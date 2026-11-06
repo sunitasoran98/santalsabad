@@ -105,6 +105,10 @@ ol.senses>li:before{content:counter(s);position:absolute;left:0;top:13px;width:3
 .list a.item{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dotted var(--line);text-decoration:none}
 .list a.item b{font-size:20px;color:var(--navy2)}.list a.item span{color:var(--muted);text-align:right}
 .empty{color:var(--muted)}
+.scripts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.scripts span{border:1px solid var(--line);background:#f5f6fa;padding:6px 14px;font-size:20px}
+.scripts small{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin-left:6px}
 .compact .center{display:none}.compact .cards3{display:none}
 .compact .top{padding:18px 0}
 .minisearch{display:none}
@@ -149,7 +153,7 @@ footer{background:var(--navy);color:#fff;padding:60px 0 30px}
     <div class="center">
       <div class="title"><span class="abbr">SSD</span><span class="bar"></span><span class="full">SantalSabad Dictionary</span></div>
       <div class="searchbox" id="sb1">
-        <select aria-label="Bhasha"><option value="all">Sabhi bhasha</option><option value="sat">Santali</option><option value="hi">Hindi</option><option value="en">English</option></select>
+        <select aria-label="Bhasha"><option value="all">Sabhi bhasha</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
         <input type="search" placeholder="dak', पानी, water…" autocomplete="off" aria-label="Search">
         <button aria-label="Search"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
         <div class="suggest"></div>
@@ -161,7 +165,7 @@ footer{background:var(--navy);color:#fff;padding:60px 0 30px}
 
     <div class="minisearch">
       <div class="searchbox" id="sb2">
-        <select aria-label="Bhasha"><option value="all">Sabhi bhasha</option><option value="sat">Santali</option><option value="hi">Hindi</option><option value="en">English</option></select>
+        <select aria-label="Bhasha"><option value="all">Sabhi bhasha</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
         <input type="search" placeholder="Shabd khojiye…" autocomplete="off" aria-label="Search">
         <button aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
         <div class="suggest"></div>
@@ -195,6 +199,29 @@ footer{background:var(--navy);color:#fff;padding:60px 0 30px}
 
 <script>
 let entries={}, order=[];
+function deva(w){
+  const s=(w||'').toLowerCase().normalize('NFC').replace(/[’`]/g,"'");
+  const C=[['kh','ख'],['gh','घ'],['ch','छ'],['jh','झ'],['ṭh','ठ'],['ḍh','ढ'],['th','थ'],['dh','ध'],['ph','फ'],['bh','भ'],['ṛh','ढ़'],
+    ['k','क'],['g','ग'],['ṅ','ङ'],['c','च'],['j','ज'],['ń','ञ'],['ñ','ञ'],['ṭ','ट'],['ḍ','ड'],['ṇ','ण'],['t','त'],['d','द'],['n','न'],
+    ['p','प'],['b','ब'],['m','म'],['y','य'],['r','र'],['ṛ','ड़'],['l','ल'],['w','व'],['v','व'],['s','स'],['h','ह'],['f','फ़'],['z','ज़'],['q','क'],['x','क्स']];
+  const V=[['ai','ऐ','ै'],['au','औ','ौ'],['ă','अ',''],['a','अ',''],['ā','आ','ा'],['e','ए','े'],['ĕ','ए','े'],['i','इ','ि'],['ī','ई','ी'],['o','ओ','ो'],['ŏ','ओ','ो'],['ô','ओ','ो'],['u','उ','ु'],['ū','ऊ','ू']];
+  let out='',prevC=false,i=0;const str=s.normalize('NFD').replace(/([aeiou])\u0303/g,'$1~').normalize('NFC');
+  while(i<str.length){let m;
+    if((m=C.find(([r])=>str.startsWith(r,i)))){if(prevC)out+='्';out+=m[1];prevC=true;i+=m[0].length;continue}
+    if((m=V.find(([r])=>str.startsWith(r,i)))){
+      // 'a' word-medially/finally after consonant: inherent; long 'a' sound in Santali usually written ा
+      if(prevC){out+=(m[0]==='a'?'ा':m[2])}else out+=(m[0]==='a'?'आ':m[1]);
+      prevC=false;i+=m[0].length;continue}
+    const ch=str[i];
+    if(ch==='~'){out+='ँ';i++;continue}
+    if(ch==="'"){if(prevC)out+='्';out+="'";prevC=false;i++;continue}
+    if(ch==='ŏ'||ch==='ŭ'){out+=prevC?'ो':'ओ';prevC=false;i++;continue}
+    if(ch==='\u0306'||ch==='\u0323'||ch==='\u0307'){i++;continue}
+    if(/[\s\-]/.test(ch)){if(prevC)out+='';prevC=false;out+=ch;i++;continue}
+    // 'o' in Santali (ô) often = short o; we use ो
+    out+=ch;prevC=false;i++}
+  return out}
+
 const $=s=>document.querySelector(s);
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const key=s=>(s||'').toLowerCase().replace(/[’`]/g,"'").trim();
@@ -222,7 +249,7 @@ async function load(){
   const ix=n=>head.indexOf(n);
   rows.forEach(r=>{const g=n=>(r[ix(n)]||'').trim();const w=g('Shabd');if(!w)return;
     const k=key(w);
-    if(!entries[k]){entries[k]={w,ipa:g('Uchcharan'),oc:g('Ol Chiki'),rel:g('Sambandhit shabd'),pos:{}};order.push(k)}
+    if(!entries[k]){entries[k]={w,dv:deva(w),ipa:g('Uchcharan'),oc:g('Ol Chiki'),rel:g('Sambandhit shabd'),pos:{}};order.push(k)}
     const e=entries[k];if(!e.ipa)e.ipa=g('Uchcharan');if(!e.oc)e.oc=g('Ol Chiki');if(!e.rel)e.rel=g('Sambandhit shabd');
     const p=g('Shabd-bhed')||'';(e.pos[p]=e.pos[p]||[]).push({n:+g('Arth no.')||99,hi:g('Hindi'),en:g('English'),ex:g('Udaharan (Santali)'),tr:g('Udaharan ka anuvad')})});
   order.sort((a,b)=>a.localeCompare(b));
@@ -233,7 +260,7 @@ async function load(){
 
 function search(q,mode='all'){q=norm(q);if(!q)return[];const out=[];
   for(const k of order){const e=entries[k];let score=0;
-    if(mode==='all'||mode==='sat'){const nk=norm(e.w);if(nk===q||norm(e.oc)===q)score=100;else if(nk.startsWith(q))score=80}
+    if(mode==='all'||mode==='sat'){const nk=norm(e.w),nd=norm(e.dv);if(nk===q||nd===q||norm(e.oc)===q)score=100;else if(nk.startsWith(q)||nd.startsWith(q))score=80}
     if(!score&&mode!=='sat'){for(const p in e.pos)for(const s of e.pos[p]){
       const src=mode==='hi'?[s.hi]:mode==='en'?[s.en]:[s.hi,s.en];
       const hay=src.join(';').split(/[;,]/).map(norm);
@@ -250,7 +277,8 @@ const wlink=k=>`<a href="#/word/${encodeURIComponent(k)}">${esc(entries[k].w)}</
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">Ye shabd abhi dictionary mein nahi hai.</p></div>`;
   let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(e.w)}</div>
   <h1 class="hw">${esc(e.w)}</h1>
-  <div class="meta">${e.ipa?`/${esc(e.ipa)}/`:''}${e.oc?`<span class="oc olchiki">${esc(e.oc)}</span>`:''}</div>
+  <div class="scripts"><span><small>Roman</small>${esc(e.w)}</span><span><small>Devanagari</small>${esc(e.dv)}</span>${e.oc?`<span><small>Ol Chiki</small><b class="olchiki">${esc(e.oc)}</b></span>`:''}</div>
+  ${e.ipa?`<div class="meta">Uchcharan: /${esc(e.ipa)}/</div>`:''}
   <div class="tabs"><span>Arth aur prayog</span></div>`;
   for(const p in e.pos){if(p)h+=`<div class="ptag">${esc(p)}</div>`;h+='<ol class="senses">';
     e.pos[p].sort((a,b)=>a.n-b.n).forEach(s=>{h+=`<li><div class="def">${esc(s.hi)}${s.hi&&s.en?'<span class="sep">|</span>':''}${esc(s.en)}</div>`;
@@ -259,7 +287,7 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>
-  <div class="list">${keys.length?keys.slice(0,500).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)}</b><span>${esc(gloss(entries[k]))}</span></a>`).join(''):'<p class="empty">Koi shabd nahi mila.</p>'}</div></div>`}
+  <div class="list">${keys.length?keys.slice(0,500).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join(''):'<p class="empty">Koi shabd nahi mila.</p>'}</div></div>`}
 
 function recentList(){return JSON.parse(localStorage.getItem('ss_recent')||'[]').filter(k=>entries[k])}
 function wotdKey(){const d=new Date();const pool=order.filter(k=>first(entries[k]).hi);return pool[(d.getFullYear()*372+d.getMonth()*31+d.getDate())*7919%pool.length]}
@@ -269,7 +297,7 @@ function home(){const k=wotdKey(),e=entries[k],s=first(e);
   const pos=Object.keys(e.pos)[0];
   return `<section class="band"><div class="wrap cols">
     <div><h4 class="dm">Aaj ke shabd</h4><div class="wl">${window.added.map(wlink).join('')}</div></div>
-    <div class="wotd"><h4 class="dm">Aaj ka shabd</h4><p class="w">${esc(e.w)}</p>${e.oc?`<div class="oc olchiki">${esc(e.oc)}</div>`:''}<div class="pos">${esc(pos||'')}</div>
+    <div class="wotd"><h4 class="dm">Aaj ka shabd</h4><p class="w">${esc(e.w)}</p><div class="oc">${esc(e.dv)}${e.oc?` · <span class="olchiki">${esc(e.oc)}</span>`:''}</div><div class="pos">${esc(pos||'')}</div>
       <div class="d">${esc(s.hi)}${s.hi&&s.en?' — ':''}${esc(s.en)}</div><a class="more" href="#/word/${encodeURIComponent(k)}">Poora arth dekhiye ›</a></div>
     <div><h4 class="dm">${recentList().length?'Haal mein dekhe':'Ol Chiki shabd'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
   </div></section>
@@ -290,6 +318,7 @@ function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;fo
  <p><b>Shabd-bhed</b> laal italic mein: sangya (noun), kriya (verb), visheshan (adjective), kriya-visheshan (adverb) aadi.</p>
  <p><b>Neele gole number</b> alag-alag arth batate hain. Har arth mein pehle Hindi, phir | ke baad English.</p>
  <p><b>Udaharan</b> baayin rekha ke saath italic mein, neeche uska anuvad.</p>
+ <p><b>Devanagari roop</b> Roman Santali se apne aap (auto lipyantaran) banaya gaya hai, isme kahin-kahin chhoti galti ho sakti hai.</p>
  <p><b>k' c' t' p'</b> mein apostrophe Santali ki "ruki hui" dhwani dikhata hai, jaise dak'.</p>
  <p>Search mein Santali, Hindi, English ya Ol Chiki kuch bhi likhiye. Bhasha chun kar search ko seemit kar sakte hain.</p></div>`}
 
@@ -312,7 +341,7 @@ document.querySelectorAll('.searchbox').forEach(box=>{
   const q=box.querySelector('input'),sel=box.querySelector('select'),sug=box.querySelector('.suggest'),btn=box.querySelector('button');let on=-1;
   const go=()=>{if(q.value.trim()){location.hash='#/search/'+encodeURIComponent(q.value.trim()+'|'+sel.value);sug.style.display='none';q.blur()}};
   q.addEventListener('input',()=>{const r=search(q.value,sel.value).slice(0,8);on=-1;
-    sug.innerHTML=r.map(k=>`<div data-k="${esc(k)}"><b>${esc(entries[k].w)}</b><small>${esc(gloss(entries[k]))}</small></div>`).join('');sug.style.display=r.length?'block':'none'});
+    sug.innerHTML=r.map(k=>`<div data-k="${esc(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><small>${esc(gloss(entries[k]))}</small></div>`).join('');sug.style.display=r.length?'block':'none'});
   sug.addEventListener('click',e=>{const d=e.target.closest('div[data-k]');if(d){location.hash='#/word/'+encodeURIComponent(d.dataset.k);sug.style.display='none';q.value=''}});
   q.addEventListener('keydown',e=>{const it=[...sug.children];
     if((e.key==='ArrowDown'||e.key==='ArrowUp')&&it.length){on=(on+(e.key==='ArrowDown'?1:-1)+it.length)%it.length;it.forEach((x,i)=>x.classList.toggle('on',i===on));e.preventDefault()}
