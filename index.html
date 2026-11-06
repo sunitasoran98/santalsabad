@@ -175,6 +175,7 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .lnote{margin:0;text-align:center;font-size:13px;color:#475569}
 .lalert{padding:10px 14px;border-radius:16px;font-size:13px;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c}.lalert.ok{background:#ecfdf5;border-color:#a7f3d0;color:#047857}
 .lfoot{display:flex;align-items:center;justify-content:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:.1em;color:#1d4ed8;font-family:monospace}.lfoot span{width:20px;height:1px;background:#93c5fd}
+.admlink{font-weight:700}
 /* admin bar amber */
 #abar{background:#fffbeb!important;color:#78350f!important;border:1px solid #fcd34d;border-radius:18px!important;bottom:14px}
 #abar .abtxt{font-size:12px;padding:0 6px}#abar .abtxt b{color:#92400e;display:block;font-size:13px}
@@ -260,12 +261,12 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
     <div class="fcols">
       <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-t="t17">About SantalSabad</a><a href="#/about" data-t="t18">Sources</a><a href="#/about" data-t="t19">Sujhav bhejiye</a></div>
       <div class="fbox"><h6 data-t="t14">Shabdkosh</h6><a href="#/browse/a" data-t="t20">A–Z Shabd suchi</a><a href="#/examples" data-t="t21">Udaharan sahit shabd</a><a href="#/random" data-t="t22">Koi bhi ek shabd</a></div>
-      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/about" data-t="t25">Contact</a></div>
+      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/about" data-t="t25">Contact</a><a href="#/admin" onclick="if(location.hash==='#/admin'){openLogin();return false}">🔒 Admin Login</a></div>
       <div class="fbox fbrand"><h6 data-t="t16">BOSC</h6>SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
       </div>
     </div>
-    <div class="legal"><a href="#/about" data-t="t26">Sources &amp; credits</a><a href="#/about" data-t="t27">Privacy</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
+    <div class="legal"><a href="#/about" data-t="t26">Sources &amp; credits</a><a href="#/about" data-t="t27">Privacy</a><a href="#/admin" class="admlink" onclick="if(location.hash==='#/admin'){openLogin();return false}">🔒 Admin Login</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
   </div>
 </footer>
 
