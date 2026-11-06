@@ -9,20 +9,19 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Ol+Chiki:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#10172a;--navy2:#1f2f57;--line:#e2ddd3;--grey:#f1ebe0;--ink:#16130f;--muted:#6b6358;--red:#c4512b;--accent:#c4512b;--ochre:#e3a33b;--cream:#fbf8f2}
 *{box-sizing:border-box}
 body{margin:0;font-family:"Open Sans","Noto Sans Devanagari",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
 a{color:inherit}
-.olchiki{font-family:"Noto Sans Ol Chiki",sans-serif}
 .dm{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
 .wrap{max-width:1180px;margin:auto;padding:0 24px}
 
 /* ---------- top bar ---------- */
 .top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:26px 0}
 .logo{display:flex;align-items:center;gap:12px;font-family:'DM Serif Display',serif;font-size:26px;color:#fff;text-decoration:none}
-.logo i{width:42px;height:42px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-style:normal;font-family:'Noto Sans Ol Chiki';font-size:22px;box-shadow:0 0 0 3px var(--ochre)}
+.logo i{width:42px;height:42px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-style:normal;font-family:'Noto Sans Devanagari';font-weight:600;font-size:22px;box-shadow:0 0 0 3px var(--ochre)}
 .tools{display:flex;gap:22px;align-items:center}
 .tools a{color:#fff;text-decoration:none;font-size:14px;line-height:1.2;display:flex;align-items:center;gap:8px}
 .tools .circ{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:Georgia,serif;font-size:20px}
@@ -34,7 +33,7 @@ a{color:inherit}
 .compact:after{height:14px;background-size:28px 14px}
 .hero .center{position:relative;z-index:2;text-align:center;padding:10px 0 40px}
 .title{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin:14px 0 22px}
-.title .abbr{font-size:52px;font-family:'Noto Sans Ol Chiki',sans-serif;color:var(--ochre)}
+.title .abbr{font-size:46px;font-family:'Noto Sans Devanagari',sans-serif;font-weight:600;color:var(--ochre)}
 .title .bar{width:3px;height:62px;background:var(--ochre)}
 .title .full{font-size:46px;font-family:'DM Serif Display',serif}
 .searchbox{position:relative;max-width:770px;margin:0 auto;display:flex;background:#fff;border-radius:32px;height:60px;box-shadow:0 0 0 4px rgba(227,163,59,.35),0 12px 30px rgba(0,0,0,.3)}
@@ -115,6 +114,10 @@ ol.senses>li:before{content:counter(s);position:absolute;left:0;top:13px;width:3
 .scripts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
 .scripts span{border:1px solid var(--line);border-left:4px solid var(--ochre);background:var(--cream);padding:6px 14px;font-size:20px}
 .scripts small{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+
+.dvh{display:flex;align-items:baseline;gap:14px;margin:8px 0 6px}
+.dvh span{font-family:'Noto Sans Devanagari',sans-serif;font-size:30px;color:var(--red)}
+.dvh small{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
 em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin-left:6px}
 .compact .center{display:none}.compact .cards3{display:none}
 .compact .top{padding:18px 0}
@@ -150,7 +153,7 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:14px;back
   <svg class="rays" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" id="rays"></svg>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#/"><i>ᱥ</i>SantalSabad</a>
+      <a class="logo" href="#/"><i>स</i>SantalSabad</a>
       <div class="tools">
         <a href="#/about" title="About"><span class="circ">i</span></a>
         <a href="#/browse/a"><span class="lbl">A–Z<br>browse</span></a>
@@ -159,7 +162,7 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:14px;back
     </div>
 
     <div class="center">
-      <div class="title"><span class="abbr">ᱥᱟᱵᱟᱫ</span><span class="bar"></span><span class="full">SantalSabad Dictionary</span></div>
+      <div class="title"><span class="full">SantalSabad</span><span class="bar"></span><span class="abbr">संतालसबद</span></div>
       <div class="searchbox" id="sb1">
         <select aria-label="Bhasha"><option value="all">All</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
         <input type="search" placeholder="e.g. johar  ·  water" autocomplete="off" aria-label="Search">
@@ -167,7 +170,7 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:14px;back
         <div class="suggest"></div>
       </div>
       <h2>Santali – Hindi – English shabdkosh</h2>
-      <p class="lead">Santali bhasha ke <b id="count">hazaron</b> shabd, unke Hindi aur English arth, uchcharan, udaharan aur Ol Chiki lipi ke saath, ek hi jagah.</p>
+      <p class="lead">Santali bhasha ke <b id="count">hazaron</b> shabd, unke Hindi aur English arth, Roman aur Devanagari dono lipi mein, uchcharan aur udaharan ke saath.</p>
       <a class="btn" href="#/about">SantalSabad ke baare mein &nbsp;›</a>
     </div>
 
@@ -183,7 +186,7 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:14px;back
     <div class="cards3">
       <div class="c3"><h3>Shabd kaise padhein</h3><p>Uchcharan, shabd-bhed, arth number aur sanket chinh ki jaankari</p><a class="btn" href="#/guide">Guide dekhiye &nbsp;›</a></div>
       <div class="c3"><h3>A–Z Shabd suchi</h3><p>Akshar ke hisaab se saare Santali shabd ek-ek karke dekhiye</p><a class="btn" href="#/browse/a">Browse kijiye &nbsp;›</a></div>
-      <div class="c3"><h3>Ol Chiki lipi</h3><p>Santali ki apni lipi mein likhe shabd aur unka Roman roop</p><a class="btn" href="#/olchiki">Ol Chiki shabd &nbsp;›</a></div>
+      <div class="c3"><h3>Udaharan sahit shabd</h3><p>Asli Santali vakyon mein shabdon ka prayog, English anuvad ke saath</p><a class="btn" href="#/examples">Udaharan dekhiye &nbsp;›</a></div>
     </div>
   </div>
 </header>
@@ -193,7 +196,7 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:14px;back
 <footer>
   <div class="wrap">
     <div class="fcols">
-      <div><a href="#/about">About SantalSabad</a><a href="#/browse/a">A–Z Shabd suchi</a><a href="#/olchiki">Ol Chiki shabd</a></div>
+      <div><a href="#/about">About SantalSabad</a><a href="#/browse/a">A–Z Shabd suchi</a><a href="#/examples">Udaharan sahit shabd</a></div>
       <div><a href="#/guide">Shabd kaise padhein</a><a href="#/random">Koi bhi ek shabd</a><a href="#/about">Sources</a></div>
       <div><a href="#/about">Sujhav bhejiye</a><a href="#/about">Contact</a></div>
       <div><a href="#/about">BOSC</a><a href="#/about">Baski Online Service Center</a></div>
@@ -285,7 +288,7 @@ const wlink=k=>`<a href="#/word/${encodeURIComponent(k)}">${esc(entries[k].w)}</
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">Ye shabd abhi dictionary mein nahi hai.</p></div>`;
   let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(e.w)}</div>
   <h1 class="hw">${esc(e.w)}</h1>
-  <div class="scripts"><span><small>Roman</small>${esc(e.w)}</span><span><small>Devanagari</small>${esc(e.dv)}</span>${e.oc?`<span><small>Ol Chiki</small><b class="olchiki">${esc(e.oc)}</b></span>`:''}</div>
+  <div class="dvh"><span>${esc(e.dv)}</span><small>Roman · Devanagari</small></div>
   ${e.ipa?`<div class="meta">Uchcharan: /${esc(e.ipa)}/</div>`:''}
   <div class="tabs"><span>Arth aur prayog</span></div>`;
   for(const p in e.pos){if(p)h+=`<div class="ptag">${esc(p)}</div>`;h+='<ol class="senses">';
@@ -301,18 +304,18 @@ function recentList(){return JSON.parse(localStorage.getItem('ss_recent')||'[]')
 function wotdKey(){const d=new Date();const pool=order.filter(k=>first(entries[k]).hi);return pool[(d.getFullYear()*372+d.getMonth()*31+d.getDate())*7919%pool.length]}
 
 function home(){const k=wotdKey(),e=entries[k],s=first(e);
-  let rec=recentList();if(rec.length<8){const extra=order.filter(x=>entries[x].oc&&!rec.includes(x));rec=rec.concat(extra.slice((new Date().getDate()*13)%Math.max(1,extra.length-16)).slice(0,16-rec.length))}
+  let rec=recentList();if(rec.length<8){const extra=order.filter(x=>!rec.includes(x));rec=rec.concat(extra.slice((new Date().getDate()*13)%Math.max(1,extra.length-16)).slice(0,16-rec.length))}
   const pos=Object.keys(e.pos)[0];
   return `<section class="band"><div class="wrap cols">
     <div><h4 class="dm">Aaj ke shabd</h4><div class="wl">${window.added.map(wlink).join('')}</div></div>
-    <div class="wotd"><h4 class="dm">Aaj ka shabd</h4><p class="w">${esc(e.w)}</p><div class="oc">${esc(e.dv)}${e.oc?` · <span class="olchiki">${esc(e.oc)}</span>`:''}</div><div class="pos">${esc(pos||'')}</div>
+    <div class="wotd"><h4 class="dm">Aaj ka shabd</h4><p class="w">${esc(e.w)}</p><div class="oc">${esc(e.dv)}</div><div class="pos">${esc(pos||'')}</div>
       <div class="d">${esc(s.hi)}${s.hi&&s.en?' — ':''}${esc(s.en)}</div><a class="more" href="#/word/${encodeURIComponent(k)}">Poora arth dekhiye ›</a></div>
-    <div><h4 class="dm">${recentList().length?'Haal mein dekhe':'Ol Chiki shabd'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
+    <div><h4 class="dm">${recentList().length?'Haal mein dekhe':'Aur shabd'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
   </div></section>
   <section class="feat"><div class="wrap tiles">
-    <a class="tile" href="#/about"><div class="art a1"><span class="olchiki">ᱥᱟᱱᱛᱟᱲᱤ</span></div><div class="tx"><h5>Santali bhasha</h5><p>Santali bhasha, uske bolne walon aur is shabdkosh ke baare mein padhiye</p></div></a>
+    <a class="tile" href="#/about"><div class="art a1"><span>संताली</span></div><div class="tx"><h5>Santali bhasha</h5><p>Santali bhasha, uske bolne walon aur is shabdkosh ke baare mein padhiye</p></div></a>
     <a class="tile" href="#/browse/a"><div class="art a2"><span class="dm">A–Z</span></div><div class="tx"><h5>Shabd suchi</h5><p>Akshar-vaar saare shabd, Hindi aur English arth ke saath</p></div></a>
-    <a class="tile" href="#/olchiki"><div class="art a3"><span class="olchiki">ᱚᱞ ᱪᱤᱠᱤ</span></div><div class="tx"><h5>Ol Chiki shabd</h5><p>Santali ki apni lipi mein likhe shabdon ka sangrah</p></div></a>
+    <a class="tile" href="#/examples"><div class="art a3"><span class="dm">“ ”</span></div><div class="tx"><h5>Udaharan sahit shabd</h5><p>Vakyon mein prayog hue Santali shabd, English anuvad ke saath</p></div></a>
     <a class="tile" href="#/random"><div class="art a4"><span class="dm">?</span></div><div class="tx"><h5>Koi bhi ek shabd</h5><p>Har baar ek naya Santali shabd seekhiye</p></div></a>
   </div></section>`}
 
@@ -322,15 +325,15 @@ function side(){const rec=recentList();
   <div class="box"><h3 class="dm">Haal mein dekhe</h3>${rec.length?rec.slice(0,8).map(wlink).join(''):'<p class="empty">Abhi koi nahi</p>'}</div></aside>`}
 
 function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">Shabd kaise padhein</h2>
- <p><b>Mukhya shabd</b> Roman Santali mein sabse upar bade akshar mein hota hai. Uske saath <b>/uchcharan/</b> aur Ol Chiki roop (jahan uplabdh) diye gaye hain.</p>
+ <p><b>Mukhya shabd</b> Roman Santali mein sabse upar bade akshar mein hota hai. Uske saath <b>/uchcharan/</b> aur Devanagari roop diye gaye hain.</p>
  <p><b>Shabd-bhed</b> laal italic mein: sangya (noun), kriya (verb), visheshan (adjective), kriya-visheshan (adverb) aadi.</p>
  <p><b>Neele gole number</b> alag-alag arth batate hain. Har arth mein pehle Hindi, phir | ke baad English.</p>
  <p><b>Udaharan</b> baayin rekha ke saath italic mein, neeche uska anuvad.</p>
  <p><b>Devanagari roop</b> Roman Santali se apne aap (auto lipyantaran) banaya gaya hai, isme kahin-kahin chhoti galti ho sakti hai.</p>
  <p><b>k' c' t' p'</b> mein apostrophe Santali ki "ruki hui" dhwani dikhata hai, jaise dak'.</p>
- <p>Search mein Santali, Hindi, English ya Ol Chiki kuch bhi likhiye. Bhasha chun kar search ko seemit kar sakte hain.</p></div>`}
+ <p>Search mein Santali (Roman ya Devanagari), Hindi ya English kuch bhi likhiye. Bhasha chun kar search ko seemit kar sakte hain.</p></div>`}
 
-function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan aur Ol Chiki lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
+function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan, Roman aur Devanagari lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
 
 function remember(k){let r=recentList();r=[k,...r.filter(x=>x!==k)].slice(0,16);localStorage.setItem('ss_recent',JSON.stringify(r))}
 
@@ -341,7 +344,7 @@ function route(){const [,v,a]=(location.hash||'#/').split('/');const arg=decodeU
   if(v==='word'){h=entryHTML(arg);if(entries[arg]){remember(arg);document.title=entries[arg].w+' – SantalSabad'}}
   else if(v==='search'){const [qq,mode]=arg.split('|');const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
   else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).startsWith(arg)));
-  else if(v==='olchiki')h=listHTML('Ol Chiki shabd',order.filter(k=>entries[k].oc)).replace(/<b>(.*?)<\/b>/g,(m,w)=>{const e=entries[key(w.replace(/&#39;|&apos;/g,"'"))];return `<b>${w}${e&&e.oc?` <span class="olchiki" style="color:#333;font-weight:400">${esc(e.oc)}</span>`:''}</b>`});
+  else if(v==='examples')h=listHTML('Udaharan sahit shabd',order.filter(k=>Object.values(entries[k].pos).some(a=>a.some(x=>x.ex))));
   else if(v==='guide')h=guide();else if(v==='about')h=about();else h=listHTML('Page nahi mila',[]);
   $('#view').innerHTML=`<div class="inner"><section>${h}</section>${side()}</div>`;window.scrollTo(0,0)}
 
