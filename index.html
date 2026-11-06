@@ -107,8 +107,6 @@ em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin
 .compact .center{display:none}.compact .cards3{display:none}
 .compact .top{padding:20px 0}
 .minisearch{display:none}
-.compact .minisearch{display:block;position:relative;z-index:2;padding:0 0 26px}
-.compact .minisearch .searchbox{max-width:none;height:54px}
 
 .tw{overflow-x:auto;margin:16px 0 8px;border-radius:10px;box-shadow:0 8px 24px rgba(1,31,67,.12);border:1px solid #d5d9e2}
 table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min-width:680px;background:#fff}
@@ -175,7 +173,6 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .lnote{margin:0;text-align:center;font-size:13px;color:#475569}
 .lalert{padding:10px 14px;border-radius:16px;font-size:13px;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c}.lalert.ok{background:#ecfdf5;border-color:#a7f3d0;color:#047857}
 .lfoot{display:flex;align-items:center;justify-content:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:.1em;color:#1d4ed8;font-family:monospace}.lfoot span{width:20px;height:1px;background:#93c5fd}
-.admlink{font-weight:700}
 /* admin bar amber */
 #abar{background:#fffbeb!important;color:#78350f!important;border:1px solid #fcd34d;border-radius:18px!important;bottom:14px}
 #abar .abtxt{font-size:12px;padding:0 6px}#abar .abtxt b{color:#92400e;display:block;font-size:13px}
@@ -183,6 +180,35 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 #abar button.on{background:#16a34a!important;border-color:#16a34a!important;color:#fff!important}
 #abar button.pub{background:#d97706!important;border-color:#d97706!important;color:#fff!important}
 #abar .dot{color:#b45309!important}
+
+/* header search (OED style) */
+.top .minisearch{display:none;flex:1;max-width:640px;margin:0 28px;padding:0!important}
+.compact .top .minisearch{display:block}
+.compact .top .minisearch .searchbox{height:48px;max-width:none}
+.compact .top .minisearch select{width:150px;font-size:15px}
+.compact .top .minisearch input{font-size:16px}
+.compact .tools .lbl{display:none}.compact .tools{gap:12px}
+.inw{flex:1;position:relative;display:flex;min-width:0}
+.inw input{width:100%}
+.inw:after{content:"";position:absolute;left:14px;right:10px;bottom:10px;height:2px;border-radius:2px;background:linear-gradient(90deg,#d6262f,#3d4fa0);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.searchbox:focus-within .inw:after,.inw.typing:after{transform:scaleX(1)}
+.tools .circ.ai{background:linear-gradient(135deg,#f2b8c6,#a98fd6);color:#011f43;font-size:20px}
+@media(max-width:820px){.top{flex-wrap:wrap}.top .minisearch{order:3;flex-basis:100%;max-width:none;margin:14px 0 0}.compact .top .minisearch select{width:96px}}
+/* advanced + ai */
+.adv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:6px 0 18px}
+.adv label{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:700;color:var(--navy)}
+.adv input,.adv select{font:inherit;font-size:16px;padding:10px 12px;border:1px solid #c9ccd5;border-radius:10px;background:#fff}
+.adv input:focus,.adv select:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px #dfe4f5}
+.adv .chk{flex-direction:row;align-items:center;gap:8px}.adv .chk input{width:18px;height:18px}
+.advn{font-size:14px;color:var(--muted);margin-bottom:6px}
+.aibox{display:flex;gap:8px;background:linear-gradient(135deg,#011f43,#4b3a8c);padding:8px;border-radius:999px;margin:8px 0 6px}
+.aibox input{flex:1;border:0;border-radius:999px;padding:12px 18px;font:inherit;font-size:16px;outline:0;min-width:0}
+.aibox button{border:0;border-radius:999px;padding:0 22px;font:inherit;font-weight:700;background:#f2b8c6;color:#011f43;cursor:pointer}
+.aiq{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 16px}.aiq button{border:1px solid #c9ccd5;background:#fff;border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}.aiq button:hover{border-color:var(--blue);color:var(--blue)}
+.aians{background:#f4f1fb;border-left:4px solid #4b3a8c;border-radius:10px;padding:16px 18px;margin:10px 0;font-size:18px}
+.aians b a{color:#011f43}.aians .ex{font-size:15px}
+.aicard{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #eceef2;text-decoration:none}.aicard b{font-size:19px;color:var(--navy2)}.aicard span{color:var(--muted);text-align:right}
+.ainote{font-size:12px;color:var(--muted);margin-top:14px}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr;gap:24px;align-items:stretch}
@@ -217,10 +243,19 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
   <div class="wrap">
     <div class="top">
       <a class="logo" href="#/">SANTALSABAD</a>
+      <div class="minisearch">
+      <div class="searchbox" id="sb2">
+        <select aria-label="Bhasha"><option value="all">All</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
+        <input type="search" placeholder="e.g. dak'  ·  house" autocomplete="off" aria-label="Search">
+        <button aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
+        <div class="suggest"></div>
+      </div>
+    </div>
       <div class="tools">
         <a href="#/about" title="About"><span class="circ">i</span></a>
-        <a href="#/browse/a"><span class="circ" style="font-family:Open Sans;font-size:15px">A–Z</span><span class="lbl">Shabd<br>suchi</span></a>
-        <a href="#/guide"><span class="star">✦</span><span class="lbl">Shabd kaise<br>padhein</span></a>
+        <a href="#/advanced" title="Advance search"><span class="circ"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><span class="lbl">Advance<br>search</span></a>
+        <a href="#/ai" title="AI search"><span class="circ ai">✦</span><span class="lbl">AI<br>search</span></a>
+        <a href="#/admin" title="Admin Login" onclick="openLogin();return false"><span class="circ"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span><span class="lbl">Admin<br>Login</span></a>
       </div>
     </div>
 
@@ -235,15 +270,6 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
       <h2 data-t="t1">Santali – Hindi – English shabdkosh</h2>
       <p class="lead" data-t="t2">Santali bhasha ke <b id="count">hazaron</b> shabd, unke Hindi aur English arth, Roman aur Devanagari dono lipi mein, uchcharan aur udaharan ke saath.</p>
       <a class="btn" href="#/about" data-t="t9">SantalSabad ke baare mein </a>
-    </div>
-
-    <div class="minisearch">
-      <div class="searchbox" id="sb2">
-        <select aria-label="Bhasha"><option value="all">All</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
-        <input type="search" placeholder="e.g. dak'  ·  house" autocomplete="off" aria-label="Search">
-        <button aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
-        <div class="suggest"></div>
-      </div>
     </div>
 
     <div class="cards3">
@@ -261,12 +287,12 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
     <div class="fcols">
       <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-t="t17">About SantalSabad</a><a href="#/about" data-t="t18">Sources</a><a href="#/about" data-t="t19">Sujhav bhejiye</a></div>
       <div class="fbox"><h6 data-t="t14">Shabdkosh</h6><a href="#/browse/a" data-t="t20">A–Z Shabd suchi</a><a href="#/examples" data-t="t21">Udaharan sahit shabd</a><a href="#/random" data-t="t22">Koi bhi ek shabd</a></div>
-      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/about" data-t="t25">Contact</a><a href="#/admin" onclick="if(location.hash==='#/admin'){openLogin();return false}">🔒 Admin Login</a></div>
+      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/about" data-t="t25">Contact</a></div>
       <div class="fbox fbrand"><h6 data-t="t16">BOSC</h6>SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
       </div>
     </div>
-    <div class="legal"><a href="#/about" data-t="t26">Sources &amp; credits</a><a href="#/about" data-t="t27">Privacy</a><a href="#/admin" class="admlink" onclick="if(location.hash==='#/admin'){openLogin();return false}">🔒 Admin Login</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
+    <div class="legal"><a href="#/about" data-t="t26">Sources &amp; credits</a><a href="#/about" data-t="t27">Privacy</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
   </div>
 </footer>
 
@@ -318,7 +344,7 @@ function parseCSV(t){const rows=[];let r=[],f='',q=false;
 
 let HEAD=[],ROWS=[],TEXTS={};
 const COLS=['Shabd','Uchcharan','Shabd-bhed','Arth no.','Hindi','English','Udaharan (Santali)','Udaharan ka anuvad','Ol Chiki','Sambandhit shabd','Devanagari'];
-function build(){entries={};order=[];
+function build(){entries={};order=[];AIX=null;
   ROWS.forEach((r,i)=>{const g=n=>(r[n]||'').trim();const w=g('Shabd');if(!w)return;const k=key(w);
     if(!entries[k]){entries[k]={w,dv:g('Devanagari')||deva(w),ipa:g('Uchcharan'),oc:g('Ol Chiki'),rel:g('Sambandhit shabd'),pos:{},rows:[]};order.push(k)}
     const e=entries[k];e.rows.push(i);if(!e.ipa)e.ipa=g('Uchcharan');if(!e.rel)e.rel=g('Sambandhit shabd');if(g('Devanagari'))e.dv=g('Devanagari');
@@ -410,6 +436,69 @@ function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;fo
 
 function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan, Roman aur Devanagari lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
 
+
+
+/* ===== Advance search ===== */
+function advHTML(){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › Advance search</div><h2 class="dm" style="margin-top:0;font-size:32px">Advance search</h2>
+ <div class="adv">
+  <label>Santali shabd<input id="av_w" placeholder="jaise: dak"></label>
+  <label>Shabd kaise mile<select id="av_m"><option value="start">Shuru mein</option><option value="has">Kahin bhi</option><option value="end">Ant mein</option><option value="exact">Poora shabd</option></select></label>
+  <label>Hindi arth mein<input id="av_hi" placeholder="jaise: पानी"></label>
+  <label>English arth mein<input id="av_en" placeholder="e.g. water"></label>
+  <label>शब्द-भेद<select id="av_p"><option value="">Sab</option>${POS.map(p=>`<option>${p}</option>`).join('')}</select></label>
+  <label>Akshar se shuru<select id="av_l"><option value="">Sab</option>${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>`<option value="${l}">${l.toUpperCase()}</option>`).join('')}</select></label>
+  <label class="chk"><input type="checkbox" id="av_x"> Sirf udaharan wale shabd</label>
+ </div><div class="advn" id="av_n"></div><div class="list" id="av_r"></div></div>`}
+function advBind(){const ids=['av_w','av_m','av_hi','av_en','av_p','av_l','av_x'];ids.forEach(i=>{const el=$('#'+i);if(el)el.addEventListener('input',advRun)});advRun()}
+function advRun(){const g=i=>$('#'+i),w=norm(g('av_w').value),m=g('av_m').value,hi=norm(g('av_hi').value),en=norm(g('av_en').value),p=g('av_p').value,l=g('av_l').value,x=g('av_x').checked;
+ const any=w||hi||en||p||l||x;const r=!any?[]:order.filter(k=>{const e=entries[k],nk=norm(e.w);
+  if(w&&!(m==='start'?nk.startsWith(w)||norm(e.dv).startsWith(w):m==='end'?nk.endsWith(w):m==='exact'?nk===w:nk.includes(w)))return false;
+  if(l&&!nk.replace(/^[^a-z]+/,'').startsWith(l))return false;
+  const ss=[];for(const q in e.pos)e.pos[q].forEach(s=>ss.push([q,s]));
+  return ss.some(([q,s])=>(!p||q===p)&&(!hi||norm(s.hi).includes(hi))&&(!en||norm(s.en).includes(en))&&(!x||s.ex))});
+ g('av_n').textContent=any?`${r.length.toLocaleString('en-IN')} shabd mile${r.length>300?' (pehle 300 dikha rahe hain)':''}`:'Upar koi bhi khana bhariye, results turant dikhenge.';
+ g('av_r').innerHTML=r.slice(0,300).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join('')}
+
+/* ===== AI search (smart, offline) ===== */
+const STOP=new Set(('ka ki ke ko kya kise kaise kahte kahate kehte kahenge kahen hai hain he ho tha thi mein me main se par aur ya bhi koi ek is us iska uska matlab arth meaning mean means santali santhali sathali shabd word words hindi english bolte bole bolo bataiye batao bata batayen what is the a an of in for to how do you say called call tell me please plz word translate translation and or me ka?'+
+ ' का की के को क्या कैसे कहते कहेंगे है हैं हो था थी में से पर और या भी कोई एक इस उस मतलब अर्थ संथाली संताली शब्द हिंदी हिन्दी बोलते बताइए बताओ').split(/\s+/));
+const D2L={'अ':'a','आ':'a','इ':'i','ई':'i','उ':'u','ऊ':'u','ए':'e','ऐ':'ai','ओ':'o','औ':'au','क':'k','ख':'k','ग':'g','घ':'g','ङ':'n','च':'c','छ':'c','ज':'j','झ':'j','ञ':'n','ट':'t','ठ':'t','ड':'d','ढ':'d','ण':'n','त':'t','थ':'t','द':'d','ध':'d','न':'n','प':'p','फ':'p','ब':'b','भ':'b','म':'m','य':'y','र':'r','ल':'l','व':'v','श':'s','ष':'s','स':'s','ह':'h','ा':'a','ि':'i','ी':'i','ु':'u','ू':'u','े':'e','ै':'ai','ो':'o','ौ':'au','ं':'n','ँ':'n','़':'','्':''};
+const skel=t=>{let r='';for(const c of t)r+=D2L[c]!=null?D2L[c]:c;r=r.toLowerCase().replace(/[^a-z]/g,'').replace(/ch/g,'c').replace(/sh/g,'s').replace(/kh/g,'k').replace(/gh/g,'g').replace(/th/g,'t').replace(/dh/g,'d').replace(/ph/g,'p').replace(/bh/g,'b').replace(/w/g,'v');return r.replace(/a/g,'').replace(/(.)\1+/g,'$1').replace(/ee/g,'i').replace(/oo/g,'u')};
+function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1));p=t}}return d[b.length]}
+let AIX=null;function aiIndex(){if(AIX)return AIX;AIX=order.map(k=>{const e=entries[k],hi=[],en=[];for(const p in e.pos)e.pos[p].forEach(s=>{(s.hi||'').split(/[;,/()]/).forEach(x=>{x=x.trim();if(x)hi.push(x)});(s.en||'').split(/[;,/()]/).forEach(x=>{x=norm(x).replace(/^to /,'');if(x)en.push(x)})});
+ return {k,w:norm(e.w),d:norm(e.dv),hi,his:hi.map(skel),en,ens:en.join(' ').split(/\s+/)}});return AIX}
+function aiRun(q){const raw=(q||'').toLowerCase().replace(/[?!.,"“”‘’]/g,' ');const toks=raw.split(/\s+/).filter(t=>t&&!STOP.has(t));if(!toks.length)return null;
+ const phrase=toks.join(' ');const res=[];
+ const toSat=/(ko|को).*(kya|क्या|kaise|कैसे)|santa?h?li (me|mein|में)|संथाली में|in santa?h?li|how (do you|to) say/.test(raw),fromSat=/(ka|का|ki|की) (matlab|arth|मतलब|अर्थ)|meaning of|what does .* mean/.test(raw);
+ for(const x of aiIndex()){let sc=0,why='';
+  for(const t of toks){const nt=norm(t).replace(/['’`]/g,"'"),isDv=/[\u0900-\u097f]/.test(t);let s=0,y='';
+   if(x.w===nt||x.d===nt){s=100;y='sat'}
+   else if(isDv&&x.hi.includes(t)){s=92;y='hi'}
+   else if(!isDv&&x.en.includes(nt)){s=90;y='en'}
+   else if(!isDv&&x.ens.includes(nt)){s=60;y='en'}
+   else if(isDv&&x.hi.some(h=>h.split(/\s+/).includes(t))){s=62;y='hi'}
+   else if(nt.length>=3&&skel(nt)&&x.his.includes(skel(nt))){s=58;y='hi'}
+   else if(nt.length>=4&&!isDv&&(lev(nt,x.w)<=1)){s=45;y='sat'}
+   else if(nt.length>=5&&!isDv&&x.en.some(e=>lev(nt,e)<=1)){s=40;y='en'}
+   if(y==='sat'&&toSat&&!fromSat)s-=50;if(y!=='sat'&&fromSat&&!toSat)s-=30;
+   if(s>sc){sc=s;why=y}else if(s>0)sc+=5}
+  if(phrase.includes(' ')&&x.en.includes(norm(phrase))){sc=Math.max(sc,95);why='en'}
+  if(sc>0)res.push({k:x.k,sc,why})}
+ res.sort((a,b)=>b.sc-a.sc||entries[a.k].w.length-entries[b.k].w.length);return {toks,res:res.slice(0,12)}}
+function aiHTML(q){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › AI search</div><h2 class="dm" style="margin-top:0;font-size:32px">✦ AI search</h2>
+ <p style="margin:0;color:var(--muted)">Apni bhasha mein seedha poochhiye: Hindi, Hinglish ya English.</p>
+ <form class="aibox" id="aif"><input id="aiq" value="${esc(q)}" placeholder="जैसे: पानी को संथाली में क्या कहते हैं?" autocomplete="off"><button>Poochho</button></form>
+ <div class="aiq">${['पानी को संथाली में क्या कहते हैं?','johar ka matlab kya hai','What is house in Santali?','ghar ko kya bolte hain'].map(x=>`<button type="button">${esc(x)}</button>`).join('')}</div>
+ <div id="aio"></div><div class="ainote">Ye smart search aapke device par hi chalta hai (internet ke bina bhi). Galat spelling aur Hinglish bhi samajhne ki koshish karta hai.</div></div>`}
+function aiBind(q){const f=$('#aif');if(!f)return;f.onsubmit=e=>{e.preventDefault();const v=$('#aiq').value.trim();if(v)location.hash='#/ai/'+encodeURIComponent(v)};
+ document.querySelectorAll('.aiq button').forEach(b=>b.onclick=()=>{location.hash='#/ai/'+encodeURIComponent(b.textContent)});
+ if(!q){$('#aiq').focus();return}const r=aiRun(q),o=$('#aio');
+ if(!r||!r.res.length){o.innerHTML=`<div class="aians">Maaf kijiye, iska jawab abhi dictionary mein nahi mila. Doosre shabd mein poochh kar dekhiye, ya <a href="#/advanced">Advance search</a> try kijiye.</div>`;return}
+ const top=r.res[0],e=entries[top.k],s=first(e),qw=esc(r.toks.join(' '));
+ let ans=top.why==='sat'?`<b><a href="#/word/${encodeURIComponent(top.k)}">${esc(e.w)}</a></b> (${esc(e.dv)}) ka arth hai: <b>${esc(s.hi||'—')}</b>${s.en?` · <i>${esc(s.en)}</i>`:''}`
+  :`“${qw}” ko Santali mein <b><a href="#/word/${encodeURIComponent(top.k)}">${esc(e.w)}</a></b> (${esc(e.dv)}) kehte hain.${s.hi||s.en?`<div style="font-size:15px;color:var(--muted);margin-top:4px">${esc([s.hi,s.en].filter(Boolean).join(' · '))}</div>`:''}`;
+ const ex=Object.values(e.pos).flat().find(x=>x.ex);if(ex)ans+=`<div class="ex"><i>${esc(ex.ex)}</i><span>${esc(ex.tr||'')}</span></div>`;
+ o.innerHTML=`<div class="aians">${ans}</div>${r.res.length>1?`<h3 class="dm" style="font-size:22px;margin:18px 0 4px">Aur milte-julte shabd</h3>`+r.res.slice(1,10).map(x=>`<a class="aicard" href="#/word/${encodeURIComponent(x.k)}"><b>${esc(entries[x.k].w)} <em class="dv">${esc(entries[x.k].dv)}</em></b><span>${esc(gloss(entries[x.k]))}</span></a>`).join(''):''}`}
 
 /* ================= ADMIN / EDIT MODE ================= */
 let EDIT=localStorage.getItem('ss_edit')==='1';
@@ -503,15 +592,19 @@ function route(){const [,v,a]=(location.hash||'#/').split('/');const arg=decodeU
   if(v==='random'){location.hash='#/word/'+encodeURIComponent(order[Math.floor(Math.random()*order.length)]);return}
   if(isHome){$('#view').innerHTML=home();applyTexts();window.scrollTo(0,0);return}
   if(v==='word'){h=entryHTML(arg);if(entries[arg]){remember(arg);document.title=entries[arg].w+' – SantalSabad'}}
-  else if(v==='search'){const [qq,mode]=arg.split('|');const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
+  else if(v==='search'){const [qq,mode]=arg.split('|');const mi=$('#sb2 input');if(mi){mi.value=qq;mi.parentNode.classList.add('typing');$('#sb2 select').value=mode||'all'}const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
   else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).replace(/^[^a-z]+/,'').startsWith(arg)));
   else if(v==='admin')h=adminPage();
+  else if(v==='advanced'){h=advHTML();setTimeout(advBind)}
+  else if(v==='ai'){h=aiHTML(arg);setTimeout(()=>aiBind(arg))}
   else if(v==='examples')h=listHTML('Udaharan sahit shabd',order.filter(k=>Object.values(entries[k].pos).some(a=>a.some(x=>x.ex))));
   else if(v==='guide')h=guide();else if(v==='about')h=about();else h=listHTML('Page nahi mila',[]);
   $('#view').innerHTML=`<div class="inner"><section>${h}</section>${side()}</div>`;applyTexts();window.scrollTo(0,0)}
 
 document.querySelectorAll('.searchbox').forEach(box=>{
   const q=box.querySelector('input'),sel=box.querySelector('select'),sug=box.querySelector('.suggest'),btn=box.querySelector('button');let on=-1;
+  const w=document.createElement('span');w.className='inw';q.parentNode.insertBefore(w,q);w.appendChild(q);
+  q.addEventListener('input',()=>w.classList.toggle('typing',!!q.value));
   const go=()=>{if(q.value.trim()){location.hash='#/search/'+encodeURIComponent(q.value.trim()+'|'+sel.value);sug.style.display='none';q.blur()}};
   q.addEventListener('input',()=>{const r=search(q.value,sel.value).slice(0,8);on=-1;
     sug.innerHTML=r.map(k=>`<div data-k="${esc(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><small>${esc(gloss(entries[k]))}</small></div>`).join('');sug.style.display=r.length?'block':'none'});
@@ -519,7 +612,7 @@ document.querySelectorAll('.searchbox').forEach(box=>{
   q.addEventListener('keydown',e=>{const it=[...sug.children];
     if((e.key==='ArrowDown'||e.key==='ArrowUp')&&it.length){on=(on+(e.key==='ArrowDown'?1:-1)+it.length)%it.length;it.forEach((x,i)=>x.classList.toggle('on',i===on));e.preventDefault()}
     if(e.key==='Enter'){if(on>=0&&it[on])it[on].click();else go()}});
-  btn.onclick=go;sel.onchange=()=>q.dispatchEvent(new Event('input'));
+  box.querySelector('button[aria-label=Search]').onclick=go;sel.onchange=()=>q.dispatchEvent(new Event('input'));
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.searchbox'))document.querySelectorAll('.suggest').forEach(s=>s.style.display='none')});
 window.addEventListener('hashchange',route);$('#yr').textContent=new Date().getFullYear();
