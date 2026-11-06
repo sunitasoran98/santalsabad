@@ -115,24 +115,27 @@ em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin
 
 /* footer */
 footer{background:var(--navy);color:#fff;padding:64px 0 30px}
-.fcols{display:grid;grid-template-columns:repeat(4,1fr) 1.3fr;gap:30px}
-.fcols a{display:block;text-decoration:none;font-size:19px;margin-bottom:14px;color:#fff}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr;gap:24px;align-items:stretch}
+.fbox{border:1px solid rgba(255,255,255,.22);border-top:4px solid var(--red);border-radius:6px;background:rgba(255,255,255,.04);padding:24px 22px}
+.fbox h6{margin:0 0 16px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#aab6cc;font-weight:700}
+.fcols a{display:block;text-decoration:none;font-size:17px;margin-bottom:12px;color:#fff}
 .fcols a:hover{text-decoration:underline}
-.fbrand{text-align:right;font-style:italic;font-size:16px;line-height:1.35}
-.fbrand .mark{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin-top:22px;font-style:normal}
-.fbrand .mark .ring{width:62px;height:62px;border-radius:50%;border:5px solid #fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans Devanagari';font-weight:600;font-size:28px}
-.fbrand .mark b{letter-spacing:7px;font-size:34px;font-weight:400;color:#fff;display:block;line-height:1}
-.fbrand .mark small{letter-spacing:3px;font-size:12px}
+.fbrand{font-style:italic;font-size:15px;line-height:1.45}
+.fbrand .mark{display:flex;align-items:center;gap:12px;margin-top:18px;font-style:normal}
+.fbrand .mark .ring{width:52px;height:52px;flex:none;border-radius:50%;border:4px solid #fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans Devanagari';font-weight:600;font-size:24px}
+.fbrand .mark b{letter-spacing:6px;font-size:28px;font-weight:400;color:#fff;display:block;line-height:1}
+.fbrand .mark small{letter-spacing:2px;font-size:10px}
 .legal{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:44px;font-size:19px}
 .legal a{text-decoration:none}
 
-@media(max-width:600px){.band .cols{grid-template-columns:1fr}}
+@media(max-width:600px){.band .cols{grid-template-columns:1fr}.fcols{grid-template-columns:1fr 1fr!important}}
 @media(max-width:900px){
- .cards3,.tiles,.fcols,.inner{grid-template-columns:1fr}
+ .cards3,.tiles,.inner{grid-template-columns:1fr}
+ .fcols{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.fbrand{grid-column:1/-1}.fbox{padding:18px 14px}.fcols a{font-size:15px}
  .band .cols{gap:14px}.band .cols>div{padding:20px 10px}.band h4{font-size:22px}.wl{grid-template-columns:1fr;font-size:15px}.wotd .w{font-size:28px}
  .cards3{gap:22px;padding-top:50px}.c3{border-bottom:1px solid rgba(255,255,255,.22)}.title .full,.title .abbr{font-size:32px}.title .bar{height:40px}
  .hero h2{font-size:30px;margin-top:50px}.hero p.lead{font-size:17px}.tools span.lbl{display:none}
- .searchbox select{width:110px;font-size:15px}.fbrand{text-align:left}.fbrand .mark{justify-content:flex-start}
+ .searchbox select{width:110px;font-size:15px}
  .rays{opacity:.4}.logo{font-size:20px;letter-spacing:5px}
 }
 </style>
@@ -186,11 +189,10 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 <footer>
   <div class="wrap">
     <div class="fcols">
-      <div><a href="#/about">About SantalSabad</a><a href="#/browse/a">A–Z Shabd suchi</a><a href="#/examples">Udaharan sahit shabd</a></div>
-      <div><a href="#/guide">Shabd kaise padhein</a><a href="#/random">Koi bhi ek shabd</a><a href="#/about">Sources</a></div>
-      <div><a href="#/about">Sujhav bhejiye</a><a href="#/about">Contact</a></div>
-      <div><a href="#/about">BOSC</a><a href="#/about">Baski Online Service Center</a></div>
-      <div class="fbrand">SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
+      <div class="fbox"><h6>SantalSabad</h6><a href="#/about">About SantalSabad</a><a href="#/about">Sources</a><a href="#/about">Sujhav bhejiye</a></div>
+      <div class="fbox"><h6>Shabdkosh</h6><a href="#/browse/a">A–Z Shabd suchi</a><a href="#/examples">Udaharan sahit shabd</a><a href="#/random">Koi bhi ek shabd</a></div>
+      <div class="fbox"><h6>Sahayata</h6><a href="#/guide">Shabd kaise padhein</a><a href="#/guide">Search kaise karein</a><a href="#/about">Contact</a></div>
+      <div class="fbox fbrand"><h6>BOSC</h6>SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
       </div>
     </div>
