@@ -148,6 +148,40 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .adm-row{display:flex;gap:10px;margin:12px 0}
 .abtn{border:0;background:#011f43;color:#fff;padding:9px 16px;border-radius:6px;cursor:pointer;font:inherit;font-size:15px}.abtn.red{background:#b4232a}
 .ain{width:100%;max-width:420px;padding:9px 12px;border:1px solid #c9ccd5;border-radius:6px;font:inherit;margin-top:4px}
+
+/* login modal (Hor Katha style) */
+#lmodal{display:none;position:fixed;inset:0;z-index:200}
+.lov{position:fixed;inset:0;overflow-y:auto;background:rgba(2,6,23,.6);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:48px 12px 24px}
+.lcard{position:relative;width:100%;max-width:420px;border-radius:32px;border:1px solid rgba(255,255,255,.8);background:linear-gradient(180deg,#f0f9ff,#f8fafc 45%,#dbeafe);box-shadow:0 30px 70px -20px rgba(30,64,175,.45),0 8px 24px -12px rgba(15,23,42,.25);font-family:'Open Sans','Noto Sans Devanagari',sans-serif}
+.ltag{position:absolute;top:-28px;left:50%;transform:translateX(-50%);padding:8px 34px;border-radius:999px;background:#fff;border:1px solid #dbeafe;box-shadow:0 10px 25px -10px rgba(37,99,235,.5);text-align:center;white-space:nowrap}
+.ltag b{display:block;font-size:20px;font-weight:800;color:#1d4ed8;line-height:1.15}.ltag small{display:block;font-size:10px;font-weight:700;color:#3b82f6;letter-spacing:.5px}
+.lx{position:absolute;top:12px;right:12px;border:0;background:transparent;color:#94a3b8;border-radius:50%;width:34px;height:34px;cursor:pointer;padding:8px}.lx:hover{background:#fff;color:#334155}.lx svg{width:16px;height:16px}
+.lin{padding:48px 24px 22px;display:flex;flex-direction:column;gap:14px}
+.lav{align-self:center;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,#38bdf8,#2563eb 55%,#4338ca);box-shadow:0 0 0 6px #fff,0 14px 30px -10px rgba(37,99,235,.7);display:flex;align-items:center;justify-content:center;color:#fff}.lav svg{width:52px;height:52px}
+.lrole{align-self:center;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:#fff;border:1px solid #bfdbfe;box-shadow:0 1px 2px rgba(0,0,0,.05);font-size:11px;font-weight:800;letter-spacing:.18em;color:#1d4ed8}.lrole svg{width:15px;height:15px}
+.lwho{align-self:center;font-family:monospace;font-weight:700;font-size:13px;color:#334155;margin-top:-6px}
+.lf{display:flex;align-items:center;gap:4px;border-radius:999px;background:#fff;border:1px solid #dbeafe;box-shadow:inset 0 1px 3px rgba(15,23,42,.06),0 4px 14px -6px rgba(37,99,235,.25)}
+.lf:focus-within{box-shadow:0 0 0 3px #93c5fd;border-color:#93c5fd}
+.lfi{margin:4px;width:42px;height:42px;flex:none;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#2563eb,#4f46e5);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px rgba(37,99,235,.3)}.lfi svg{width:18px;height:18px}
+.lf input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:15px;color:#0f172a;padding:10px 6px}
+.eyeb{border:0;background:transparent;color:#94a3b8;margin-right:8px;padding:6px;border-radius:50%;cursor:pointer}.eyeb:hover{color:#1d4ed8;background:#eff6ff}.eyeb svg{width:16px;height:16px}
+.lrem{font-size:13px;font-weight:700;color:#334155;display:flex;gap:8px;align-items:center;padding:0 6px}.lrem input{accent-color:#2563eb;width:16px;height:16px}
+.lbtn{width:100%;border:0;border-radius:999px;padding:13px;font:inherit;font-size:15px;font-weight:800;color:#fff;cursor:pointer;background:linear-gradient(90deg,#0ea5e9,#2563eb,#4f46e5);box-shadow:0 10px 20px -8px rgba(37,99,235,.6);transition:.15s}.lbtn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.lbtn.ghost{background:#fff;color:#1e40af;border:1px solid #bfdbfe;box-shadow:none}
+.lbtn.amber{background:#fffbeb;color:#78350f;border:2px solid #fcd34d;box-shadow:none;font-size:14px;padding:10px}.lbtn.amber small{color:#b45309;font-size:11px}
+.lbtn.red{background:linear-gradient(90deg,#ef4444,#b91c1c)}
+.lbox{padding:16px;border-radius:24px;background:rgba(255,255,255,.8);border:1px solid #dbeafe;display:flex;flex-direction:column;gap:10px}
+.lbox h4{margin:0;font-size:14px;font-weight:800;color:#0f172a;display:flex;gap:8px;align-items:center}.lbox h4 svg{width:16px;height:16px;color:#1d4ed8}
+.lnote{margin:0;text-align:center;font-size:13px;color:#475569}
+.lalert{padding:10px 14px;border-radius:16px;font-size:13px;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c}.lalert.ok{background:#ecfdf5;border-color:#a7f3d0;color:#047857}
+.lfoot{display:flex;align-items:center;justify-content:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:.1em;color:#1d4ed8;font-family:monospace}.lfoot span{width:20px;height:1px;background:#93c5fd}
+/* admin bar amber */
+#abar{background:#fffbeb!important;color:#78350f!important;border:1px solid #fcd34d;border-radius:18px!important;bottom:14px}
+#abar .abtxt{font-size:12px;padding:0 6px}#abar .abtxt b{color:#92400e;display:block;font-size:13px}
+#abar button{border-color:#fcd34d!important;color:#78350f!important;background:#fff!important;font-weight:700}
+#abar button.on{background:#16a34a!important;border-color:#16a34a!important;color:#fff!important}
+#abar button.pub{background:#d97706!important;border-color:#d97706!important;color:#fff!important}
+#abar .dot{color:#b45309!important}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr;gap:24px;align-items:stretch}
@@ -387,8 +421,8 @@ function dl(name,txt,type){const a=document.createElement('a');a.href=URL.create
 function adminBar(){let b=$('#abar');if(!isAdmin()){if(b)b.remove();return}
   if(!b){b=document.createElement('div');b.id='abar';document.body.appendChild(b)}
   const dirty=localStorage.getItem('ss_draft')||localStorage.getItem('ss_texts_draft');
-  b.innerHTML=`<b>Admin</b><button data-a="edit" class="${EDIT?'on':''}">${EDIT?'✎ Edit mode: ON':'✎ Edit mode: OFF'}</button><button data-a="new">+ Naya shabd</button>
-   <button data-a="publish" class="pub">⬆ Live par publish</button><button data-a="csv">⬇ words.csv</button>${dirty?'<span class="dot">Unsaved badlav</span><button data-a="discard">Badlav hatao</button>':''}<a href="#/admin">⚙</a>`}
+  b.innerHTML=`<span class="abtxt"><b>एडमिन लाइव मोड सक्रिय</b> नया जोड़ें (Add), सुधारें (Edit) या हटाएँ (Delete)</span><button data-a="edit" class="${EDIT?'on':''}">${EDIT?'✎ Edit mode: ON':'✎ Edit mode: OFF'}</button><button data-a="new">+ Naya shabd</button>
+   <button data-a="publish" class="pub">⬆ Live par publish</button><button data-a="csv">⬇ words.csv</button>${dirty?'<span class="dot">Unsaved badlav</span><button data-a="discard">Badlav hatao</button>':''}<button data-a="settings">⚙ Settings</button>`}
 document.addEventListener('click',async e=>{const t=e.target;
   const a=t.closest('#abar [data-a]')?.dataset.a;
   if(a==='edit'){EDIT=!EDIT;localStorage.setItem('ss_edit',EDIT?'1':'0');adminBar();route();return}
@@ -397,6 +431,7 @@ document.addEventListener('click',async e=>{const t=e.target;
   if(a==='csv'){dl('words.csv',toCSV(),'csv');dl('texts.json',JSON.stringify(TEXTS,null,1),'json');return}
   if(a==='discard'){if(confirm('Saare unsaved badlav hata dein?')){localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');location.reload()}return}
   if(a==='publish'){publish();return}
+  if(a==='settings'){openLogin();return}
   if(t.dataset.del){if(confirm('Ye arth delete karein?')){ROWS[+t.dataset.del]={};saveDraft();build();route()}return}
   if(t.dataset.addsense){const e2=entries[t.dataset.addsense];const r={};COLS.forEach(c=>r[c]='');r['Shabd']=e2.w;r['Devanagari']=ROWS[e2.rows[0]]['Devanagari']||'';r['Arth no.']=String(e2.rows.length+1);ROWS.push(r);saveDraft();build();route();return}
   if(t.dataset.delword){if(confirm('Poora shabd "'+entries[t.dataset.delword].w+'" delete karein?')){entries[t.dataset.delword].rows.forEach(i=>ROWS[i]={});saveDraft();build();location.hash='#/'}return}
@@ -415,23 +450,50 @@ async function ghPut(path,content,tok,repo){const api=`https://api.github.com/re
   const r=await fetch(api,{method:'PUT',headers:H,body:JSON.stringify({message:'Admin se update '+new Date().toLocaleString('en-IN'),content:b64,sha,branch:'main'})});
   if(!r.ok)throw new Error((await r.json()).message||r.status)}
 async function publish(){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
-  if(!tok){alert('Pehle Admin settings (⚙) mein GitHub token daaliye.');location.hash='#/admin';return}
+  if(!tok){alert('Pehle Admin settings (⚙) mein GitHub token daaliye.');openLogin();return}
   const b=$('#abar .pub');b.textContent='Publish ho raha hai…';b.disabled=true;
   try{await ghPut('words.csv',toCSV(),tok,repo);await ghPut('texts.json',JSON.stringify(TEXTS,null,1),tok,repo);
     localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');adminBar();alert('Publish ho gaya! 1-2 minute mein site par dikhega.')}
   catch(err){alert('Publish nahi hua: '+err.message);adminBar()}}
-function adminPage(){const on=isAdmin();return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">Admin</h2>
-  ${on?`<p>Admin mode chalu hai. Upar bar mein <b>Edit mode</b> ON kijiye, phir kisi bhi shabd, arth, udaharan ya site ke text par click karke badliye. Enter dabane par save ho jata hai.</p>`:`<p>Admin mode se aap shabd jod, badal aur hata sakte hain.</p>`}
-  <p><label>Admin PIN<br><input id="apin" type="password" class="ain" placeholder="PIN"></label></p>
-  <p><label>GitHub token (Live publish ke liye)<br><input id="atok" type="password" class="ain" placeholder="github_pat_..." value="${esc(localStorage.getItem('ss_gh_token')||'')}"></label></p>
-  <p><label>Repo<br><input id="arepo" class="ain" value="${esc(localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}"></label></p>
-  <p><button class="abtn" onclick="adminSave()">${on?'Save':'Admin mode chalu karein'}</button> ${on?'<button class="abtn red" onclick="adminOff()">Admin mode band karein</button>':''}</p>
-  <p style="font-size:14px;color:#555">Badlav pehle isi browser mein save hote hain. "Live par publish" dabane par words.csv aur texts.json GitHub par chale jaate hain aur site 1-2 minute mein update ho jaati hai. Token sirf aapke browser mein rehta hai.</p></div>`}
+const IC={user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
+ lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>',
+ key:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg>',
+ shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><circle cx="12" cy="10" r="2.5"/><path d="M8 16c.8-1.8 2.3-2.6 4-2.6s3.2.8 4 2.6"/></svg>',
+ eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+ git:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="8" r="2.5"/><path d="M6 8.5v7M18 10.5c0 4-6 3-10.5 6"/></svg>',
+ x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>'};
+const fld=(id,ic,ph,type='text',val='')=>`<div class="lf"><span class="lfi">${IC[ic]}</span><input id="${id}" type="${type}" placeholder="${ph}" value="${esc(val)}" autocomplete="off">${type==='password'?`<button type="button" class="eyeb" onclick="const i=$('#${id}');i.type=i.type==='password'?'text':'password'">${IC.eye}</button>`:''}</div>`;
+function adminPage(){setTimeout(openLogin);return listHTML('Admin',[]).replace('<p class="empty">Koi shabd nahi mila.</p>','<p>Admin login khul raha hai…</p>')}
+function openLogin(){let m=$('#lmodal');if(!m){m=document.createElement('div');m.id='lmodal';document.body.appendChild(m)}
+  const set=!!localStorage.getItem('ss_pw'),on=isAdmin(),u=localStorage.getItem('ss_user')||'admin';
+  let body;
+  if(on)body=`<div class="lbox"><h4>${IC.git} Live publish (GitHub)</h4>${fld('atok','key','GitHub token (github_pat_...)','password',localStorage.getItem('ss_gh_token')||'')}${fld('arepo','git','Repo','text',localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}
+     <button class="lbtn" onclick="adminSave()">Save करें</button></div>
+     <div class="lbox"><h4>${IC.lock} पासवर्ड बदलें</h4>${fld('opw','lock','पुराना पासवर्ड','password')}${fld('npw','key','नया पासवर्ड (कम से कम 6 अक्षर)','password')}<button class="lbtn ghost" onclick="changePw()">पासवर्ड बदलें</button></div>
+     <button class="lbtn red" onclick="adminOff()">Logout</button>`;
+  else if(!set)body=`<p class="lnote">First-time Setup: अपना Admin username और पासवर्ड बनाइए।</p>${fld('lu','user','Admin Username','text','admin')}${fld('lp','lock','पासवर्ड (कम से कम 6 अक्षर)','password')}${fld('lp2','key','पासवर्ड दोबारा (Confirm)','password')}<button class="lbtn" onclick="doSetup()">Setup करें</button>`;
+  else body=`${fld('lu','user','Username','text',u)}${fld('lp','lock','Enter Password','password')}<label class="lrem"><input type="checkbox" id="lrem" checked> मुझे याद रखें</label><button class="lbtn" onclick="doLogin()">Login</button>
+     <button class="lbtn amber" onclick="forgotPw()">पासवर्ड भूल गए? <small>(इस ब्राउज़र में रीसेट)</small></button>`;
+  m.innerHTML=`<div class="lov" onclick="if(event.target===this)closeLogin()"><div class="lcard"><div class="ltag"><b>SantalSabad</b><small>Admin Authentication</small></div>
+    <button class="lx" onclick="closeLogin()">${IC.x}</button><div class="lin"><div class="lav">${IC.shield}</div><span class="lrole">${IC.shield} ${on?'ADMIN · ACTIVE':'ADMIN'}</span>
+    ${on?`<div class="lwho">${esc(u)}</div>`:''}<div id="lmsg"></div>${body}<div class="lfoot"><span></span>BOSC@TECH&amp;EDU<span></span></div></div></div></div>`;
+  m.style.display='block';setTimeout(()=>{const f=m.querySelector('input');if(f)f.focus()},50);
+  m.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter'){const b=m.querySelector('.lbtn');b&&b.click()}}))}
+function closeLogin(){const m=$('#lmodal');if(m)m.style.display='none';if(location.hash==='#/admin')location.hash='#/'}
+const lmsg=(t,ok)=>{$('#lmsg').innerHTML=`<div class="lalert ${ok?'ok':''}">${t}</div>`};
+async function doSetup(){const u=$('#lu').value.trim(),p=$('#lp').value,p2=$('#lp2').value;
+  if(!u)return lmsg('Username daaliye');if(p.length<6)return lmsg('पासवर्ड कम से कम 6 अक्षर का हो');if(p!==p2)return lmsg('दोनों पासवर्ड एक जैसे नहीं हैं');
+  localStorage.setItem('ss_user',u);localStorage.setItem('ss_pw',await sha256(u+':'+p));localStorage.setItem('ss_admin','1');adminBar();route();openLogin();lmsg('Setup हो गया! Admin mode चालू है।',1)}
+async function doLogin(){const u=$('#lu').value.trim(),p=$('#lp').value;
+  if(u!==localStorage.getItem('ss_user')||await sha256(u+':'+p)!==localStorage.getItem('ss_pw'))return lmsg('गलत username या पासवर्ड');
+  localStorage.setItem('ss_admin','1');EDIT=true;localStorage.setItem('ss_edit','1');adminBar();closeLogin();route()}
+async function changePw(){const u=localStorage.getItem('ss_user'),o=$('#opw').value,n=$('#npw').value;
+  if(await sha256(u+':'+o)!==localStorage.getItem('ss_pw'))return lmsg('पुराना पासवर्ड गलत है');if(n.length<6)return lmsg('नया पासवर्ड कम से कम 6 अक्षर का हो');
+  localStorage.setItem('ss_pw',await sha256(u+':'+n));lmsg('पासवर्ड बदल गया',1)}
+function forgotPw(){if(confirm('Is browser se admin login hata kar naya setup karein? (Aapke shabd aur publish kiya data safe rahega)')){['ss_pw','ss_user','ss_admin'].forEach(k=>localStorage.removeItem(k));openLogin()}}
 async function sha256(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-async function adminSave(){const pin=$('#apin').value,h=localStorage.getItem('ss_pin');
-  if(!isAdmin()){if(!pin)return alert('PIN daaliye');if(h&&h!==await sha256(pin))return alert('Galat PIN');if(!h)localStorage.setItem('ss_pin',await sha256(pin));localStorage.setItem('ss_admin','1')}
-  localStorage.setItem('ss_gh_token',$('#atok').value.trim());localStorage.setItem('ss_gh_repo',$('#arepo').value.trim());adminBar();route();alert('Save ho gaya')}
-function adminOff(){localStorage.removeItem('ss_admin');EDIT=false;localStorage.setItem('ss_edit','0');adminBar();route()}
+function adminSave(){localStorage.setItem('ss_gh_token',$('#atok').value.trim());localStorage.setItem('ss_gh_repo',$('#arepo').value.trim());lmsg('Save हो गया',1)}
+function adminOff(){localStorage.removeItem('ss_admin');EDIT=false;localStorage.setItem('ss_edit','0');adminBar();closeLogin();route()}
 
 function remember(k){if(EDIT)return;let r=recentList();r=[k,...r.filter(x=>x!==k)].slice(0,16);localStorage.setItem('ss_recent',JSON.stringify(r))}
 
