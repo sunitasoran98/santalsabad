@@ -55,12 +55,14 @@ a{color:inherit}
 
 /* grey band */
 .band{background:var(--grey);padding:46px 0 70px}
-.band .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;text-align:center}
-.band h4{font-size:36px;margin:0 0 30px;position:relative;padding-bottom:14px;font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+.band .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;text-align:center;align-items:stretch}
+.band .cols>div{background:#fff;border:1px solid #c9ccd5;border-top:5px solid var(--navy);border-radius:6px;padding:30px 22px 32px;box-shadow:0 6px 18px rgba(1,31,67,.08)}
+.band .cols>div.wotd{border-top-color:var(--red)}
+.band h4{font-size:30px;margin:0 0 30px;position:relative;padding-bottom:14px;font-family:"DM Serif Display",Georgia,serif;font-weight:400}
 .band h4:after{content:"";position:absolute;left:50%;bottom:0;width:56px;height:5px;transform:translateX(-50%);background:var(--blue)}
-.wl{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;font-size:19px}
+.wl{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;font-size:17px}
 .wl a{text-decoration:none}.wl a:hover{text-decoration:underline}
-.wotd .w{font-size:46px;font-weight:700;margin:0;line-height:1.15}
+.wotd .w{font-size:40px;font-weight:700;margin:0;line-height:1.15}
 .wotd .oc{font-size:24px;margin-top:2px;color:#333}
 .wotd .pos{letter-spacing:1.5px;font-size:14px;text-transform:uppercase;margin:6px 0 14px}
 .wotd .d{font-size:19px}
@@ -124,8 +126,10 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 .legal{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:44px;font-size:19px}
 .legal a{text-decoration:none}
 
+@media(max-width:600px){.band .cols{grid-template-columns:1fr}}
 @media(max-width:900px){
- .cards3,.band .cols,.tiles,.fcols,.inner{grid-template-columns:1fr}
+ .cards3,.tiles,.fcols,.inner{grid-template-columns:1fr}
+ .band .cols{gap:14px}.band .cols>div{padding:20px 10px}.band h4{font-size:22px}.wl{grid-template-columns:1fr;font-size:15px}.wotd .w{font-size:28px}
  .cards3{gap:22px;padding-top:50px}.c3{border-bottom:1px solid rgba(255,255,255,.22)}.title .full,.title .abbr{font-size:32px}.title .bar{height:40px}
  .hero h2{font-size:30px;margin-top:50px}.hero p.lead{font-size:17px}.tools span.lbl{display:none}
  .searchbox select{width:110px;font-size:15px}.fbrand{text-align:left}.fbrand .mark{justify-content:flex-start}
