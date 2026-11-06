@@ -97,9 +97,6 @@ ol.senses>li:before{content:counter(s);position:absolute;left:0;top:13px;width:3
 .side .box{background:#fff;border:1px solid var(--line);padding:18px 20px;margin-bottom:22px}
 .side h3{margin:0 0 10px;font-size:22px;font-family:"DM Serif Display",Georgia,serif;font-weight:400;border-bottom:4px solid var(--blue);display:inline-block;padding-bottom:4px}
 .side a{display:block;text-decoration:none;padding:3px 0;color:var(--accent)}
-.az{display:flex;flex-wrap:wrap;gap:6px}
-.az a{display:inline-block!important;width:32px;height:32px;line-height:32px;text-align:center;border:1px solid var(--line);padding:0!important}
-.az a:hover{background:var(--navy);color:#fff}
 .list a.item{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #eceef2;text-decoration:none}
 .list a.item b{font-size:20px;color:var(--navy2)}.list a.item span{color:var(--muted);text-align:right}
 .empty{color:var(--muted)}
@@ -113,19 +110,44 @@ em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin
 .compact .minisearch{display:block;position:relative;z-index:2;padding:0 0 26px}
 .compact .minisearch .searchbox{max-width:none;height:54px}
 
-.tw{overflow-x:auto;margin:14px 0 6px;border:1px solid #c9ccd5;border-radius:6px}
-table.et{width:100%;border-collapse:collapse;font-size:16px;min-width:640px}
-.et th{background:var(--navy);color:#fff;text-align:left;font-weight:600;font-size:13px;letter-spacing:.5px;padding:10px 12px;vertical-align:bottom}
-.et th b{display:block;font-size:22px;font-family:"DM Serif Display",Georgia,serif;font-weight:400;color:#f2b8c6;letter-spacing:0}
-.et th small{display:block;font-weight:400;opacity:.75;font-size:11px}
-.et td{padding:12px;border-top:1px solid #e3e5ea;border-left:1px solid #eef0f3;vertical-align:top}
-.et td:first-child{border-left:0}
-.et tbody tr:nth-child(even){background:#f6f7fa}
-.et .rw{font-weight:700;font-size:17px;display:block}
-.et .pn{display:block;color:var(--accent);font-style:italic;font-size:13px;margin-top:2px}
-.et .dvc{font-family:'Noto Sans Devanagari',sans-serif;color:var(--red);font-size:18px}
-.et .exs{display:block}.et .exe{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+.tw{overflow-x:auto;margin:16px 0 8px;border-radius:10px;box-shadow:0 8px 24px rgba(1,31,67,.12);border:1px solid #d5d9e2}
+table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min-width:680px;background:#fff}
+.et th{color:#fff;text-align:left;font-weight:700;font-size:16px;padding:14px 14px 12px;vertical-align:bottom;font-family:'Noto Sans Devanagari','Open Sans',sans-serif}
+.et th small{display:block;font-weight:400;opacity:.8;font-size:11px;letter-spacing:.8px;text-transform:uppercase;font-family:'Open Sans',sans-serif}
+.et th.c1{background:#011f43}.et th.c2{background:#b4232a}.et th.c3h{background:#c46a12}.et th.c4{background:#0f6b5f}.et th.c5{background:#4b3a8c}.et th.c6{background:#011f43;width:44px}
+.et td{padding:13px 14px;border-top:1px solid #e6e8ee;vertical-align:top}
+.et td.c1{background:#f1f4fa;border-left:4px solid #011f43}
+.et td.c2{background:#fdf2f2}.et td.c3h{background:#fff6ea}.et td.c4{background:#ecf7f5}.et td.c5{background:#f4f1fb}
+.et tbody tr:hover td{filter:brightness(.97)}
+.et .rw{font-weight:700;font-size:17px;display:block;color:#011f43}
+.et .pn{display:inline-block;margin-top:5px;background:#011f43;color:#fff;border-radius:20px;padding:1px 10px;font-size:13px;font-family:'Noto Sans Devanagari',sans-serif}
+.et .dvc{font-family:'Noto Sans Devanagari',sans-serif;color:#b4232a;font-size:19px;font-weight:600}
+.et .c3h{font-family:'Noto Sans Devanagari',sans-serif;font-size:17px}
+.et .exs{display:block;font-style:italic;color:#2c2350}.et .exe{display:block;color:var(--muted);font-size:14px;margin-top:4px}
 .et .na{color:#b5b9c3}
+/* A-Z box */
+.azbox{background:linear-gradient(160deg,#011f43,#0d2f5c)!important;border:0!important;border-radius:12px;color:#fff;box-shadow:0 10px 26px rgba(1,31,67,.25)}
+.azbox h3{color:#fff;border-bottom-color:#f2b8c6!important}
+.az{display:grid!important;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:6px}
+.az a,.az span{display:flex!important;flex-direction:column;align-items:center;justify-content:center;height:46px;border-radius:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff!important;font-weight:700;font-size:17px;text-decoration:none;padding:0!important;line-height:1.1;transition:.15s}
+.az small{font-size:9px;font-weight:400;opacity:.7}
+.az a:hover{background:#f2b8c6!important;color:#011f43!important;transform:translateY(-2px)}
+.az span.off{opacity:.35;cursor:default}
+/* admin */
+#abar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:99;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#011f43;color:#fff;padding:9px 12px;border-radius:40px;box-shadow:0 10px 30px rgba(0,0,0,.35);font-size:14px;max-width:96vw}
+#abar b{padding:0 6px;color:#f2b8c6}
+#abar button{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:20px;padding:6px 12px;cursor:pointer;font:inherit}
+#abar button.on{background:#2ea043;border-color:#2ea043}#abar button.pub{background:#d6262f;border-color:#d6262f}
+#abar .dot{color:#ffd27a;font-size:12px}#abar a{color:#fff;text-decoration:none;font-size:18px;padding:0 4px}
+[contenteditable="true"]{outline:1px dashed #6b8fd6;outline-offset:2px;border-radius:3px;cursor:text;min-width:20px;display:inline-block}
+[contenteditable="true"]:focus{outline:2px solid #2ea043;background:#fffbe6;color:#111}
+.ed{display:block!important;min-height:22px}
+.del{border:0;background:#fde7e7;color:#b4232a;border-radius:50%;width:28px;height:28px;cursor:pointer;font-weight:700}
+.pn .ed{display:inline-block!important;min-width:14px}
+.possel{font:inherit;font-size:12px;border-radius:10px;border:0;padding:0 4px}
+.adm-row{display:flex;gap:10px;margin:12px 0}
+.abtn{border:0;background:#011f43;color:#fff;padding:9px 16px;border-radius:6px;cursor:pointer;font:inherit;font-size:15px}.abtn.red{background:#b4232a}
+.ain{width:100%;max-width:420px;padding:9px 12px;border:1px solid #c9ccd5;border-radius:6px;font:inherit;margin-top:4px}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr;gap:24px;align-items:stretch}
@@ -175,9 +197,9 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
         <button aria-label="Search"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
         <div class="suggest"></div>
       </div>
-      <h2>Santali – Hindi – English shabdkosh</h2>
-      <p class="lead">Santali bhasha ke <b id="count">hazaron</b> shabd, unke Hindi aur English arth, Roman aur Devanagari dono lipi mein, uchcharan aur udaharan ke saath.</p>
-      <a class="btn" href="#/about">SantalSabad ke baare mein </a>
+      <h2 data-t="t1">Santali – Hindi – English shabdkosh</h2>
+      <p class="lead" data-t="t2">Santali bhasha ke <b id="count">hazaron</b> shabd, unke Hindi aur English arth, Roman aur Devanagari dono lipi mein, uchcharan aur udaharan ke saath.</p>
+      <a class="btn" href="#/about" data-t="t9">SantalSabad ke baare mein </a>
     </div>
 
     <div class="minisearch">
@@ -190,9 +212,9 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
     </div>
 
     <div class="cards3">
-      <div class="c3"><h3>Shabd kaise padhein</h3><p>Uchcharan, shabd-bhed, arth number aur sanket chinh ki jaankari</p><a class="btn" href="#/guide">Guide dekhiye </a></div>
-      <div class="c3"><h3>A–Z Shabd suchi</h3><p>Akshar ke hisaab se saare Santali shabd ek-ek karke dekhiye</p><a class="btn" href="#/browse/a">Browse kijiye </a></div>
-      <div class="c3"><h3>Udaharan sahit shabd</h3><p>Asli Santali vakyon mein shabdon ka prayog, English anuvad ke saath</p><a class="btn" href="#/examples">Udaharan dekhiye </a></div>
+      <div class="c3"><h3 data-t="t3">Shabd kaise padhein</h3><p data-t="t4">Uchcharan, shabd-bhed, arth number aur sanket chinh ki jaankari</p><a class="btn" href="#/guide" data-t="t10">Guide dekhiye </a></div>
+      <div class="c3"><h3 data-t="t5">A–Z Shabd suchi</h3><p data-t="t6">Akshar ke hisaab se saare Santali shabd ek-ek karke dekhiye</p><a class="btn" href="#/browse/a" data-t="t11">Browse kijiye </a></div>
+      <div class="c3"><h3 data-t="t7">Udaharan sahit shabd</h3><p data-t="t8">Asli Santali vakyon mein shabdon ka prayog, English anuvad ke saath</p><a class="btn" href="#/examples" data-t="t12">Udaharan dekhiye </a></div>
     </div>
   </div>
 </header>
@@ -202,14 +224,14 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 <footer>
   <div class="wrap">
     <div class="fcols">
-      <div class="fbox"><h6>SantalSabad</h6><a href="#/about">About SantalSabad</a><a href="#/about">Sources</a><a href="#/about">Sujhav bhejiye</a></div>
-      <div class="fbox"><h6>Shabdkosh</h6><a href="#/browse/a">A–Z Shabd suchi</a><a href="#/examples">Udaharan sahit shabd</a><a href="#/random">Koi bhi ek shabd</a></div>
-      <div class="fbox"><h6>Sahayata</h6><a href="#/guide">Shabd kaise padhein</a><a href="#/guide">Search kaise karein</a><a href="#/about">Contact</a></div>
-      <div class="fbox fbrand"><h6>BOSC</h6>SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
+      <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-t="t17">About SantalSabad</a><a href="#/about" data-t="t18">Sources</a><a href="#/about" data-t="t19">Sujhav bhejiye</a></div>
+      <div class="fbox"><h6 data-t="t14">Shabdkosh</h6><a href="#/browse/a" data-t="t20">A–Z Shabd suchi</a><a href="#/examples" data-t="t21">Udaharan sahit shabd</a><a href="#/random" data-t="t22">Koi bhi ek shabd</a></div>
+      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/about" data-t="t25">Contact</a></div>
+      <div class="fbox fbrand"><h6 data-t="t16">BOSC</h6>SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
       </div>
     </div>
-    <div class="legal"><a href="#/about">Sources &amp; credits</a><a href="#/about">Privacy</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
+    <div class="legal"><a href="#/about" data-t="t26">Sources &amp; credits</a><a href="#/about" data-t="t27">Privacy</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
   </div>
 </footer>
 
@@ -259,19 +281,25 @@ function parseCSV(t){const rows=[];let r=[],f='',q=false;
     else f+=c}
   if(f||r.length){r.push(f);rows.push(r)}return rows.filter(x=>x.some(v=>v.trim()))}
 
-async function load(){
-  const txt=await (await fetch('words.csv')).text();
-  const rows=parseCSV(txt.replace(/^\uFEFF/,''));const head=rows.shift().map(h=>h.trim());
-  const ix=n=>head.indexOf(n);
-  rows.forEach(r=>{const g=n=>(r[ix(n)]||'').trim();const w=g('Shabd');if(!w)return;
-    const k=key(w);
-    if(!entries[k]){entries[k]={w,dv:deva(w),ipa:g('Uchcharan'),oc:g('Ol Chiki'),rel:g('Sambandhit shabd'),pos:{}};order.push(k)}
-    const e=entries[k];if(!e.ipa)e.ipa=g('Uchcharan');if(!e.oc)e.oc=g('Ol Chiki');if(!e.rel)e.rel=g('Sambandhit shabd');
-    const p=g('Shabd-bhed')||'';(e.pos[p]=e.pos[p]||[]).push({n:+g('Arth no.')||99,hi:g('Hindi'),en:g('English'),ex:g('Udaharan (Santali)'),tr:g('Udaharan ka anuvad')})});
+let HEAD=[],ROWS=[],TEXTS={};
+const COLS=['Shabd','Uchcharan','Shabd-bhed','Arth no.','Hindi','English','Udaharan (Santali)','Udaharan ka anuvad','Ol Chiki','Sambandhit shabd','Devanagari'];
+function build(){entries={};order=[];
+  ROWS.forEach((r,i)=>{const g=n=>(r[n]||'').trim();const w=g('Shabd');if(!w)return;const k=key(w);
+    if(!entries[k]){entries[k]={w,dv:g('Devanagari')||deva(w),ipa:g('Uchcharan'),oc:g('Ol Chiki'),rel:g('Sambandhit shabd'),pos:{},rows:[]};order.push(k)}
+    const e=entries[k];e.rows.push(i);if(!e.ipa)e.ipa=g('Uchcharan');if(!e.rel)e.rel=g('Sambandhit shabd');if(g('Devanagari'))e.dv=g('Devanagari');
+    const p=g('Shabd-bhed');(e.pos[p]=e.pos[p]||[]).push({i,n:+g('Arth no.')||1,hi:g('Hindi'),en:g('English'),ex:g('Udaharan (Santali)'),tr:g('Udaharan ka anuvad')})});
+  window.added=[];for(let i=ROWS.length-1;i>=0&&window.added.length<16;i--){const k=key(ROWS[i]['Shabd']||'');if(entries[k]&&!window.added.includes(k))window.added.push(k)}
   order.sort((a,b)=>a.localeCompare(b));
-  {const d=new Date().getDate(),st=Math.floor(order.length/16);window.added=order.slice(-16).reverse();}
-  $('#count').textContent=order.length.toLocaleString('en-IN');
-  route();
+  $('#count').textContent=order.length.toLocaleString('en-IN')}
+async function load(){
+  const draft=localStorage.getItem('ss_draft');
+  if(draft){ROWS=JSON.parse(draft)}else{
+    const txt=await (await fetch('words.csv',{cache:'no-cache'})).text();
+    const rows=parseCSV(txt.replace(/^\uFEFF/,''));HEAD=rows.shift().map(h=>h.trim());
+    ROWS=rows.map(r=>{const o={};HEAD.forEach((h,j)=>o[h]=r[j]||'');return o})}
+  try{TEXTS=await (await fetch('texts.json',{cache:'no-cache'})).json()}catch(e){TEXTS={}}
+  Object.assign(TEXTS,JSON.parse(localStorage.getItem('ss_texts_draft')||'{}'));
+  build();applyTexts();adminBar();route();
 }
 
 function search(q,mode='all'){q=norm(q);if(!q)return[];const out=[];
@@ -290,17 +318,24 @@ const first=e=>Object.values(e.pos)[0][0];
 function gloss(e){const s=first(e);return [s.hi,s.en].filter(Boolean).join(' · ')}
 const wlink=k=>`<a href="#/word/${encodeURIComponent(k)}">${esc(entries[k].w)}</a>`;
 
+const POS=['संज्ञा','क्रिया','विशेषण','सर्वनाम','क्रिया-विशेषण','संख्यावाचक','निपात','निर्धारक','समुच्चयबोधक','संबंधबोधक','विस्मयादिबोधक','वाक्यांश'];
+const ed=(i,f,v,cls='')=>EDIT?`<span class="ed ${cls}" contenteditable="true" data-i="${i}" data-f="${esc(f)}">${esc(v)}</span>`:(v?`<span class="${cls}">${esc(v)}</span>`:'<span class="na">—</span>');
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">Ye shabd abhi dictionary mein nahi hai.</p></div>`;
   let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(e.w)}</div>
-  <h1 class="hw">${esc(e.w)}</h1>
-  <div class="dvh"><span>${esc(e.dv)}</span><small>Roman · Devanagari</small></div>
-  ${e.ipa?`<div class="meta">Uchcharan: /${esc(e.ipa)}/</div>`:''}
-  <div class="tabs"><span>Arth aur prayog</span></div>`;
-  h+=`<div class="tw"><table class="et"><thead><tr><th><b>R</b>Roman</th><th><b>D</b>Devanagari</th><th><b>H</b>Hindi</th><th><b>E</b>English</th><th><b>U</b>Udaharan <small>Santali · English</small></th></tr></thead><tbody>`;
-  for(const p in e.pos){e.pos[p].sort((a,b)=>a.n-b.n).forEach(s=>{const en=s.ex?((s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr):'';
-    h+=`<tr><td><span class="rw">${esc(e.w)}</span><small class="pn">${s.n||1}${p?' · '+esc(p):''}</small></td><td class="dvc">${esc(e.dv)}</td><td>${esc(s.hi)||'<span class="na">—</span>'}</td><td>${esc(s.en)||'<span class="na">—</span>'}</td><td>${s.ex?`<i class="exs">${esc(s.ex)}</i>${en?`<span class="exe">${esc(en)}</span>`:''}`:'<span class="na">—</span>'}</td></tr>`})}
+  <h1 class="hw"${EDIT?` contenteditable="true" data-word="${esc(k)}"`:''}>${esc(e.w)}</h1>
+  <div class="dvh"><span${EDIT?` contenteditable="true" data-dv="${esc(k)}"`:''}>${esc(e.dv)}</span></div>
+  ${e.ipa?`<div class="meta">उच्चारण: /${esc(e.ipa)}/</div>`:''}
+  <div class="tabs"><span>अर्थ और प्रयोग</span></div>
+  <div class="tw"><table class="et"><thead><tr><th class="c1">रोमन<small>Roman</small></th><th class="c2">देवनागरी<small>Devanagari</small></th><th class="c3h">हिन्दी<small>Hindi</small></th><th class="c4">अंग्रेज़ी<small>English</small></th><th class="c5">उदाहरण<small>Santali · English</small></th>${EDIT?'<th class="c6"></th>':''}</tr></thead><tbody>`;
+  const all=[];for(const p in e.pos)e.pos[p].forEach(s=>all.push([p,s]));all.sort((a,b)=>a[1].n-b[1].n||a[1].i-b[1].i);
+  all.forEach(([p,s])=>{const en=s.ex?((s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr):s.tr;
+    h+=`<tr><td class="c1"><span class="rw">${esc(e.w)}</span><span class="pn">${EDIT?`<span class="ed" contenteditable="true" data-i="${s.i}" data-f="Arth no.">${s.n}</span>`:s.n} · ${EDIT?`<select data-i="${s.i}" class="possel"><option value="">—</option>${POS.concat(POS.includes(p)||!p?[]:[p]).map(x=>`<option${x===p?' selected':''}>${esc(x)}</option>`).join('')}</select>`:esc(p||'—')}</span></td>
+      <td class="c2 dvc">${esc(e.dv)}</td><td class="c3h">${ed(s.i,'Hindi',s.hi)}</td><td class="c4">${ed(s.i,'English',s.en)}</td>
+      <td class="c5">${EDIT?`${ed(s.i,'Udaharan (Santali)',s.ex,'exs')}${ed(s.i,'Udaharan ka anuvad',s.tr,'exe')}`:(s.ex?`<i class="exs">${esc(s.ex)}</i>${en?`<span class="exe">${esc(en)}</span>`:''}`:'<span class="na">—</span>')}</td>
+      ${EDIT?`<td class="c6"><button class="del" data-del="${s.i}" title="Ye arth hatao">✕</button></td>`:''}</tr>`});
   h+='</tbody></table></div>';
-  if(e.rel)h+=`<div class="rel"><b>Sambandhit shabd:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
+  if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ Naya arth jodo</button><button class="abtn red" data-delword="${esc(k)}">Poora shabd delete</button></div>`;
+  if(e.rel)h+=`<div class="rel"><b>संबंधित शब्द:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>
@@ -313,27 +348,26 @@ function home(){const k=wotdKey(),e=entries[k],s=first(e);
   let rec=recentList();if(rec.length<8){const extra=order.filter(x=>!rec.includes(x));rec=rec.concat(extra.slice((new Date().getDate()*13)%Math.max(1,extra.length-16)).slice(0,16-rec.length))}
   const pos=Object.keys(e.pos)[0];
   return `<section class="band"><div class="wrap cols">
-    <div><h4 class="dm">Naye jode gaye</h4><div class="wl">${window.added.map(wlink).join('')}</div></div>
-    <div class="wotd"><h4 class="dm">Aaj ka shabd</h4><p class="w">${esc(e.w)}</p><div class="oc">${esc(e.dv)}</div><div class="pos">${esc(pos||'')}</div>
+    <div><h4 class="dm" data-t="t36">Naye jode gaye</h4><div class="wl">${window.added.map(wlink).join('')}</div></div>
+    <div class="wotd"><h4 class="dm" data-t="t37">Aaj ka shabd</h4><p class="w">${esc(e.w)}</p><div class="oc">${esc(e.dv)}</div><div class="pos">${esc(pos||'')}</div>
       <div class="d">${esc(s.hi)}${s.hi&&s.en?' — ':''}${esc(s.en)}</div><a class="more" href="#/word/${encodeURIComponent(k)}">Poora arth dekhiye</a></div>
     <div><h4 class="dm">${recentList().length?'Haal mein dekhe':'Aur shabd'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
   </div></section>
   <section class="feat"><div class="wrap tiles">
-    <a class="tile" href="#/about"><img src="img/t1.webp" alt="" loading="lazy"><div class="tx"><h5>Santali bhasha</h5><p>Santali bhasha, uske bolne walon aur is shabdkosh ke baare mein padhiye</p></div></a>
-    <a class="tile" href="#/browse/a"><img src="img/t2.webp" alt="" loading="lazy"><div class="tx"><h5>Shabd suchi</h5><p>Akshar-vaar saare shabd, Hindi aur English arth ke saath</p></div></a>
-    <a class="tile" href="#/examples"><img src="img/t3.webp" alt="" loading="lazy"><div class="tx"><h5>Udaharan sahit shabd</h5><p>Vakyon mein prayog hue Santali shabd, English anuvad ke saath</p></div></a>
-    <a class="tile" href="#/random"><img src="img/t4.webp" alt="" loading="lazy"><div class="tx"><h5>Koi bhi ek shabd</h5><p>Har baar ek naya Santali shabd seekhiye</p></div></a>
+    <a class="tile" href="#/about"><img src="img/t1.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t28">Santali bhasha</h5><p data-t="t29">Santali bhasha, uske bolne walon aur is shabdkosh ke baare mein padhiye</p></div></a>
+    <a class="tile" href="#/browse/a"><img src="img/t2.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t30">Shabd suchi</h5><p data-t="t31">Akshar-vaar saare shabd, Hindi aur English arth ke saath</p></div></a>
+    <a class="tile" href="#/examples"><img src="img/t3.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t32">Udaharan sahit shabd</h5><p data-t="t33">Vakyon mein prayog hue Santali shabd, English anuvad ke saath</p></div></a>
+    <a class="tile" href="#/random"><img src="img/t4.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t34">Koi bhi ek shabd</h5><p data-t="t35">Har baar ek naya Santali shabd seekhiye</p></div></a>
   </div></section>`}
 
-function side(){const rec=recentList();
-  const letters=[...new Set(order.map(k=>norm(k)[0]))].filter(l=>/[a-z]/.test(l)).sort();
-  return `<aside class="side"><div class="box"><h3 class="dm">A–Z</h3><div class="az">${letters.map(l=>`<a href="#/browse/${l}">${l.toUpperCase()}</a>`).join('')}</div></div>
+function side(){const rec=recentList();const cnt={};order.forEach(k=>{const l=norm(k).replace(/^[^a-z]+/,'')[0];if(l)cnt[l]=(cnt[l]||0)+1});
+  return `<aside class="side"><div class="box azbox"><h3 class="dm" data-t="az_title">A–Z Shabd suchi</h3><div class="az">${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>cnt[l]?`<a href="#/browse/${l}">${l.toUpperCase()}<small>${cnt[l]}</small></a>`:`<span class="off">${l.toUpperCase()}<small>0</small></span>`).join('')}</div></div>
   <div class="box"><h3 class="dm">Haal mein dekhe</h3>${rec.length?rec.slice(0,8).map(wlink).join(''):'<p class="empty">Abhi koi nahi</p>'}</div></aside>`}
 
 function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">Shabd kaise padhein</h2>
  <p><b>Mukhya shabd</b> Roman Santali mein sabse upar bade akshar mein hota hai. Uske saath <b>/uchcharan/</b> aur Devanagari roop diye gaye hain.</p>
- <p><b>Shabd-bhed</b> laal italic mein: sangya (noun), kriya (verb), visheshan (adjective), kriya-visheshan (adverb) aadi.</p>
- <p><b>Neele gole number</b> alag-alag arth batate hain. Har arth mein pehle Hindi, phir | ke baad English.</p>
+ <p><b>Shabd-bhed</b> Hindi mein: संज्ञा, क्रिया, विशेषण, सर्वनाम, क्रिया-विशेषण aadi.</p>
+ <p><b>Table</b> mein har arth ki ek line hai: रोमन, देवनागरी, हिन्दी, अंग्रेज़ी aur उदाहरण. Roman ke neeche arth number aur shabd-bhed.</p>
  <p><b>Udaharan</b> baayin rekha ke saath italic mein, neeche uska anuvad.</p>
  <p><b>Devanagari roop</b> Roman Santali se apne aap (auto lipyantaran) banaya gaya hai, isme kahin-kahin chhoti galti ho sakti hai.</p>
  <p><b>k' c' t' p'</b> mein apostrophe Santali ki "ruki hui" dhwani dikhata hai, jaise dak'.</p>
@@ -341,18 +375,77 @@ function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;fo
 
 function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan, Roman aur Devanagari lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
 
-function remember(k){let r=recentList();r=[k,...r.filter(x=>x!==k)].slice(0,16);localStorage.setItem('ss_recent',JSON.stringify(r))}
+
+/* ================= ADMIN / EDIT MODE ================= */
+let EDIT=localStorage.getItem('ss_edit')==='1';
+const isAdmin=()=>localStorage.getItem('ss_admin')==='1';
+function saveDraft(){localStorage.setItem('ss_draft',JSON.stringify(ROWS));adminBar()}
+function applyTexts(){setTimeout(()=>{const c=$('#count');if(c)c.textContent=order.length.toLocaleString('en-IN')});document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(TEXTS[k]!=null)el.innerHTML=TEXTS[k];el.contentEditable=EDIT?'true':'false';el.classList.toggle('edt',EDIT)})}
+function toCSV(){const H=[...new Set(COLS.concat(HEAD))];const q=v=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+  return H.join(',')+'\n'+ROWS.filter(r=>(r['Shabd']||'').trim()).map(r=>H.map(h=>q(r[h]||'')).join(',')).join('\n')+'\n'}
+function dl(name,txt,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\uFEFF'.repeat(type==='csv'?1:0)+txt],{type:type==='csv'?'text/csv':'application/json'}));a.download=name;a.click()}
+function adminBar(){let b=$('#abar');if(!isAdmin()){if(b)b.remove();return}
+  if(!b){b=document.createElement('div');b.id='abar';document.body.appendChild(b)}
+  const dirty=localStorage.getItem('ss_draft')||localStorage.getItem('ss_texts_draft');
+  b.innerHTML=`<b>Admin</b><button data-a="edit" class="${EDIT?'on':''}">${EDIT?'✎ Edit mode: ON':'✎ Edit mode: OFF'}</button><button data-a="new">+ Naya shabd</button>
+   <button data-a="publish" class="pub">⬆ Live par publish</button><button data-a="csv">⬇ words.csv</button>${dirty?'<span class="dot">Unsaved badlav</span><button data-a="discard">Badlav hatao</button>':''}<a href="#/admin">⚙</a>`}
+document.addEventListener('click',async e=>{const t=e.target;
+  const a=t.closest('#abar [data-a]')?.dataset.a;
+  if(a==='edit'){EDIT=!EDIT;localStorage.setItem('ss_edit',EDIT?'1':'0');adminBar();route();return}
+  if(a==='new'){const w=prompt('Naya Santali shabd (Roman mein):');if(!w||!w.trim())return;
+    const r={};COLS.forEach(c=>r[c]='');r['Shabd']=w.trim();r['Arth no.']='1';ROWS.push(r);saveDraft();build();EDIT=true;localStorage.setItem('ss_edit','1');adminBar();location.hash='#/word/'+encodeURIComponent(key(w));route();return}
+  if(a==='csv'){dl('words.csv',toCSV(),'csv');dl('texts.json',JSON.stringify(TEXTS,null,1),'json');return}
+  if(a==='discard'){if(confirm('Saare unsaved badlav hata dein?')){localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');location.reload()}return}
+  if(a==='publish'){publish();return}
+  if(t.dataset.del){if(confirm('Ye arth delete karein?')){ROWS[+t.dataset.del]={};saveDraft();build();route()}return}
+  if(t.dataset.addsense){const e2=entries[t.dataset.addsense];const r={};COLS.forEach(c=>r[c]='');r['Shabd']=e2.w;r['Devanagari']=ROWS[e2.rows[0]]['Devanagari']||'';r['Arth no.']=String(e2.rows.length+1);ROWS.push(r);saveDraft();build();route();return}
+  if(t.dataset.delword){if(confirm('Poora shabd "'+entries[t.dataset.delword].w+'" delete karein?')){entries[t.dataset.delword].rows.forEach(i=>ROWS[i]={});saveDraft();build();location.hash='#/'}return}
+  if(EDIT&&t.closest('[contenteditable="true"]')&&t.closest('a'))e.preventDefault();
+},true);
+document.addEventListener('focusout',e=>{const el=e.target;if(!EDIT||!el.isContentEditable)return;const v=el.innerText.trim();
+  if(el.dataset.i!=null){const r=ROWS[+el.dataset.i];if(r&&r[el.dataset.f]!==v){r[el.dataset.f]=v;saveDraft();build()}}
+  else if(el.dataset.word){const e2=entries[el.dataset.word];if(v&&v!==e2.w){e2.rows.forEach(i=>ROWS[i]['Shabd']=v);saveDraft();build();location.hash='#/word/'+encodeURIComponent(key(v))}}
+  else if(el.dataset.dv){const e2=entries[el.dataset.dv];if(v!==e2.dv){e2.rows.forEach(i=>ROWS[i]['Devanagari']=v);saveDraft();build()}}
+  else if(el.dataset.t){TEXTS[el.dataset.t]=el.innerHTML;const d=JSON.parse(localStorage.getItem('ss_texts_draft')||'{}');d[el.dataset.t]=el.innerHTML;localStorage.setItem('ss_texts_draft',JSON.stringify(d));adminBar()}});
+document.addEventListener('change',e=>{if(e.target.classList.contains('possel')){ROWS[+e.target.dataset.i]['Shabd-bhed']=e.target.value;saveDraft();build()}});
+document.addEventListener('keydown',e=>{if(EDIT&&e.key==='Enter'&&e.target.isContentEditable&&!e.shiftKey){e.preventDefault();e.target.blur()}});
+async function ghPut(path,content,tok,repo){const api=`https://api.github.com/repos/${repo}/contents/${path}`;const H={Authorization:'Bearer '+tok,Accept:'application/vnd.github+json'};
+  const cur=await fetch(api+'?ref=main',{headers:H});const sha=cur.ok?(await cur.json()).sha:undefined;
+  const b64=btoa(unescape(encodeURIComponent(content)));
+  const r=await fetch(api,{method:'PUT',headers:H,body:JSON.stringify({message:'Admin se update '+new Date().toLocaleString('en-IN'),content:b64,sha,branch:'main'})});
+  if(!r.ok)throw new Error((await r.json()).message||r.status)}
+async function publish(){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
+  if(!tok){alert('Pehle Admin settings (⚙) mein GitHub token daaliye.');location.hash='#/admin';return}
+  const b=$('#abar .pub');b.textContent='Publish ho raha hai…';b.disabled=true;
+  try{await ghPut('words.csv',toCSV(),tok,repo);await ghPut('texts.json',JSON.stringify(TEXTS,null,1),tok,repo);
+    localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');adminBar();alert('Publish ho gaya! 1-2 minute mein site par dikhega.')}
+  catch(err){alert('Publish nahi hua: '+err.message);adminBar()}}
+function adminPage(){const on=isAdmin();return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">Admin</h2>
+  ${on?`<p>Admin mode chalu hai. Upar bar mein <b>Edit mode</b> ON kijiye, phir kisi bhi shabd, arth, udaharan ya site ke text par click karke badliye. Enter dabane par save ho jata hai.</p>`:`<p>Admin mode se aap shabd jod, badal aur hata sakte hain.</p>`}
+  <p><label>Admin PIN<br><input id="apin" type="password" class="ain" placeholder="PIN"></label></p>
+  <p><label>GitHub token (Live publish ke liye)<br><input id="atok" type="password" class="ain" placeholder="github_pat_..." value="${esc(localStorage.getItem('ss_gh_token')||'')}"></label></p>
+  <p><label>Repo<br><input id="arepo" class="ain" value="${esc(localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}"></label></p>
+  <p><button class="abtn" onclick="adminSave()">${on?'Save':'Admin mode chalu karein'}</button> ${on?'<button class="abtn red" onclick="adminOff()">Admin mode band karein</button>':''}</p>
+  <p style="font-size:14px;color:#555">Badlav pehle isi browser mein save hote hain. "Live par publish" dabane par words.csv aur texts.json GitHub par chale jaate hain aur site 1-2 minute mein update ho jaati hai. Token sirf aapke browser mein rehta hai.</p></div>`}
+async function sha256(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function adminSave(){const pin=$('#apin').value,h=localStorage.getItem('ss_pin');
+  if(!isAdmin()){if(!pin)return alert('PIN daaliye');if(h&&h!==await sha256(pin))return alert('Galat PIN');if(!h)localStorage.setItem('ss_pin',await sha256(pin));localStorage.setItem('ss_admin','1')}
+  localStorage.setItem('ss_gh_token',$('#atok').value.trim());localStorage.setItem('ss_gh_repo',$('#arepo').value.trim());adminBar();route();alert('Save ho gaya')}
+function adminOff(){localStorage.removeItem('ss_admin');EDIT=false;localStorage.setItem('ss_edit','0');adminBar();route()}
+
+function remember(k){if(EDIT)return;let r=recentList();r=[k,...r.filter(x=>x!==k)].slice(0,16);localStorage.setItem('ss_recent',JSON.stringify(r))}
 
 function route(){const [,v,a]=(location.hash||'#/').split('/');const arg=decodeURIComponent(a||'');let h;
   const isHome=!v;$('#hero').classList.toggle('compact',!isHome);document.title='SantalSabad: Santali Hindi English Dictionary';
   if(v==='random'){location.hash='#/word/'+encodeURIComponent(order[Math.floor(Math.random()*order.length)]);return}
-  if(isHome){$('#view').innerHTML=home();window.scrollTo(0,0);return}
+  if(isHome){$('#view').innerHTML=home();applyTexts();window.scrollTo(0,0);return}
   if(v==='word'){h=entryHTML(arg);if(entries[arg]){remember(arg);document.title=entries[arg].w+' – SantalSabad'}}
   else if(v==='search'){const [qq,mode]=arg.split('|');const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
-  else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).startsWith(arg)));
+  else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).replace(/^[^a-z]+/,'').startsWith(arg)));
+  else if(v==='admin')h=adminPage();
   else if(v==='examples')h=listHTML('Udaharan sahit shabd',order.filter(k=>Object.values(entries[k].pos).some(a=>a.some(x=>x.ex))));
   else if(v==='guide')h=guide();else if(v==='about')h=about();else h=listHTML('Page nahi mila',[]);
-  $('#view').innerHTML=`<div class="inner"><section>${h}</section>${side()}</div>`;window.scrollTo(0,0)}
+  $('#view').innerHTML=`<div class="inner"><section>${h}</section>${side()}</div>`;applyTexts();window.scrollTo(0,0)}
 
 document.querySelectorAll('.searchbox').forEach(box=>{
   const q=box.querySelector('input'),sel=box.querySelector('select'),sug=box.querySelector('.suggest'),btn=box.querySelector('button');let on=-1;
