@@ -113,6 +113,19 @@ em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin
 .compact .minisearch{display:block;position:relative;z-index:2;padding:0 0 26px}
 .compact .minisearch .searchbox{max-width:none;height:54px}
 
+.tw{overflow-x:auto;margin:14px 0 6px;border:1px solid #c9ccd5;border-radius:6px}
+table.et{width:100%;border-collapse:collapse;font-size:16px;min-width:640px}
+.et th{background:var(--navy);color:#fff;text-align:left;font-weight:600;font-size:13px;letter-spacing:.5px;padding:10px 12px;vertical-align:bottom}
+.et th b{display:block;font-size:22px;font-family:"DM Serif Display",Georgia,serif;font-weight:400;color:#f2b8c6;letter-spacing:0}
+.et th small{display:block;font-weight:400;opacity:.75;font-size:11px}
+.et td{padding:12px;border-top:1px solid #e3e5ea;border-left:1px solid #eef0f3;vertical-align:top}
+.et td:first-child{border-left:0}
+.et tbody tr:nth-child(even){background:#f6f7fa}
+.et .rw{font-weight:700;font-size:17px;display:block}
+.et .pn{display:block;color:var(--accent);font-style:italic;font-size:13px;margin-top:2px}
+.et .dvc{font-family:'Noto Sans Devanagari',sans-serif;color:var(--red);font-size:18px}
+.et .exs{display:block}.et .exe{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+.et .na{color:#b5b9c3}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr;gap:24px;align-items:stretch}
@@ -283,9 +296,10 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   <div class="dvh"><span>${esc(e.dv)}</span><small>Roman · Devanagari</small></div>
   ${e.ipa?`<div class="meta">Uchcharan: /${esc(e.ipa)}/</div>`:''}
   <div class="tabs"><span>Arth aur prayog</span></div>`;
-  for(const p in e.pos){if(p)h+=`<div class="ptag">${esc(p)}</div>`;h+='<ol class="senses">';
-    e.pos[p].sort((a,b)=>a.n-b.n).forEach(s=>{h+=`<li><div class="def">${esc(s.hi)}${s.hi&&s.en?'<span class="sep">|</span>':''}${esc(s.en)}</div>`;
-      if(s.ex){const en=(s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr;h+=`<div class="ex"><i>${esc(s.ex)}</i>${en?`<span>${esc(en)}</span>`:''}</div>`}h+='</li>'});h+='</ol>'}
+  h+=`<div class="tw"><table class="et"><thead><tr><th><b>R</b>Roman</th><th><b>D</b>Devanagari</th><th><b>H</b>Hindi</th><th><b>E</b>English</th><th><b>U</b>Udaharan <small>Santali · English</small></th></tr></thead><tbody>`;
+  for(const p in e.pos){e.pos[p].sort((a,b)=>a.n-b.n).forEach(s=>{const en=s.ex?((s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr):'';
+    h+=`<tr><td><span class="rw">${esc(e.w)}</span><small class="pn">${s.n||1}${p?' · '+esc(p):''}</small></td><td class="dvc">${esc(e.dv)}</td><td>${esc(s.hi)||'<span class="na">—</span>'}</td><td>${esc(s.en)||'<span class="na">—</span>'}</td><td>${s.ex?`<i class="exs">${esc(s.ex)}</i>${en?`<span class="exe">${esc(en)}</span>`:''}`:'<span class="na">—</span>'}</td></tr>`})}
+  h+='</tbody></table></div>';
   if(e.rel)h+=`<div class="rel"><b>Sambandhit shabd:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
 
