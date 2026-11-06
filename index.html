@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SantalSabad: Santali Hindi English Dictionary</title>
 <meta name="description" content="SantalSabad – Santali, Hindi aur English ka shabdkosh. By BOSC (Baski Online Service Center).">
-<meta name="theme-color" content="#0a1f44">
+<meta name="theme-color" content="#10172a">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Ol+Chiki:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0a1f44;--navy2:#13306a;--line:#d5d9e0;--grey:#dcdde3;--ink:#111;--muted:#5d6470;--red:#c8102e;--accent:#3f51a3}
+:root{--navy:#10172a;--navy2:#1f2f57;--line:#e2ddd3;--grey:#f1ebe0;--ink:#16130f;--muted:#6b6358;--red:#c4512b;--accent:#c4512b;--ochre:#e3a33b;--cream:#fbf8f2}
 *{box-sizing:border-box}
-body{margin:0;font-family:"Open Sans","Noto Sans Devanagari",system-ui,sans-serif;color:var(--ink);background:#fafafa;line-height:1.55}
+body{margin:0;font-family:"Open Sans","Noto Sans Devanagari",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
 a{color:inherit}
 .olchiki{font-family:"Noto Sans Ol Chiki",sans-serif}
 .dm{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
@@ -21,69 +21,76 @@ a{color:inherit}
 
 /* ---------- top bar ---------- */
 .top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:26px 0}
-.logo{letter-spacing:6px;font-size:22px;font-weight:600;color:#fff;text-decoration:none}
+.logo{display:flex;align-items:center;gap:12px;font-family:'DM Serif Display',serif;font-size:26px;color:#fff;text-decoration:none}
+.logo i{width:42px;height:42px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-style:normal;font-family:'Noto Sans Ol Chiki';font-size:22px;box-shadow:0 0 0 3px var(--ochre)}
 .tools{display:flex;gap:22px;align-items:center}
 .tools a{color:#fff;text-decoration:none;font-size:14px;line-height:1.2;display:flex;align-items:center;gap:8px}
 .tools .circ{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:Georgia,serif;font-size:20px}
 
 /* ---------- hero ---------- */
-.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.rays{position:absolute;left:-120px;top:-60px;width:620px;height:900px;pointer-events:none;opacity:.95}
+.hero{background:radial-gradient(ellipse at 50% -10%,#24345c 0%,var(--navy) 60%);color:#fff;position:relative;overflow:hidden}
+.rays{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='26'%3E%3Crect width='52' height='26' fill='%2310172a'/%3E%3Cpath d='M0 26 L13 6 L26 26 L39 6 L52 26Z' fill='%23c4512b'/%3E%3Cpath d='M7 26 L13 16 L19 26Z M33 26 L39 16 L45 26Z' fill='%23e3a33b'/%3E%3Ccircle cx='26' cy='8' r='2.5' fill='%23fbf8f2'/%3E%3C/svg%3E") repeat-x;z-index:2}
+.compact:after{height:14px;background-size:28px 14px}
 .hero .center{position:relative;z-index:2;text-align:center;padding:10px 0 40px}
 .title{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin:14px 0 22px}
-.title .abbr{font-size:46px;font-weight:700;letter-spacing:6px}
-.title .bar{width:3px;height:62px;background:var(--red)}
-.title .full{font-size:44px;font-weight:400}
-.searchbox{position:relative;max-width:770px;margin:0 auto;display:flex;background:#fff;border-radius:32px;height:60px}
-.searchbox select{border:0;background:transparent;font:inherit;font-size:17px;padding:0 18px;width:210px;border-right:1px solid #ccc;border-radius:32px 0 0 32px;color:#222;cursor:pointer}
+.title .abbr{font-size:52px;font-family:'Noto Sans Ol Chiki',sans-serif;color:var(--ochre)}
+.title .bar{width:3px;height:62px;background:var(--ochre)}
+.title .full{font-size:46px;font-family:'DM Serif Display',serif}
+.searchbox{position:relative;max-width:770px;margin:0 auto;display:flex;background:#fff;border-radius:32px;height:60px;box-shadow:0 0 0 4px rgba(227,163,59,.35),0 12px 30px rgba(0,0,0,.3)}
+.searchbox select{border:0;background:transparent;font:inherit;font-size:17px;font-weight:600;padding:0 18px;width:120px;border-right:1px solid #ccc;border-radius:32px 0 0 32px;color:#222;cursor:pointer}
 .searchbox input{flex:1;border:0;font:inherit;font-size:18px;padding:0 16px;outline:0;min-width:0;background:transparent}
-.searchbox button{border:0;background:transparent;width:60px;cursor:pointer;color:#111}
+.searchbox button{border:0;background:var(--red);width:52px;height:52px;margin:4px;border-radius:50%;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center}
+.searchbox button svg{width:24px;height:24px}
 .suggest{position:absolute;left:24px;right:24px;top:62px;background:#fff;color:#111;border-radius:0 0 12px 12px;box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:left;z-index:10;display:none;overflow:hidden}
 .suggest div{padding:11px 18px;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
 .suggest div:hover,.suggest div.on{background:#eef1f8}
 .suggest small{color:var(--muted)}
-.hero h2{font-size:42px;font-weight:400;margin:58px 0 8px}
+.hero h2{font-size:40px;font-weight:400;margin:54px 0 8px;font-family:'DM Serif Display',serif}
 .hero p.lead{font-size:20px;max-width:880px;margin:0 auto 26px;color:#e8ecf5}
 .btn{display:inline-flex;align-items:center;gap:12px;border:1px solid #fff;color:#fff;text-decoration:none;padding:11px 20px;font-size:17px;background:transparent}
-.btn:hover{background:#fff;color:var(--navy)}
+.btn:hover{background:var(--ochre);border-color:var(--ochre);color:var(--navy)}
 .cards3{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:62px;padding:70px 0 70px}
-.c3{border:1px solid rgba(255,255,255,.18);background:rgba(16,40,86,.55);backdrop-filter:blur(6px);text-align:center;padding:40px 30px 34px}
-.c3 h3{font-size:25px;margin:0 0 16px}
+.c3{border:1px solid rgba(227,163,59,.35);border-top:4px solid var(--red);background:rgba(20,30,58,.72);backdrop-filter:blur(6px);text-align:center;padding:40px 30px 34px}
+.c3 h3{font-size:26px;margin:0 0 16px;font-family:'DM Serif Display',serif;font-weight:400}
 .c3 p{font-size:17px;margin:0 0 22px;color:#e6eaf3}
 
 /* ---------- grey band ---------- */
 .band{background:var(--grey);padding:46px 0 60px}
 .band .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;text-align:center}
 .band h4{font-size:34px;margin:0 0 30px;position:relative;padding-bottom:12px}
-.band h4:after{content:"";position:absolute;left:50%;bottom:0;width:56px;height:4px;background:var(--accent);transform:translateX(-50%)}
+.band h4:after{content:"";position:absolute;left:50%;bottom:0;width:60px;height:8px;transform:translateX(-50%);background:linear-gradient(135deg,transparent 33%,var(--red) 33% 66%,transparent 66%) 0 0/12px 8px repeat-x}
 .wl{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;font-size:18px}
 .wl a{text-decoration:none}.wl a:hover{text-decoration:underline}
-.wotd .w{font-size:44px;font-weight:700;margin:0;line-height:1.1}
+.wotd{background:#fff;border:1px solid var(--line);padding:30px 24px;box-shadow:0 10px 30px rgba(60,40,10,.08)}
+.wotd .w{font-size:46px;font-weight:400;font-family:'DM Serif Display',serif;margin:0;line-height:1.1;color:var(--navy)}
 .wotd .oc{font-size:24px;margin-top:6px}
 .wotd .pos{letter-spacing:1.5px;font-size:14px;text-transform:uppercase;margin:6px 0 14px}
 .wotd .d{font-size:18px}
 .wotd a.more{display:inline-block;margin-top:14px;color:var(--accent);font-weight:600;text-decoration:none}
 
 /* ---------- feature tiles ---------- */
-.feat{background:#fafafa;padding:70px 0}
+.feat{background:var(--cream);padding:70px 0}
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 .tile{background:#fff;border:1px solid var(--line);text-decoration:none;display:block;transition:transform .15s}
 .tile:hover{transform:translateY(-3px)}
 .art{height:170px;display:flex;align-items:center;justify-content:center;font-size:76px;color:#f6e7d0;position:relative;overflow:hidden}
 .art span{position:relative;z-index:1;text-shadow:0 4px 18px rgba(0,0,0,.45)}
-.a1{background:radial-gradient(circle at 30% 30%,#a8743f,#3d2412)}
-.a2{background:radial-gradient(circle at 70% 40%,#8a5a2c,#2b190c)}
-.a3{background:radial-gradient(circle at 40% 60%,#4c6b6f,#141c22)}
-.a4{background:radial-gradient(circle at 60% 30%,#b58a57,#3a2814)}
+.art:before{content:"";position:absolute;inset:0;opacity:.22;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 2 L38 20 L20 38 L2 20Z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23fff'/%3E%3C/svg%3E")}
+.a1{background:linear-gradient(135deg,#c4512b,#7a2b14)}
+.a2{background:linear-gradient(135deg,#1f2f57,#10172a)}
+.a3{background:linear-gradient(135deg,#e3a33b,#a8661a)}
+.a4{background:linear-gradient(135deg,#3c5a4a,#1b2b23)}
 .tile .tx{padding:20px 20px 24px}
-.tile h5{font-size:24px;margin:0 0 10px}
+.tile{border-bottom:4px solid var(--ochre)}
+.tile h5{font-size:24px;margin:0 0 10px;font-family:'DM Serif Display',serif;font-weight:400}
 .tile p{margin:0;font-size:16px;color:#333}
 
 /* ---------- inner pages ---------- */
 .inner{max-width:1180px;margin:auto;padding:36px 24px 70px;display:grid;grid-template-columns:1fr 300px;gap:34px}
-.card{background:#fff;border:1px solid var(--line);padding:30px 34px}
+.card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--red);padding:30px 34px;box-shadow:0 8px 24px rgba(60,40,10,.06)}
 .crumb{font-size:13px;color:var(--muted);margin-bottom:10px}.crumb a{color:var(--navy2)}
-.hw{font-size:46px;font-weight:700;margin:0;line-height:1.1;color:var(--navy)}
+.hw{font-size:52px;font-weight:400;font-family:'DM Serif Display',serif;margin:0;line-height:1.1;color:var(--navy)}
 .meta{margin:8px 0 4px;color:var(--muted);font-size:16px}
 .meta .oc{font-size:24px;color:#111;margin-left:8px}
 .ptag{display:inline-block;font-style:italic;color:var(--red);font-size:18px;margin:16px 0 4px}
@@ -91,13 +98,13 @@ a{color:inherit}
 .tabs span{padding:8px 14px;font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--navy2);border-bottom:3px solid var(--navy2)}
 ol.senses{list-style:none;padding:0;margin:8px 0;counter-reset:s}
 ol.senses>li{counter-increment:s;position:relative;padding:14px 0 14px 44px;border-bottom:1px dotted var(--line)}
-ol.senses>li:before{content:counter(s);position:absolute;left:0;top:13px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+ol.senses>li:before{content:counter(s);position:absolute;left:0;top:13px;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
 .def{font-size:19px}.def .sep{color:#999;margin:0 8px}
 .ex{margin-top:8px;padding-left:14px;border-left:3px solid #d6dbe3}.ex i{display:block}.ex span{color:var(--muted);font-size:15px}
 .rel{margin-top:18px}.rel a{margin-right:10px;color:var(--navy2)}
 .cite{margin-top:26px;font-size:12px;color:var(--muted)}
 .side .box{background:#fff;border:1px solid var(--line);padding:18px 20px;margin-bottom:22px}
-.side h3{margin:0 0 10px;font-size:20px;border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:4px}
+.side h3{margin:0 0 10px;font-size:20px;border-bottom:3px solid var(--ochre);display:inline-block;padding-bottom:4px}
 .side a{display:block;text-decoration:none;padding:3px 0;color:var(--navy2)}
 .az{display:flex;flex-wrap:wrap;gap:6px}
 .az a{display:inline-block!important;width:32px;height:32px;line-height:32px;text-align:center;border:1px solid var(--line);padding:0!important}
@@ -106,7 +113,7 @@ ol.senses>li:before{content:counter(s);position:absolute;left:0;top:13px;width:3
 .list a.item b{font-size:20px;color:var(--navy2)}.list a.item span{color:var(--muted);text-align:right}
 .empty{color:var(--muted)}
 .scripts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
-.scripts span{border:1px solid var(--line);background:#f5f6fa;padding:6px 14px;font-size:20px}
+.scripts span{border:1px solid var(--line);border-left:4px solid var(--ochre);background:var(--cream);padding:6px 14px;font-size:20px}
 .scripts small{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
 em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin-left:6px}
 .compact .center{display:none}.compact .cards3{display:none}
@@ -116,7 +123,8 @@ em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin
 .compact .minisearch .searchbox{max-width:none;height:52px}
 
 /* ---------- footer ---------- */
-footer{background:var(--navy);color:#fff;padding:60px 0 30px}
+footer{background:var(--navy);color:#fff;padding:70px 0 30px;position:relative}
+footer:before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:repeating-linear-gradient(90deg,var(--red) 0 28px,var(--ochre) 28px 42px,var(--cream) 42px 46px,var(--ochre) 46px 60px)}
 .fcols{display:grid;grid-template-columns:repeat(4,1fr) 1.3fr;gap:30px}
 .fcols a{display:block;text-decoration:none;font-size:17px;margin-bottom:14px;color:#fff}
 .fcols a:hover{text-decoration:underline}
@@ -139,10 +147,10 @@ footer{background:var(--navy);color:#fff;padding:60px 0 30px}
 <body>
 
 <header class="hero" id="hero">
-  <svg class="rays" viewBox="0 0 620 900" aria-hidden="true" id="rays"></svg>
+  <svg class="rays" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" id="rays"></svg>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#/">SANTALSABAD</a>
+      <a class="logo" href="#/"><i>ᱥ</i>SantalSabad</a>
       <div class="tools">
         <a href="#/about" title="About"><span class="circ">i</span></a>
         <a href="#/browse/a"><span class="lbl">A–Z<br>browse</span></a>
@@ -151,10 +159,10 @@ footer{background:var(--navy);color:#fff;padding:60px 0 30px}
     </div>
 
     <div class="center">
-      <div class="title"><span class="abbr">SSD</span><span class="bar"></span><span class="full">SantalSabad Dictionary</span></div>
+      <div class="title"><span class="abbr">ᱥᱟᱵᱟᱫ</span><span class="bar"></span><span class="full">SantalSabad Dictionary</span></div>
       <div class="searchbox" id="sb1">
-        <select aria-label="Bhasha"><option value="all">Sabhi bhasha</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
-        <input type="search" placeholder="dak', पानी, water…" autocomplete="off" aria-label="Search">
+        <select aria-label="Bhasha"><option value="all">All</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
+        <input type="search" placeholder="e.g. johar  ·  water" autocomplete="off" aria-label="Search">
         <button aria-label="Search"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
         <div class="suggest"></div>
       </div>
@@ -165,8 +173,8 @@ footer{background:var(--navy);color:#fff;padding:60px 0 30px}
 
     <div class="minisearch">
       <div class="searchbox" id="sb2">
-        <select aria-label="Bhasha"><option value="all">Sabhi bhasha</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
-        <input type="search" placeholder="Shabd khojiye…" autocomplete="off" aria-label="Search">
+        <select aria-label="Bhasha"><option value="all">All</option><option value="sat">Santali (Roman/देवनागरी)</option><option value="hi">Hindi</option><option value="en">English</option></select>
+        <input type="search" placeholder="e.g. dak'  ·  house" autocomplete="off" aria-label="Search">
         <button aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
         <div class="suggest"></div>
       </div>
@@ -227,12 +235,12 @@ const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"
 const key=s=>(s||'').toLowerCase().replace(/[’`]/g,"'").trim();
 const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’`]/g,"'").trim();
 
-/* decorative rays */
-(function(){const g=$('#rays');let s='';let seed=7;const r=()=>(seed=(seed*9301+49297)%233280)/233280;
- for(let i=0;i<70;i++){const a=(-75+i*1.6)*Math.PI/180,len=200+r()*420,w=2+r()*16,x0=40,y0=880;
-  const x1=x0+Math.cos(a)*120,y1=y0+Math.sin(a)*120,x2=x0+Math.cos(a)*len*1.4,y2=y0+Math.sin(a)*len*1.4;
-  const col=['#f2b8cf','#d7a2d6','#b79be0','#8f8fe0','#ffffff'][Math.floor(r()*5)];
-  s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" stroke-opacity="${.35+r()*.55}"/>`}
+/* Santal-art inspired motif */
+(function(){const g=$('#rays');let s='';
+ const dia=(cx,cy,r,c,o,w)=>`<path d="M${cx} ${cy-r} L${cx+r} ${cy} L${cx} ${cy+r} L${cx-r} ${cy}Z" fill="none" stroke="${c}" stroke-opacity="${o}" stroke-width="${w}"/>`;
+ [[60,420],[1140,420]].forEach(([x,y])=>{for(let r=40;r<=360;r+=32)s+=dia(x,y,r,r%64?'#e3a33b':'#c4512b',.10+.25*(1-r/360),r%64?1.5:3);
+   for(let k=0;k<12;k++){const a=k*Math.PI/6;s+=`<circle cx="${x+Math.cos(a)*200}" cy="${y+Math.sin(a)*200}" r="4" fill="#fbf8f2" fill-opacity=".35"/>`}});
+ for(let x=0;x<1200;x+=40)s+=`<path d="M${x} 0 L${x+20} 18 L${x+40} 0" fill="none" stroke="#e3a33b" stroke-opacity=".25" stroke-width="2"/>`;
  g.innerHTML=s})();
 
 function parseCSV(t){const rows=[];let r=[],f='',q=false;
@@ -282,7 +290,7 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   <div class="tabs"><span>Arth aur prayog</span></div>`;
   for(const p in e.pos){if(p)h+=`<div class="ptag">${esc(p)}</div>`;h+='<ol class="senses">';
     e.pos[p].sort((a,b)=>a.n-b.n).forEach(s=>{h+=`<li><div class="def">${esc(s.hi)}${s.hi&&s.en?'<span class="sep">|</span>':''}${esc(s.en)}</div>`;
-      if(s.ex)h+=`<div class="ex"><i>${esc(s.ex)}</i>${s.tr?`<span>${esc(s.tr)}</span>`:''}</div>`;h+='</li>'});h+='</ol>'}
+      if(s.ex){const en=(s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr;h+=`<div class="ex"><i>${esc(s.ex)}</i>${en?`<span>${esc(en)}</span>`:''}</div>`}h+='</li>'});h+='</ol>'}
   if(e.rel)h+=`<div class="rel"><b>Sambandhit shabd:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
 
