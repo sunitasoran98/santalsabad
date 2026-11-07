@@ -490,7 +490,7 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 /* ===== v27: HorKatha-match modals (light) ===== */
 .mdl.lpm,.mdl.fbm{position:fixed;inset:0;z-index:600;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(15,23,42,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:fade .2s ease;font-family:"Open Sans","Noto Sans Devanagari",system-ui,sans-serif}
 @media(min-width:640px){.mdl.lpm,.mdl.fbm{padding:20px}}
-.lbox{position:relative;width:100%;max-width:1024px;height:90vh;max-height:820px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:#fff;color:#0f172a;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+.lpbox{position:relative;width:100%;max-width:1024px;height:90vh;max-height:820px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:#fff;color:#0f172a;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
 .lhd{flex:none;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid #e2e8f0;background:#fff}
 .lhl{display:flex;align-items:center;gap:12px}
 .lem{width:40px;height:40px;border-radius:16px;background:#ecfdf5;border:1px solid rgba(16,185,129,.4);color:#059669;display:flex;align-items:center;justify-content:center;font:700 20px "Noto Sans Devanagari",sans-serif}
@@ -543,7 +543,7 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .lok:hover{background:#10b981}
 @media(max-width:767px){.lside{border-right:0;border-bottom:1px solid #e2e8f0;max-height:38vh}.lcom{display:none}.lft .sdt{display:none}.lft{justify-content:flex-end}}
 /* feedback */
-.fbox{position:relative;width:100%;max-width:576px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+.fbbox{position:relative;width:100%;max-width:576px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
 .fhd{flex:none;display:flex;align-items:center;justify-content:space-between;padding:20px;color:#fff;background:linear-gradient(90deg,#d97706,#ea580c,#b45309)}
 .fhl{display:flex;align-items:center;gap:12px}
 .fic{padding:10px;background:rgba(255,255,255,.2);border-radius:16px;display:flex;color:#fef3c7}
@@ -576,7 +576,12 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .fdi{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:#d1fae5;color:#059669;display:flex;align-items:center;justify-content:center}
 .fdoneb h3{margin:0;font:700 18px Georgia,"Noto Sans Devanagari",serif;color:#0f172a}.fdh{margin:4px 0;font-weight:700;color:#065f46}.fds{font-size:12px;color:#64748b;max-width:360px;margin:0 auto 16px}
 .fdone{padding:10px 24px;border:0;border-radius:12px;background:#0f172a;color:#fff;font:700 12px "Noto Sans Devanagari",sans-serif;cursor:pointer}
-@media print{.lbox{height:auto;max-height:none;border:0;box-shadow:none}.lside,.lft,.lhb{display:none!important}.lgrid{display:block}.lmain{overflow:visible}}
+@media print{.lpbox{height:auto;max-height:none;border:0;box-shadow:none}.lside,.lft,.lhb{display:none!important}.lgrid{display:block}.lmain{overflow:visible}}
+
+.brandcol{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:none}
+.brandcol .sdt{margin:0;padding:4px 12px;font-size:12px;gap:7px;box-shadow:0 2px 8px rgba(1,31,67,.06)}
+.brandcol .sdt .d{display:inline!important}
+@media(max-width:640px){.brandcol{gap:4px}.brandcol .sdt{order:0;margin:0;font-size:11px;padding:3px 10px;gap:6px}}
 </style>
 </head>
 <body>
@@ -584,7 +589,7 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 <header class="hero" id="hero">
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#/">SANTALSABAD</a><div class="sdt" id="sdt" title="तेहेञ (आज)"></div>
+      <div class="brandcol"><a class="logo" href="#/">SANTALSABAD</a><div class="sdt" id="sdt" title="तेहेञ (आज)"></div></div>
       <div class="minisearch">
       <div class="searchbox" id="sb2">
         <select class="vh" tabindex="-1" aria-label="भाषा"><option value="all">All</option><option value="sat">संताली (रोमन/देवनागरी)</option><option value="hi">हिन्दी</option><option value="en">अंग्रेज़ी</option></select><button type="button" class="chip" aria-haspopup="listbox" aria-label="भाषा फ़िल्टर"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg><span class="cl">All</span><i class="cx" title="हटाएँ">×</i><svg class="car" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button><div class="chipmenu" role="listbox"><button type="button" data-v="all">All <small>सब भाषाएँ</small></button><button type="button" data-v="sat">संताली <small>रोमन / देवनागरी</small></button><button type="button" data-v="hi">हिन्दी</button><button type="button" data-v="en">अंग्रेज़ी</button></div>
@@ -1104,7 +1109,7 @@ function mpCards(k){let h=mpBody(k).replace(/<div class="crumb">.*?<\/div>/,'').
  return `<div class="lhero"><div class="lhr"><div><h3>${t}</h3><p class="lhi">${MSUB[k]||''}</p></div><span class="lver">${SMON[new Date().getMonth()]} ${new Date().getFullYear()} (SantalSabad v27)</span></div><div class="llead">${intro}</div></div><div class="lsecs">${secs}</div>`}
 function closeModal(){document.querySelectorAll('.mdl').forEach(m=>m.remove());document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel()}
 function openModal(k){if(k==='feedback'){openFeedback();return}closeModal();const m=document.createElement('div');m.className='mdl lpm';m.id='mdl';
- m.innerHTML=`<div class="lbox" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+ m.innerHTML=`<div class="lpbox" role="dialog" aria-modal="true" aria-labelledby="mtitle">
  <div class="lhd"><div class="lhl"><div class="lem">स</div><div><p class="lkick">SANTALSABAD नीति और जानकारी · BOSC</p><h2 id="mtitle">आधिकारिक नीतियाँ और जानकारी</h2></div></div>
   <div class="lhb"><button class="lib mp" title="प्रिंट करें" aria-label="प्रिंट करें"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button><button class="lib mx" title="बंद करें" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div></div>
  <div class="lgrid"><div class="lside"><div><span class="lsel">दस्तावेज़ चुनें</span><div class="llist">${MP.map(([x,t])=>`<button data-mt="${x}"><span class="lbl">${ico(x)}<span>${t}</span></span>${CHV}</button>`).join('')}</div></div>
@@ -1120,7 +1125,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('footer a[href^="
 
 /* feedback modal (HorKatha style, light) */
 function openFeedback(w){closeModal();const m=document.createElement('div');m.className='mdl fbm';m.id='mdl';
- m.innerHTML=`<div class="fbox" role="dialog" aria-modal="true" aria-labelledby="fbt"><div class="fhd"><div class="fhl"><div class="fic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div><p class="fk">समुदाय की आवाज़ और सुझाव</p><h2 id="fbt">सुझाव / फ़ीडबैक</h2></div></div><button class="fx mx" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+ m.innerHTML=`<div class="fbbox" role="dialog" aria-modal="true" aria-labelledby="fbt"><div class="fhd"><div class="fhl"><div class="fic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div><p class="fk">समुदाय की आवाज़ और सुझाव</p><h2 id="fbt">सुझाव / फ़ीडबैक</h2></div></div><button class="fx mx" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
  <div class="fbd">${fbHTML()}</div></div>`;
  document.body.appendChild(m);document.body.style.overflow='hidden';
  m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.fcancel,.fdone'))closeModal()});
