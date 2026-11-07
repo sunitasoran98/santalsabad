@@ -762,7 +762,7 @@ document.querySelectorAll('.searchbox').forEach(box=>{
   q.addEventListener('keydown',e=>{const it=[...sug.children];
     if((e.key==='ArrowDown'||e.key==='ArrowUp')&&it.length){on=(on+(e.key==='ArrowDown'?1:-1)+it.length)%it.length;it.forEach((x,i)=>x.classList.toggle('on',i===on));e.preventDefault()}
     if(e.key==='Enter'){if(on>=0&&it[on])it[on].click();else go()}});
-  box.querySelector('button[aria-label=Search]').onclick=go;sel.onchange=()=>q.dispatchEvent(new Event('input'));
+  btn.onclick=go;sel.onchange=()=>q.dispatchEvent(new Event('input'));
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.searchbox'))document.querySelectorAll('.suggest').forEach(s=>s.style.display='none')});
 window.addEventListener('hashchange',route);$('#yr').textContent=new Date().getFullYear();
