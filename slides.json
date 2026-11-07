@@ -1,52 +1,2606 @@
 [
- {
-  "img": "img/slides/s01.webp",
-  "title": "संताल गाँव का घर",
-  "text": "मिट्टी की दीवारों पर लाल, सफ़ेद और काले रंग की पट्टियाँ। हर संताल घर अपने आप में एक कलाकृति है।"
- },
- {
-  "img": "img/slides/s02.webp",
-  "title": "दोङ और लागड़े नाच",
-  "text": "हाथ में हाथ डाले एक पंक्ति में नाचती महिलाएँ। संताल नाच समूह और एकता का प्रतीक है।"
- },
- {
-  "img": "img/slides/s03.webp",
-  "title": "टामाक' और टुमदाक'",
-  "text": "संताल संगीत की धड़कन: बड़ा टामाक' (नगाड़ा) और टुमदाक' (मांदर) हर पर्व में गूँजते हैं।"
- },
- {
-  "img": "img/slides/s04.webp",
-  "title": "जाहेर थान",
-  "text": "गाँव का पवित्र साल-वन, जहाँ संताल समाज अपने देवताओं की पूजा करता है।"
- },
- {
-  "img": "img/slides/s05.webp",
-  "title": "सोहराय पर्व",
-  "text": "फ़सल कटने के बाद का उत्सव: घरों की सजावट, पशुओं का सम्मान, गीत और नाच।"
- },
- {
-  "img": "img/slides/s06.webp",
-  "title": "बाहा पर्व",
-  "text": "बसंत में साल के फूल खिलने पर मनाया जाने वाला फूलों का पर्व।"
- },
- {
-  "img": "img/slides/s07.webp",
-  "title": "हूल, 30 जून 1855",
-  "text": "सिदो-कान्हू के नेतृत्व में संताल हूल, शोषण के ख़िलाफ़ ऐतिहासिक विद्रोह। हर साल 30 जून को हूल दिवस मनाया जाता है।"
- },
- {
-  "img": "img/slides/s08.webp",
-  "title": "करम पर्व",
-  "text": "करम डाली की पूजा और रात भर गीत-नाच। प्रकृति और परिवार का उत्सव।"
- },
- {
-  "img": "img/slides/s09.webp",
-  "title": "संताली भाषा और शिक्षा",
-  "text": "92वें संविधान संशोधन (2003) से संताली भाषा संविधान की आठवीं अनुसूची में शामिल हुई।"
- },
- {
-  "img": "img/slides/s10.webp",
-  "title": "संताल परगना",
-  "text": "हरे धान के खेत, लाल मिट्टी के रास्ते और साल के जंगल। हूल के बाद बना संताल परगना आज झारखंड का प्रमंडल है।"
- }
+{
+"img": "img/sc/c001.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Martin_Kempchen_Interview_14.jpg"
+},
+{
+"img": "img/sc/c002.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_festival_Jaher_than_14.jpg"
+},
+{
+"img": "img/sc/c003.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:085_-_Panchi_(Bakura)_-_01.jpg"
+},
+{
+"img": "img/sc/c004.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Documentary_video_shooting_on_rat_hunting_by_the_Santhals_of_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024_08.jpg"
+},
+{
+"img": "img/sc/c005.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Daily_Life_Of_Santal_Village_Bishnubati_On_A_Dull_Winter_Day_-_Birbhum_2024-12-09_04047.jpg"
+},
+{
+"img": "img/sc/c006.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02749.jpg"
+},
+{
+"img": "img/sc/c007.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Making_pot_by_santali_tribe.jpg"
+},
+{
+"img": "img/sc/c008.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_priest_worshiping1.jpg"
+},
+{
+"img": "img/sc/c009.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Dance_At_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03605.jpg"
+},
+{
+"img": "img/sc/c010.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8162.jpg"
+},
+{
+"img": "img/sc/c011.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A0%E1%B1%A9%E1%B1%9E%E1%B1%A9%E1%B1%AF%E1%B1%B0%E1%B1%9F%E1%B1%9D%E1%B1%9C%E1%B1%9F_%E1%B1%B5%E1%B1%9F%E1%B1%A6%E1%B1%9F_%E1%B1%B5%E1%B1%9A%E1%B1%B8%E1%B1%9C%E1%B1%9F_01.jpg"
+},
+{
+"img": "img/sc/c012.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._09.jpg"
+},
+{
+"img": "img/sc/c013.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_people_in_Naogaon.jpg"
+},
+{
+"img": "img/sc/c014.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Swan_Egg_Fritters_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02502.jpg"
+},
+{
+"img": "img/sc/c015.webp",
+"title": "सिदो-कान्हू",
+"text": "1855 के हूल के महानायक",
+"credit": "Niteshgupta555 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sidhu_Kanhu_Birsa_Polytechnic_College.jpg"
+},
+{
+"img": "img/sc/c016.webp",
+"title": "दासाँय नृत्य",
+"text": "दासाँय पर्व का पारंपरिक नृत्य",
+"credit": "Bodhisattwa · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Dasai_Dance_at_the_streets_of_Purulia_district_08.JPG"
+},
+{
+"img": "img/sc/c018.webp",
+"title": "टमाक'",
+"text": "संताल नगाड़ा, नृत्य और पर्व का ढोल",
+"credit": "Prateek Pattanaik · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Instruments_of_Odisha_-_Tamak_01.jpg"
+},
+{
+"img": "img/sc/c019.webp",
+"title": "संताल महिलाएँ",
+"text": "संताल समाज की महिलाएँ",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Girls_Floating_Lighted_Diyas_On_Water_As_A_Traditional_Ritual_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03146.jpg"
+},
+{
+"img": "img/sc/c020.webp",
+"title": "मातकोम पावरो",
+"text": "महुआ से जुड़ी परंपरा",
+"credit": "Suresh Kumar Vakalapudi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:A_Bonda_tribe_of_Odisha_drinking_Mahua_drink.jpg"
+},
+{
+"img": "img/sc/c021.webp",
+"title": "संताल वाद्य यंत्र",
+"text": "पारंपरिक संताल वाद्य",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tamak_and_Tumdak_01.jpg"
+},
+{
+"img": "img/sc/c022.webp",
+"title": "संताल पुरुष",
+"text": "संताल समाज के पुरुष",
+"credit": "Milantudu1 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_tribe_dance_performed_at_30th_june_in_my_village.jpg"
+},
+{
+"img": "img/sc/c023.webp",
+"title": "टुमदाक'",
+"text": "संताल मांदर, नृत्य का मुख्य वाद्य",
+"credit": "Subhashish Panigrahi · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_drums_of_Odisha.JPG"
+},
+{
+"img": "img/sc/c024.webp",
+"title": "पंडित रघुनाथ मुर्मू",
+"text": "ओल चिकी लिपि के रचयिता",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Kapi_Buru,_Rairangpur,_Odisha_(79495).jpg"
+},
+{
+"img": "img/sc/c025.webp",
+"title": "संताली नृत्य",
+"text": "पर्व-त्योहार का सामूहिक नृत्य",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Lagre_enej_in_Birbhum.jpg"
+},
+{
+"img": "img/sc/c026.webp",
+"title": "सिदो-कान्हू डाहार",
+"text": "हूल के नायकों की स्मृति",
+"credit": "শরদিন্দু ভট্টাচার্য্য · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E0%A6%B9%E0%A6%B2%E0%A7%81%E0%A6%A6_%E0%A6%9F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%BF.jpg"
+},
+{
+"img": "img/sc/c028.webp",
+"title": "संताल बच्चे",
+"text": "संताल समाज के बच्चे",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Little_Visitor_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03251.jpg"
+},
+{
+"img": "img/sc/c029.webp",
+"title": "गुडु लाट",
+"text": "पारंपरिक संताल पकवान",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Roasting_Rat_Meat_In_Leaf-Wrapped_Metal_Container_In_The_Field_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03489.jpg"
+},
+{
+"img": "img/sc/c030.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "संग्रहालय की वस्तुएँ",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Samiran_Nandy_-_Birbhum_2024-09-20_00486.jpg"
+},
+{
+"img": "img/sc/c031.webp",
+"title": "झारखंड के संताल",
+"text": "झारखंड के संताल समाज की झलक",
+"credit": "Joy sagar Murmu · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_cultural_dance_group_from_DSPMU_Ranchi_nfront_of_Jharkhand_Vidhansabha.jpg"
+},
+{
+"img": "img/sc/c032.webp",
+"title": "सोहराय",
+"text": "फसल और पशुधन का पर्व",
+"credit": "Gustavimam · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Twac.jpg"
+},
+{
+"img": "img/sc/c033.webp",
+"title": "पश्चिम बंगाल के संताल",
+"text": "पश्चिम बंगाल के संताल समाज की झलक",
+"credit": "Fagu Baskey · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Topa_Santal_creation.jpg"
+},
+{
+"img": "img/sc/c034.webp",
+"title": "सिदो-कान्हू प्रतिमा",
+"text": "दिनाजपुर, बांग्लादेश",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Statue_of_Sidhu_and_Kanhu_in_Dinajpur_District_03.jpg"
+},
+{
+"img": "img/sc/c035.webp",
+"title": "झिनुक पीठा",
+"text": "सीप के आकार का पारंपरिक पीठा",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Jhinuk_Pitho_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03526.jpg"
+},
+{
+"img": "img/sc/c036.webp",
+"title": "कड़ाखा",
+"text": "पारंपरिक संताल वस्तु",
+"credit": "Subhashish Panigrahi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Kadakha_(Chadachadi)_and_Madala.jpg"
+},
+{
+"img": "img/sc/c037.webp",
+"title": "संताल लोकगीत",
+"text": "संताल लोकगीत और संगीत",
+"credit": "Deotima Ghosh · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Karamnach.jpg"
+},
+{
+"img": "img/sc/c038.webp",
+"title": "असम के संताल",
+"text": "असम के संताल समाज की झलक",
+"credit": "Joy sagar Murmu · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Mathiash_Mardi.jpg"
+},
+{
+"img": "img/sc/c039.webp",
+"title": "संग्रहालय संग्रह",
+"text": "संताल संस्कृति संग्रहालय की वस्तुएँ",
+"credit": "Sumitsurai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Arrow.jpg"
+},
+{
+"img": "img/sc/c040.webp",
+"title": "संताल अनुष्ठान",
+"text": "पारंपरिक पूजा और रीति-रिवाज",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_tribes_dancing_in_BAHA_PARAB_(Sarhul_festival).jpg"
+},
+{
+"img": "img/sc/c041.webp",
+"title": "संताल संस्कृति",
+"text": "संताल जीवन की झलक",
+"credit": "Pinakpani · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Statue_of_Sadhu_Ramchand_Murmu_in_Sadhu_Ram_Chand_Murmu_University_03.jpg"
+},
+{
+"img": "img/sc/c042.webp",
+"title": "संताल संस्कृति",
+"text": "संताल जीवन की झलक",
+"credit": "Manik Soren · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A1%E1%B1%9F%E1%B1%A6%E1%B1%AE%E1%B1%A8_%E1%B1%9B%E1%B1%B7%E1%B1%9F%E1%B1%B1%E1%B1%A8%E1%B1%AE_%E1%B1%B1%E1%B1%9F%E1%B1%AD%E1%B1%A0%E1%B1%AE%E1%B1%AD_%E1%B1%AF%E1%B1%A9%E1%B1%A1%E1%B1%9F%E1%B1%B9%E1%B1%AD_%E1%B1%AB%E1%B1%9F_.jpg"
+},
+{
+"img": "img/sc/c043.webp",
+"title": "संताल कला और शिल्प",
+"text": "हाथ से बनी पारंपरिक कलाकृतियाँ",
+"credit": "SMarndi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%AF%E1%B1%B7%E1%B1%A9%E1%B1%B4%E1%B1%9F%E1%B1%B9_%E1%B1%A0%E1%B1%9F%E1%B1%AA%E1%B1%9F.jpg"
+},
+{
+"img": "img/sc/c044.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Aniket Bankri · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tribal_Baha_Festival.jpg"
+},
+{
+"img": "img/sc/c045.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_parab_1.jpg"
+},
+{
+"img": "img/sc/c046.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:015_-_Gudu_Sitap_-_Mouse_Trap_-_01.jpg"
+},
+{
+"img": "img/sc/c047.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Random_images_of_the_neighbourhood_at_Bishnubati,_Bolpur,_West_Bengal._December_5_and_6,_2024_03.jpg"
+},
+{
+"img": "img/sc/c048.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Piglet_in_front_of_a_house_in_a_Santal_village_02.jpg"
+},
+{
+"img": "img/sc/c049.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02296.jpg"
+},
+{
+"img": "img/sc/c050.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_person_making_pot_from_clay.jpg"
+},
+{
+"img": "img/sc/c051.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Fagu_baskey.jpg"
+},
+{
+"img": "img/sc/c052.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8935.jpg"
+},
+{
+"img": "img/sc/c053.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8158.jpg"
+},
+{
+"img": "img/sc/c054.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%AA%E1%B1%9F%E1%B1%AB%E1%B1%9A%E1%B1%A8_%E1%B1%B5%E1%B1%9F%E1%B1%AB%E1%B1%9A%E1%B1%B1%E1%B1%A4_%E1%B1%92.jpg"
+},
+{
+"img": "img/sc/c055.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._08.jpg"
+},
+{
+"img": "img/sc/c056.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-14,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c057.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Chhaya mandi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Matha_arag_(%E1%B1%A2%E1%B1%9F%E1%B1%B4%E1%B1%B7%E1%B1%9F_%E1%B1%9F%E1%B1%B2%E1%B1%9F%E1%B1%9C).jpg"
+},
+{
+"img": "img/sc/c058.webp",
+"title": "सिदो-कान्हू",
+"text": "1855 के हूल के महानायक",
+"credit": "Niteshgupta555 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sidhu_Kanhu_Birsa_Polytechnic.jpg"
+},
+{
+"img": "img/sc/c060.webp",
+"title": "ओल चिकी शताब्दी",
+"text": "ओल चिकी लिपि के सौ साल का उत्सव, 2025",
+"credit": "Bijendra Hansda Purudhul · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Ol_Chiki_Centenary_Celebration_14_february_2025_Participant.jpg"
+},
+{
+"img": "img/sc/c061.webp",
+"title": "टमाक'",
+"text": "संताल नगाड़ा, नृत्य और पर्व का ढोल",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A6%E1%B1%A9%E1%B1%B0%E1%B1%A4%E1%B1%A7_%E1%B1%B4%E1%B1%9F%E1%B1%A2%E1%B1%9F%E1%B1%A0.jpg"
+},
+{
+"img": "img/sc/c062.webp",
+"title": "संताल महिलाएँ",
+"text": "संताल समाज की महिलाएँ",
+"credit": "SMarndi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A1%E1%B1%B7%E1%B1%9F%E1%B1%B9%E1%B1%9E%E1%B1%9F%E1%B1%9C_%E1%B1%A5%E1%B1%9F%E1%B1%B9%E1%B1%B2%E1%B1%A4_%E1%B1%A6%E1%B1%9A%E1%B1%A8%E1%B1%9A%E1%B1%9C_%E1%B1%9F%E1%B1%A0%E1%B1%9F%E1%B1%AB_%E1%B1%A2%E1%B1%A4%E1%B1%AB_%E1%B1%A0%E1%B1%A9%E1%B1%B2%E1%B1%A4_%E1%B1%9C%E1%B1%9F%E1%B1%AB%E1%B1%AE%E1%B1%9E_SC19.jpg"
+},
+{
+"img": "img/sc/c063.webp",
+"title": "मातकोम पावरो",
+"text": "महुआ से जुड़ी परंपरा",
+"credit": "Swetapadma07 · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Distillation_process_for_Mahuli_Traditional_drink.jpg"
+},
+{
+"img": "img/sc/c064.webp",
+"title": "संताल वाद्य यंत्र",
+"text": "पारंपरिक संताल वाद्य",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Banam_a_Santali_musical_instrument.jpg"
+},
+{
+"img": "img/sc/c065.webp",
+"title": "संताल पुरुष",
+"text": "संताल समाज के पुरुष",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Daily_Life_Of_Santal_Village_Bishnubati_On_A_Dull_Winter_Day_-_Birbhum_2024-12-09_03839.jpg"
+},
+{
+"img": "img/sc/c066.webp",
+"title": "टुमदाक'",
+"text": "संताल मांदर, नृत्य का मुख्य वाद्य",
+"credit": "Subhashish Panigrahi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Dumeng_(drum).jpg"
+},
+{
+"img": "img/sc/c067.webp",
+"title": "पंडित रघुनाथ मुर्मू",
+"text": "ओल चिकी लिपि के रचयिता",
+"credit": "Raghunath Murmu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A8%E1%B1%9F%E1%B1%B9%E1%B1%9C%E1%B1%B7%E1%B1%A9%E1%B1%B1%E1%B1%9F%E1%B1%9B%E1%B1%B7_%E1%B1%A2%E1%B1%A9%E1%B1%A8%E1%B1%A2%E1%B1%A9%E1%B1%9F%E1%B1%9C_%E1%B1%9B%E1%B1%A4_%E1%B1%9B%E1%B1%AE_%E1%B1%9A%E1%B1%9E_%E1%B1%9F%E1%B1%A0%E1%B1%9F%E1%B1%B1_%E1%B1%A2%E1%B1%A4%E1%B1%AB_%E1%B1%A5%E1%B1%9F%E1%B1%B8%E1%B1%AB%E1%B1%AE%E1%B1%A5.jpg"
+},
+{
+"img": "img/sc/c068.webp",
+"title": "संताली नृत्य",
+"text": "पर्व-त्योहार का सामूहिक नृत्य",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Karam_enej_by_Mahli_Santal_of_Birbhum_1.jpg"
+},
+{
+"img": "img/sc/c070.webp",
+"title": "जिल पीठा",
+"text": "मांस से बना पारंपरिक पीठा",
+"credit": "Kushal26.s · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Jill_Pitha_01.JPG"
+},
+{
+"img": "img/sc/c071.webp",
+"title": "संताल बच्चे",
+"text": "संताल समाज के बच्चे",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Little_Visitor_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03238.jpg"
+},
+{
+"img": "img/sc/c072.webp",
+"title": "गुडु लाट",
+"text": "पारंपरिक संताल पकवान",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Roasted_Rat_Meat_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03221.jpg"
+},
+{
+"img": "img/sc/c073.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "संग्रहालय की वस्तुएँ",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Samiran_Nandy_-_Birbhum_2024-09-20_00488.jpg"
+},
+{
+"img": "img/sc/c074.webp",
+"title": "झारखंड के संताल",
+"text": "झारखंड के संताल समाज की झलक",
+"credit": "Jessica Ridgewell · CC BY 2.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_people_Jharkhand_India.jpg"
+},
+{
+"img": "img/sc/c075.webp",
+"title": "सोहराय",
+"text": "फसल और पशुधन का पर्व",
+"credit": "Shreyashprashu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sohrai_wall_painting_jharkhand_India.jpg"
+},
+{
+"img": "img/sc/c076.webp",
+"title": "पश्चिम बंगाल के संताल",
+"text": "पश्चिम बंगाल के संताल समाज की झलक",
+"credit": "R Ashwani Banjan Murmu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sripati_tudu.jpg"
+},
+{
+"img": "img/sc/c077.webp",
+"title": "सिदो-कान्हू प्रतिमा",
+"text": "दिनाजपुर, बांग्लादेश",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Statue_of_Sidhu_and_Kanhu_in_Dinajpur_District_04.jpg"
+},
+{
+"img": "img/sc/c078.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Subarna Majhi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_Dance_at_Nepal.jpg"
+},
+{
+"img": "img/sc/c079.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_211.jpg"
+},
+{
+"img": "img/sc/c080.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:019_-_Bar_-_02.jpg"
+},
+{
+"img": "img/sc/c081.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Documentary_video_shooting_on_rat_hunting_by_the_Santhals_of_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024_24.jpg"
+},
+{
+"img": "img/sc/c082.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Holy_place_in_a_Santhal_village_in_the_Dinajpur_district,_Bangladesh_01.jpg"
+},
+{
+"img": "img/sc/c083.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02315.jpg"
+},
+{
+"img": "img/sc/c084.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Method_of_catching_fish_on_tribal_area.jpg"
+},
+{
+"img": "img/sc/c085.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Budhi_gali-_santhal_tribe_dance5.jpg"
+},
+{
+"img": "img/sc/c086.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8939.jpg"
+},
+{
+"img": "img/sc/c087.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Sumitsurai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Museum.jpg"
+},
+{
+"img": "img/sc/c088.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A0%E1%B1%A9%E1%B1%9E%E1%B1%A9%E1%B1%AF%E1%B1%B0%E1%B1%9F%E1%B1%9D%E1%B1%9C%E1%B1%9F_%E1%B1%B5%E1%B1%9F%E1%B1%A6%E1%B1%9F_%E1%B1%B5%E1%B1%9A%E1%B1%B8%E1%B1%9C%E1%B1%9F_03.jpg"
+},
+{
+"img": "img/sc/c089.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._01.jpg"
+},
+{
+"img": "img/sc/c090.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-27,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c091.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "SMarndi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A6%E1%B1%9F%E1%B1%B9%E1%B1%A0%E1%B1%A9_%E1%B1%9E%E1%B1%9F%E1%B1%AB_%E1%B1%AA%E1%B1%A9%E1%B1%9E%E1%B1%A6%E1%B1%9F%E1%B1%B9_%E1%B1%9F%E1%B1%9D%E1%B1%9C%E1%B1%A8%E1%B1%9F_%E1%B1%A8%E1%B1%AE_SC30.jpg"
+},
+{
+"img": "img/sc/c093.webp",
+"title": "दासाँय नृत्य",
+"text": "दासाँय पर्व का पारंपरिक नृत्य",
+"credit": "Bodhisattwa · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Dasai_Dance_at_the_streets_of_Purulia_district_06.JPG"
+},
+{
+"img": "img/sc/c094.webp",
+"title": "ओल चिकी शताब्दी",
+"text": "ओल चिकी लिपि के सौ साल का उत्सव, 2025",
+"credit": "Bijendra Hansda Purudhul · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Premchand,_Bijendra,_Shiba_%26_Rajnikant_Mandi_on_stage.jpg"
+},
+{
+"img": "img/sc/c095.webp",
+"title": "टमाक'",
+"text": "संताल नगाड़ा, नृत्य और पर्व का ढोल",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A6%E1%B1%AF%E1%B1%B0%E1%B1%A4%E1%B1%A7_%E1%B1%B4%E1%B1%9F%E1%B1%A2%E1%B1%9F%E1%B1%A02.jpg"
+},
+{
+"img": "img/sc/c096.webp",
+"title": "संताल महिलाएँ",
+"text": "संताल समाज की महिलाएँ",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Girls_Floating_Lighted_Diyas_On_Water_As_A_Traditional_Ritual_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03165.jpg"
+},
+{
+"img": "img/sc/c097.webp",
+"title": "मातकोम पावरो",
+"text": "महुआ से जुड़ी परंपरा",
+"credit": "Swetapadma07 · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Checking_the_level_of_vapor.JPG"
+},
+{
+"img": "img/sc/c098.webp",
+"title": "संताल वाद्य यंत्र",
+"text": "पारंपरिक संताल वाद्य",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tamak_and_Tumdak_02.jpg"
+},
+{
+"img": "img/sc/c099.webp",
+"title": "संताल पुरुष",
+"text": "संताल समाज के पुरुष",
+"credit": "Bp1995 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_musicians,_Bolpur.jpg"
+},
+{
+"img": "img/sc/c100.webp",
+"title": "टुमदाक'",
+"text": "संताल मांदर, नृत्य का मुख्य वाद्य",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tumdak_Santali_musical_instrument.jpg"
+},
+{
+"img": "img/sc/c101.webp",
+"title": "पंडित रघुनाथ मुर्मू",
+"text": "ओल चिकी लिपि के रचयिता",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Kapi_Buru,_Rairangpur,_Odisha.jpg"
+},
+{
+"img": "img/sc/c102.webp",
+"title": "संताली नृत्य",
+"text": "पर्व-त्योहार का सामूहिक नृत्य",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Karam_enej_by_Mahli_Santal_of_Birbhum.jpg"
+},
+{
+"img": "img/sc/c103.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Aniket Bankri · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Indian_Tribal_Baha_Festival.jpg"
+},
+{
+"img": "img/sc/c104.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_festival_2025_30.jpg"
+},
+{
+"img": "img/sc/c105.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:124_-_Net_-_01.jpg"
+},
+{
+"img": "img/sc/c106.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Subodh (CIS-A2K) · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Stall_of_organic_food_by_students_at_the_Santal_food_festival_(8_December_2024)2.jpg"
+},
+{
+"img": "img/sc/c107.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_03.jpg"
+},
+{
+"img": "img/sc/c108.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Roasting_Meat_In_Leaf-Wrapped_Metal_Container_In_The_Field_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02799.jpg"
+},
+{
+"img": "img/sc/c109.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Portrait_made_in_clay_having_very_unique_look.jpg"
+},
+{
+"img": "img/sc/c110.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Budhi_gali-_santhal_tribe_dance3.jpg"
+},
+{
+"img": "img/sc/c111.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_dance.jpg"
+},
+{
+"img": "img/sc/c112.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Sumitsurai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Biswarup_Ganguly_-_Santal_Museum.jpg"
+},
+{
+"img": "img/sc/c113.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A0%E1%B1%A9%E1%B1%9E%E1%B1%A9%E1%B1%AF%E1%B1%B0%E1%B1%9F%E1%B1%9D%E1%B1%9C%E1%B1%9F_%E1%B1%B5%E1%B1%9F%E1%B1%A6%E1%B1%9F_%E1%B1%B5%E1%B1%9A%E1%B1%B8%E1%B1%9C%E1%B1%9F_07.jpg"
+},
+{
+"img": "img/sc/c114.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._07.jpg"
+},
+{
+"img": "img/sc/c115.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "নয়ন জ্যোতি নাথ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tomal_%E0%A6%A4%E0%A6%AE%E0%A6%BE%E0%A6%B2._jpg.jpg"
+},
+{
+"img": "img/sc/c116.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Lunch_at_a_Santal_village_03.jpg"
+},
+{
+"img": "img/sc/c118.webp",
+"title": "दासाँय नृत्य",
+"text": "दासाँय पर्व का पारंपरिक नृत्य",
+"credit": "Bodhisattwa · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Dasai_Dance_at_the_streets_of_Purulia_district_05.JPG"
+},
+{
+"img": "img/sc/c119.webp",
+"title": "ओल चिकी शताब्दी",
+"text": "ओल चिकी लिपि के सौ साल का उत्सव, 2025",
+"credit": "Bijendra Hansda Purudhul · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A3%E1%B1%A4%E1%B1%A0%E1%B1%A4%E1%B1%AF%E1%B1%A4%E1%B1%B0%E1%B1%A4%E1%B1%AD%E1%B1%9F_%E1%B1%B5%E1%B1%9F%E1%B1%B5%E1%B1%9A%E1%B1%9B_%E1%B1%9E%E1%B1%9F%E1%B1%B9%E1%B1%AD_%E1%B1%9A%E1%B1%A0%E1%B1%9B%E1%B1%AE_%E1%B1%A2%E1%B1%A4%E1%B1%AB_%E1%B1%AA%E1%B1%A4%E1%B1%9B%E1%B1%9F%E1%B1%B9%E1%B1%A8.jpg"
+},
+{
+"img": "img/sc/c120.webp",
+"title": "टमाक'",
+"text": "संताल नगाड़ा, नृत्य और पर्व का ढोल",
+"credit": "Arijit Kisku · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tribal_Men_Playing_Tamak%27.jpg"
+},
+{
+"img": "img/sc/c121.webp",
+"title": "संताल महिलाएँ",
+"text": "संताल समाज की महिलाएँ",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Girls_Floating_Lighted_Diyas_On_Water_As_A_Traditional_Ritual_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03154.jpg"
+},
+{
+"img": "img/sc/c122.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "SMarndi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Paranchha3.jpg"
+},
+{
+"img": "img/sc/c123.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_161.jpg"
+},
+{
+"img": "img/sc/c124.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:056_-_Chun_Thonga_-_01.jpg"
+},
+{
+"img": "img/sc/c125.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Subodh (CIS-A2K) · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Stall_of_organic_food_by_students_at_the_Santal_food_festival_(8_December_2024)1.jpg"
+},
+{
+"img": "img/sc/c126.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Piglet_in_front_of_a_house_in_a_Santal_village_01.jpg"
+},
+{
+"img": "img/sc/c127.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02027.jpg"
+},
+{
+"img": "img/sc/c128.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_tribe_on_the_context_of_earning_money.jpg"
+},
+{
+"img": "img/sc/c129.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "MaxA-Matrix · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baruni_mela_(Baripada)_1.jpg"
+},
+{
+"img": "img/sc/c130.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8933.jpg"
+},
+{
+"img": "img/sc/c131.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8163.jpg"
+},
+{
+"img": "img/sc/c132.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "Sbiswas1982 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Bandhna_Porob.jpg"
+},
+{
+"img": "img/sc/c133.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Sneharshidasgupta · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_Museum_of_Santal_Culture,_Bishnubati_-_Sneharshi_Dasgupta.JPG"
+},
+{
+"img": "img/sc/c134.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_male_people.jpg"
+},
+{
+"img": "img/sc/c135.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Premchand murmu thakur · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Food_of_home.jpg"
+},
+{
+"img": "img/sc/c136.webp",
+"title": "सिदो-कान्हू",
+"text": "1855 के हूल के महानायक",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sidhu_Kanhu_Park_Entrance_-_Ranchi_9204.JPG"
+},
+{
+"img": "img/sc/c137.webp",
+"title": "दासाँय नृत्य",
+"text": "दासाँय पर्व का पारंपरिक नृत्य",
+"credit": "Bodhisattwa · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Dasai_Dance_at_the_streets_of_Purulia_district_04.JPG"
+},
+{
+"img": "img/sc/c139.webp",
+"title": "टमाक'",
+"text": "संताल नगाड़ा, नृत्य और पर्व का ढोल",
+"credit": "Prateek Pattanaik · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Instruments_of_Odisha_-_Tamak_02.jpg"
+},
+{
+"img": "img/sc/c140.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Aniket Bankri · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tribes_Spring_Festival.jpg"
+},
+{
+"img": "img/sc/c141.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_rituals_02.jpg"
+},
+{
+"img": "img/sc/c142.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:016_-_Gundri_Pasi_-_Bird_Trap_-_01.jpg"
+},
+{
+"img": "img/sc/c143.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Carrying_Oyster_From_Kopai_Riverbed_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-07_00689.jpg"
+},
+{
+"img": "img/sc/c144.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Durga Soren · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_House_at_%27_State_Tribal_Fair-2020_%27_Bhubaneswar,India.jpg"
+},
+{
+"img": "img/sc/c145.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02006.jpg"
+},
+{
+"img": "img/sc/c146.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Refreshment_time.jpg"
+},
+{
+"img": "img/sc/c147.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Budhi_gali-_santhal_tribe_dance2.jpg"
+},
+{
+"img": "img/sc/c148.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8936.jpg"
+},
+{
+"img": "img/sc/c149.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8164.jpg"
+},
+{
+"img": "img/sc/c150.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "SpeakingArch · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Bala_sakam_(bangles),_Santali_Tribe,_Birbhum,_Eastern_India.jpg"
+},
+{
+"img": "img/sc/c151.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._10.jpg"
+},
+{
+"img": "img/sc/c152.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-21,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c153.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Lunch_at_a_Santal_village_01.jpg"
+},
+{
+"img": "img/sc/c154.webp",
+"title": "सिदो-कान्हू",
+"text": "1855 के हूल के महानायक",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sidhu_Kanhu,_Jadugora_01.jpg"
+},
+{
+"img": "img/sc/c155.webp",
+"title": "दासाँय नृत्य",
+"text": "दासाँय पर्व का पारंपरिक नृत्य",
+"credit": "Bodhisattwa · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Dasai_Dance_at_the_streets_of_Purulia_district_03.JPG"
+},
+{
+"img": "img/sc/c156.webp",
+"title": "ओल चिकी शताब्दी",
+"text": "ओल चिकी लिपि के सौ साल का उत्सव, 2025",
+"credit": "Bijendra Hansda Purudhul · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A3%E1%B1%A4%E1%B1%A0%E1%B1%A4%E1%B1%AF%E1%B1%A4%E1%B1%B0%E1%B1%A4%E1%B1%AD%E1%B1%9F%E1%B1%B1_%E1%B1%9F%E1%B1%A8_%E1%B1%A2%E1%B1%9F%E1%B1%B1%E1%B1%9A%E1%B1%9B%E1%B1%9F%E1%B1%B1_%E1%B1%A5%E1%B1%A9%E1%B1%AB%E1%B1%B7%E1%B1%A4%E1%B1%A8_%E1%B1%A2%E1%B1%A9%E1%B1%A8%E1%B1%A2%E1%B1%A9_%E1%B1%A5%E1%B1%9F%E1%B1%9E%E1%B1%9F%E1%B1%9C_%E1%B1%AA%E1%B1%A4%E1%B1%9B%E1%B1%9F%E1%B1%B9%E1%B1%A8.jpg"
+},
+{
+"img": "img/sc/c157.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santals_worshiping_their_God_during_Mag_More_Fastival_18.jpg"
+},
+{
+"img": "img/sc/c158.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_25.jpg"
+},
+{
+"img": "img/sc/c159.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:144_-_Kat_Banam_-_02.jpg"
+},
+{
+"img": "img/sc/c160.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Villager_Collecting_Saag_From_Rice_Field_-_Preparation_Of_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01218.jpg"
+},
+{
+"img": "img/sc/c161.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_01.jpg"
+},
+{
+"img": "img/sc/c162.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02319.jpg"
+},
+{
+"img": "img/sc/c163.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Refreshment_dance_by_santali_tribe.jpg"
+},
+{
+"img": "img/sc/c164.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:JAAHER_garh.jpg"
+},
+{
+"img": "img/sc/c165.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Dance_At_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03611.jpg"
+},
+{
+"img": "img/sc/c166.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Sneharshidasgupta · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_second_storey_of_the_Museum_of_Santal_Culture,_Bishnubati.jpg"
+},
+{
+"img": "img/sc/c167.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A0%E1%B1%A9%E1%B1%9E%E1%B1%A9%E1%B1%AF%E1%B1%B0%E1%B1%9F%E1%B1%9D%E1%B1%9C%E1%B1%9F_%E1%B1%B5%E1%B1%9F%E1%B1%A6%E1%B1%9F_%E1%B1%B5%E1%B1%9A%E1%B1%B8%E1%B1%9C%E1%B1%9F_06.jpg"
+},
+{
+"img": "img/sc/c168.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._02.jpg"
+},
+{
+"img": "img/sc/c169.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-29,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c170.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "P.55tirkey · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Mansapitha-dulki-westbengal-002.jpg"
+},
+{
+"img": "img/sc/c171.webp",
+"title": "सिदो-कान्हू",
+"text": "1855 के हूल के महानायक",
+"credit": "Illustrated London News · Public domain · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Attack_by_600_Santhals_upon_a_party_of_50_sepoys,_40th_regiment_native_infantry.jpg"
+},
+{
+"img": "img/sc/c172.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Wine_Preperation_rat_hunting_04.jpg"
+},
+{
+"img": "img/sc/c173.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_08.jpg"
+},
+{
+"img": "img/sc/c174.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:115_-_Tora_(For_Leg)_-_02.jpg"
+},
+{
+"img": "img/sc/c175.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Subodh (CIS-A2K) · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Women_singing_at_the_inauguration_of_Santal_Food_Seminar_(8_December_2024).jpg"
+},
+{
+"img": "img/sc/c176.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Holy_place_in_a_Santhal_village_in_the_Dinajpur_district,_Bangladesh_02.jpg"
+},
+{
+"img": "img/sc/c177.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02533.jpg"
+},
+{
+"img": "img/sc/c178.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Person_playing_musical_instrument_in_tribal_area.jpg"
+},
+{
+"img": "img/sc/c179.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_priest_worshiping3.jpg"
+},
+{
+"img": "img/sc/c180.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Dance_At_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03601.jpg"
+},
+{
+"img": "img/sc/c181.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Sumitsurai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Saikat_Surai_-_Santal_Museum.jpg"
+},
+{
+"img": "img/sc/c182.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "Kingshukchakravarty · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Where_Earth_Remembers_Color.jpg"
+},
+{
+"img": "img/sc/c183.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._03.jpg"
+},
+{
+"img": "img/sc/c184.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "Drmakazad · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E0%A6%86%E0%A6%B2%E0%A6%A4%E0%A6%BE%E0%A6%A6%E0%A7%80%E0%A6%98%E0%A6%BF_%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A7%80%E0%A6%AF%E0%A6%BC_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%87_%E0%A6%B8%E0%A6%BE%E0%A6%93%E0%A6%A4%E0%A6%BE%E0%A6%B2_%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF.jpg"
+},
+{
+"img": "img/sc/c185.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Lunch_at_a_Santal_village_02.jpg"
+},
+{
+"img": "img/sc/c186.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sohray_khuntaw.jpg"
+},
+{
+"img": "img/sc/c187.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_170.jpg"
+},
+{
+"img": "img/sc/c188.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:105_-_Sakom_-_02.jpg"
+},
+{
+"img": "img/sc/c189.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Preparation_Of_Cooking_Jhinuk_Pitho_Or_Oyster_Pancake_Roasted_In_Leaf_Plate_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02180.jpg"
+},
+{
+"img": "img/sc/c190.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Dolon Prova · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_3.jpg"
+},
+{
+"img": "img/sc/c191.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02251.jpg"
+},
+{
+"img": "img/sc/c192.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Handicrafts_items_of_santali_tribe.jpg"
+},
+{
+"img": "img/sc/c193.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Rukmini Murmu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:IMG-20190212-WA0012.jpg"
+},
+{
+"img": "img/sc/c194.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8945.jpg"
+},
+{
+"img": "img/sc/c195.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Sneharshidasgupta · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Sculptures_exhibited_at_the_Museum_of_Santal_Culture,_Bishnubati.jpg"
+},
+{
+"img": "img/sc/c196.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "Chhaya mandi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Heand_tattoo.jpg"
+},
+{
+"img": "img/sc/c197.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Random_images_of_the_neighbourhood_at_Bishnubati,_Bolpur,_West_Bengal._December_5_and_6,_2024_09.jpg"
+},
+{
+"img": "img/sc/c198.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Mud_house.jpg"
+},
+{
+"img": "img/sc/c199.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Swan_Egg_Fritters_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03101.jpg"
+},
+{
+"img": "img/sc/c200.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_dance_in_Mag_more_fastival.jpg"
+},
+{
+"img": "img/sc/c201.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_190.jpg"
+},
+{
+"img": "img/sc/c202.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:077_-_Ram_Singha_-_03.jpg"
+},
+{
+"img": "img/sc/c203.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Decorative_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01857.jpg"
+},
+{
+"img": "img/sc/c204.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-17,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c205.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02289.jpg"
+},
+{
+"img": "img/sc/c206.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Culture_of_Tamil_Nadu,_santali_Museum_Delhi.jpg"
+},
+{
+"img": "img/sc/c207.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Nayke_baba_worshiping.jpg"
+},
+{
+"img": "img/sc/c208.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8941.jpg"
+},
+{
+"img": "img/sc/c209.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8165.jpg"
+},
+{
+"img": "img/sc/c210.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "Neha 678990 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Parob.jpg"
+},
+{
+"img": "img/sc/c211.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._11.jpg"
+},
+{
+"img": "img/sc/c212.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Women.jpg"
+},
+{
+"img": "img/sc/c213.webp",
+"title": "संताल व्यंजन",
+"text": "संताल रसोई के पारंपरिक पकवान",
+"credit": "Chhaya mandi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Fruit_(%E1%B1%B5%E1%B1%B7%E1%B1%A9%E1%B1%9E%E1%B1%9E%E1%B1%A9_%E1%B1%B5%E1%B1%A4%E1%B1%9E%E1%B1%A4).jpg"
+},
+{
+"img": "img/sc/c214.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Joy sagar Murmu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Two_Santhali_girls_in_traditional_attire_from_Kokrajhar_Assam_India.jpg"
+},
+{
+"img": "img/sc/c215.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_2025_104.jpg"
+},
+{
+"img": "img/sc/c216.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:032A_-_Ring_-_02.jpg"
+},
+{
+"img": "img/sc/c217.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_Museum_of_Santhal_Culture,_Bishnubati,_Bolpur_decking_up_for_food_festival._December_8,_2024._25.jpg"
+},
+{
+"img": "img/sc/c218.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-15,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c219.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02286.jpg"
+},
+{
+"img": "img/sc/c220.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Musical_instrument_by_santali_tribe.jpg"
+},
+{
+"img": "img/sc/c221.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_priest_worshiping.jpg"
+},
+{
+"img": "img/sc/c222.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8806.jpg"
+},
+{
+"img": "img/sc/c223.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Sneharshidasgupta · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_inside_roof_architecture_of_the_Museum_of_Santal_Culture,_Bishnubati.jpg"
+},
+{
+"img": "img/sc/c224.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Chador_Badoni_Puppet.jpg"
+},
+{
+"img": "img/sc/c225.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._04.jpg"
+},
+{
+"img": "img/sc/c226.webp",
+"title": "बांग्लादेश के संताल",
+"text": "बांग्लादेश में बसे संताल समाज की झलक",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_people_at_Dhamoirhat.jpg"
+},
+{
+"img": "img/sc/c227.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Joy sagar Murmu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:20th_Adivasi_Mahasabha_2025_a-4.jpg"
+},
+{
+"img": "img/sc/c228.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_2025_108.jpg"
+},
+{
+"img": "img/sc/c229.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:115_-_Tora_(For_Leg)_-_01.jpg"
+},
+{
+"img": "img/sc/c230.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Subodh (CIS-A2K) · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Recipes_at_the_Santal_Food_Festival_(8_December_2024).jpg"
+},
+{
+"img": "img/sc/c231.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Durga Soren, India · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_House_at_%22State_Tribal_Festival-2020%22_(Odisha),_bhubaneswar,_India.jpg"
+},
+{
+"img": "img/sc/c232.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02015.jpg"
+},
+{
+"img": "img/sc/c233.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Arrow_used_for_hunting.jpg"
+},
+{
+"img": "img/sc/c234.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Budhi_gali-_santhal_tribe_dance.jpg"
+},
+{
+"img": "img/sc/c235.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8932.jpg"
+},
+{
+"img": "img/sc/c236.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8160.jpg"
+},
+{
+"img": "img/sc/c237.webp",
+"title": "संताल संस्कृति",
+"text": "परंपरा, कला और जीवन-शैली",
+"credit": "SAMIT DAS · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:ADIBASI_DANCE.jpg"
+},
+{
+"img": "img/sc/c238.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी, शांतिनिकेतन के पास",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Museum_of_Santhal_Culture,_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024._05.jpg"
+},
+{
+"img": "img/sc/c239.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santals_worshiping_their_God_during_Mag_More_Fastival_17.jpg"
+},
+{
+"img": "img/sc/c240.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_11.jpg"
+},
+{
+"img": "img/sc/c241.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:013_-_Tari_Get_Churi_-_02.jpg"
+},
+{
+"img": "img/sc/c242.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_Museum_of_Santhal_Culture,_Bishnubati,_Bolpur_decking_up_for_food_festival._December_8,_2024._32.jpg"
+},
+{
+"img": "img/sc/c243.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_07.jpg"
+},
+{
+"img": "img/sc/c244.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02559.jpg"
+},
+{
+"img": "img/sc/c245.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Culture_of_Arunachal_Pradesh,_santali_museum_Delhi.jpg"
+},
+{
+"img": "img/sc/c246.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Rukmini Murmu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:IMG-20190212-WA0000.jpg"
+},
+{
+"img": "img/sc/c247.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8931.jpg"
+},
+{
+"img": "img/sc/c248.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8168.jpg"
+},
+{
+"img": "img/sc/c249.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Martin_Kempchen_Interview_74.jpg"
+},
+{
+"img": "img/sc/c250.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_135.jpg"
+},
+{
+"img": "img/sc/c251.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:020_-_Potam_Champa_-_Bird_Trap_-_02.jpg"
+},
+{
+"img": "img/sc/c252.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Subodh (CIS-A2K) · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Food_preparation_at_Santal_food_festival_(8_December_2024)7.jpg"
+},
+{
+"img": "img/sc/c253.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_02.jpg"
+},
+{
+"img": "img/sc/c254.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02530.jpg"
+},
+{
+"img": "img/sc/c255.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Person_involve_in_doing_household_work_in_tribal_area.jpg"
+},
+{
+"img": "img/sc/c256.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Budhi_gali-_santhal_tribe_dance4.jpg"
+},
+{
+"img": "img/sc/c257.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Neverdie1672018 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Lungi_Panchi_Dance_West_Bengal.jpg"
+},
+{
+"img": "img/sc/c258.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8167.jpg"
+},
+{
+"img": "img/sc/c259.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ShishirMallika · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhali_Dance.jpg"
+},
+{
+"img": "img/sc/c260.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_03.jpg"
+},
+{
+"img": "img/sc/c261.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:086_-_Dhera_-_01.jpg"
+},
+{
+"img": "img/sc/c262.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Documentary_video_shooting_on_rat_hunting_by_the_Santhals_of_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024_11.jpg"
+},
+{
+"img": "img/sc/c263.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:A_santal_woman_working_on_her_mud_house.jpg"
+},
+{
+"img": "img/sc/c264.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02551.jpg"
+},
+{
+"img": "img/sc/c265.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Image_of_santal_museum.jpg"
+},
+{
+"img": "img/sc/c266.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Kanailal_Tudu_(santali_writer)_with_wife.jpg"
+},
+{
+"img": "img/sc/c267.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Sayantan Sarkar · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tribal_dance.jpg"
+},
+{
+"img": "img/sc/c268.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8166.jpg"
+},
+{
+"img": "img/sc/c269.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Martin_Kempchen_Interview_13.jpg"
+},
+{
+"img": "img/sc/c270.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_143.jpg"
+},
+{
+"img": "img/sc/c271.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:054_-_Sora_Cover_-_01.jpg"
+},
+{
+"img": "img/sc/c272.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Villager_Returning_With_Collected_Saag_From_Rice_Field_-_Preparation_Of_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01334.jpg"
+},
+{
+"img": "img/sc/c273.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Daily_Life_Of_Santal_Village_Bishnubati_On_A_Dull_Winter_Day_-_Birbhum_2024-12-09_04053.jpg"
+},
+{
+"img": "img/sc/c274.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02194.jpg"
+},
+{
+"img": "img/sc/c275.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Art_of_living_of_women_in_tribal_area_of_India.jpg"
+},
+{
+"img": "img/sc/c276.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_priest_worshiping4.jpg"
+},
+{
+"img": "img/sc/c277.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "PritD · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_Dance_of_Shonibarer_Haat_at_Sonajhuri_03.jpg"
+},
+{
+"img": "img/sc/c278.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8161.jpg"
+},
+{
+"img": "img/sc/c279.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Mag_more_fastival_3.jpg"
+},
+{
+"img": "img/sc/c280.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_55.jpg"
+},
+{
+"img": "img/sc/c281.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:007_-_Gudu_Pasi_-_Mouse_trap_-_01.jpg"
+},
+{
+"img": "img/sc/c282.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03285.jpg"
+},
+{
+"img": "img/sc/c283.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Biplob Rahman-BD · CC BY-SA 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santal_Lifestyle-16,_SriramPur,_DinajPur_(c)_Biplob_Rahman.jpg"
+},
+{
+"img": "img/sc/c284.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02238.jpg"
+},
+{
+"img": "img/sc/c285.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Unique_musical_instrument.jpg"
+},
+{
+"img": "img/sc/c286.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Kids_with_small_drum_used_as_musical_instrument_by_santhal_people.jpg"
+},
+{
+"img": "img/sc/c287.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Sumitsoren sumit soren · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_dance.jpg"
+},
+{
+"img": "img/sc/c288.webp",
+"title": "संग्रहालय के भीतर",
+"text": "संताल संस्कृति संग्रहालय, बिष्णुबाटी",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Museum_Of_Santal_Culture_-_Birbhum_2024-09-18_8159.jpg"
+},
+{
+"img": "img/sc/c289.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Wine_Preperation_rat_hunting_17.jpg"
+},
+{
+"img": "img/sc/c290.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_35.jpg"
+},
+{
+"img": "img/sc/c291.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:137_-_Tali_Gashaa_-_02.jpg"
+},
+{
+"img": "img/sc/c292.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_Museum_of_Santhal_Culture,_Bishnubati,_Bolpur_decking_up_for_food_festival._December_8,_2024._27.jpg"
+},
+{
+"img": "img/sc/c293.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Daily_Life_Of_Santal_Village_Bishnubati_On_A_Dull_Winter_Day_-_Birbhum_2024-12-09_03813.jpg"
+},
+{
+"img": "img/sc/c294.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02324.jpg"
+},
+{
+"img": "img/sc/c295.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Metal_weapons.jpg"
+},
+{
+"img": "img/sc/c296.webp",
+"title": "ओडिशा के संताल",
+"text": "ओडिशा के संताल समाज की झलक",
+"credit": "Ramjit Tudu · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_priest_worshiping2.jpg"
+},
+{
+"img": "img/sc/c297.webp",
+"title": "संताल नृत्य",
+"text": "मांदर और टमाक की ताल पर सामूहिक नृत्य",
+"credit": "Biswarup Ganguly · CC BY 3.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Dance_Performance_-_Sundarban_Kristi_Mela_O_Loko_Sanskriti_Utsab_-_Narayantala_-_South_24_Parganas_2022-12-28_8947.jpg"
+},
+{
+"img": "img/sc/c298.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Subarna Majhi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_Dance_at_Jhapa,_Nepal.jpg"
+},
+{
+"img": "img/sc/c299.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_69.jpg"
+},
+{
+"img": "img/sc/c300.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:111_-_Sakom_(Birbhum)_-_01.jpg"
+},
+{
+"img": "img/sc/c301.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Documentary_video_shooting_on_rat_hunting_by_the_Santhals_of_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024_20.jpg"
+},
+{
+"img": "img/sc/c302.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "ROCKY · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Mud_house_in_Bangladesh.jpg"
+},
+{
+"img": "img/sc/c303.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01957.jpg"
+},
+{
+"img": "img/sc/c304.webp",
+"title": "संताली संग्रहालय, दिल्ली",
+"text": "संताल संस्कृति की वस्तुएँ और प्रदर्शनी",
+"credit": "Radhadwibedi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Image_of_santali_culture.jpg"
+},
+{
+"img": "img/sc/c305.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "The Illustrated London News · Public domain · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santhal_rebellion_recovery.jpg"
+},
+{
+"img": "img/sc/c306.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_217.jpg"
+},
+{
+"img": "img/sc/c307.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:050_-_Sher_-_01.jpg"
+},
+{
+"img": "img/sc/c308.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Initiating_Jhinuk_Pitho_Or_Oyster_Pancake_Cooking_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-07_00929.jpg"
+},
+{
+"img": "img/sc/c309.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_04.jpg"
+},
+{
+"img": "img/sc/c310.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02437.jpg"
+},
+{
+"img": "img/sc/c311.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "সন্দীপ সরকার · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E0%A6%A8%E0%A6%AC_%E0%A6%AC%E0%A6%BF%E0%A6%AC%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A4_%E0%A6%B8%E0%A6%BE%E0%A6%81%E0%A6%93%E0%A6%A4%E0%A6%BE%E0%A6%B2_%E0%A6%A6%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%A4%E0%A6%BF.jpg"
+},
+{
+"img": "img/sc/c312.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_58.jpg"
+},
+{
+"img": "img/sc/c313.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:109_-_Jhunko_Sulak_-_01.jpg"
+},
+{
+"img": "img/sc/c314.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Random_images_of_the_neighbourhood_at_Bishnubati,_Bolpur,_West_Bengal._December_5_and_6,_2024_04.jpg"
+},
+{
+"img": "img/sc/c315.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_08.jpg"
+},
+{
+"img": "img/sc/c316.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02537.jpg"
+},
+{
+"img": "img/sc/c317.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Milantudu1 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Regra_-_Santhal_Tribe_Music_Instrument.jpg"
+},
+{
+"img": "img/sc/c318.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_festival_2025_21.jpg"
+},
+{
+"img": "img/sc/c319.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:068_-_Dom_Don_Arsi_-_02.jpg"
+},
+{
+"img": "img/sc/c320.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Experienced_Santal_Rat_Meat_Roaster_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03508.jpg"
+},
+{
+"img": "img/sc/c321.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_in_Dinajpur_district_06.jpg"
+},
+{
+"img": "img/sc/c322.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02322.jpg"
+},
+{
+"img": "img/sc/c323.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Aniket Bankri · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Maa_Mode_Festival.jpg"
+},
+{
+"img": "img/sc/c324.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_10.jpg"
+},
+{
+"img": "img/sc/c325.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:058_-_Binthi_-_01.jpg"
+},
+{
+"img": "img/sc/c326.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03560.jpg"
+},
+{
+"img": "img/sc/c327.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "SMarndi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santali_Paranchha3.jpg"
+},
+{
+"img": "img/sc/c328.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Roasting_Meat_In_Leaf-Wrapped_Metal_Container_In_Paddy_Field_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02952.jpg"
+},
+{
+"img": "img/sc/c329.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Wine_Preperation_rat_hunting_14.jpg"
+},
+{
+"img": "img/sc/c330.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_07.jpg"
+},
+{
+"img": "img/sc/c331.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:057_-_Furuh_-_01.jpg"
+},
+{
+"img": "img/sc/c332.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03372.jpg"
+},
+{
+"img": "img/sc/c333.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:A_pigeon_house_in_a_Santal_village_in_Dinajpur_district_02.jpg"
+},
+{
+"img": "img/sc/c334.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02450.jpg"
+},
+{
+"img": "img/sc/c335.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Wine_Preperation_rat_hunting_05.jpg"
+},
+{
+"img": "img/sc/c336.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_68.jpg"
+},
+{
+"img": "img/sc/c337.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:045_-_Patia_-_02.jpg"
+},
+{
+"img": "img/sc/c338.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Preparation_Of_Cooking_Jhinuk_Pitho_Or_Oyster_Pancake_Roasted_In_Leaf_Plate_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01837.jpg"
+},
+{
+"img": "img/sc/c339.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Soumendra Kumar Sahoo · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E0%AC%B8%E0%AC%BE%E0%AC%A8%E0%AD%8D%E0%AC%A4%E0%AC%BE%E0%AC%B3_%E0%AC%9C%E0%AC%BE%E0%AC%A4%E0%AC%BF%E0%AC%B0_%E0%AC%B2%E0%AD%8B%E0%AC%95%E0%AC%99%E0%AD%8D%E0%AC%95%E0%AC%B0_%E0%AC%98%E0%AC%B0.jpg"
+},
+{
+"img": "img/sc/c340.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02543.jpg"
+},
+{
+"img": "img/sc/c341.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Santals_worshiping_their_God_during_Mag_More_Fastival_6.jpg"
+},
+{
+"img": "img/sc/c342.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_at_jagannathpur_village_67.jpg"
+},
+{
+"img": "img/sc/c343.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:047_-_Thari_-_01.jpg"
+},
+{
+"img": "img/sc/c344.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Rat_hunting_and_processing_of_meat_by_the_Santhals_of_Bishnubati,_Bolpur,_West_Bengal._December_6,_2024_13.jpg"
+},
+{
+"img": "img/sc/c345.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Souviksam07 · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Tiny,_yet_elegant.jpg"
+},
+{
+"img": "img/sc/c346.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02259.jpg"
+},
+{
+"img": "img/sc/c347.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:RSV_School_Bishnu_bati_06.jpg"
+},
+{
+"img": "img/sc/c348.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_164.jpg"
+},
+{
+"img": "img/sc/c349.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:153_-_Haran_-_02.jpg"
+},
+{
+"img": "img/sc/c350.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Preparation_Of_Cooking_Jhinuk_Pitho_Or_Oyster_Pancake_Roasted_In_Leaf_Plate_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01910.jpg"
+},
+{
+"img": "img/sc/c351.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Dolon Prova · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_1.jpg"
+},
+{
+"img": "img/sc/c352.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02453.jpg"
+},
+{
+"img": "img/sc/c353.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Wine_Preperation_rat_hunting_18.jpg"
+},
+{
+"img": "img/sc/c354.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_13.jpg"
+},
+{
+"img": "img/sc/c355.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:021_-_Khuni_-_01.jpg"
+},
+{
+"img": "img/sc/c356.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Villager_Collecting_Saag_From_Rice_Field_-_Preparation_Of_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01214.jpg"
+},
+{
+"img": "img/sc/c357.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Kritzolina · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:A_pigeon_house_in_a_Santal_village_in_Dinajpur_district_01.jpg"
+},
+{
+"img": "img/sc/c358.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02540.jpg"
+},
+{
+"img": "img/sc/c359.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Wine_Preperation_rat_hunting_20.jpg"
+},
+{
+"img": "img/sc/c360.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_Festival_rituals_08.jpg"
+},
+{
+"img": "img/sc/c361.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:157_-_Rundo_Khancha_-_02.jpg"
+},
+{
+"img": "img/sc/c362.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Visva-Bharati_Student_Participants_With_Dignitaries_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03449.jpg"
+},
+{
+"img": "img/sc/c363.webp",
+"title": "संताल घर",
+"text": "मिट्टी की दीवारें, रंगीन चित्रकारी और साफ़-सुथरा आँगन",
+"credit": "Dolon Prova · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Houses_in_a_Santal_village_2.jpg"
+},
+{
+"img": "img/sc/c364.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Village_Cuisine_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02534.jpg"
+},
+{
+"img": "img/sc/c365.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Aniket Bankri · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Maa_Mode_Traditional_Festival.jpg"
+},
+{
+"img": "img/sc/c366.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_212.jpg"
+},
+{
+"img": "img/sc/c367.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:143_-_Thro_Thoto_-_03.jpg"
+},
+{
+"img": "img/sc/c368.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Oindrilla Maity Surai · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:The_Museum_of_Santhal_Culture,_Bishnubati,_Bolpur_decking_up_for_food_festival._December_8,_2024._02.jpg"
+},
+{
+"img": "img/sc/c370.webp",
+"title": "पारंपरिक भोजन",
+"text": "संताल रसोई में पारंपरिक व्यंजन बनाना",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Roasting_Meat_In_Leaf-Wrapped_Metal_Container_In_Paddy_Field_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_02965.jpg"
+},
+{
+"img": "img/sc/c371.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "SMarndi · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:%E1%B1%A1%E1%B1%B7%E1%B1%9F%E1%B1%B9%E1%B1%9E%E1%B1%9F%E1%B1%9C_%E1%B1%A5%E1%B1%9F%E1%B1%B9%E1%B1%B2%E1%B1%A4_%E1%B1%AB%E1%B1%9A%E1%B1%A0%E1%B1%9F%E1%B1%B1_SC22.jpg"
+},
+{
+"img": "img/sc/c372.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Bah_festival_2025_3.jpg"
+},
+{
+"img": "img/sc/c373.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:021_-_Khuni_-_02.jpg"
+},
+{
+"img": "img/sc/c374.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_03475.jpg"
+},
+{
+"img": "img/sc/c375.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "ᱥᱟᱹᱜᱩᱱ ᱗ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Baha_dance_in_Mag_more_fastival_01.jpg"
+},
+{
+"img": "img/sc/c376.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_42.jpg"
+},
+{
+"img": "img/sc/c377.webp",
+"title": "संताल संस्कृति संग्रहालय",
+"text": "बिष्णुबाटी के संताल संस्कृति संग्रहालय से",
+"credit": "Saikat Surai · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:053_-_Lompha_-_01.jpg"
+},
+{
+"img": "img/sc/c378.webp",
+"title": "संताल खाद्य उत्सव",
+"text": "बिष्णुबाटी में पारंपरिक संताल व्यंजन मेला, 2024",
+"credit": "Gangulybiswarup · CC BY 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Decorative_Preparations_-_Traditional_Santal_Food_Mela_-_11th_Museum_Day_Celebration_-_Museum_Of_Santal_Culture_-_Birbhum_2024-12-08_01561.jpg"
+},
+{
+"img": "img/sc/c379.webp",
+"title": "संताल समाज",
+"text": "संताल लोग और उनका रोज़मर्रा का जीवन",
+"credit": "Art Gravure · CC0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Martin_Kempchen_Interview_87.jpg"
+},
+{
+"img": "img/sc/c380.webp",
+"title": "बाहा परब",
+"text": "फूलों का पर्व, साल और महुआ के फूलों के स्वागत का उत्सव",
+"credit": "ᱤᱧ ᱢᱟᱛᱟᱞ · CC BY-SA 4.0 · Wikimedia Commons",
+"link": "https://commons.wikimedia.org/wiki/File:Crossing_Baha_Festival_Showcases_Santali_Mythology_and_History_178.jpg"
+}
 ]

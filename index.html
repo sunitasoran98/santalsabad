@@ -426,6 +426,66 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .fb .ok{display:none;padding:12px 14px;border-radius:12px;background:#e8f8f1;color:#0b6b4b;margin-top:14px;font-size:14px}.fb .ok.on{display:block}
 @media(max-width:640px){.searchbox .chip:not(.set) .cl{display:none}.searchbox .chip{padding:0 10px;margin-left:6px}.sact .vsel{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== v26 ===== */
+/* modal light pro */
+.mdl{background:rgba(15,30,55,.45)}
+.mdl .box{width:min(1120px,100%);max-height:min(90vh,880px);border-radius:24px;background:#f6f8fc;border:1px solid #e1e7f1}
+.mdl .mh{padding:18px 22px;background:#fff;border-bottom:1px solid #e6ebf3;gap:14px}
+.mdl .mlogo{width:50px;height:50px;border-radius:14px;flex:none;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f7f0,#d3efe3);border:1px solid #bfe5d3;color:#0e9f6e;font:700 24px "Noto Sans Devanagari",sans-serif}
+.mdl .mt{display:flex;flex-direction:column;min-width:0}
+.mdl .mt small{color:#0e9f6e;font:700 11.5px "Open Sans",sans-serif;letter-spacing:.09em}
+.mdl .mt b{font:700 22px "Noto Sans Devanagari","Open Sans",sans-serif;color:#0f1d33;margin-top:2px}
+.mdl .mp{margin-left:auto;border:0;background:none;color:#41506e;width:40px;height:40px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.mdl .mp:hover{background:#eef3fb}
+.mdl .mx{background:none;font-size:26px;color:#41506e}.mdl .mx:hover{background:#fdecec;color:#d6262f}
+.mdl .tabs{width:300px;background:#fff;border-right:1px solid #e6ebf3;padding:16px}
+.mdl .tabs .tl{font:700 12px "Open Sans",sans-serif;letter-spacing:.08em;color:#6b7387;margin:4px 6px 12px}
+.mdl .tabs button{display:flex;align-items:center;gap:12px;border:1px solid #e3e9f2;background:#fbfcfe;border-radius:14px;padding:12px 14px;margin-bottom:8px;color:#24324d;font-size:14.5px;transition:.15s}
+.mdl .tabs button span{flex:1}.mdl .tabs button i{font-style:normal;color:#9aa6bb;font-size:18px}
+.mdl .tabs button svg{color:#6b7387;flex:none}
+.mdl .tabs button:hover{background:#f1f6fd;border-color:#cbd6e7}
+.mdl .tabs button.on{background:#0e9f6e;border-color:#0e9f6e;color:#fff;box-shadow:0 10px 22px -10px rgba(14,159,110,.7)}
+.mdl .tabs button.on svg,.mdl .tabs button.on i{color:#fff}
+.mdl .commit{margin-top:14px;padding:14px;border-radius:14px;background:#effaf5;border:1px solid #c6eadb;font-size:13px;line-height:1.6;color:#41506e}.mdl .commit b{color:#0e9f6e;display:block}
+.mdl .mc{padding:24px 30px;background:#f6f8fc}
+.mdl .mhero,.mdl .msec{background:#fff;border:1px solid #e3e9f2;border-radius:18px;box-shadow:0 8px 24px -16px rgba(1,31,67,.25);padding:24px 28px;margin-bottom:16px}
+.mdl .mhero h2{font:800 30px "Noto Sans Devanagari","Open Sans",sans-serif;color:#0f1d33;margin:0}
+.mdl .mhero .sub{color:#0e9f6e;font-weight:700;margin:2px 0 10px}
+.mdl .mhero .ver{display:inline-block;font-size:12.5px;padding:4px 12px;border-radius:999px;background:#f1f5fb;border:1px solid #dbe3ef;color:#41506e;margin-bottom:12px}
+.mdl .mhero .intro{color:#33405c}.mdl .mhero .intro p:last-child{margin-bottom:0}
+.mdl .msec h4{display:flex;align-items:center;gap:12px;margin:0 0 8px;font-size:17px;color:#0f1d33}
+.mdl .msec .ck{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;border:2px solid #0e9f6e;color:#0e9f6e;font-size:13px;background:#effaf5}
+.mdl .msec>div{padding-left:38px;color:#33405c}.mdl .msec>div p{margin:0 0 8px}
+.mdl .mc .fb{background:#fff;border:1px solid #e3e9f2;border-radius:18px;padding:24px 28px;box-shadow:0 8px 24px -16px rgba(1,31,67,.25)}
+.mdl .mf{background:#fff;border-top:1px solid #e6ebf3;padding:14px 22px;align-items:center}
+.mdl .mf .sdt{margin:0}
+.mdl .mok{border:0;border-radius:14px;background:#0e9f6e;color:#fff;font:700 16px "Noto Sans Devanagari","Open Sans",sans-serif;padding:14px 30px;cursor:pointer;box-shadow:0 12px 24px -12px rgba(14,159,110,.8);transition:.15s}
+.mdl .mok:hover{background:#0b8a5f;transform:translateY(-1px)}
+@media(max-width:720px){.mdl .tabs{width:auto;padding:10px}.mdl .tabs .tl,.mdl .commit{display:none}.mdl .tabs button{margin:0;padding:9px 12px;flex:none}.mdl .tabs button i{display:none}.mdl .mc{padding:14px}.mdl .mhero,.mdl .msec{padding:18px}.mdl .msec>div{padding-left:0}.mdl .mhero h2{font-size:24px}.mdl .mt b{font-size:17px}.mdl .mt small{font-size:10px}.mdl .mlogo{width:40px;height:40px}.mdl .mf .sdt{display:none}.mdl .mok{width:100%}}
+@media print{body>*:not(.mdl){display:none!important}.mdl{position:static;background:none}.mdl .tabs,.mdl .mf,.mdl .mp,.mdl .mx{display:none}.mdl .box{max-height:none;box-shadow:none}.mdl .mc{overflow:visible}}
+/* search: divider line + shadowed input pill */
+.searchbox .inw{margin:6px 4px 6px 16px;border-radius:999px;background:#fbfcfe;box-shadow:0 3px 10px -2px rgba(1,31,67,.12),inset 0 0 0 1px #e3e9f2;align-items:center;padding-right:4px;transition:.2s}
+.searchbox .inw:before{content:"";position:absolute;left:-10px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(180deg,#d6262f,#3d4fa0)}
+.searchbox:focus-within .inw{background:#fff;box-shadow:0 6px 16px -4px rgba(61,79,160,.25),inset 0 0 0 1px #c4cfe4}
+.searchbox .chip{box-shadow:0 3px 10px -2px rgba(1,31,67,.12)}
+.searchbox .inw input{height:100%}
+.compact .top .minisearch .searchbox .inw{margin:4px 4px 4px 14px}
+@media(max-width:640px){.searchbox .inw{margin:5px 2px 5px 12px}.searchbox .inw:before{left:-8px}}
+/* light shadow boxes */
+.band .cols>div{border:1px solid #e3e9f2!important;border-top:4px solid var(--navy)!important;border-radius:20px!important;box-shadow:0 14px 34px -18px rgba(1,31,67,.35)!important;background:#fff}
+.band .cols>div.wotd{border-top-color:#d6262f!important;background:linear-gradient(180deg,#fff,#fbfcff)}
+.wl a{display:block;background:#fff;border:1px solid #e8edf5;border-radius:12px;padding:8px 12px;box-shadow:0 3px 10px -6px rgba(1,31,67,.25);text-decoration:none;transition:.15s;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wl a:hover{transform:translateY(-2px);box-shadow:0 8px 16px -8px rgba(1,31,67,.35);border-color:#cbd6e7}
+.wl{display:grid;gap:8px}
+.side .box{border:1px solid #e3e9f2!important;border-radius:20px;box-shadow:0 14px 34px -18px rgba(1,31,67,.35)}
+.side .box>a{background:#fff;border:1px solid #e8edf5;border-radius:12px;padding:7px 12px;margin-bottom:7px;box-shadow:0 3px 10px -6px rgba(1,31,67,.25)}
+.wotd .w{background:none}
+.wotd a.more{padding:9px 20px;border-radius:999px;background:#011f43;color:#fff!important;box-shadow:0 10px 20px -10px rgba(1,31,67,.6)}
+/* slider photos */
+.sl .cap small.crd{display:block;margin-top:8px;font-size:11.5px;opacity:.8}.sl .cap small.crd a{color:#fff}
+.slprog{position:absolute;left:40px;right:40px;bottom:18px;height:4px;border-radius:4px;background:rgba(255,255,255,.3);z-index:3}.slprog i{display:block;height:100%;border-radius:4px;background:#fff;transition:width .4s}
+@media(max-width:640px){.slprog{left:18px;right:18px;bottom:12px}.sl .cap small.crd{font-size:10px}}
 </style>
 </head>
 <body>
@@ -636,15 +696,15 @@ function stats(){let hi=new Set(),en=new Set(),dv=0;order.forEach(k=>{const e=en
 /* ===== Slider ===== */
 let SLIDES=[],SLI=0,SLT=null;
 async function loadSlides(){const d=localStorage.getItem('ss_slides_draft');if(d){SLIDES=JSON.parse(d);return}try{SLIDES=await (await fetch('slides.json',{cache:'no-cache'})).json()}catch(e){SLIDES=[]}}
-function slN(){return SLIDES.length+(EDIT?0:wsl().length)}
-function sliderHTML(){const n=slN();if(!n&&!EDIT)return'';SLI=Math.min(SLI,Math.max(0,n-1));
+function slN(){return SLIDES.length}
+function sliderHTML(){const n=slN();if(!EDIT&&n>15&&!window._sld){window._sld=1;SLI=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5)%n}if(!n&&!EDIT)return'';SLI=Math.min(SLI,Math.max(0,n-1));
  const ce=(i,f,v)=>EDIT?`contenteditable="true" data-sl="${i}" data-slf="${f}"`:'';
- return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img src="${esc(x.img)}" alt="${esc(x.title)}" ${i>1?'loading="lazy"':''}><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p></div></div>`).join('')}${!EDIT&&wsl().length?`<div class="sli ws${SLI>=SLIDES.length?' on':''}" id="wsli">${wsHTML(SLI)}</div>`:''}
-  ${n>1?`<button class="nav prev" data-sn="-1" aria-label="पिछला">‹</button><button class="nav next" data-sn="1" aria-label="अगला">›</button><div class="dots">${SLIDES.map((x,i)=>`<button data-sd="${i}" class="${i===SLI?'on':''}" aria-label="स्लाइड ${i+1}"></button>`).join('')}${!EDIT&&wsl().length?`<button data-sd="${SLIDES.length}" class="wd${SLI>=SLIDES.length?' on':''}" aria-label="दिन का शब्द">365+</button>`:''}</div>`:''}
+ return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img ${Math.abs(i-SLI)<=1||EDIT?'src':'data-src'}="${esc(x.img)}" alt="${esc(x.title)}" decoding="async"><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p>${x.credit?`<small class="crd">📷 ${x.link?`<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.credit)}</a>`:esc(x.credit)}</small>`:''}</div></div>`).join('')}
+  ${n>1?`<button class="nav prev" data-sn="-1" aria-label="पिछला">‹</button><button class="nav next" data-sn="1" aria-label="अगला">›</button>${n<=15?`<div class="dots">${SLIDES.map((x,i)=>`<button data-sd="${i}" class="${i===SLI?'on':''}" aria-label="स्लाइड ${i+1}"></button>`).join('')}</div>`:`<div class="slprog"><i style="width:${(SLI+1)/n*100}%"></i></div>`}`:''}
   <span class="cnt">${n?SLI+1:0} / ${n}</span><div class="bar"></div>
   ${EDIT?`<div class="sladm"><label>+ नई स्लाइड (फ़ोटो)<input type="file" accept="image/*" id="slup" hidden></label>${n?`<label>फ़ोटो बदलें<input type="file" accept="image/*" id="slrep" hidden></label><button class="x" data-sx="1">✕ यह स्लाइड हटाएँ</button>`:''}</div>`:''}</div>`}
-function slGo(i){const el=$('#sl'),N=slN();if(!el||!N)return;SLI=(i+N)%N;const w=el.querySelector('#wsli');if(w){w.classList.toggle('on',SLI>=SLIDES.length);if(SLI>=SLIDES.length)w.innerHTML=wsHTML(SLI)}
- el.querySelectorAll('.sli:not(.ws)').forEach((x,j)=>x.classList.toggle('on',j===SLI));el.querySelectorAll('.dots button').forEach((x,j)=>x.classList.toggle('on',x.classList.contains('wd')?SLI>=SLIDES.length:j===SLI));
+function slGo(i){const el=$('#sl'),N=slN();if(!el||!N)return;SLI=(i+N)%N;const S=el.querySelectorAll('.sli');[SLI-1,SLI,SLI+1,SLI+2].forEach(j=>{const im=S[(j+N)%N]&&S[(j+N)%N].querySelector('img[data-src]');if(im){im.src=im.dataset.src;im.removeAttribute('data-src')}});const pg=el.querySelector('.slprog i');if(pg)pg.style.width=((SLI+1)/N*100)+'%';
+ S.forEach((x,j)=>x.classList.toggle('on',j===SLI));el.querySelectorAll('.dots button').forEach((x,j)=>x.classList.toggle('on',j===SLI));
  const c=el.querySelector('.cnt');if(c)c.textContent=`${SLI+1} / ${N}`;slPlay()}
 function slPlay(){clearTimeout(SLT);const el=$('#sl');if(!el||EDIT||slN()<2)return;const b=el.querySelector('.bar');if(b){b.classList.remove('run');void b.offsetWidth;b.classList.add('run')}
  SLT=setTimeout(()=>{if(!el.matches(':hover'))slGo(SLI+1);else slPlay()},6000)}
@@ -672,7 +732,7 @@ const LEGAL={
 disclaimer:['अस्वीकरण (Disclaimer)',`<p>SantalSabad एक मुफ़्त, शैक्षिक शब्दकोश है जिसे BOSC (Baski Online Service Center) चलाता है। हम शब्दों और अर्थों को सही रखने की पूरी कोशिश करते हैं, लेकिन <b>किसी भी जानकारी की पूर्णता या शुद्धता की गारंटी नहीं देते</b>.</p>
 <h3>हिन्दी अर्थ</h3><p>कई हिन्दी अर्थ मशीन-सहायता से तैयार किए गए हैं और अभी मूल संताली भाषियों द्वारा जाँच के दौर में हैं। कृपया महत्वपूर्ण काम (क़ानूनी, सरकारी, चिकित्सा, परीक्षा) के लिए किसी विशेषज्ञ से पुष्टि करें।</p>
 <h3>देवनागरी रूप</h3><p>देवनागरी रूप रोमन संताली से अपने आप (स्वतः लिप्यंतरण) बनाया गया है, इसमें गलती हो सकती है।</p>
-<h3>बाहरी लिंक और तस्वीरें</h3><p>स्लाइडर की कुछ तस्वीरें प्रतिनिधि (AI से बनी) चित्र हैं, किसी व्यक्ति या घटना की असली फ़ोटो नहीं। बाहरी वेबसाइटों की सामग्री के लिए हम ज़िम्मेदार नहीं हैं।</p>
+<h3>बाहरी लिंक और तस्वीरें</h3><p>स्लाइडर की तस्वीरें Wikimedia Commons से ली गई असली फ़ोटो हैं (CC BY, CC BY-SA, CC0 या पब्लिक डोमेन)। हर फ़ोटो पर फ़ोटोग्राफ़र और लाइसेंस लिखा है और उसका लिंक दिया गया है। बाहरी वेबसाइटों की सामग्री के लिए हम ज़िम्मेदार नहीं हैं।</p>
 <p>इस साइट के उपयोग से होने वाले किसी भी नुकसान के लिए BOSC ज़िम्मेदार नहीं होगा।</p>`],
 terms:['उपयोग की शर्तें (Terms of Use)',`<p>SantalSabad का उपयोग करके आप इन शर्तों से सहमत होते हैं।</p><ul>
 <li>यह साइट व्यक्तिगत, शैक्षिक और गैर-व्यावसायिक उपयोग के लिए मुफ़्त है।</li><li>साइट के डेटा का उपयोग करते समय स्रोतों का श्रेय देना ज़रूरी है (देखिए कॉपीराइट और लाइसेंस)।</li>
@@ -685,7 +745,7 @@ privacy:['गोपनीयता नीति (Privacy Policy)',`<p>SantalSaba
 copyright:['कॉपीराइट और लाइसेंस',`<p>साइट का डिज़ाइन, कोड और BOSC द्वारा लिखी सामग्री © BOSC (Baski Online Service Center)। सर्वाधिकार सुरक्षित।</p>
 <h3>शब्द-डेटा</h3><ul><li><b>A Santal Dictionary</b> (5 खंड), Rev. P. O. Bodding (Oslo, 1929–1936): पब्लिक डोमेन; स्कैन: National Library of Norway (nb.no)।</li><li><b>A Santali-English Dictionary</b>, Rev. A. Campbell (1899): पब्लिक डोमेन।</li><li><b>Wiktionary</b> (kaikki.org के माध्यम से): <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>। इस हिस्से का उपयोग उसी लाइसेंस के तहत श्रेय के साथ किया जा सकता है।</li><li>हिन्दी अर्थ और देवनागरी रूप: SantalSabad / BOSC।</li></ul>
 <p>डेटा या सामग्री का व्यावसायिक उपयोग करना हो तो पहले BOSC से अनुमति लें।</p>`],
-credits:['स्रोत और श्रेय',`<ul><li>Rev. P. O. Bodding, <i>A Santal Dictionary</i>, 5 खंड (Oslo, 1929–1936), पब्लिक डोमेन; डिजिटल प्रति: National Library of Norway।</li><li>Rev. A. Campbell, <i>A Santali-English Dictionary</i> (1899), पब्लिक डोमेन।</li><li>Wiktionary योगदानकर्ता, kaikki.org द्वारा निकाला गया डेटा (CC BY-SA 4.0)।</li><li>फ़ॉन्ट: DM Serif Display, Open Sans, Noto Sans Devanagari (Google Fonts, SIL Open Font License)।</li><li>होस्टिंग: Cloudflare Pages।</li></ul><p>सभी संताली शब्द असली स्रोतों से लिए गए हैं। सुझाव और सुधार का स्वागत है।</p>`],
+credits:['स्रोत और श्रेय',`<ul><li>स्लाइडर की 372 तस्वीरें: Wikimedia Commons (संताल संस्कृति, बाहा परब, संताल संस्कृति संग्रहालय बिष्णुबाटी आदि श्रेणियाँ), CC BY / CC BY-SA / CC0 / पब्लिक डोमेन। हर फ़ोटो पर फ़ोटोग्राफ़र, लाइसेंस और मूल पेज का लिंक दिया गया है।</li><li>Rev. P. O. Bodding, <i>A Santal Dictionary</i>, 5 खंड (Oslo, 1929–1936), पब्लिक डोमेन; डिजिटल प्रति: National Library of Norway।</li><li>Rev. A. Campbell, <i>A Santali-English Dictionary</i> (1899), पब्लिक डोमेन।</li><li>Wiktionary योगदानकर्ता, kaikki.org द्वारा निकाला गया डेटा (CC BY-SA 4.0)।</li><li>फ़ॉन्ट: DM Serif Display, Open Sans, Noto Sans Devanagari (Google Fonts, SIL Open Font License)।</li><li>होस्टिंग: Cloudflare Pages।</li></ul><p>सभी संताली शब्द असली स्रोतों से लिए गए हैं। सुझाव और सुधार का स्वागत है।</p>`],
 accessibility:['सुगम्यता (Accessibility)',`<p>हम चाहते हैं कि SantalSabad हर किसी के लिए आसान हो।</p><ul><li>मोबाइल, टैबलेट और डेस्कटॉप पर चलता है, और एक बार खुलने के बाद ऑफ़लाइन भी।</li><li>कीबोर्ड से सर्च: लिखिए, ↑ ↓ से चुनिए, Enter दबाइए।</li><li>ब्राउज़र ज़ूम (Ctrl +) से अक्षर बड़े किए जा सकते हैं।</li><li>Home / End बटन से पेज के ऊपर या नीचे तुरंत जाइए।</li></ul><p>कोई दिक्कत हो तो हमें ज़रूर बताइए।</p>`],
 contact:['सम्पर्क (Contact)',`<p><b>BOSC (Baski Online Service Center)</b></p><p data-t="contact_info">गलत अर्थ, नया शब्द या कोई सुझाव भेजने के लिए BOSC से सम्पर्क करें।</p><p>शब्द भेजते समय रोमन संताली शब्द, हिन्दी अर्थ, अंग्रेज़ी अर्थ और हो सके तो एक उदाहरण वाक्य ज़रूर लिखिए।</p>`]};
 function legalHTML(v){const [t,b]=LEGAL[v];return `<div class="card lp"><div class="crumb"><a href="#/">Home</a> › ${t}</div><h2 class="dm" style="margin-top:0;font-size:32px">${t}</h2>${b}<p class="upd">Antim badlav: ${UPD}</p></div>`}
@@ -899,6 +959,7 @@ document.querySelectorAll('.searchbox').forEach(box=>{const sel=box.querySelecto
  chip.addEventListener('click',e=>{if(e.target.classList.contains('cx')){sel.value='all';sel.dispatchEvent(new Event('change'));sync();e.stopPropagation();return}menu.classList.toggle('open');e.stopPropagation()});
  menu.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sel.value=b.dataset.v;sel.dispatchEvent(new Event('change'));sync();menu.classList.remove('open');box.querySelector('input').focus();e.stopPropagation()});
  sel.addEventListener('change',sync);box._sync=sync;sync();
+ {const iw=box.querySelector('.inw'),sa=box.querySelector('.sact');if(iw&&sa)iw.appendChild(sa)}
  box.querySelector('.mic').onclick=()=>voiceSearch(box);
  box.querySelector('.spk').onclick=()=>{const v=box.querySelector('input').value.trim();if(v)say(v,box.querySelector('.spk'));else{const k=wotdKey();if(k)sayWord(k,box.querySelector('.spk'))}};
  box.querySelector('.vsel').onclick=e=>{e.stopPropagation();voicePop(e.currentTarget)};});
@@ -942,11 +1003,22 @@ document.querySelectorAll('.searchbox input').forEach(q=>q.defaultPh=q.getAttrib
 const MP=[['about','SantalSabad के बारे में'],['guide','शब्द कैसे पढ़ें'],['feedback','सुझाव / फ़ीडबैक'],['contact','सम्पर्क'],['disclaimer','अस्वीकरण'],['terms','उपयोग की शर्तें'],['privacy','गोपनीयता नीति'],['copyright','कॉपीराइट और लाइसेंस'],['credits','स्रोत और श्रेय'],['accessibility','सुगम्यता']];
 function mpBody(k){if(k==='about')return about();if(k==='guide')return guide();if(k==='feedback')return fbHTML();const [t,b]=LEGAL[k];return `<h2>${t}</h2>${b}`}
 function closeModal(){const m=$('#mdl');if(m)m.remove();document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel()}
+const MI={about:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',guide:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/>',feedback:'<path d="M4 5h16v11H8l-4 4z"/>',contact:'<path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>',disclaimer:'<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/>',terms:'<path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/>',privacy:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',copyright:'<circle cx="12" cy="12" r="9"/><path d="M15 9.5a4 4 0 100 5"/>',credits:'<path d="M6 3h12v18l-6-4-6 4z"/>',accessibility:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>'};
+const MSUB={about:'About SantalSabad',guide:'How to read an entry',feedback:'Feedback',contact:'Contact',disclaimer:'Disclaimer',terms:'Terms of Use',privacy:'Privacy Policy',copyright:'Copyright & Licence',credits:'Sources & Credits',accessibility:'Accessibility'};
+const ico=(k,sz=18)=>`<svg viewBox="0 0 24 24" width="${sz}" height="${sz}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${MI[k]||MI.about}</svg>`;
+function mpCards(k){let h=mpBody(k).replace(/<div class="crumb">.*?<\/div>/,'').replace(/<p class="upd">.*?<\/p>/,'').replace(/class="card[^"]*"/g,'');
+ if(k==='feedback')return h;const t=(MP.find(x=>x[0]===k)||[])[1];h=h.replace(/<h2[^>]*>.*?<\/h2>/,'');
+ const parts=h.split(/<h3>/);const intro=parts.shift();let n=0;
+ const secs=parts.map(p=>{const i=p.indexOf('</h3>');n++;return `<div class="msec"><h4><span class="ck">✓</span>${n}. ${p.slice(0,i)}</h4><div>${p.slice(i+5)}</div></div>`}).join('');
+ const mon=SMON[new Date().getMonth()];
+ return `<div class="mhero"><h2>${t}</h2><div class="sub">${MSUB[k]||''}</div><span class="ver">${mon} ${new Date().getFullYear()} · SantalSabad v26</span><div class="intro">${intro}</div></div>${secs}`}
 function openModal(k,pre){closeModal();const m=document.createElement('div');m.className='mdl';m.id='mdl';
- m.innerHTML=`<div class="box" role="dialog" aria-modal="true"><div class="mh"><b>SantalSabad</b><div class="sdt">${sdtHTML()}</div><button class="mx" aria-label="बंद करें">×</button></div><div class="mb"><nav class="tabs">${MP.map(([x,t])=>`<button data-mt="${x}">${t}</button>`).join('')}</nav><div class="mc"></div></div><div class="mf"><span>© ${new Date().getFullYear()} BOSC · SantalSabad</span><span>Esc दबाकर बंद करें</span></div></div>`;
+ m.innerHTML=`<div class="box" role="dialog" aria-modal="true" aria-labelledby="mtitle"><div class="mh"><span class="mlogo">स</span><div class="mt"><small>SANTALSABAD · BOSC · नीति और जानकारी</small><b id="mtitle">आधिकारिक नीतियाँ और जानकारी</b></div><button class="mp" title="प्रिंट करें" aria-label="प्रिंट करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6M6 17H4v-6h16v6h-2M7 14h10v7H7z"/></svg></button><button class="mx" aria-label="बंद करें">×</button></div>
+ <div class="mb"><nav class="tabs"><div class="tl">दस्तावेज़ चुनें</div>${MP.map(([x,t])=>`<button data-mt="${x}">${ico(x)}<span>${t}</span><i>›</i></button>`).join('')}<div class="commit"><b>BOSC प्रतिबद्धता:</b> संताली भाषा के लिए 100% मुफ़्त शैक्षिक शब्दकोश। कोई विज्ञापन नहीं, कोई लॉगिन ज़रूरी नहीं।</div></nav><div class="mc"></div></div>
+ <div class="mf"><div class="sdt">${sdtHTML()}</div><button class="mok">समझ गया, बंद करें</button></div></div>`;
  document.body.appendChild(m);document.body.style.overflow='hidden';
- const show=x=>{m.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.mc');c.innerHTML=mpBody(x).replace(/<div class="crumb">.*?<\/div>/,'').replace(/class="card[^"]*"/g,'');c.scrollTop=0;if(x==='feedback')fbBind(pre);const on=m.querySelector('.tabs .on');if(on)on.scrollIntoView({block:'nearest',inline:'center'})};
- m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx'))closeModal();const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);const a=e.target.closest('.mc a[href^="#/"]');if(a){const kk=a.getAttribute('href').slice(2);if(MP.some(x=>x[0]===kk)){e.preventDefault();show(kk)}else closeModal()}});
+ const show=x=>{m.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.mc');c.innerHTML=mpCards(x);c.scrollTop=0;if(x==='feedback')fbBind(pre);const on=m.querySelector('.tabs .on');if(on&&innerWidth<=720)on.scrollIntoView({block:'nearest',inline:'center'})};
+ m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.mok'))closeModal();if(e.target.closest('.mp'))window.print();const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);const a=e.target.closest('.mc a[href^="#/"]');if(a){const kk=a.getAttribute('href').slice(2);if(MP.some(x=>x[0]===kk)){e.preventDefault();show(kk)}else closeModal()}});
  show(k)}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 document.addEventListener('click',e=>{const a=e.target.closest('footer a[href^="#/"],a[data-modal],.tools a[href="#/about"]');if(!a)return;const k=(a.dataset.modal||a.getAttribute('href').slice(2));if(MP.some(x=>x[0]===k)){e.preventDefault();openModal(k)}});
