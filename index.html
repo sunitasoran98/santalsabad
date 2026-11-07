@@ -774,6 +774,21 @@ body.embed>*:not(#view):not(main),body.embed header,body.embed footer,body.embed
 .gnav{justify-content:space-between;margin-top:22px}.gtn{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#011f43;color:#fff;align-items:center;justify-content:center;font:700 15px "Open Sans",sans-serif}
 .wll{display:flex;flex-direction:column;gap:6px;margin-top:10px}.wlr{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#fff;border:1px solid #e2e8f0}.wlr>span{color:#b45309;font-weight:700}.wlr em{font-style:normal;color:#0f6b5f;font-weight:600;margin-left:auto}.wlr.wlc{flex-direction:column;align-items:flex-start}.wlw2 .grom{display:inline;margin-right:6px}.wln{font:700 20px "Open Sans",sans-serif;min-width:44px}
 .rdl{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}.rd{padding:14px;border-radius:16px;background:linear-gradient(135deg,#fff7ec,#f5f0ff);border:1px solid #eadcf8}.rd p{margin:0 0 10px}.rda{margin-top:10px!important;color:#047857;font-weight:600}
+/* ===== v49 ===== */
+.gscb{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0}.gscb>span{font-weight:700;color:#475569}.olt{font-family:"Noto Sans Ol Chiki",sans-serif}
+.gexb{display:flex;gap:4px}.gpb{align-self:center;color:#047857;font-weight:700}
+.gprog{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding:14px;border-radius:16px;background:#f0f7ff;margin:10px 0}.gprog>div:first-child{flex:1;min-width:220px}.gbar{height:10px;border-radius:9px;background:#dbe7f5;margin-top:6px;overflow:hidden}.gbar i{display:block;height:100%;background:linear-gradient(90deg,#0f6b5f,#22a06b)}
+.ttile.gdone{box-shadow:inset 0 0 0 2px #22a06b}.ttile.gdone .gtn{background:#22a06b}.ttile.gtry{box-shadow:inset 0 0 0 2px #f59e0b}
+.gsrch{margin:6px 0 14px}#gsr{display:flex;flex-direction:column;gap:6px;margin-top:8px}.gsr{display:block;padding:10px 12px;border-radius:12px;border:1px solid #e2e8f0;text-decoration:none;color:inherit}.gsr small{color:#94a3b8}.gsr span{display:block;font-size:14px;color:#475569;margin-top:3px}.gsr mark{background:#fde68a}
+.cjg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}.cjg label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:14px}
+.cjout{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px;border-radius:16px;background:#fffaf0;border:1px solid #f3dcb2;margin:10px 0 18px}.cjout .gsat{font-size:24px}.cjout em{font-style:normal;color:#0f6b5f;width:100%}
+.exhd{position:sticky;top:70px;z-index:3;display:flex;justify-content:space-between;padding:10px 14px;border-radius:12px;background:#011f43;color:#fff;margin-bottom:10px}.qzo button.pick{background:#dbeafe;border-color:#1f5fae}
+.exres{text-align:center;padding:16px}.exsc{font:800 56px "Open Sans",sans-serif;color:#011f43;margin:0}
+.drq{display:inline-block;padding:2px 12px;border-radius:8px;background:#fde68a}
+.hkd{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding:16px 18px;border-radius:18px;background:linear-gradient(135deg,#fff7ec,#f5f0ff);border:1px solid #eadcf8;margin:16px 0}.hkd .gsat{font-size:19px;margin:4px 0}
+.wshd{border-bottom:2px solid #011f43;margin-bottom:12px}.wshd p:first-child{color:#b45309;font-weight:700;margin:0}.wsq{margin:10px 0;break-inside:avoid}.wso{margin:4px 0 0 18px}.wsl{color:#94a3b8;margin:8px 0}.wsk{margin-top:28px;padding-top:12px;border-top:2px dashed #94a3b8;break-before:page}
+@media print{.ws .crumb{display:none}}
+.stg.st1{grid-template-columns:1fr}.stg.st1 .stx{max-width:760px;font-size:17px;line-height:1.75}
 </style>
 </head>
 <body>
@@ -2019,7 +2034,7 @@ function textsDraft(k,v){TEXTS[k]=v;const d=JSON.parse(localStorage.getItem('ss_
 /* 1. असली आवाज़ */
 const AUD=()=>{try{return typeof TEXTS.audio==='string'?JSON.parse(TEXTS.audio||'{}'):(TEXTS.audio||{})}catch(_){return{}}};
 function playAud(k){const a=AUD()[k];if(!a)return false;const x=new Audio(a);x.play().catch(()=>{});return true}
-function recOpen(k){if(!isAdmin()){openLogin();return}const e=entries[k];if(!e)return;
+function recOpen(k){if(!isAdmin()){openLogin();return}const e=entries[k]||(String(k).startsWith('g:')?{w:k.slice(2)}:null);if(!e)return;
  if(!navigator.mediaDevices||!window.MediaRecorder){alert('इस ब्राउज़र में रिकॉर्डिंग नहीं होती। Chrome या Edge इस्तेमाल कीजिए।');return}
  const m=xModal('ADMIN · असली आवाज़','🎙 '+esc(cap(e.w))+' की आवाज़ रिकॉर्ड करें',`<p class="xsub" style="margin:0">“रिकॉर्ड शुरू” दबाइए, शब्द साफ़ बोलिए (1-3 सेकंड), फिर “रोकें”। सुनकर ठीक लगे तो “सेव करें और लाइव करें”।</p>
  <div class="recw"><button class="xbtn" id="rcgo">● रिकॉर्ड शुरू</button><span id="rct" class="xsub"></span></div><audio id="rcau" controls style="width:100%;display:none"></audio>${AUD()[k]?'<p class="xsub">इस शब्द की आवाज़ पहले से है। नई रिकॉर्डिंग पुरानी को बदल देगी।</p>':''}`,
@@ -2078,17 +2093,17 @@ function linkWords(t){return esc(t).replace(/[A-Za-zÀ-ɏḀ-ỿ̀-ͯ'’]+/g,w=
 XR.stories=arg=>`<div class="card">${crumb(arg?'<a href="#/stories">कहानी और गीत</a>':'कहानी और गीत')}<div id="stw"><p class="xsub">लोड हो रहा है…</p></div></div>`;
 XB.stories=async arg=>{const S=await loadStories(),w=$('#stw');if(!w)return;const adm=isAdmin();
  if(arg!==''&&arg!=null&&S[+arg]){const s=S[+arg];w.innerHTML=`<h2 class="dm xh">${s.type==='geet'?'🎵':'📖'} ${esc(s.title)}</h2>${s.by?`<p class="xsub">${esc(s.by)}</p>`:''}<div class="xact noprint"><button class="xbtn sec" data-print="1">🖨 प्रिंट / PDF</button>${adm?`<button class="xbtn sec" data-sted="${arg}">✎ बदलें</button>`:''}</div>
-  <div class="stg"><div><h4>संताली</h4><div class="stx">${linkWords(s.sat||'').replace(/\n/g,'<br>')}</div></div><div><h4>हिन्दी</h4><div class="stx">${esc(s.hi||'').replace(/\n/g,'<br>')}</div></div></div><p class="xsub">नीले शब्दों पर माउस रखें तो अर्थ दिखेगा, क्लिक करें तो पूरा पेज खुलेगा।</p>`;return}
- w.innerHTML=`<h2 class="dm xh">📖 कहानी और गीत <small>${S.length}</small></h2><p class="xsub">संताली लोक-कहानियाँ और गीत, हिन्दी अर्थ के साथ। संताली शब्दों पर क्लिक करके उनका अर्थ देखिए।</p>${adm?'<div class="xact"><button class="xbtn" data-sted="new">+ नई कहानी / गीत जोड़ें</button></div>':''}
- ${S.length?`<div class="tgrid">${S.map((s,i)=>`<a class="ttile" href="#/stories/${i}"><span>${s.type==='geet'?'🎵':'📖'}</span><b>${esc(s.title)}</b><small>${esc((s.hi||'').slice(0,60))}…</small></a>`).join('')}</div>`:'<p class="empty">अभी कोई कहानी या गीत नहीं जोड़ा गया है। BOSC जल्द ही जोड़ेगा। आप भी “सुझाव” से अपनी कहानी या गीत भेज सकते हैं।</p>'}`};
+  <div class="stg${[s.sat,s.hi,s.en].filter(Boolean).length===1?' st1':''}">${s.sat?`<div><h4>संताली</h4><div class="stx">${linkWords(s.sat).replace(/\n/g,'<br>')}</div></div>`:''}${s.hi?`<div><h4>हिन्दी</h4><div class="stx">${esc(s.hi).replace(/\n/g,'<br>')}</div></div>`:''}${s.en?`<div><h4>English</h4><div class="stx">${esc(s.en).replace(/\n\n/g,'</p><p>').replace(/^/,'<p>')}</p></div></div>`:''}</div>${s.sat?'<p class="xsub">नीले शब्दों पर माउस रखें तो अर्थ दिखेगा, क्लिक करें तो पूरा पेज खुलेगा।</p>':''}${s.url?`<p class="xsub">स्रोत: ${esc(s.source||'')} · <a href="${esc(s.url)}" target="_blank" rel="noopener">archive.org पर मूल किताब</a>. यह अनुवाद पब्लिक डोमेन है। हिन्दी अनुवाद अभी बाकी है।</p>`:''}<div class="xact noprint">${S[+arg-1]?`<a class="xbtn sec" href="#/stories/${+arg-1}">‹ पिछली</a>`:''}${S[+arg+1]?`<a class="xbtn sec" href="#/stories/${+arg+1}">अगली ›</a>`:''}</div>`;return}
+ w.innerHTML=`<h2 class="dm xh">📖 कहानी और गीत <small>${S.length}</small></h2><p class="xsub">संताली लोक-कहानियाँ और गीत। P. O. Bodding की “Santal Folk Tales” (1925, 1929) की 47 कहानियाँ उनके अंग्रेज़ी अनुवाद में हैं (पब्लिक डोमेन)। हिन्दी अनुवाद धीरे-धीरे जोड़ा जाएगा।</p>${adm?'<div class="xact"><button class="xbtn" data-sted="new">+ नई कहानी / गीत जोड़ें</button></div>':''}
+ ${S.length?`<div class="tgrid">${S.map((s,i)=>`<a class="ttile" href="#/stories/${i}"><span>${s.type==='geet'?'🎵':'📖'}</span><b>${esc(s.title)}</b><small>${esc((s.hi||s.en||'').slice(0,60))}…</small></a>`).join('')}</div>`:'<p class="empty">अभी कोई कहानी या गीत नहीं जोड़ा गया है। BOSC जल्द ही जोड़ेगा। आप भी “सुझाव” से अपनी कहानी या गीत भेज सकते हैं।</p>'}`};
 function stEdit(id){if(!isAdmin()){openLogin();return}const S=STORIES||[],s=id==='new'?{type:'kahani'}:S[+id];
  const m=xModal('ADMIN · कहानी / गीत',id==='new'?'नई कहानी या गीत':'बदलें: '+esc(s.title),`<div class="aeg"><label>शीर्षक *<input id="st_t" value="${esc(s.title||'')}"></label><label>प्रकार<select id="st_y"><option value="kahani"${s.type!=='geet'?' selected':''}>कहानी</option><option value="geet"${s.type==='geet'?' selected':''}>गीत</option></select></label>
- <label class="w2">स्रोत / लेखक / गायक<input id="st_b" value="${esc(s.by||'')}"></label><label class="w2">संताली पाठ (रोमन) *<textarea id="st_s" style="min-height:180px">${esc(s.sat||'')}</textarea></label><label class="w2">हिन्दी अनुवाद<textarea id="st_h" style="min-height:180px">${esc(s.hi||'')}</textarea></label></div>`,
+ <label class="w2">स्रोत / लेखक / गायक<input id="st_b" value="${esc(s.by||'')}"></label><label class="w2">संताली पाठ (रोमन)<textarea id="st_s" style="min-height:180px">${esc(s.sat||'')}</textarea></label><label class="w2">हिन्दी अनुवाद<textarea id="st_h" style="min-height:180px">${esc(s.hi||'')}</textarea></label><label class="w2">English<textarea id="st_e" style="min-height:180px">${esc(s.en||'')}</textarea></label></div>`,
  `${id!=='new'?'<button class="aebtn red" id="st_del">हटाएँ</button>':'<span></span>'}<div class="aeact"><button class="lok" id="st_sv"><span>सेव करें और लाइव करें</span></button></div>`);
  const msg=(t,ok)=>{const x=m.querySelector('#aemsg');x.className='aemsg on'+(ok?' ok':'');x.textContent=t},g=i=>m.querySelector('#'+i);
  const push=async()=>{localStorage.setItem('ss_stories_draft',JSON.stringify(S));if(!GHT()){msg('इस डिवाइस पर सेव है। लाइव करने के लिए GitHub token डालिए।',1);return}
   try{await ghPut('stories.json',JSON.stringify(S,null,1),GHT(),GHR());localStorage.removeItem('ss_stories_draft');msg('लाइव हो गया!',1);setTimeout(()=>{closeModal();route()},1000)}catch(err){msg('लाइव नहीं हुआ: '+err.message+' (इस डिवाइस पर सेव है)')}};
- g('st_sv').onclick=()=>{const o={title:g('st_t').value.trim(),type:g('st_y').value,by:g('st_b').value.trim(),sat:g('st_s').value.trim(),hi:g('st_h').value.trim()};if(!o.title||!o.sat){msg('शीर्षक और संताली पाठ भरिए।');return}
+ g('st_sv').onclick=()=>{const o={...(id==='new'?{}:s),title:g('st_t').value.trim(),type:g('st_y').value,by:g('st_b').value.trim(),sat:g('st_s').value.trim(),hi:g('st_h').value.trim(),en:g('st_e').value.trim()};['sat','hi','en'].forEach(k=>{if(!o[k])delete o[k]});if(!o.title||!(o.sat||o.hi||o.en)){msg('शीर्षक और कम से कम एक पाठ (संताली, हिन्दी या English) भरिए।');return}
   if(id==='new')S.push(o);else S[+id]=o;STORIES=S;msg('सेव हो रहा है…',1);push()};
  const d=g('st_del');if(d)d.onclick=()=>{if(!confirm('हटाएँ?'))return;S.splice(+id,1);STORIES=S;push()}}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-sted]');if(b)stEdit(b.dataset.sted)});
@@ -2206,7 +2221,7 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-say]'))stat('sa
 /* ===== v48: व्याकरण पाठ (अपने शब्दों में), शब्द-सूचियाँ, कुदुम, कहावतें ===== */
 let GJ2=null;async function gLoad(){if(GJ2)return GJ2;try{GJ2=await (await fetch('grammar.json',{cache:'no-cache'})).json()}catch(_){GJ2={chapters:[],glossary:[],lists:{}}}return GJ2}
 const dRom=s=>{try{return devaToRoman(s)}catch(_){return''}};
-const satH=s=>`<span class="gsat">${esc(s)}</span>`;
+let satH=s=>`<span class="gsat">${esc(s)}</span>`;
 function gSec(s){return `<section class="gsec"><h3 class="dm">${esc(s.h)}</h3>${(s.p||[]).map(p=>`<p>${esc(p)}</p>`).join('')}${s.list&&s.list.length?`<ul class="gul">${s.list.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`:''}
  ${s.table&&s.table.rows&&s.table.rows.length?`<div class="gtw"><table class="gtbl"><thead><tr>${(s.table.head||[]).map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}
  ${s.ex&&s.ex.length?`<div class="gexs">${s.ex.map(x=>`<div class="gex"><button class="wbtn sm" data-tts="${esc(x.sat)}">🔊</button><div>${satH(x.sat)}<em>${esc(x.hi)}</em></div></div>`).join('')}</div>`:''}</section>`}
@@ -2252,6 +2267,154 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-rd]');if(!
 {const _pv=XR.proverbs;XR.proverbs=()=>`<div id="pvw">${_pv()}</div>`;XB.proverbs=async()=>{const P=((await gLoad()).lists||{}).proverbs||[],w=$('#pvw');if(!w||!P.length)return;
  w.insertAdjacentHTML('afterbegin',`<div class="card" style="margin-bottom:14px">${crumb('कहावतें')}<h2 class="dm xh">🪶 संताली कहावतें (काहतुक) <small>${P.length}</small></h2><div class="fsl">${P.map(p=>`<div class="fs"><p class="pvs">${satH(p.sat)}</p><p><b>अर्थ:</b> ${esc(p.hi)}</p></div>`).join('')}</div></div>`);const old=w.querySelector('.card:nth-child(2) .crumb');old&&old.remove()}}
 
+
+
+/* ===== v49: व्याकरण के 13 नए फ़ीचर ===== */
+/* admin draft */
+{const _gl=gLoad;gLoad=async function(){const G=await _gl();if(isAdmin()){const d=localStorage.getItem('ss_grammar_draft');if(d){try{const D=JSON.parse(d);Object.assign(G,D)}catch(_){}}}return G}}
+const GP=()=>LS('ss_gq',{});
+/* 5. लिपि बदलें */
+const GSC=()=>localStorage.getItem('ss_gscript')||'d';
+function gConv(s){const m=GSC();if(m==='d')return s;let r='';try{r=devaToRoman(s)}catch(_){return s}if(m==='r')return r;try{return romanToOl(r)}catch(_){return r}}
+let DVMAP=null;function dvMap(){if(DVMAP)return DVMAP;DVMAP=new Map();order.forEach(k=>{const d=entries[k].dv;if(d&&!DVMAP.has(d))DVMAP.set(d,k)});return DVMAP}
+const gStrip=w=>w.replace(/[़]/g,'');
+/* 6. शब्दकोश से लिंक */
+function gWordLink(w){const M=dvMap();let k=M.get(w);if(!k){const r=(()=>{try{return devaToRoman(w)}catch(_){return''}})();if(r&&entries[key(r)])k=key(r)}
+ if(!k){const s=gStrip(w);for(const [d,kk] of [[s,M.get(s)]])if(kk){k=kk;break}}
+ const t=esc(gConv(w));return k&&hasHi(k)?`<a class="swd" href="#/word/${encodeURIComponent(k)}" title="${esc(hi1(entries[k]))}">${t}</a>`:t}
+satH=function(s){return `<span class="gsat${GSC()==='o'?' olt':''}">${String(s).split(/(\s+)/).map(w=>/\s/.test(w)||!w?w:gWordLink(w.replace(/[।,!?]+$/,''))+esc((w.match(/[।,!?]+$/)||[''])[0])).join('')}</span>`};
+const gScriptBar=()=>`<div class="gscb noprint"><span>लिपि:</span>${[['d','देवनागरी'],['r','Roman'],['o','ᱚᱞ ᱪᱤᱠᱤ']].map(([k,t])=>`<button class="xchip${GSC()===k?' on':''}" data-gsc="${k}">${t}</button>`).join('')}${GSC()!=='d'?'<small class="xsub">अपने-आप बदला गया, लगभग सही</small>':''}</div>`;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-gsc]');if(!b)return;localStorage.setItem('ss_gscript',b.dataset.gsc);route()});
+/* 9. असली आवाज़ + 10. गलती बताएँ: उदाहरण में बटन */
+gSec=function(s){const ad=isAdmin();return `<section class="gsec"><h3 class="dm">${esc(s.h)}</h3>${(s.p||[]).map(p=>`<p>${esc(p)}</p>`).join('')}${s.list&&s.list.length?`<ul class="gul">${s.list.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`:''}
+ ${s.table&&s.table.rows&&s.table.rows.length?`<div class="gtw"><table class="gtbl"><thead><tr>${(s.table.head||[]).map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}
+ ${s.ex&&s.ex.length?`<div class="gexs">${s.ex.map(x=>`<div class="gex"><button class="wbtn sm" data-tts="${esc(x.sat)}" title="सुनें">${AUD()['g:'+x.sat]?'🔈':'🔊'}</button><div style="flex:1">${satH(x.sat)}<em>${esc(x.hi)}</em></div><div class="gexb noprint">${ad?`<button class="wbtn sm" data-rec="${esc('g:'+x.sat)}" title="आवाज़ रिकॉर्ड">🎙</button>`:''}<button class="wbtn sm" data-gfix="${esc(x.sat)}" data-ghi="${esc(x.hi)}" title="गलती बताएँ">🚩</button></div></div>`).join('')}</div>`:''}</section>`};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-tts]');if(b&&AUD()['g:'+b.dataset.tts]){e.stopImmediatePropagation();speechSynthesis&&speechSynthesis.cancel();playAud('g:'+b.dataset.tts)}},true);
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-gfix]');if(!b)return;const t=prompt('इस उदाहरण में क्या गलत है? सही रूप या सुझाव लिखिए:\n\n'+b.dataset.gfix+' = '+b.dataset.ghi);if(!t||!t.trim())return;
+ const data={_subject:'SantalSabad व्याकरण सुधार',_template:'table','अध्याय':location.hash,'उदाहरण':b.dataset.gfix,'हिन्दी':b.dataset.ghi,'सुझाव':t.trim()};
+ try{const r=await fetch('https://formsubmit.co/ajax/'+(TEXTS.fb_formid||OWNER),{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});if(!r.ok)throw 0;alert('धन्यवाद! सुझाव BOSC को भेज दिया गया।')}
+ catch(_){location.href='mailto:'+OWNER+'?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(Object.entries(data).filter(([k])=>k[0]!=='_').map(([k,v])=>k+': '+v).join('\n'))}});
+
+/* अध्याय पेज: लिपि बार, प्रगति, प्रिंट, एडिट */
+{const _gb=XB.grammar;XB.grammar=async arg=>{
+await _gb(arg);const G=await gLoad(),w=$('#gramw');if(!w)return;const C=G.chapters||[],c=C.find(x=>x.id===arg),P=GP();
+ if(c){const h=w.querySelector('.gintro');h&&h.insertAdjacentHTML('afterend',gScriptBar()+`<div class="xact noprint"><a class="xbtn sec" href="#/worksheet/${c.id}">🖨 वर्कशीट</a>${P[c.id]?`<span class="gpb">✅ अभ्यास: ${P[c.id][0]}/${P[c.id][1]}</span>`:''}${isAdmin()?`<button class="xbtn sec" data-gedit="${c.id}">✏️ अध्याय संपादित करें</button>`:''}</div>`);return}
+ if(arg==='glossary')return;
+ const top=$('#gramtop');if(!top||!C.length)return;const done=C.filter(x=>P[x.id]&&P[x.id][0]/P[x.id][1]>=.6).length;
+ top.querySelectorAll('.ttile[href^="#/grammar/"]').forEach(a=>{const id=a.getAttribute('href').split('/')[2];if(P[id])a.classList.add(P[id][0]/P[id][1]>=.6?'gdone':'gtry')});
+ const tg=top.querySelector('.tgrid');tg&&tg.insertAdjacentHTML('beforebegin',`<div class="gprog"><div><b>आपकी प्रगति: ${done}/${C.length} अध्याय पास</b><div class="gbar"><i style="width:${done/C.length*100}%"></i></div></div><div class="xact">${done===C.length?'<a class="xbtn" href="#/certificate">🎓 प्रमाण-पत्र</a>':''}<a class="xbtn" href="#/exam">🎯 परीक्षा मोड</a><a class="xbtn sec" href="#/conjugate">🔧 क्रिया-रूप</a><a class="xbtn sec" href="#/drill">🧩 तालिका अभ्यास</a><a class="xbtn sec" href="#/letters">✉️ चिट्ठी का ढाँचा</a>${isAdmin()?'<button class="xbtn sec" data-gedit="__new">✏️ नया अध्याय</button>':''}</div></div>
+ <div class="gsrch"><input class="xin" id="gsq" placeholder="🔎 व्याकरण में खोजें… (जैसे: कारक, बहुवचन, ओ़कते)"><div id="gsr"></div></div>`);
+ const q=$('#gsq');if(q)q.oninput=()=>gSearch(q.value,C)}}
+/* 8. खोज */
+function gSearch(v,C){const R=$('#gsr');if(!R)return;v=v.trim();if(v.length<2){R.innerHTML='';return}const out=[];
+ C.forEach(c=>{const push=(t,where)=>{if(out.length<40&&String(t).includes(v))out.push([c,t,where])};push(c.hi,'शीर्षक');push(c.sat,'शीर्षक');push(c.intro||'','परिचय');
+  (c.sections||[]).forEach(s=>{push(s.h,'खंड');(s.p||[]).forEach(p=>push(p,s.h));(s.list||[]).forEach(p=>push(p,s.h));(s.ex||[]).forEach(x=>push(x.sat+' = '+x.hi,s.h));((s.table||{}).rows||[]).forEach(r=>push(r.join(' · '),s.h))})});
+ const hl=t=>{t=String(t);const i=t.indexOf(v),a=Math.max(0,i-50);return (a?'…':'')+esc(t.slice(a,i))+'<mark>'+esc(v)+'</mark>'+esc(t.slice(i+v.length,i+v.length+70))+'…'};
+ R.innerHTML=out.length?`<p class="xsub">${out.length}${out.length>=40?'+':''} नतीजे</p>`+out.map(([c,t,w])=>`<a class="gsr" href="#/grammar/${c.id}"><b>${c.no}. ${esc(c.hi)}</b> <small>${esc(w)}</small><span>${hl(t)}</span></a>`).join(''):'<p class="empty">कुछ नहीं मिला।</p>'}
+
+/* अभ्यास स्कोर सेव (प्रगति) */
+document.addEventListener('click',e=>{const b=e.target.closest('[data-gqa]');if(!b)return;setTimeout(()=>{const all=[...document.querySelectorAll('.gq')];if(!all.length||all.some(x=>!x.dataset.done))return;const id=location.hash.split('/')[2];if(!id)return;
+ const s=all.filter(x=>x.dataset.ok==='1').length,P=GP();if(!P[id]||s>=P[id][0])P[id]=[s,all.length];LSS('ss_gq',P)},0)});
+
+/* 1. Admin: व्याकरण एडिटर */
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-gedit]');if(!b)return;if(!isAdmin()){openLogin();return}const G=await gLoad(),id=b.dataset.gedit;
+ const c=id==='__new'?{id:'naya'+Date.now().toString(36),no:(G.chapters||[]).length+1,sat:'',hi:'नया अध्याय',intro:'',sections:[{h:'पहला खंड',p:[''],ex:[{sat:'',hi:''}]}],quiz:[]}:G.chapters.find(x=>x.id===id);
+ const m=xModal('ADMIN · व्याकरण','✏️ '+esc(c.hi),`<p class="xsub" style="margin:0">नीचे अध्याय JSON रूप में है। सँभलकर बदलिए: "sections" में h (शीर्षक), p (पैराग्राफ़), list, table {head, rows}, ex [{sat, hi}]; "quiz" में q, o (4 विकल्प), a (सही विकल्प का नंबर, 0 से)।</p>
+ <textarea class="xin" id="gedt" style="min-height:52vh;font:13px/1.5 monospace;white-space:pre">${esc(JSON.stringify(c,null,1))}</textarea>`,
+ `${id!=='__new'?'<button class="aebtn red" id="gedel">अध्याय हटाएँ</button>':'<span></span>'}<div class="aeact"><button class="aebtn" id="gedr">ड्राफ़्ट सेव</button><button class="lok" id="gepub"><span>सेव करें और लाइव करें</span></button></div>`);
+ const msg=(t,ok)=>{const x=m.querySelector('#aemsg');x.className='aemsg on'+(ok?' ok':'');x.textContent=t};
+ const apply=del=>{let n=null;if(!del){try{n=JSON.parse(m.querySelector('#gedt').value)}catch(err){msg('JSON में गलती: '+err.message);return false}if(!n.id||!n.hi||!Array.isArray(n.sections)){msg('id, hi और sections ज़रूरी हैं।');return false}}
+  const C=G.chapters.slice(),i=C.findIndex(x=>x.id===id);if(del)C.splice(i,1);else if(i>=0)C[i]=n;else C.push(n);C.sort((a,b)=>a.no-b.no);G.chapters=C;
+  localStorage.setItem('ss_grammar_draft',JSON.stringify({chapters:C,glossary:G.glossary,lists:G.lists}));return true};
+ m.querySelector('#gedr').onclick=()=>{if(apply())msg('ड्राफ़्ट सेव हुआ (सिर्फ़ इस ब्राउज़र में)। लाइव करने के लिए “सेव करें और लाइव करें” दबाइए।',1)};
+ const pub=async del=>{if(!apply(del))return;if(!GHT()){msg('लाइव करने के लिए Admin सेटिंग्स में GitHub token डालिए।');return}msg('पब्लिश हो रहा है…',1);
+  try{await ghPut('grammar.json',JSON.stringify({glossary:G.glossary,chapters:G.chapters,lists:G.lists}),GHT(),GHR());localStorage.removeItem('ss_grammar_draft');msg('लाइव हो गया! 1-2 मिनट में सबको दिखेगा।',1);setTimeout(()=>{closeModal();location.hash='#/grammar'},900)}catch(err){msg('नहीं हुआ: '+err.message)}};
+ m.querySelector('#gepub').onclick=()=>pub(false);const d=m.querySelector('#gedel');if(d)d.onclick=()=>{if(confirm('यह अध्याय हटा दें?'))pub(true)}});
+
+/* 2. क्रिया-रूप टूल */
+const CJV=[['जो़म','खाना','s'],['ञेल','देखना','s'],['ओ़ल','लिखना','s'],['पाड़हाव','पढ़ना','s'],['दाल','मारना','s'],['आञ्जो़म','सुनना','s'],['रो़ड़','बोलना','a'],['सेन','जाना','a'],['हिजुक्','आना','a'],['जा़पित्','सोना','a'],['दाड़ा़म','दौड़ना','a']];
+const CJP=[['इञ्','ञ्','मैं'],['आलाङ','लाङ','हम दो (तुम सहित)'],['आ़लिञ्','लिञ्','हम दो (तुम नहीं)'],['आबो़','बो़न','हम सब (तुम सहित)'],['आले','ले','हम सब (तुम नहीं)'],['आम','म','तुम'],['आबेन','बेन','तुम दोनों'],['आपे','पे','तुम सब'],['उनी','य','वह'],['उनकिन','किन','वे दो'],['उनको़','को़','वे सब']];
+const addV=(r,m,ind)=>/्$/.test(r)?r.slice(0,-1)+m:/[क-ह]़?$/.test(r)?r+m:r+ind;
+const CJT=[['pr','सामान्य वर्तमान',v=>v[2]==='s'?addV(v[0],'े','ए')+'त् काना':/क्$/.test(v[0])?v[0]+' काना':addV(v[0],'ो़','ओ़')+'क् काना'],['pa','सामान्य भूत',v=>v[2]==='s'?v[0]+' केदा':v[0]+' एना'],['fu','सामान्य भविष्य',v=>v[2]==='s'?addV(v[0],'ा','आ'):/क्$/.test(v[0])?v[0]+'आ':addV(v[0],'ो़','ओ़')+'क्आ'],['pp','पूर्ण वर्तमान',v=>v[2]==='s'?v[0]+' आकात्आ':v[0]+' आकाना']];
+function cjForm(v,p,t){return `${p[0]} दो़${p[1]} ${t[2](v)}`}
+XR.conjugate=()=>`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › क्रिया-रूप')}<h2 class="dm xh">🔧 क्रिया-रूप बनाइए</h2><p class="xsub">क्रिया, कर्ता और काल चुनिए। रूप नियमों से अपने-आप बनता है, इसलिए यह लगभग सही नमूना है। बोलचाल में रूप थोड़े अलग हो सकते हैं।</p>
+ <div class="cjg"><label>क्रिया<select class="xin" id="cjv">${CJV.map((v,i)=>`<option value="${i}">${v[0]} (${v[1]})</option>`).join('')}<option value="x">अपनी क्रिया लिखें…</option></select></label>
+ <label id="cjxw" hidden>अपनी क्रिया (देवनागरी)<input class="xin" id="cjx" placeholder="जैसे: एनेच्"><select class="xin" id="cjxt"><option value="s">सकर्मक (कर्म वाली)</option><option value="a">अकर्मक</option></select></label>
+ <label>कर्ता<select class="xin" id="cjp">${CJP.map((p,i)=>`<option value="${i}">${p[0]} (${p[2]})</option>`).join('')}</select></label>
+ <label>काल<select class="xin" id="cjt">${CJT.map((t,i)=>`<option value="${i}">${t[1]}</option>`).join('')}</select></label></div>
+ <div class="cjout" id="cjo"></div><h3 class="dm">इस क्रिया के सारे रूप</h3><div class="gtw"><table class="gtbl" id="cjtb"></table></div><p class="xsub">⚠ मशीन से बना। Native speaker से जाँच के बाद ही पढ़ाई में इस्तेमाल करें। ग़लती दिखे तो व्याकरण पेज के 🚩 से बताइए।</p></div>`;
+XB.conjugate=()=>{const V=()=>{const s=$('#cjv').value;$('#cjxw').hidden=s!=='x';return s==='x'?[($('#cjx').value||'').trim()||'—','',$('#cjxt').value]:CJV[+s]};
+ const up=()=>{const v=V(),p=CJP[+$('#cjp').value],t=CJT[+$('#cjt').value];$('#cjo').innerHTML=`<button class="wbtn" data-tts="${esc(cjForm(v,p,t))}">🔊</button> <b class="gsat">${esc(cjForm(v,p,t))}</b><em>${esc(p[2])} · ${esc(v[1]||v[0])} · ${t[1]}</em>`;
+  $('#cjtb').innerHTML=`<thead><tr><th>कर्ता</th>${CJT.map(t=>`<th>${t[1]}</th>`).join('')}</tr></thead><tbody>${CJP.map(p=>`<tr><td><b>${p[0]}</b><br><small>${p[2]}</small></td>${CJT.map(t=>`<td>${esc(cjForm(v,p,t))}</td>`).join('')}</tr>`).join('')}</tbody>`};
+ ['cjv','cjp','cjt','cjxt'].forEach(i=>$('#'+i).onchange=up);$('#cjx').oninput=up;up()};
+
+/* 3. परीक्षा मोड */
+let EXQ=null,EXT=null;
+XR.exam=()=>`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › परीक्षा')}<h2 class="dm xh">🎯 परीक्षा मोड</h2><div id="exw"><p class="xsub">सभी अध्यायों से 20 मिले-जुले सवाल, 15 मिनट का समय। हर सवाल का एक सही जवाब है। आख़िर में नंबर और सही जवाब दिखेंगे।</p>${LS('ss_exam',null)?`<p><b>पिछला सबसे अच्छा:</b> ${LS('ss_exam').best}/20</p>`:''}<button class="xbtn" id="exgo">शुरू करें</button></div></div>`;
+XB.exam=async()=>{const G=await gLoad();const b=$('#exgo');if(!b)return;b.onclick=()=>{const all=[];(G.chapters||[]).forEach(c=>(c.quiz||[]).forEach(q=>all.push({...q,ch:c.hi})));EXQ=shuf(all).slice(0,20);EXQ.ans=[];let left=900;clearInterval(EXT);
+ const draw=()=>{$('#exw').innerHTML=`<div class="exhd"><b id="extm"></b><span>${EXQ.ans.filter(x=>x!=null).length}/${EXQ.length} हल</span></div>${EXQ.map((q,i)=>`<div class="gq"><p><b>${i+1}.</b> ${esc(q.q)} <small class="xsub">(${esc(q.ch)})</small></p><div class="qzo">${q.o.map((o,k)=>`<button data-exa="${i}:${k}" class="${EXQ.ans[i]===k?'pick':''}">${esc(o)}</button>`).join('')}</div></div>`).join('')}<button class="xbtn" id="exend">जमा करें</button>`;$('#exend').onclick=fin;tick()};
+ const tick=()=>{const t=$('#extm');if(t)t.textContent='⏱ '+Math.floor(left/60)+':'+String(left%60).padStart(2,'0')};
+ const fin=()=>{clearInterval(EXT);const s=EXQ.filter((q,i)=>EXQ.ans[i]===q.a).length,B=LS('ss_exam',{best:0,n:0});B.best=Math.max(B.best,s);B.n++;LSS('ss_exam',B);stat('exam');
+  $('#exw').innerHTML=`<div class="exres"><p class="exsc">${s}/20</p><p>${s>=16?'शानदार! 🎉':s>=12?'अच्छा! थोड़ा और अभ्यास करें।':'अध्याय फिर से पढ़कर दोबारा कोशिश करें।'}</p><button class="xbtn" onclick="route()">फिर से परीक्षा</button></div>${EXQ.map((q,i)=>`<div class="gq"><p><b>${i+1}.</b> ${esc(q.q)}</p><p>${EXQ.ans[i]===q.a?'✅':'❌'} सही जवाब: <b>${esc(q.o[q.a])}</b>${EXQ.ans[i]!=null&&EXQ.ans[i]!==q.a?` · आपका: ${esc(q.o[EXQ.ans[i]])}`:''}</p></div>`).join('')}`;window.scrollTo(0,0)};
+ window._exPick=(i,k)=>{EXQ.ans[i]=k;const box=document.querySelectorAll('#exw .gq')[i];box.querySelectorAll('button').forEach((x,j)=>x.classList.toggle('pick',j===k));const h=document.querySelector('.exhd span');h&&(h.textContent=EXQ.ans.filter(x=>x!=null).length+'/'+EXQ.length+' हल')};
+ EXT=setInterval(()=>{left--;tick();if(left<=0||!$('#extm'))fin()},1000);draw()}};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-exa]');if(!b||!window._exPick)return;const [i,k]=b.dataset.exa.split(':').map(Number);window._exPick(i,k)});
+
+/* 4. प्रमाण-पत्र */
+XR.certificate=()=>`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › प्रमाण-पत्र')}<h2 class="dm xh">🎓 प्रमाण-पत्र</h2><div id="cfw"></div></div>`;
+XB.certificate=async()=>{const G=await gLoad(),C=G.chapters||[],P=GP(),done=C.filter(x=>P[x.id]&&P[x.id][0]/P[x.id][1]>=.6),w=$('#cfw');if(!w)return;
+ if(done.length<C.length){w.innerHTML=`<p>प्रमाण-पत्र पाने के लिए सभी ${C.length} अध्यायों का अभ्यास कम से कम 60% अंकों से पास कीजिए। अभी ${done.length} पास हैं।</p><div class="hil">${C.filter(x=>!done.includes(x)).map(x=>`<a class="hir" href="#/grammar/${x.id}"><b>${x.no}. ${esc(x.hi)}</b><span>${P[x.id]?P[x.id][0]+'/'+P[x.id][1]:'बाकी'}</span></a>`).join('')}</div>`;return}
+ w.innerHTML=`<p>बधाई! आपने सारे अध्याय पास कर लिए। अपना नाम लिखकर प्रमाण-पत्र डाउनलोड कीजिए।</p><input class="xin" id="cfn" placeholder="आपका नाम" value="${esc(localStorage.getItem('ss_cfname')||'')}"><div class="xact"><button class="xbtn" id="cfgo">⬇ प्रमाण-पत्र (PNG)</button></div>`;
+ $('#cfgo').onclick=async()=>{const n=$('#cfn').value.trim();if(!n){alert('नाम लिखिए');return}localStorage.setItem('ss_cfname',n);try{await document.fonts.ready}catch(_){}
+  const c=document.createElement('canvas');c.width=1600;c.height=1130;const x=c.getContext('2d');x.fillStyle='#fffaf0';x.fillRect(0,0,1600,1130);x.strokeStyle='#011f43';x.lineWidth=18;x.strokeRect(30,30,1540,1070);x.strokeStyle='#c8902e';x.lineWidth=4;x.strokeRect(62,62,1476,1006);
+  x.textAlign='center';x.fillStyle='#b45309';x.font='700 34px "Open Sans",sans-serif';x.fillText('SANTALSABAD · BOSC',800,170);x.fillStyle='#011f43';x.font='700 76px "Noto Sans Devanagari",sans-serif';x.fillText('प्रमाण-पत्र',800,290);
+  x.font='34px "Noto Sans Devanagari",sans-serif';x.fillStyle='#334155';x.fillText('यह प्रमाणित किया जाता है कि',800,400);x.font='700 68px "Noto Sans Devanagari",sans-serif';x.fillStyle='#011f43';x.fillText(n,800,510);
+  x.fillStyle='#c8902e';x.fillRect(500,540,600,4);x.font='34px "Noto Sans Devanagari",sans-serif';x.fillStyle='#334155';x.fillText(`ने SantalSabad के संताली व्याकरण के सभी ${C.length} अध्यायों का`,800,630);x.fillText('अभ्यास सफलतापूर्वक पूरा किया है।',800,685);
+  const tot=done.reduce((a,b)=>a+P[b.id][0],0),mx=done.reduce((a,b)=>a+P[b.id][1],0);x.font='600 30px "Noto Sans Devanagari",sans-serif';x.fillStyle='#0f6b5f';x.fillText(`कुल अंक: ${tot}/${mx}`,800,770);
+  x.font='28px "Open Sans",sans-serif';x.fillStyle='#64748b';x.fillText(new Date().toLocaleDateString('hi-IN',{day:'numeric',month:'long',year:'numeric'}),400,940);x.fillText('santalsabad.pages.dev',1200,940);
+  x.font='22px "Noto Sans Devanagari",sans-serif';x.fillText('यह ऑनलाइन अभ्यास का प्रमाण-पत्र है, कोई सरकारी प्रमाण-पत्र नहीं।',800,1020);
+  const a=document.createElement('a');a.download='SantalSabad-certificate.png';a.href=c.toDataURL('image/png');a.click();stat('cert')}};
+
+/* 7. तालिका अभ्यास */
+XR.drill=()=>`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › तालिका अभ्यास')}<h2 class="dm xh">🧩 तालिका अभ्यास</h2><p class="xsub">व्याकरण की तालिकाओं से एक खाना छिपाया गया है। सही रूप चुनिए।</p><div id="drw"></div></div>`;
+let DRS={n:0,ok:0};
+XB.drill=async()=>{const G=await gLoad(),T=[];(G.chapters||[]).forEach(c=>(c.sections||[]).forEach(s=>{const t=s.table;if(t&&t.rows&&t.rows.length>=4&&(t.head||[]).length>=2)T.push([c,s,t])}));
+ const w=$('#drw');if(!w||!T.length)return;const nx=()=>{for(let tries=0;tries<50;tries++){const [c,s,t]=T[Math.floor(Math.random()*T.length)],r=Math.floor(Math.random()*t.rows.length),col=1+Math.floor(Math.random()*(t.head.length-1)),ans=t.rows[r][col];
+  if(!ans||ans.length>40||ans==='-'||ans==='—')continue;const pool=[...new Set(t.rows.map(x=>x[col]).filter(x=>x&&x!==ans&&x.length<=40))];if(pool.length<3)continue;const opts=shuf([ans,...shuf(pool).slice(0,3)]);
+  w.innerHTML=`<p class="xsub">${esc(c.hi)} › ${esc(s.h)}</p><div class="gtw"><table class="gtbl"><thead><tr>${t.head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody><tr>${t.rows[r].map((x,j)=>`<td>${j===col?'<b class="drq">?</b>':esc(x)}</td>`).join('')}</tr></tbody></table></div>
+  <p><b>“${esc(t.head[col])}”</b> वाले खाने में क्या आएगा?</p><div class="qzo">${opts.map(o=>`<button data-dra="${o===ans?1:0}">${esc(o)}</button>`).join('')}</div><p class="kres">${DRS.n?`स्कोर: ${DRS.ok}/${DRS.n}`:''}</p>`;
+  w.querySelectorAll('[data-dra]').forEach(b=>b.onclick=()=>{if(w.dataset.lock)return;w.dataset.lock=1;const ok=b.dataset.dra==='1';DRS.n++;if(ok)DRS.ok++;w.querySelectorAll('[data-dra]').forEach(x=>{x.disabled=true;if(x.dataset.dra==='1')x.classList.add('ok')});if(!ok)b.classList.add('bad');stat('drill');
+   w.insertAdjacentHTML('beforeend',`<button class="xbtn" id="drn">अगला ›</button>`);$('#drn').onclick=()=>{delete w.dataset.lock;nx()}});return}};nx()};
+
+/* 11. वर्कशीट */
+XR.worksheet=arg=>`<div class="card ws">${crumb('<a href="#/grammar">व्याकरण</a> › वर्कशीट')}<div id="wsw"><p class="xsub">लोड हो रहा है…</p></div></div>`;
+XB.worksheet=async arg=>{const G=await gLoad(),c=(G.chapters||[]).find(x=>x.id===arg),w=$('#wsw');if(!w)return;if(!c){w.innerHTML='<p class="empty">अध्याय नहीं मिला।</p>';return}
+ const ex=[];(c.sections||[]).forEach(s=>(s.ex||[]).forEach(x=>ex.push(x)));
+ w.innerHTML=`<div class="xact noprint"><button class="xbtn" data-print="1">🖨 प्रिंट / PDF</button><a class="xbtn sec" href="#/grammar/${c.id}">‹ अध्याय पर वापस</a></div>
+ <div class="wshd"><p>SantalSabad · संताली व्याकरण अभ्यास-पत्र</p><h2 class="dm">अध्याय ${c.no}: ${esc(c.hi)} (${esc(c.sat)})</h2><p>नाम: ______________________ &nbsp; कक्षा: ________ &nbsp; तारीख़: ____________</p></div>
+ <h3>क. सही विकल्प पर ✓ लगाइए</h3>${(c.quiz||[]).map((q,i)=>`<div class="wsq"><p><b>${i+1}.</b> ${esc(q.q)}</p><p class="wso">${q.o.map((o,k)=>`(${'कखगघ'[k]}) ${esc(o)}`).join(' &nbsp;&nbsp; ')}</p></div>`).join('')}
+ ${ex.length?`<h3>ख. इन संताली वाक्यों/शब्दों का हिन्दी अर्थ लिखिए</h3>${ex.slice(0,8).map((x,i)=>`<div class="wsq"><p><b>${i+1}.</b> ${esc(x.sat)}</p><p class="wsl">______________________________________________</p></div>`).join('')}`:''}
+ <h3>ग. इस अध्याय से अपने तीन उदाहरण लिखिए</h3>${[1,2,3].map(i=>`<p class="wsl">${i}. ______________________________________________</p>`).join('')}
+ <div class="wsk"><h3>उत्तर कुंजी (शिक्षक के लिए)</h3><p>क: ${(c.quiz||[]).map((q,i)=>`${i+1}-${'कखगघ'[q.a]}`).join(', ')}</p>${ex.length?`<p>ख: ${ex.slice(0,8).map((x,i)=>`${i+1}. ${esc(x.hi)}`).join('; ')}</p>`:''}</div>`};
+
+/* 12. आज की कुदुम (होम) */
+{const _lb2=learnBand;learnBand=function(){setTimeout(async()=>{const el=$('#hkudum');if(!el||el.dataset.f)return;const R=((await gLoad()).lists||{}).riddles||[];if(!R.length)return;const d=new Date(),i=(d.getFullYear()*372+d.getMonth()*31+d.getDate())%R.length,r=R[i];el.dataset.f=1;
+ el.innerHTML=`<div class="hkd"><div><p class="lkick">❓ आज की कुदुम</p><p class="gsat">${esc(r.sat)}</p><p class="rda" hidden>✅ ${r.ans_sat?esc(r.ans_sat)+' · ':''}${esc(r.ans_hi||'')}</p></div><div class="xact"><button class="xbtn sec" data-rd="x">जवाब देखें</button><a class="xbtn sec" href="#/riddles">सारी पहेलियाँ</a></div></div>`;
+ const b=el.querySelector('[data-rd]');if(b)b.onclick=ev=>{ev.stopPropagation();const a=el.querySelector('.rda');a.hidden=!a.hidden;b.textContent=a.hidden?'जवाब देखें':'छिपाएँ'}},50);return _lb2()+'<div class="wrap"><div id="hkudum"></div></div>'}}
+
+/* 13. चिट्ठी का ढाँचा */
+XR.letters=()=>`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › चिट्ठी का ढाँचा')}<h2 class="dm xh">✉️ संताली में चिट्ठी कैसे लिखें</h2><p class="xsub">चिट्ठी के हिस्से, उनका क्रम और काम के शब्द। भाषा अपनी रखिए, बस ढाँचा याद रखिए।</p>
+${gSec({h:'दो तरह की चिट्ठी',table:{head:['किस्म','किसे','पहचान'],rows:[['अनौपचारिक (निजी)','माँ-बाप, भाई-बहन, दोस्त, रिश्तेदार','अपनापन, हाल-चाल, घर की बातें'],['औपचारिक (सरकारी/दफ़्तरी)','प्रधानाध्यापक, अफ़सर, थाना, बैंक, संपादक','छोटी, साफ़, एक ही काम की बात'],['आवेदन (दरख़्वास्त)','छुट्टी, प्रमाण-पत्र, राशन कार्ड, शिकायत','विषय पहले, फिर कारण, फिर निवेदन']]}})}
+${gSec({h:'औपचारिक चिट्ठी / आवेदन का क्रम',list:['1. सबसे ऊपर: ला़ना़य (सेवा में, प्रति) — पाने वाले का पद, दफ़्तर और पता','2. बाबो़त (विषय) — एक लाइन में चिट्ठी का काम','3. संबोधन — आ़डी मानो़तान (आदरणीय) + पद, जैसे “आ़डी मानो़तान माराङ माचेत्”','4. मुख्य बात — छोटे पैराग्राफ़ में: क्या हुआ, क्या चाहिए, कब तक','5. निवेदन की लाइन — विनम्र अनुरोध के साथ बात ख़त्म करें','6. नीचे दाईं ओर: आपका नाम, कक्षा/पता, हस्ताक्षर','7. तारीख़ — ऊपर या नीचे बाईं ओर']})}
+${gSec({h:'निजी चिट्ठी का क्रम',list:['1. ऊपर दाईं ओर: जगह और तारीख़','2. प्यार या आदर वाला संबोधन (जैसे बड़े के लिए आदर, छोटे के लिए स्नेह)','3. पहला पैराग्राफ़: अपना और घर का हाल, उनका हाल पूछना','4. बीच में: असली बात (ख़बर, न्योता, सलाह)','5. आख़िर में: सबको प्रणाम/प्यार, जल्दी जवाब देने की बात','6. नीचे: आपका रिश्ता और नाम (जैसे “तुम्हारा बड़ा भाई …”)']})}
+${gSec({h:'काम के शब्द',table:{head:['संताली','हिन्दी'],rows:[['चिठी','चिट्ठी'],['ला़ना़य','सेवा में / प्रति'],['बाबो़त','विषय / के बारे में'],['आ़डी मानो़तान','अति आदरणीय'],['मानो़तान','आदरणीय'],['माराङ माचेत्','प्रधानाध्यापक'],['इसकुल','स्कूल'],['चिठी ओ़नो़ल','पत्र लेखन'],['आरो़ज','आवेदन / अर्ज़ी']]}})}
+${gSec({h:'लिफ़ाफ़े पर पता',list:['ऊपर दाईं ओर टिकट','बीच में: पाने वाले का नाम, गाँव/टोला, डाकघर, थाना, ज़िला, पिन कोड','नीचे बाईं ओर: भेजने वाले का नाम और पता']})}
+${gSec({h:'अभ्यास के विषय',list:['प्रधानाध्यापक को बीमारी की छुट्टी का आवेदन','थाना प्रभारी को साइकिल चोरी की शिकायत','ज़िला आपूर्ति अधिकारी को नए राशन कार्ड का आवेदन','दोस्त को अपने गाँव के सोहराय पर्व का न्योता','छोटे भाई को पढ़ाई पर ध्यान देने की सलाह','स्कूल की पिकनिक की अनुमति के लिए आवेदन']})}
+<p class="xsub">ये सब हिस्से संताली चिट्ठी में भी इसी क्रम में आते हैं। शब्दों की शुद्धता किसी जानकार से जँचवा लें।</p></div>`;
+
+/* बैज */
+{const _bd=badges;badges=function(){const P=GP(),S=LS('ss_stats',{}),n=Object.values(P).filter(x=>x[0]/x[1]>=.6).length,E=LS('ss_exam',{best:0});
+ return _bd().concat([['📖','व्याकरण शुरू','एक अध्याय का अभ्यास पास',n>=1],['📗','आधा व्याकरण','11 अध्याय पास',n>=11],['🎓','व्याकरण विद्वान','सारे अध्याय पास',n>=22],['🎯','परीक्षा वीर','परीक्षा में 16/20 या ज़्यादा',(E.best||0)>=16],['🧩','तालिका उस्ताद','तालिका अभ्यास 25 बार',(S.drill||0)>=25]])}}
 
 </script>
 </body>
