@@ -720,6 +720,7 @@ html.dark img,html.dark .sl,html.dark .li,html.dark .ttile span,html.dark .kt sp
 .hbars{display:flex;flex-direction:column;gap:6px}.hbars div{display:grid;grid-template-columns:120px 1fr 70px;gap:10px;align-items:center}.hbars span{font:600 14px "Noto Sans Devanagari",sans-serif}.hbars i{display:block;height:12px;border-radius:9px;background:linear-gradient(90deg,#0f6b5f,#10b981)}.hbars b{font-size:13px;color:#475569}
 .fsl{display:grid;gap:12px}.fs{padding:16px 18px;border-radius:16px;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #f59e0b}.fsh{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}.fsh b{font:700 22px "Noto Sans Devanagari",sans-serif;color:#011f43}.fsh span{color:#1f5fae;font-weight:700}.fsh em{font-style:normal;color:#b45309;font-size:14px}.fs p{margin:6px 0;color:#334155}.fs a{color:#1f5fae;font-weight:700;font-size:14px;text-decoration:none}
 @media print{html.dark{filter:none}body.pp>#view{display:block!important}body.pp .side,body.pp .noprint,body.pp .crumb,body.pp .xact,body.pp #abar{display:none!important}body.pp .inner{display:block!important;padding:0}body.pp .card{box-shadow:none;border:0}body.pp .poster{border-width:2px}}
+.chg{grid-template-columns:repeat(auto-fill,minmax(128px,1fr))}.chc b{font-family:"Noto Sans Devanagari","Open Sans",sans-serif;font-size:30px}.chc span i{font-style:normal;font-size:17px;color:#b4232a}.chc small{font-size:11.5px;text-align:center}.chc em{font-style:normal;font-size:11.5px;color:#1f5fae;text-align:center;line-height:1.3;margin-top:2px}
 </style>
 </head>
 <body>
@@ -1441,7 +1442,7 @@ function ocRoman(s){let o='';const a=[...(s||'')];for(let i=0;i<a.length;i++){co
 function learnBand(){const n=BM().filter(k=>entries[k]).length,q=JSON.parse(localStorage.getItem('ss_quiz')||'{}');
  const T=[['#/flash','🃏','फ़्लैशकार्ड','रोज़ के शब्द कार्ड पलटकर याद कीजिए'],['#/quiz','🧠','आज का क्विज़',q.last===today()?`आज का स्कोर ${q.score}/5 · 🔥 ${q.streak||1} दिन`:'5 सवाल, रोज़ नए'+(q.streak?` · 🔥 ${q.streak} दिन`:'')],
   ['#/topics','📚','विषय के शब्द','परिवार, शरीर, गिनती, जानवर…'],['#/phrases','💬','छोटे वाक्य','असली संताली वाक्य, अनुवाद के साथ'],
-  ['#/hindi','🔤','हिन्दी → संताली','हिन्दी शब्द से संताली खोजिए'],['#/kids','🧒','बच्चों का कोना','चित्र वाले शब्द और खेल'],['#/stories','📖','कहानी और गीत','संताली पाठ, हिन्दी अर्थ के साथ'],['#/festivals','🎉','त्योहार','सोहराय, बाहा, करम…'],['#/stats','📊','आँकड़े','कितने शब्द, कितने अर्थ'],['#/thanks','🙏','धन्यवाद','योगदान देने वाले'],['#/poster','🔳','QR पोस्टर','गाँव-स्कूल में लगाइए'],['#/saved','⭐','मेरे शब्द',n?n+' शब्द सेव हैं':'शब्द पेज पर ☆ दबाकर सेव कीजिए'],['#/olchiki','ᱚ','Ol Chiki चार्ट','अक्षर, नाम, रोमन और देवनागरी']];
+  ['#/hindi','🔤','हिन्दी → संताली','हिन्दी शब्द से संताली खोजिए'],['#/kids','🧒','बच्चों का कोना','चित्र वाले शब्द और खेल'],['#/stories','📖','कहानी और गीत','संताली पाठ, हिन्दी अर्थ के साथ'],['#/festivals','🎉','त्योहार','सोहराय, बाहा, करम…'],['#/stats','📊','आँकड़े','कितने शब्द, कितने अर्थ'],['#/thanks','🙏','धन्यवाद','योगदान देने वाले'],['#/poster','🔳','QR पोस्टर','गाँव-स्कूल में लगाइए'],['#/saved','⭐','मेरे शब्द',n?n+' शब्द सेव हैं':'शब्द पेज पर ☆ दबाकर सेव कीजिए'],['#/roman','Aa','रोमन चार्ट','रोमन अक्षर, देवनागरी और Ol Chiki के साथ'],['#/devanagari','अ','देवनागरी चार्ट','संताली देवनागरी अक्षर और मात्राएँ'],['#/olchiki','ᱚ','Ol Chiki चार्ट','अक्षर, नाम, रोमन और देवनागरी']];
  return `<section class="learn"><div class="wrap"><h2 class="dm sec">सीखें और खेलें</h2><div class="lrngrid">${T.map(t=>`<a class="ltile" href="${t[0]}"><span class="li">${t[1]}</span><b>${t[2]}</b><small>${t[3]}</small></a>`).join('')}
  <button type="button" class="ltile linst" data-install="1"><span class="li">📲</span><b>App इंस्टॉल करें</b><small>फ़ोन पर ऐप की तरह, बिना इंटरनेट भी</small></button></div></div></section>`}
 
@@ -1500,7 +1501,7 @@ XR.phrases=()=>{const P=[];ROWS.forEach(r=>{const s=(r['Udaharan (Santali)']||''
  return `<div class="card">${crumb('छोटे वाक्य')}<h2 class="dm xh">💬 छोटे संताली वाक्य <small>${P.length}</small></h2><p class="xsub">शब्दकोश के उदाहरणों से लिए गए असली वाक्य। शब्द पर क्लिक करके उसका पूरा अर्थ देखिए।</p>
  <div class="phl">${P.map(p=>`<div class="ph"><b>${esc(p.s)}</b><span>${esc(p.t)}</span>${entries[p.k]?`<a href="#/word/${encodeURIComponent(p.k)}">${esc(cap(entries[p.k].w))} ›</a>`:''}</div>`).join('')}</div></div>`};
 
-XR.olchiki=()=>`<div class="card">${crumb('Ol Chiki चार्ट')}<h2 class="dm xh"><span class="olc">ᱚᱞ ᱪᱤᱠᱤ</span> Ol Chiki चार्ट</h2>
+XR.olchiki=()=>`<div class="card">${crumb('Ol Chiki चार्ट')}<h2 class="dm xh"><span class="olc">ᱚᱞ ᱪᱤᱠᱤ</span> Ol Chiki चार्ट</h2>${typeof chNav==="function"?chNav("olchiki"):""}
  <p class="xsub">संताली की अपनी लिपि, जिसे पंडित रघुनाथ मुर्मू ने बनाया। हर अक्षर का नाम, रोमन और देवनागरी रूप। अक्षर पर क्लिक करके नीचे लिखिए।</p>
  <div class="ocg">${OCL.map(x=>`<button class="occ" data-ock="${x[0]}"><b class="olc">${x[0]}</b><small>${x[1]}</small><span>${x[2]} · ${x[3]}</span></button>`).join('')}</div>
  <h3 class="dm" style="margin:22px 0 8px">अंक</h3><div class="ocg ocd">${[...'᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙'].map((c,i)=>`<button class="occ" data-ock="${c}"><b class="olc">${c}</b><span>${i}</span></button>`).join('')}</div>
@@ -1621,6 +1622,49 @@ XR.sug=arg=>{const o=unb64u(arg);if(!o)return `<div class="card">${crumb('सु
 XB.sug=XB.inbox;
 
 olInit();
+/* ===== v42: रोमन और देवनागरी चार्ट ===== */
+// [roman, देवनागरी, Ol Chiki, नाम/टिप्पणी, समूह]
+const RCH=[
+ ['a','आ','ᱟ','खुला आ','v'],['ạ','अ','ᱟᱹ','बीच का स्वर (ə)','v'],['ă','अ','ᱟ','छोटा अ','v'],['e','ए','ᱮ','ए','v'],['ĕ','ए','ᱮ','छोटा ए','v'],['i','इ','ᱤ','इ','v'],
+ ['o','ओ / ऑ','ᱚ','खुला ओ (ऑ)','v'],['ŏ','ओ','ᱳ','बंद ओ','v'],['u','उ','ᱩ','उ','v'],
+ ['ã','आँ','ᱟᱸ','नाक से (अनुनासिक)','n'],['ẽ','एँ','ᱮᱸ','नाक से','n'],['ĩ','इँ','ᱤᱸ','नाक से','n'],['õ','ओँ','ᱚᱸ','नाक से','n'],['ũ','उँ','ᱩᱸ','नाक से','n'],
+ ['k','क','ᱠ','','c'],['kh','ख','ᱠᱷ','महाप्राण','c'],['g','ग','ᱜ','','c'],['gh','घ','ᱜᱷ','महाप्राण','c'],['ṅ','ङ','ᱝ','','c'],
+ ['c','च','ᱪ','','c'],['ch','छ','ᱪᱷ','महाप्राण','c'],['j','ज','ᱡ','','c'],['jh','झ','ᱡᱷ','महाप्राण','c'],['ñ','ञ','ᱧ','(ń भी लिखा जाता है)','c'],
+ ['ṭ','ट','ᱴ','','c'],['ṭh','ठ','ᱴᱷ','महाप्राण','c'],['ḍ','ड','ᱰ','','c'],['ḍh','ढ','ᱰᱷ','महाप्राण','c'],['ṇ','ण','ᱬ','','c'],
+ ['t','त','ᱛ','','c'],['th','थ','ᱛᱷ','महाप्राण','c'],['d','द','ᱫ','','c'],['dh','ध','ᱫᱷ','महाप्राण','c'],['n','न','ᱱ','','c'],
+ ['p','प','ᱯ','','c'],['ph','फ','ᱯᱷ','महाप्राण','c'],['b','ब','ᱵ','','c'],['bh','भ','ᱵᱷ','महाप्राण','c'],['m','म','ᱢ','','c'],
+ ['y','य','ᱭ','','c'],['r','र','ᱨ','','c'],['ṛ','ड़','ᱲ','','c'],['ṛh','ढ़','ᱲᱷ','महाप्राण','c'],['l','ल','ᱞ','','c'],['w','व','ᱣ','','c'],['s','स','ᱥ','','c'],['h','ह','ᱦ','','c'],
+ ["k'","क्'",'ᱜ','रुका हुआ क (शब्द के अंत में)','g'],["c'","च्'",'ᱡ','रुका हुआ च','g'],["t'","त्'",'ᱫ','रुका हुआ त','g'],["p'","प्'",'ᱵ','रुका हुआ प','g'],
+ ["'","'",'ᱹ','रुकावट (कंठ-स्पर्श)','m'],['~','ँ','ᱸ','अनुनासिक चिह्न','m']];
+const RGRP={v:'स्वर (Vowels)',n:'अनुनासिक स्वर',c:'व्यंजन (Consonants)',g:"रुके हुए व्यंजन (k' c' t' p')",m:'चिह्न'};
+const MATRA=[['a','ा'],['ạ',''],['i','ि'],['u','ु'],['e','े'],['o','ो'],['ã','ाँ']];
+function romanToOl(s){s=(s||'').toLowerCase().normalize('NFC').replace(/[’`]/g,"'");const U=RCH.filter(r=>r[4]!=='m').map(r=>[r[0],r[2]]).sort((a,b)=>b[0].length-a[0].length);U.push(['ń','ᱧ'],['é','ᱮ'],['ô','ᱳ']);
+ let o='',i=0;const vow='aạăeĕéiioŏôuãẽĩõũ';while(i<s.length){const c=s[i];
+  if(/[0-9]/.test(c)){o+=String.fromCharCode(0x1C50+ +c);i++;continue}
+  if("kctp".includes(c)&&s[i+1]==="'"){o+={k:'ᱜ',c:'ᱡ',t:'ᱫ',p:'ᱵ'}[c];i+=2;continue}
+  if(c==="'"){o+='ᱹ';i++;continue}if(c==='~'||c==='\u0303'){o+='ᱸ';i++;continue}
+  const m=U.find(([r])=>s.startsWith(r,i));if(m){o+=m[1];i+=m[0].length;continue}o+=c;i++}return o}
+let REX=null;function romEx(){if(REX)return REX;REX={};const K=order.filter(hasHi).sort((a,b)=>a.length-b.length);
+ RCH.forEach(([r])=>{if(r==="'"||r==='~')return;const n=r.normalize('NFC');let k=K.find(x=>x.startsWith(n)&&(r.length>1||!/^(kh|gh|ch|jh|th|dh|ph|bh|ṭh|ḍh|ṛh)/.test(x)||!'kgcjtdpbṭḍṛ'.includes(r)));if(!k)k=K.find(x=>x.includes(n));if(k)REX[r]=k});return REX}
+const chTry=(ph,mode)=>`<h3 class="dm" style="margin:24px 0 8px">लिखकर देखें</h3><div class="octry"><textarea id="octa" placeholder="${ph}" style="font-size:22px"></textarea><div id="ocout"></div><div class="xact"><button class="xbtn sec" data-ock="⌫">⌫ मिटाएँ</button><button class="xbtn sec" data-ock=" ">स्पेस</button><button class="xbtn" id="chgo">🔍 शब्दकोश में खोजें</button></div></div>`;
+function chCell(r,big){const ex=romEx()[r[0]],e=ex&&entries[ex];const bigTxt=big==='r'?r[0]:r[1],ins=big==='r'?r[0]:r[1].split(' / ')[0];
+ return `<button class="occ chc" data-ock="${esc(ins)}"><b>${esc(bigTxt)}</b><span>${big==='r'?esc(r[1]):esc(r[0])} · <i class="olc">${r[2]}</i></span>${r[3]?`<small>${esc(r[3])}</small>`:''}${e?`<em>${esc(cap(e.w))} · ${esc(hi1(e))}</em>`:''}</button>`}
+function chGroups(big){return Object.keys(RGRP).map(g=>`<h3 class="dm" style="margin:20px 0 8px">${RGRP[g]}</h3><div class="ocg chg">${RCH.filter(r=>r[4]===g).map(r=>chCell(r,big)).join('')}</div>`).join('')}
+const chNav=on=>`<div class="xact">${[['roman','Aa रोमन चार्ट'],['devanagari','अ देवनागरी चार्ट'],['olchiki','ᱚ Ol Chiki चार्ट']].map(([h,t])=>`<a class="xchip${h===on?' on':''}" href="#/${h}">${t}</a>`).join('')}</div>`;
+XR.roman=()=>`<div class="card">${crumb('संताली रोमन चार्ट')}<h2 class="dm xh">Aa संताली रोमन चार्ट <small>${RCH.length} अक्षर और चिह्न</small></h2>${chNav('roman')}
+ <p class="xsub">इस शब्दकोश में संताली शब्द रोमन लिपि में लिखे हैं। हर अक्षर के साथ उसका देवनागरी और Ol Chiki रूप और एक उदाहरण शब्द है। अक्षर पर क्लिक करके नीचे लिखिए।</p>${chGroups('r')}${chTry('johar','r')}
+ <p class="xsub">ध्यान दें: ạ (बीच का स्वर) और ' (रुकावट) संताली की खास आवाज़ें हैं। Ol Chiki रूप अपने आप बनता है, कहीं-कहीं फ़र्क हो सकता है।</p></div>`;
+XR.devanagari=()=>`<div class="card">${crumb('संताली देवनागरी चार्ट')}<h2 class="dm xh">अ संताली देवनागरी चार्ट</h2>${chNav('devanagari')}
+ <p class="xsub">संताली को देवनागरी में लिखने के लिए हर अक्षर, उसका रोमन और Ol Chiki रूप। अक्षर पर क्लिक करके नीचे लिखिए और शब्दकोश में खोजिए।</p>${chGroups('d')}
+ <h3 class="dm" style="margin:20px 0 8px">मात्राएँ (क के साथ)</h3><div class="ocg chg">${MATRA.map(([r,m])=>`<button class="occ chc" data-ock="${'क'+m}"><b>क${m}</b><span>k${r}</span><small>${m?'मात्रा '+m:'बिना मात्रा'}</small></button>`).join('')}<button class="occ chc" data-ock="क्"><b>क्</b><span>k (हलंत)</span><small>्</small></button></div>
+ ${chTry('जोहार','d')}<p class="xsub">ध्यान दें: संताली देवनागरी में ạ को “अ” और खुले o को “ऑ” से लिखा जाता है। ' का मतलब रुकावट है (जैसे दाक्' = पानी)।</p></div>`;
+const chBind=mode=>()=>{const ta=$('#octa'),out=$('#ocout');if(!ta)return;
+ const up=()=>{const v=ta.value;if(!v){out.innerHTML='';return}
+  if(mode==='r')out.innerHTML=`देवनागरी: <b>${esc(deva(v))}</b> · Ol Chiki: <b class="olc">${esc(romanToOl(v))}</b>`;
+  else{const q=norm(v.trim()),L=order.filter(k=>norm(entries[k].dv).startsWith(q)).slice(0,8);out.innerHTML=L.length?'मिलते शब्द: '+L.map(k=>`<a href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].dv)}</b> (${esc(cap(entries[k].w))})</a>`).join(', '):'कोई शब्द नहीं मिला।'}};
+ ta.oninput=up;$('#chgo').onclick=()=>{if(ta.value.trim())location.hash='#/search/'+encodeURIComponent(ta.value.trim()+'|sat')}};
+XB.roman=chBind('r');XB.devanagari=chBind('d');
+
 /* ===== v39: आवाज़, हिन्दी→संताली, डार्क, बच्चे, कहानी, QR, प्रिंट, धन्यवाद, आँकड़े, त्योहार ===== */
 const GHT=()=>localStorage.getItem('ss_gh_token'),GHR=()=>localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
 function textsDraft(k,v){TEXTS[k]=v;const d=JSON.parse(localStorage.getItem('ss_texts_draft')||'{}');d[k]=v;localStorage.setItem('ss_texts_draft',JSON.stringify(d));adminBar()}
