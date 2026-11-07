@@ -1,12 +1,52 @@
 [
- {"img":"img/slides/s01.webp","title":"Santal gaon ka ghar","text":"Mitti ki deewaron par laal, safed aur kaale rang ki pattiyan. Har Santal ghar apne aap mein ek kalakriti hai."},
- {"img":"img/slides/s02.webp","title":"Dong aur Lagre naach","text":"Haath mein haath daale ek line mein naachti mahilayein. Santal naach samuh aur ekta ka prateek hai."},
- {"img":"img/slides/s03.webp","title":"Tamak' aur Tumdak'","text":"Santal sangeet ki dhadkan: bada Tamak' (nagara) aur Tumdak' (madal) har parv mein goonjte hain."},
- {"img":"img/slides/s04.webp","title":"Jaher than","text":"Gaon ka pavitra sal-van, jahan Santal samaj apne devtaon ki puja karta hai."},
- {"img":"img/slides/s05.webp","title":"Sohrai parv","text":"Fasal katne ke baad ka utsav: gharon ki sajawat, pashuon ka samman, geet aur naach."},
- {"img":"img/slides/s06.webp","title":"Baha parv","text":"Basant mein sal ke phool khilne par manaya jaane wala phoolon ka parv."},
- {"img":"img/slides/s07.webp","title":"Hul, 30 June 1855","text":"Sidho-Kanhu ke netritva mein Santal Hul, shoshan ke khilaf aitihasik vidroh. Har saal 30 June ko Hul Diwas manaya jaata hai."},
- {"img":"img/slides/s08.webp","title":"Karam parv","text":"Karam daali ki puja aur raat bhar geet-naach. Prakriti aur parivar ka utsav."},
- {"img":"img/slides/s09.webp","title":"Santali bhasha aur shiksha","text":"92ve Samvidhan Sanshodhan (2003) se Santali bhasha Samvidhan ki Aathvi Anusuchi mein shamil hui."},
- {"img":"img/slides/s10.webp","title":"Santal Pargana","text":"Hare dhaan ke khet, laal mitti ke raaste aur sal ke jungle. Hul ke baad bana Santal Pargana aaj Jharkhand ka pramandal hai."}
+ {
+  "img": "img/slides/s01.webp",
+  "title": "संताल गाँव का घर",
+  "text": "मिट्टी की दीवारों पर लाल, सफ़ेद और काले रंग की पट्टियाँ। हर संताल घर अपने आप में एक कलाकृति है।"
+ },
+ {
+  "img": "img/slides/s02.webp",
+  "title": "दोङ और लागड़े नाच",
+  "text": "हाथ में हाथ डाले एक पंक्ति में नाचती महिलाएँ। संताल नाच समूह और एकता का प्रतीक है।"
+ },
+ {
+  "img": "img/slides/s03.webp",
+  "title": "टामाक' और टुमदाक'",
+  "text": "संताल संगीत की धड़कन: बड़ा टामाक' (नगाड़ा) और टुमदाक' (मांदर) हर पर्व में गूँजते हैं।"
+ },
+ {
+  "img": "img/slides/s04.webp",
+  "title": "जाहेर थान",
+  "text": "गाँव का पवित्र साल-वन, जहाँ संताल समाज अपने देवताओं की पूजा करता है।"
+ },
+ {
+  "img": "img/slides/s05.webp",
+  "title": "सोहराय पर्व",
+  "text": "फ़सल कटने के बाद का उत्सव: घरों की सजावट, पशुओं का सम्मान, गीत और नाच।"
+ },
+ {
+  "img": "img/slides/s06.webp",
+  "title": "बाहा पर्व",
+  "text": "बसंत में साल के फूल खिलने पर मनाया जाने वाला फूलों का पर्व।"
+ },
+ {
+  "img": "img/slides/s07.webp",
+  "title": "हूल, 30 जून 1855",
+  "text": "सिदो-कान्हू के नेतृत्व में संताल हूल, शोषण के ख़िलाफ़ ऐतिहासिक विद्रोह। हर साल 30 जून को हूल दिवस मनाया जाता है।"
+ },
+ {
+  "img": "img/slides/s08.webp",
+  "title": "करम पर्व",
+  "text": "करम डाली की पूजा और रात भर गीत-नाच। प्रकृति और परिवार का उत्सव।"
+ },
+ {
+  "img": "img/slides/s09.webp",
+  "title": "संताली भाषा और शिक्षा",
+  "text": "92वें संविधान संशोधन (2003) से संताली भाषा संविधान की आठवीं अनुसूची में शामिल हुई।"
+ },
+ {
+  "img": "img/slides/s10.webp",
+  "title": "संताल परगना",
+  "text": "हरे धान के खेत, लाल मिट्टी के रास्ते और साल के जंगल। हूल के बाद बना संताल परगना आज झारखंड का प्रमंडल है।"
+ }
 ]
