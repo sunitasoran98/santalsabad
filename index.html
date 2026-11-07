@@ -9,7 +9,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Ol+Chiki:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#011f43;--navy2:#0d2f5c;--line:#d9dbe1;--grey:#dcdde3;--ink:#111;--muted:#5c6170;--red:#d6262f;--accent:#2f3f8f;--blue:#3d4fa0;--cream:#fafafa}
 *{box-sizing:border-box}
@@ -627,6 +627,68 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .aest{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}.aest.on{background:#ecfdf5;color:#047857;border-color:#a7f3d0}
 @media(max-width:640px){.aest{display:none}.lft .aeact button{padding:9px 12px;font-size:12px}}
 .aes.aenew{border-left-color:#f59e0b;box-shadow:0 0 0 2px rgba(245,158,11,.25)}.aes.aenew .aen:after{content:" (नया)";color:#d97706}
+
+/* ===== v37 ===== */
+.olc{font-family:"Noto Sans Ol Chiki",sans-serif}
+.learn{padding:30px 0 6px}.learn .sec{margin-bottom:14px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.ltile{display:flex;flex-direction:column;gap:3px;text-align:left;padding:16px 18px;border-radius:18px;background:#fff;border:1.5px solid #e2e8f0;text-decoration:none;color:#0f172a;box-shadow:0 4px 14px rgba(1,31,67,.06);cursor:pointer;font:inherit;transition:.18s}
+.ltile:hover{transform:translateY(-2px);border-color:#9fc0ea;box-shadow:0 10px 24px rgba(31,95,174,.14)}
+.ltile .li{font-size:26px;line-height:1.1;font-family:"Noto Sans Ol Chiki","Segoe UI Emoji",sans-serif;color:#1f5fae}
+.ltile b{font:700 16px "Noto Sans Devanagari","Open Sans",sans-serif;color:#011f43}.ltile small{color:#64748b;font-size:13px}
+.ltile.linst{background:linear-gradient(135deg,#fff7ec,#eef5ff);border-color:#f3c98b}
+.xh{margin-top:0;font-size:30px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.xh small{font:600 15px "Open Sans",sans-serif;color:#64748b}
+.xsub{color:#64748b;font-size:14px}
+.xact{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.xbtn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;padding:10px 18px;background:#1f5fae;color:#fff;font:700 14px "Noto Sans Devanagari","Open Sans",sans-serif;text-decoration:none;cursor:pointer}
+.xbtn:hover{filter:brightness(1.08)}.xbtn.sec{background:#eef2f8;color:#1f3a63}.xbtn.grn{background:#059669}.xbtn.red{background:#fef2f2;color:#dc2626}
+.xchip{padding:6px 12px;border-radius:999px;border:1px solid #d5dcea;background:#fff;color:#1f3a63;text-decoration:none;font-size:13px}.xchip.on{background:#1f5fae;color:#fff;border-color:#1f5fae}
+.xin{flex:1;min-width:180px;padding:10px 14px;border:1px solid #d5dcea;border-radius:12px;font:15px "Open Sans","Noto Sans Devanagari",sans-serif;outline:0}.xin:focus{border-color:#1f5fae;box-shadow:0 0 0 3px rgba(31,95,174,.15)}
+.xit{display:flex;align-items:center;gap:8px}.xit>a{flex:1;text-decoration:none;color:inherit;display:block}.xrm{border:0;background:#fef2f2;color:#dc2626;width:30px;height:30px;border-radius:50%;cursor:pointer;flex:none}
+.wbtn.wbm.on{background:#fff7ec;border-color:#f3c98b;color:#b45309}
+.fcbar,.fbar{height:6px;border-radius:9px;background:#e8eef7;overflow:hidden;margin:14px 0 6px}.fcbar i,.fbar i{display:block;height:100%;background:linear-gradient(90deg,#1f5fae,#4b3a8c);transition:width .3s}
+.fcn{text-align:center;color:#64748b;font-size:13px;margin:4px 0 10px}
+.fcc{position:relative;max-width:520px;height:300px;margin:0 auto;perspective:1200px;cursor:pointer;outline:0}
+.fcc .fcf,.fcc .fcb{position:absolute;inset:0;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:24px;text-align:center;backface-visibility:hidden;transition:transform .5s;box-shadow:0 18px 40px -16px rgba(1,31,67,.45)}
+.fcc .fcf{background:linear-gradient(135deg,#011f43,#1f5fae);color:#fff}.fcc .fcb{background:#fff;border:2px solid #cfe0f6;transform:rotateY(180deg)}
+.fcc.fl .fcf{transform:rotateY(180deg)}.fcc.fl .fcb{transform:rotateY(360deg)}
+.fcf b{font:700 52px "DM Serif Display",Georgia,serif}.fcf span{font:600 26px "Noto Sans Devanagari",sans-serif;color:#ffd1d4}.fcf em{font-style:normal;font-size:24px;color:#f3c98b}.fcf small{opacity:.7;margin-top:10px}
+.fcb b{font:700 32px "Noto Sans Devanagari",sans-serif;color:#011f43}.fcb span{font-size:18px;color:#475569;font-style:italic}.fcb a{margin-top:10px;color:#1f5fae;font-weight:700}
+.fcact{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.fcdone{text-align:center;padding:30px 10px}.fcdone>b{font-size:28px;display:block;margin-bottom:6px}
+.qzq{font:600 22px "Noto Sans Devanagari","Open Sans",sans-serif;text-align:center;margin:10px 0 18px;color:#011f43}.qzq b{color:#1f5fae}.qzq span{color:#b4232a}
+.qzo{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:640px;margin:0 auto}
+.qzo button{padding:16px;border-radius:16px;border:2px solid #d5dcea;background:#fff;font:600 17px "Noto Sans Devanagari","Open Sans",sans-serif;cursor:pointer;color:#0f172a}
+.qzo button:hover:not([disabled]){border-color:#1f5fae;background:#eef5ff}.qzo button small{color:#b4232a;font-weight:400}
+.qzo button.ok{border-color:#059669;background:#ecfdf5;color:#047857}.qzo button.bad{border-color:#dc2626;background:#fef2f2;color:#b91c1c}
+.qzr{font-weight:700;color:#1f3a63;margin-right:auto}
+@media(max-width:560px){.qzo{grid-template-columns:1fr}.fcf b{font-size:40px}.fcc{height:260px}}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.ttile{display:flex;flex-direction:column;gap:2px;padding:16px;border-radius:16px;border:1.5px solid #e2e8f0;background:#fff;text-decoration:none;color:#0f172a}.ttile:hover{border-color:#9fc0ea;background:#f6faff}
+.ttile span{font-size:28px}.ttile b{font:700 17px "Noto Sans Devanagari",sans-serif;color:#011f43}.ttile small{color:#64748b}
+.twl{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.twl a{display:flex;flex-direction:column;padding:12px 14px;border-radius:14px;background:#f6faff;border:1px solid #dbe7f6;text-decoration:none}.twl b{color:#1f5fae;font-size:18px}.twl span{color:#b4232a;font-family:"Noto Sans Devanagari",sans-serif}.twl em{font-style:normal;color:#0f6b5f;font-weight:600;font-family:"Noto Sans Devanagari",sans-serif}
+.phl{display:flex;flex-direction:column;gap:10px}.ph{padding:12px 16px;border-radius:14px;background:#fff;border:1px solid #e2e8f0;border-left:4px solid #4b3a8c;display:flex;flex-direction:column;gap:3px}
+.ph b{color:#2c2350;font-size:17px}.ph span{color:#475569}.ph a{align-self:flex-start;color:#1f5fae;font-weight:700;font-size:13px;text-decoration:none}
+.ocg{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}.ocd{grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}
+.occ{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border-radius:14px;border:1.5px solid #e2e8f0;background:#fff;cursor:pointer;font:inherit}.occ:hover{border-color:#1f5fae;background:#eef5ff}
+.occ b{font-size:34px;color:#011f43;line-height:1.2}.occ small{color:#b45309;font-family:"Noto Sans Devanagari",sans-serif}.occ span{font-size:13px;color:#475569}
+.octry textarea{width:100%;min-height:80px;font-size:30px;padding:12px;border-radius:14px;border:1.5px solid #d5dcea;box-sizing:border-box}#ocout{margin-top:8px;font-size:17px;color:#1f3a63;min-height:24px}
+.olkb{width:38px;height:38px;border-radius:50%;border:0;background:#eef2f8;color:#1f3a63;font-size:20px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-right:4px}.olkb:hover{background:#1f5fae;color:#fff}
+#olpad{position:fixed;left:50%;bottom:0;transform:translate(-50%,110%);width:min(640px,100%);z-index:400;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -12px 40px rgba(1,31,67,.25);padding:10px 12px 14px;transition:transform .25s;box-sizing:border-box}
+#olpad.on{transform:translate(-50%,0)}.okh{display:flex;justify-content:space-between;align-items:center;padding:2px 4px 8px;color:#011f43}.okh button{border:0;background:#f1f5f9;border-radius:50%;width:30px;height:30px;cursor:pointer}
+.okk{display:grid;grid-template-columns:repeat(11,1fr);gap:5px}@media(max-width:560px){.okk{grid-template-columns:repeat(8,1fr)}}
+.okk button,.okf button{border:1px solid #d5dcea;background:#f8fafc;border-radius:10px;padding:6px 0;cursor:pointer;display:flex;flex-direction:column;align-items:center;font:inherit}
+.okk button b{font-size:22px;color:#011f43;line-height:1.2}.okk button small{font-size:10px;color:#64748b}.okk button:active{background:#dbe7f6}
+.okf{display:flex;gap:6px;margin-top:6px}.okf button{flex:1;padding:10px;font-weight:700}.okf .sp{flex:3}.okf .go{background:#1f5fae;color:#fff;border-color:#1f5fae}
+.shbox{max-width:620px}.shimg{width:100%;max-width:520px;margin:0 auto;display:block;border-radius:18px;box-shadow:0 14px 34px -14px rgba(1,31,67,.5)}
+.tk .tkl .tked{margin-left:6px;border:0;background:rgba(255,255,255,.22);color:#fff;border-radius:50%;width:24px;height:24px;cursor:pointer}
+.tkta{width:100%;min-height:160px;padding:12px;border:1px solid #d5dcea;border-radius:12px;font:15px "Open Sans",sans-serif;box-sizing:border-box}
+.fstat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.fstat div{padding:14px;border-radius:14px;background:#f6faff;border:1px solid #dbe7f6;text-align:center}.fstat b{display:block;font-size:24px;color:#1f5fae}.fstat small{color:#64748b}
+.fcard{margin-top:12px;padding:18px;border-radius:18px;border:1.5px solid #dbe7f6;background:#fff}.fcard h3{margin:0 0 10px;font-size:28px}.fcard h3 a{color:#011f43;text-decoration:none}.fcard h3 span{color:#b4232a;font-size:20px;font-family:"Noto Sans Devanagari",sans-serif}
+.frow{display:grid;grid-template-columns:1.3fr 1fr;gap:12px;align-items:center;padding:10px 0;border-top:1px dashed #e2e8f0}.frow p{margin:2px 0;color:#0f172a}.frow small{color:#64748b}.frow i{color:#475569;font-size:13px}
+@media(max-width:600px){.frow{grid-template-columns:1fr}.fstat b{font-size:19px}}
+.ibx{padding:16px;border-radius:16px;background:#f6faff;border:1px solid #dbe7f6}.ibx p{margin-top:0;color:#334155}
 </style>
 </head>
 <body>
@@ -679,7 +741,7 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
   <div class="wrap">
     <div class="fcols">
       <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-modal="ss:about" data-t="t17">SantalSabad के बारे में</a><a href="#/credits" data-modal="ss:sources" data-t="t18">स्रोत</a><a href="#/feedback" data-modal="ss:feedback" data-t="t19">सुझाव भेजिए</a></div>
-      <div class="fbox"><h6 data-t="t14">शब्दकोश</h6><a href="#/browse/a" data-modal="dict:az" data-t="t20">A–Z शब्द सूची</a><a href="#/examples" data-modal="dict:examples" data-t="t21">उदाहरण सहित शब्द</a><a href="#/random" data-modal="dict:random" data-t="t22">कोई भी एक शब्द</a></div>
+      <div class="fbox"><h6 data-t="t14">शब्दकोश</h6><a href="#/browse/a" data-modal="dict:az" data-t="t20">A–Z शब्द सूची</a><a href="#/examples" data-modal="dict:examples" data-t="t21">उदाहरण सहित शब्द</a><a href="#/random" data-modal="dict:random" data-t="t22">कोई भी एक शब्द</a><a href="#/quiz">आज का क्विज़</a><a href="#/flash">फ़्लैशकार्ड</a><a href="#/topics">विषय के शब्द</a><a href="#/phrases">छोटे वाक्य</a><a href="#/olchiki">Ol Chiki चार्ट</a><a href="#/saved">मेरे शब्द</a><a href="#/" data-install="1">App इंस्टॉल करें</a></div>
       <div class="fbox"><h6 data-t="t15">सहायता</h6><a href="#/guide" data-modal="help:guide" data-t="t23">शब्द कैसे पढ़ें</a><a href="#/guide" data-modal="help:searchhelp" data-t="t24">सर्च कैसे करें</a><a href="#/contact" data-modal="help:contact" data-t="t25">सम्पर्क</a></div>
       <div class="fbox fbrand"><h6 data-t="t16">BOSC</h6>SantalSabad, BOSC की एक पहल है, जिसका उद्देश्य संताली भाषा को हर किसी तक पहुँचाना है।
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
@@ -745,7 +807,7 @@ function build(){entries={};order=[];AIX=null;ROWS=ROWS.filter(r=>(r['Shabd']||'
   $('#count').textContent=order.length.toLocaleString('en-IN')}
 async function load(){
   const draft=localStorage.getItem('ss_draft');
-  if(draft){ROWS=JSON.parse(draft)}else{
+  if(draft&&draft[0]==='['){ROWS=JSON.parse(draft)}else if(draft){const rows=parseCSV(draft.replace(/^\uFEFF/,''));HEAD=rows.shift().map(h=>h.trim());ROWS=rows.map(r=>{const o={};HEAD.forEach((h,j)=>o[h]=r[j]||'');return o})}else{
     const txt=await (await fetch('words.csv',{cache:'no-cache'})).text();
     const rows=parseCSV(txt.replace(/^\uFEFF/,''));HEAD=rows.shift().map(h=>h.trim());
     ROWS=rows.map(r=>{const o={};HEAD.forEach((h,j)=>o[h]=r[j]||'');return o})}
@@ -755,9 +817,9 @@ async function load(){
   build();applyTexts();adminBar();route();
 }
 
-function search(q,mode='all'){q=norm(q);if(!q)return[];const out=[];
+function search(q,mode='all'){const qo=/[\u1C50-\u1C7F]/.test(q||'')?norm(q):null;if(qo)q=ocRoman(q);q=norm(q);if(!q)return[];const out=[];
   for(const k of order){const e=entries[k];let score=0;
-    if(mode==='all'||mode==='sat'){const nk=norm(e.w),nd=norm(e.dv);if(nk===q||nd===q||norm(e.oc)===q)score=100;else if(nk.startsWith(q)||nd.startsWith(q))score=80}
+    if(mode==='all'||mode==='sat'){const nk=norm(e.w),nd=norm(e.dv);if(nk===q||nd===q||norm(e.oc)===q||(qo&&norm(e.oc)===qo))score=100;else if(nk.startsWith(q)||nd.startsWith(q))score=80}
     if(!score&&mode!=='sat'){for(const p in e.pos)for(const s of e.pos[p]){
       const src=mode==='hi'?[s.hi]:mode==='en'?[s.en]:[s.hi,s.en];
       const hay=src.join(';').split(/[;,]/).map(norm);
@@ -789,7 +851,7 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   h+='</tbody></table></div>';
   if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ नया अर्थ जोड़ें</button><button class="abtn red" data-delword="${esc(k)}">पूरा शब्द हटाएँ</button></div>`;
   if(e.rel)h+=`<div class="rel"><b>संबंधित शब्द:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
-  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
+  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn wbm${BM().includes(k)?' on':''}" data-bm="${esc(k)}">${BM().includes(k)?'★ सेव है':'☆ सेव करें'}</button><button type="button" class="wbtn" data-share="${esc(k)}">📤 शेयर</button><button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(cap(e.w))}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>
@@ -807,7 +869,7 @@ function home(){const k=wotdKey(),e=entries[k],s=first(e);
       <div class="d">${esc(s.hi)}${s.hi&&s.en?' — ':''}${esc(s.en)}</div><a class="more" href="#/word/${encodeURIComponent(k)}">पूरा अर्थ देखिए</a></div>
     <div><h4 class="dm">${recentList().length?'हाल में देखे':'और शब्द'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
   </div></section>
-  <section class="feat"><div class="wrap"><h2 class="dm sec" data-t="sl_title">संताल संस्कृति की झलक</h2>${tickerHTML()}${sliderHTML()}</div></section>`}
+  ${learnBand()}<section class="feat"><div class="wrap"><h2 class="dm sec" data-t="sl_title">संताल संस्कृति की झलक</h2>${tickerHTML()}${sliderHTML()}</div></section>`}
 
 function side(){const rec=recentList();const cnt={};order.forEach(k=>{const l=norm(k).replace(/^[^a-z]+/,'')[0];if(l)cnt[l]=(cnt[l]||0)+1});
   return `<aside class="side"><div class="box azbox"><h3 class="dm" data-t="az_title">A–Z शब्द सूची</h3><div class="az">${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>cnt[l]?`<a href="#/browse/${l}">${l.toUpperCase()}<small>${cnt[l]}</small></a>`:`<span class="off">${l.toUpperCase()}<small>0</small></span>`).join('')}</div></div>
@@ -841,10 +903,10 @@ let SLIDES=[],SLI=0,SLT=null;
 async function loadSlides(){const d=localStorage.getItem('ss_slides_draft');if(d){SLIDES=JSON.parse(d);return}try{SLIDES=await (await fetch('slides.json',{cache:'no-cache'})).json()}catch(e){SLIDES=[]}}
 function slN(){return SLIDES.length}
 const TKW=["johar","dak'","daka","orak'","hor","gidră","baba","ayo","gate","bahu","jawae","hopon","koṛa","kuṛi","ńutum","ato","disom","roṛ","jom","ńu","ńel","calak'","daran","seren","enec'","bes","ba","mit'","bar","pe","pon","moṇe","siń","ńĩdă","gapa","cando","ipil","dhărti","dare","bir","sakam","ul","jel","sim","seta","gai","merom","ti","jaṅga","bohok'","lutur","sendra"];
-function tickerHTML(){const L=TKW.map(key).filter(k=>entries[k]&&first(entries[k]).hi);if(!L.length)return'';
+function tickerHTML(){const L=tkList();if(!L.length)return'';
  const d=new Date(),st=(d.getDate()*7)%L.length,K=L.slice(st).concat(L.slice(0,st));
  const one=K.map(k=>{const e=entries[k],s=first(e);return `<a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(e.w))}</b><em>${esc(e.dv)}</em>– <span>${esc((s.hi||'').split(/[;,]/)[0])}</span></a>`}).join('');
- return `<div class="tk" role="marquee" aria-label="रोज़ के संताली शब्द"><div class="tkl">📢 <span>रोज़ के शब्द</span><i style="font-style:normal;opacity:.85">· Daily words</i></div><div class="tkv"><div class="tkr">${one}${one}</div></div></div>`}
+ return `<div class="tk" role="marquee" aria-label="रोज़ के संताली शब्द"><div class="tkl">📢 <span>रोज़ के शब्द</span><i style="font-style:normal;opacity:.85">· Daily words</i>${isAdmin()?'<button type="button" class="tked" data-tkedit="1" title="टिकर के शब्द बदलें">✎</button>':''}</div><div class="tkv"><div class="tkr">${one}${one}</div></div></div>`}
 /* ticker: JS se right-to-left chalana (Windows animation-off setting par bhi chale) */
 (function(){let x=0,last=0,hold=false;
  document.addEventListener('mouseover',e=>{hold=!!(e.target.closest&&e.target.closest('.tk'))});
@@ -974,7 +1036,7 @@ let EDIT=localStorage.getItem('ss_edit')==='1';
 const OWNER='bosctechedu@gmail.com';
 const isAdmin=()=>localStorage.getItem('ss_admin')==='1'&&(localStorage.getItem('ss_user')||'').toLowerCase()===OWNER;
 if(!isAdmin()){EDIT=false;localStorage.setItem('ss_edit','0')}
-function saveDraft(){localStorage.setItem('ss_draft',JSON.stringify(ROWS));adminBar()}
+function saveDraft(){try{localStorage.setItem('ss_draft',toCSV())}catch(err){try{localStorage.removeItem('ss_draft')}catch(_){}console.warn('draft too big',err)}adminBar()}
 function applyTexts(){setTimeout(()=>{const c=$('#count');if(c)c.textContent=order.length.toLocaleString('en-IN')});document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(TEXTS[k]!=null)el.innerHTML=TEXTS[k];el.contentEditable=EDIT?'true':'false';el.classList.toggle('edt',EDIT)})}
 function toCSV(){const H=[...new Set(COLS.concat(HEAD))];const q=v=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
   return H.join(',')+'\n'+ROWS.filter(r=>(r['Shabd']||'').trim()).map(r=>H.map(h=>q(r[h]||'')).join(',')).join('\n')+'\n'}
@@ -982,12 +1044,13 @@ function dl(name,txt,type){const a=document.createElement('a');a.href=URL.create
 function adminBar(){let b=$('#abar');if(!isAdmin()){if(b)b.remove();return}
   if(!b){b=document.createElement('div');b.id='abar';document.body.appendChild(b)}
   const dirty=localStorage.getItem('ss_draft')||localStorage.getItem('ss_texts_draft')||localStorage.getItem('ss_slides_draft');
-  b.innerHTML=`<span class="abtxt"><b>एडमिन लाइव मोड सक्रिय</b> नया जोड़ें (Add), सुधारें (Edit) या हटाएँ (Delete)</span><button data-a="edit" class="${EDIT?'on':''}">${EDIT?'✎ एडिट मोड: चालू':'✎ एडिट मोड: बंद'}</button><button data-a="new">+ नया शब्द</button>
+  b.innerHTML=`<span class="abtxt"><b>एडमिन लाइव मोड सक्रिय</b> नया जोड़ें (Add), सुधारें (Edit) या हटाएँ (Delete)</span><button data-a="edit" class="${EDIT?'on':''}">${EDIT?'✎ एडिट मोड: चालू':'✎ एडिट मोड: बंद'}</button><button data-a="new">+ नया शब्द</button><button data-a="fill">🈯 हिन्दी भरें</button><button data-a="inbox">📥 सुझाव</button><button data-a="tk">📢 टिकर</button>
    <button data-a="publish" class="pub">⬆ लाइव पर पब्लिश</button><button data-a="csv">⬇ words.csv</button>${dirty?'<span class="dot">बिना सेव बदलाव</span><button data-a="discard">बदलाव हटाएँ</button>':''}<button data-a="settings">⚙ सेटिंग्स</button>`}
 document.addEventListener('click',async e=>{const t=e.target;
   const a=t.closest('#abar [data-a]')?.dataset.a;
   if(a==='edit'){EDIT=!EDIT;localStorage.setItem('ss_edit',EDIT?'1':'0');adminBar();route();return}
   if(a==='new'){openEntry(null);return}
+  if(a==='fill'){location.hash='#/fill';return}if(a==='inbox'){location.hash='#/inbox';return}if(a==='tk'){tkEdit();return}
   if(a==='csv'){dl('words.csv',toCSV(),'csv');dl('texts.json',JSON.stringify(TEXTS,null,1),'json');return}
   if(a==='discard'){if(confirm('सारे बिना सेव बदलाव हटा दें?')){localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');localStorage.removeItem('ss_slides_draft');location.reload()}return}
   if(a==='publish'){publish();return}
@@ -1064,6 +1127,7 @@ function route(){const [,v,a]=(location.hash||'#/').split('/');const arg=decodeU
   if(v==='random'){location.hash='#/word/'+encodeURIComponent(order[Math.floor(Math.random()*order.length)]);return}
   if(isHome){$('#view').innerHTML=home();applyTexts();stats();slPlay();window.scrollTo(0,0);return}
   clearTimeout(SLT);
+  if(XR[v]){const hx=XR[v](arg);$('#view').innerHTML=`<div class="inner"><section>${hx}</section>${side()}</div>`;applyTexts();window.scrollTo(0,0);setTimeout(()=>XB[v]&&XB[v](arg));return}
   if(v==='word'){h=entryHTML(arg);if(entries[arg]){remember(arg);document.title=entries[arg].w+' – SantalSabad'}}
   else if(v==='search'){const [qq,mode]=arg.split('|');const mi=$('#sb2 input');if(mi){mi.value=qq;mi.parentNode.classList.add('typing');$('#sb2 select').value=mode||'all'}const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
   else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).replace(/^[^a-z]+/,'').startsWith(arg)));
@@ -1247,12 +1311,14 @@ function fbBind(pre){const g=i=>document.getElementById(i);let type='गलत �
  g('fb_s').onclick=e=>{const sp=[...g('fb_s').children],i=sp.indexOf(e.target);if(i>=0){stars=i+1;sp.forEach((x,j)=>x.classList.toggle('on',j<stars))}};
  if(pre&&entries[pre]){w.value=entries[pre].w;showCur(pre)}
  const txt=()=>`SantalSabad सुझाव\nप्रकार: ${type}\nशब्द: ${w.value}\nहिन्दी अर्थ: ${g('fb_hi').value}\nअंग्रेज़ी अर्थ: ${g('fb_en').value}\nटिप्पणी: ${g('fb_note').value}\nनाम: ${g('fb_n').value} (${(g('fb_loc')||{}).value||''})\nरेटिंग: ${stars?stars+'/5':'-'}\nपेज: ${location.href}`;
+ const sobj=()=>({t:type,w:w.value.trim(),hi:g('fb_hi').value.trim(),en:g('fb_en').value.trim(),note:g('fb_note').value.trim().slice(0,300),n:g('fb_n').value.trim()});
  const ok=m=>{const o=g('fb_ok');o.textContent=m;o.classList.add('on')};
  const valid=()=>{if(!w.value.trim()&&!g('fb_note').value.trim()){ok('कृपया शब्द या टिप्पणी लिखिए।');return false}return true};
- const save=()=>{const L=JSON.parse(localStorage.getItem('ss_feedback')||'[]');L.push({t:Date.now(),text:txt()});localStorage.setItem('ss_feedback',JSON.stringify(L.slice(-50)))};
+ const save=()=>{const L=JSON.parse(localStorage.getItem('ss_feedback')||'[]');L.push({t:Date.now(),text:txt(),link:sugLink(sobj())});localStorage.setItem('ss_feedback',JSON.stringify(L.slice(-50)))};
  g('fb_copy').onclick=async()=>{if(!valid())return;try{await navigator.clipboard.writeText(txt());ok('कॉपी हो गया। अब इसे BOSC को भेज दीजिए।')}catch(e){ok(txt())}};
  g('fb_send').onclick=async()=>{if(!valid())return;save();const bt=g('fb_send');bt.disabled=true;ok('भेजा जा रहा है…');
   const data={_subject:'SantalSabad सुझाव: '+(w.value||type),_template:'table',_captcha:'false','प्रकार':type,'शब्द':w.value,'हिन्दी अर्थ':g('fb_hi').value,'अंग्रेज़ी अर्थ':g('fb_en').value,'संदेश':g('fb_note').value,'नाम':g('fb_n').value,'गाँव/जगह':(g('fb_loc')||{}).value||'','रेटिंग':stars?stars+'/5':'-','पेज':location.href};
+  data['Admin लिंक (क्लिक करके जोड़ें)']=sugLink(sobj());
   try{const r=await fetch('https://formsubmit.co/ajax/'+(TEXTS.fb_formid||OWNER),{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});const j=await r.json().catch(()=>({}));
    if(!r.ok||j.success==='false'||j.success===false)throw 0;ok('धन्यवाद! आपका सुझाव BOSC को भेज दिया गया।');window._fbDone&&window._fbDone()}
   catch(e){ok('इंटरनेट या सर्वर की दिक़्क़त से नहीं भेजा जा सका। ईमेल ऐप खुल रहा है।');location.href='mailto:'+OWNER+'?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(txt())}
@@ -1266,7 +1332,7 @@ function aeSense(x={}){const v=n=>esc(x[n]||'');return `<div class="aes"><div cl
  <label>हिन्दी अर्थ<input data-c="Hindi" value="${v('Hindi')}"></label><label>अंग्रेज़ी अर्थ<input data-c="English" value="${v('English')}"></label>
  <label class="w2">उदाहरण (संताली)<textarea data-c="Udaharan (Santali)">${v('Udaharan (Santali)')}</textarea></label><label class="w2">उदाहरण का अनुवाद<textarea data-c="Udaharan ka anuvad">${v('Udaharan ka anuvad')}</textarea></label></div></div>`}
 function aeNum(m){m.querySelectorAll('.aes .aen').forEach((b,i)=>b.textContent='अर्थ '+(i+1))}
-function openEntry(k,o={}){closeModal();const e=k&&entries[k];const rows=(e?e.rows.map(i=>ROWS[i]).filter(hasMeaning):[]);if(e&&!rows.length)rows.push(ROWS[e.rows[0]]);if(!e)rows.push({});if(o.addSense)rows.push({Shabd:e.w,'Arth no.':String(rows.length+1)});const r0=rows[0]||{};const v=n=>esc(r0[n]||'');
+function openEntry(k,o={}){closeModal();const e=k&&entries[k];const rows=(e?e.rows.map(i=>ROWS[i]).filter(hasMeaning):[]);if(e&&!rows.length)rows.push(ROWS[e.rows[0]]);if(!e)rows.push({});if(o.addSense)rows.push({Shabd:e.w,'Arth no.':String(rows.length+1)});if(o.sug){const S={Hindi:o.sug.hi||'',English:o.sug.en||'','Udaharan (Santali)':''};if(e){rows.push(Object.assign({Shabd:e.w,'Arth no.':String(rows.length+1)},S));o.addSense=true}else Object.assign(rows[0],{Shabd:o.sug.w||''},S)}const r0=rows[0]||{};const v=n=>esc(r0[n]||'');
  const m=document.createElement('div');m.className='mdl lpm aem';m.id='mdl';
  m.innerHTML=`<div class="lpbox aebox" role="dialog" aria-modal="true" aria-labelledby="aet">
  <div class="lhd"><div class="lhl"><div class="lem">✎</div><div><p class="lkick">ADMIN · शब्द एंट्री</p><h2 id="aet">${e?'शब्द बदलें: '+esc(cap(e.w)):'नया शब्द जोड़ें'}</h2></div></div>
@@ -1296,7 +1362,7 @@ function openEntry(k,o={}){closeModal();const e=k&&entries[k];const rows=(e?e.ro
   if(t.closest('.aedw')){if(!need())return;if(!confirm('पूरा शब्द "'+e.w+'" हटाएँ?'))return;[...e.rows].sort((a,b)=>b-a).forEach(i=>ROWS.splice(i,1));saveDraft();build();await liveSave(msg);closeModal();location.hash='#/';route();return}
   if(t.closest('.aeoff')){if(!need())return;const nk=apply();if(!nk)return;localStorage.setItem('ss_pending','1');msg('इस डिवाइस पर सेव हो गया। ऑनलाइन होने पर "सेव करें और लाइव करें" या Publish दबाइए।',1);setTimeout(()=>go(nk),900);return}
   if(t.closest('.aelive')){if(!need())return;const nk=apply();if(!nk)return;const b=t.closest('.aelive');b.disabled=true;msg('सेव हो रहा है…',1);const ok=await liveSave(msg);b.disabled=false;if(ok)setTimeout(()=>go(nk),1200)}});
- setTimeout(()=>{if(o.addSense){const L=[...m.querySelectorAll('.aes')].pop();L.classList.add('aenew');L.scrollIntoView({block:'center'});const f=L.querySelector('[data-c="Hindi"]');f&&f.focus()}else{const f=m.querySelector('#ae_w');f&&f.focus()}},80)}
+ setTimeout(()=>{if(o.sug){const x=m.querySelector('#aemsg');x.className='aemsg on ok';x.textContent='सुझाव ('+(o.sug.t||'')+')'+(o.sug.note?': '+o.sug.note:'')+(o.sug.n?' — '+o.sug.n:'')+'। जाँचकर सेव कीजिए।'}if(o.addSense){const L=[...m.querySelectorAll('.aes')].pop();L.classList.add('aenew');L.scrollIntoView({block:'center'});const f=L.querySelector('[data-c="Hindi"]');f&&f.focus()}else{const f=m.querySelector('#ae_w');f&&f.focus()}},80)}
 async function liveSave(msg){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
  if(!navigator.onLine){localStorage.setItem('ss_pending','1');msg('आप ऑफ़लाइन हैं। बदलाव इस डिवाइस पर सेव है, इंटरनेट आते ही अपने आप लाइव होगा।',1);return true}
  if(!tok){localStorage.setItem('ss_pending','1');msg('इस डिवाइस पर सेव हो गया। लाइव करने के लिए Admin सेटिंग्स में GitHub token डालिए।');return false}
@@ -1304,6 +1370,227 @@ async function liveSave(msg){const tok=localStorage.getItem('ss_gh_token'),repo=
  catch(err){localStorage.setItem('ss_pending','1');msg('लाइव नहीं हुआ ('+err.message+')। बदलाव इस डिवाइस पर सेव है।');return false}}
 window.addEventListener('online',()=>{if(isAdmin()&&localStorage.getItem('ss_pending')&&localStorage.getItem('ss_gh_token'))liveSave(()=>{}).then(ok=>ok&&console.log('pending changes published'))});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-aedit]');if(b)openEntry(b.dataset.aedit)});
+/* ===== v37: सीखें, शेयर, Ol Chiki, इंस्टॉल, Admin टूल ===== */
+const BM=()=>JSON.parse(localStorage.getItem('ss_bm')||'[]');
+const setBM=a=>localStorage.setItem('ss_bm',JSON.stringify(a));
+const hasHi=k=>!!(entries[k]&&first(entries[k]).hi);
+const hi1=e=>((first(e).hi||'').split(/[;,]/)[0]||'').trim();
+const crumb=t=>`<div class="crumb"><a href="#/">Home</a> › ${t}</div>`;
+function rng(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()};
+
+const TOPICS=[
+ ['family','👪','परिवार','Family',["baba","ayo","gogo","dada","dai","hopon","bahu","jawae","gidră","koṛa","kuṛi","era","herel","gate"]],
+ ['body','🖐','शरीर','Body',["bohok'","lutur","mu","ḍaṭa","ti","jaṅga","idi","hormo"]],
+ ['numbers','🔢','गिनती','Numbers',["mit'","bar","pe","pon","moṇe","eae","irăl","are","gel","isi"]],
+ ['food','🍚','खाना-पीना','Food',["daka","dak'","jel","jondra","jo","ul","jom","ńu"]],
+ ['animals','🐄','जानवर','Animals',["seta","sim","gai","merom","bitkil","sukri","pusi","hako","kul","hăti","bhiḍi"]],
+ ['nature','🌳','प्रकृति','Nature',["cando","ipil","dhărti","dare","bir","sakam","baha","buru","gaḍa","hoe","seṅgel","dhiri","dhuṛi","baṛe"]],
+ ['time','⏰','समय','Time',["siń","ńĩdă","mahã","gapa","ayup","serma"]],
+ ['actions','🏃','काम (क्रिया)','Actions',["jom","ńu","ńel","calak'","daran","ăgu","duṛup'","teṅgo","gitic'","enec'","seren","sendra"]],
+ ['describe','🎨','रंग और गुण','Describing',["arak'","hende","gorom","bes","bhage","haṛam"]],
+ ['village','🏡','घर-गाँव','Home & village',["johar","orak'","ato","ătu","kulhi","disom","roṛ","hor"]]];
+const topicKeys=t=>[...new Set(t[4].map(key))].filter(hasHi);
+const commonKeys=()=>[...new Set(TOPICS.flatMap(topicKeys).concat(tkList()))];
+
+/* Ol Chiki */
+const OCL=[['ᱚ','ला','o','ऑ'],['ᱛ','आत','t','त'],['ᱜ','आग','g / k\'','ग'],['ᱝ','आंग','ṅ','ङ'],['ᱞ','आल','l','ल'],['ᱟ','ला','a','आ'],['ᱠ','आक','k','क'],['ᱡ','आज','j / c\'','ज'],['ᱢ','आम','m','म'],['ᱣ','आव','w','व'],
+ ['ᱤ','लि','i','इ'],['ᱥ','इस','s','स'],['ᱦ','इह','h','ह'],['ᱧ','इञ','ñ','ञ'],['ᱨ','इर','r','र'],['ᱩ','लु','u','उ'],['ᱪ','उच','c','च'],['ᱫ','उद','d / t\'','द'],['ᱬ','उण','ṇ','ण'],['ᱭ','उय','y','य'],
+ ['ᱮ','ले','e','ए'],['ᱯ','एप','p','प'],['ᱰ','एड','ḍ','ड'],['ᱱ','एन','n','न'],['ᱲ','एड़','ṛ','ड़'],['ᱳ','लो','o','ओ'],['ᱴ','ओट','ṭ','ट'],['ᱵ','ओब','b / p\'','ब'],['ᱶ','ओव','w̃','वँ'],['ᱷ','ओह','h (महाप्राण)','ह']];
+const OCM={ᱚ:'o',ᱛ:'t',ᱜ:'g',ᱝ:'ṅ',ᱞ:'l',ᱟ:'a',ᱠ:'k',ᱡ:'j',ᱢ:'m',ᱣ:'w',ᱤ:'i',ᱥ:'s',ᱦ:'h',ᱧ:'ñ',ᱨ:'r',ᱩ:'u',ᱪ:'c',ᱫ:'d',ᱬ:'ṇ',ᱭ:'y',ᱮ:'e',ᱯ:'p',ᱰ:'ḍ',ᱱ:'n',ᱲ:'ṛ',ᱳ:'o',ᱴ:'ṭ',ᱵ:'b',ᱶ:'w',ᱷ:'h'};
+const OCV='ᱚᱟᱤᱩᱮᱳ',OCG={ᱜ:"k'",ᱡ:"c'",ᱫ:"t'",ᱵ:"p'"};
+function ocRoman(s){let o='';const a=[...(s||'')];for(let i=0;i<a.length;i++){const c=a[i],n=a[i+1];
+ if(c>='᱐'&&c<='᱙'){o+=String(c.charCodeAt(0)-0x1C50);continue}
+ if(OCG[c]){if(n==='ᱽ'){o+=OCM[c];i++;continue}if(!n||!OCV.includes(n)){o+=OCG[c];continue}o+=OCM[c];continue}
+ if(OCM[c]){o+=OCM[c];continue}
+ if(c==='ᱹ'||c==='ᱺ'){o+='\u0323';continue}if(c==='ᱸ'){o+='\u0303';continue}if(c==='ᱼ'){o+="'";continue}if(c==='ᱻ'||c==='ᱽ')continue;if(c==='᱾'||c==='᱿'){o+='.';continue}
+ o+=c}return o.normalize('NFC')}
+
+/* Home: सीखें */
+function learnBand(){const n=BM().filter(k=>entries[k]).length,q=JSON.parse(localStorage.getItem('ss_quiz')||'{}');
+ const T=[['#/flash','🃏','फ़्लैशकार्ड','रोज़ के शब्द कार्ड पलटकर याद कीजिए'],['#/quiz','🧠','आज का क्विज़',q.last===today()?`आज का स्कोर ${q.score}/5 · 🔥 ${q.streak||1} दिन`:'5 सवाल, रोज़ नए'+(q.streak?` · 🔥 ${q.streak} दिन`:'')],
+  ['#/topics','📚','विषय के शब्द','परिवार, शरीर, गिनती, जानवर…'],['#/phrases','💬','छोटे वाक्य','असली संताली वाक्य, अनुवाद के साथ'],
+  ['#/saved','⭐','मेरे शब्द',n?n+' शब्द सेव हैं':'शब्द पेज पर ☆ दबाकर सेव कीजिए'],['#/olchiki','ᱚ','Ol Chiki चार्ट','अक्षर, नाम, रोमन और देवनागरी']];
+ return `<section class="learn"><div class="wrap"><h2 class="dm sec">सीखें और खेलें</h2><div class="lgrid">${T.map(t=>`<a class="ltile" href="${t[0]}"><span class="li">${t[1]}</span><b>${t[2]}</b><small>${t[3]}</small></a>`).join('')}
+ <button type="button" class="ltile linst" data-install="1"><span class="li">📲</span><b>App इंस्टॉल करें</b><small>फ़ोन पर ऐप की तरह, बिना इंटरनेट भी</small></button></div></div></section>`}
+
+/* पेज */
+const XR={},XB={};
+XR.saved=()=>{const a=BM().filter(k=>entries[k]);return `<div class="card">${crumb('मेरे शब्द')}<h2 class="dm xh">⭐ मेरे शब्द <small>${a.length}</small></h2>
+ ${a.length?`<div class="xact"><a class="xbtn" href="#/flash/saved">🃏 इनसे फ़्लैशकार्ड</a><a class="xbtn sec" href="#/quiz">🧠 क्विज़ खेलें</a></div><div class="list">${a.map(k=>`<div class="item xit"><a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(entries[k].w))} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a><button class="xrm" data-bm="${esc(k)}" title="हटाएँ">✕</button></div>`).join('')}</div>`
+ :'<p class="empty">अभी कोई शब्द सेव नहीं है। किसी भी शब्द के पेज पर “☆ सेव करें” दबाइए।</p>'}</div>`};
+
+let FC={keys:[],i:0,flip:false,known:0};
+XR.flash=arg=>{let keys,title;const t=TOPICS.find(x=>x[0]===arg);
+ if(arg==='saved'){keys=BM().filter(k=>entries[k]&&hasHi(k));title='मेरे शब्द'}else if(t){keys=topicKeys(t);title=t[2]}else{keys=commonKeys();title='रोज़ के शब्द'}
+ const r=rng(Date.now()%1e6);keys=keys.slice().sort(()=>r()-.5);FC={keys,i:0,flip:false,known:0,title};
+ return `<div class="card">${crumb('फ़्लैशकार्ड')}<h2 class="dm xh">🃏 फ़्लैशकार्ड · ${esc(title)}</h2><div class="xact">${TOPICS.map(x=>`<a class="xchip${x[0]===arg?' on':''}" href="#/flash/${x[0]}">${x[1]} ${x[2]}</a>`).join('')}<a class="xchip${arg==='saved'?' on':''}" href="#/flash/saved">⭐ मेरे शब्द</a></div><div id="fcw"></div></div>`};
+function fcDraw(){const w=$('#fcw');if(!w)return;const {keys,i,flip}=FC;if(!keys.length){w.innerHTML='<p class="empty">इस सूची में अभी शब्द नहीं हैं।</p>';return}
+ if(i>=keys.length){w.innerHTML=`<div class="fcdone"><b>🎉 बहुत बढ़िया!</b><p>आपने ${keys.length} में से ${FC.known} शब्द याद होने का निशान लगाया।</p><button class="xbtn" data-fc="restart">फिर से शुरू करें</button></div>`;return}
+ const k=keys[i],e=entries[k],s=first(e);
+ w.innerHTML=`<div class="fcbar"><i style="width:${i/keys.length*100}%"></i></div><p class="fcn">${i+1} / ${keys.length}</p>
+ <div class="fcc${flip?' fl':''}" data-fc="flip" tabindex="0"><div class="fcf"><b>${esc(cap(e.w))}</b><span>${esc(e.dv)}</span>${e.oc?`<em class="olc">${esc(e.oc)}</em>`:''}<small>दबाकर पलटें</small></div>
+ <div class="fcb"><b>${esc(s.hi||'—')}</b><span>${esc(s.en||'')}</span><a href="#/word/${encodeURIComponent(k)}">पूरा अर्थ ›</a></div></div>
+ <div class="fcact"><button class="xbtn sec" data-fc="prev">‹ पिछला</button><button class="xbtn sec" data-fc="say">🔊</button><button class="xbtn red" data-fc="again">फिर से</button><button class="xbtn grn" data-fc="known">✓ याद है</button></div>`}
+XB.flash=fcDraw;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-fc]');if(!b||e.target.closest('a'))return;const a=b.dataset.fc;
+ if(a==='flip')FC.flip=!FC.flip;else if(a==='prev'){FC.i=Math.max(0,FC.i-1);FC.flip=false}else if(a==='known'){FC.known++;FC.i++;FC.flip=false}
+ else if(a==='again'){FC.keys.push(FC.keys[FC.i]);FC.i++;FC.flip=false}else if(a==='restart'){FC.i=0;FC.known=0;FC.flip=false}
+ else if(a==='say'){const e2=entries[FC.keys[FC.i]];if(e2&&window.speechSynthesis){const u=new SpeechSynthesisUtterance(e2.dv);u.lang='hi-IN';speechSynthesis.cancel();speechSynthesis.speak(u)}return}
+ fcDraw()});
+document.addEventListener('keydown',e=>{if(!$('#fcw')||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+ if(e.key===' '){e.preventDefault();FC.flip=!FC.flip;fcDraw()}else if(e.key==='ArrowRight'){FC.i=Math.min(FC.keys.length,FC.i+1);FC.flip=false;fcDraw()}else if(e.key==='ArrowLeft'){FC.i=Math.max(0,FC.i-1);FC.flip=false;fcDraw()}});
+
+let QZ=null;
+function qzMake(seed){const r=rng(seed),pool=commonKeys();if(pool.length<4)return[];const P=pool.slice().sort(()=>r()-.5).slice(0,5);
+ return P.map((k,j)=>{const rev=j%2===1;const wrong=pool.filter(x=>x!==k&&hi1(entries[x])!==hi1(entries[k])).sort(()=>r()-.5).slice(0,3);
+  const opts=[k,...wrong].sort(()=>r()-.5);return {k,rev,opts,ans:null}})}
+XR.quiz=arg=>{const t=today(),seed=+t.replace(/-/g,'');QZ={qs:qzMake(arg==='new'?Date.now()%1e7:seed),i:0,score:0,daily:arg!=='new'};
+ return `<div class="card">${crumb('आज का क्विज़')}<h2 class="dm xh">🧠 ${QZ.daily?'आज का क्विज़':'अभ्यास क्विज़'}</h2><div id="qzw"></div></div>`};
+function qzDraw(){const w=$('#qzw');if(!w||!QZ)return;const q=QZ.qs[QZ.i];
+ if(!q){let S=JSON.parse(localStorage.getItem('ss_quiz')||'{}');const t=today();
+  if(QZ.daily&&S.last!==t){const y=new Date();y.setDate(y.getDate()-1);const yd=y.getFullYear()+'-'+(y.getMonth()+1)+'-'+y.getDate();S.streak=S.last===yd?(S.streak||0)+1:1;S.last=t;S.score=QZ.score;S.best=Math.max(S.best||0,S.streak);localStorage.setItem('ss_quiz',JSON.stringify(S))}
+  w.innerHTML=`<div class="fcdone"><b>${QZ.score>=4?'🎉 शानदार!':QZ.score>=2?'👍 अच्छा!':'💪 कोशिश जारी रखिए!'}</b><p>स्कोर: <b>${QZ.score} / ${QZ.qs.length}</b>${S.streak?` · 🔥 लगातार ${S.streak} दिन`:''}</p><div class="xact" style="justify-content:center"><a class="xbtn" href="#/quiz/new">🔁 और अभ्यास करें</a><a class="xbtn sec" href="#/flash">🃏 फ़्लैशकार्ड</a></div><p class="fcn">कल नया क्विज़ आएगा।</p></div>`;return}
+ const e=entries[q.k],L=o=>q.rev?esc(cap(entries[o].w))+` <small>${esc(entries[o].dv)}</small>`:esc(hi1(entries[o]));
+ w.innerHTML=`<div class="fcbar"><i style="width:${QZ.i/QZ.qs.length*100}%"></i></div><p class="fcn">सवाल ${QZ.i+1} / ${QZ.qs.length} · स्कोर ${QZ.score}</p>
+ <div class="qzq">${q.rev?`“<b>${esc(hi1(e))}</b>” को संताली में क्या कहते हैं?`:`<b>${esc(cap(e.w))}</b> <span>${esc(e.dv)}</span> का हिन्दी अर्थ क्या है?`}</div>
+ <div class="qzo">${q.opts.map(o=>`<button data-qo="${esc(o)}" class="${q.ans?o===q.k?'ok':o===q.ans?'bad':'':''}" ${q.ans?'disabled':''}>${L(o)}</button>`).join('')}</div>
+ ${q.ans?`<div class="xact" style="justify-content:flex-end"><span class="qzr">${q.ans===q.k?'✓ सही!':'✗ सही उत्तर: '+L(q.k)}</span><button class="xbtn" data-qn="1">${QZ.i+1<QZ.qs.length?'अगला ›':'नतीजा देखें'}</button></div>`:''}`}
+XB.quiz=qzDraw;
+document.addEventListener('click',e=>{const o=e.target.closest('[data-qo]');if(o&&QZ){const q=QZ.qs[QZ.i];if(q.ans)return;q.ans=o.dataset.qo;if(q.ans===q.k)QZ.score++;qzDraw();return}
+ if(e.target.closest('[data-qn]')&&QZ){QZ.i++;qzDraw()}});
+
+XR.topics=()=>`<div class="card">${crumb('विषय के शब्द')}<h2 class="dm xh">📚 विषय के शब्द</h2><div class="tgrid">${TOPICS.map(t=>`<a class="ttile" href="#/topic/${t[0]}"><span>${t[1]}</span><b>${t[2]}</b><small>${t[3]} · ${topicKeys(t).length} शब्द</small></a>`).join('')}</div></div>`;
+XR.topic=arg=>{const t=TOPICS.find(x=>x[0]===arg);if(!t)return XR.topics();const K=topicKeys(t);
+ return `<div class="card">${crumb(`<a href="#/topics">विषय</a> › ${t[2]}`)}<h2 class="dm xh">${t[1]} ${t[2]} <small>${t[3]}</small></h2><div class="xact"><a class="xbtn" href="#/flash/${t[0]}">🃏 इनसे फ़्लैशकार्ड</a></div>
+ <div class="twl">${K.map(k=>{const e=entries[k];return `<a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(e.w))}</b><span>${esc(e.dv)}</span><em>${esc(hi1(e))}</em></a>`}).join('')}</div></div>`};
+
+XR.phrases=()=>{const P=[];ROWS.forEach(r=>{const s=(r['Udaharan (Santali)']||'').trim(),t=(r['Udaharan ka anuvad']||'').trim();if(s&&t&&s.split(/\s+/).length<=7&&!P.some(x=>x.s===s))P.push({s,t,k:key(r.Shabd)})});
+ return `<div class="card">${crumb('छोटे वाक्य')}<h2 class="dm xh">💬 छोटे संताली वाक्य <small>${P.length}</small></h2><p class="xsub">शब्दकोश के उदाहरणों से लिए गए असली वाक्य। शब्द पर क्लिक करके उसका पूरा अर्थ देखिए।</p>
+ <div class="phl">${P.map(p=>`<div class="ph"><b>${esc(p.s)}</b><span>${esc(p.t)}</span>${entries[p.k]?`<a href="#/word/${encodeURIComponent(p.k)}">${esc(cap(entries[p.k].w))} ›</a>`:''}</div>`).join('')}</div></div>`};
+
+XR.olchiki=()=>`<div class="card">${crumb('Ol Chiki चार्ट')}<h2 class="dm xh"><span class="olc">ᱚᱞ ᱪᱤᱠᱤ</span> Ol Chiki चार्ट</h2>
+ <p class="xsub">संताली की अपनी लिपि, जिसे पंडित रघुनाथ मुर्मू ने बनाया। हर अक्षर का नाम, रोमन और देवनागरी रूप। अक्षर पर क्लिक करके नीचे लिखिए।</p>
+ <div class="ocg">${OCL.map(x=>`<button class="occ" data-ock="${x[0]}"><b class="olc">${x[0]}</b><small>${x[1]}</small><span>${x[2]} · ${x[3]}</span></button>`).join('')}</div>
+ <h3 class="dm" style="margin:22px 0 8px">अंक</h3><div class="ocg ocd">${[...'᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙'].map((c,i)=>`<button class="occ" data-ock="${c}"><b class="olc">${c}</b><span>${i}</span></button>`).join('')}</div>
+ <h3 class="dm" style="margin:22px 0 8px">लिखकर देखें</h3><div class="octry"><textarea id="octa" class="olc" placeholder="ᱡᱚᱦᱟᱨ"></textarea><div id="ocout"></div><div class="xact"><button class="xbtn sec" data-ock="⌫">⌫ मिटाएँ</button><button class="xbtn sec" data-ock=" ">स्पेस</button><button class="xbtn" id="ocgo">🔍 शब्दकोश में खोजें</button></div></div>
+ <p class="xsub">ध्यान दें: ᱜ ᱡ ᱫ ᱵ शब्द के अंत में k' c' t' p' बोले जाते हैं। रोमन रूप अपने आप बनता है, कहीं-कहीं फ़र्क हो सकता है।</p></div>`;
+XB.olchiki=()=>{const ta=$('#octa'),out=$('#ocout');if(!ta)return;const up=()=>{const r=ocRoman(ta.value);out.innerHTML=ta.value?`रोमन: <b>${esc(r)}</b> · देवनागरी: <b>${esc(deva(r))}</b>`:''};ta.oninput=up;
+ $('#ocgo').onclick=()=>{if(ta.value.trim())location.hash='#/search/'+encodeURIComponent(ta.value.trim()+'|sat')}};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-ock]');if(!b)return;const ta=$('#octa');if(!ta)return;const c=b.dataset.ock;ta.value=c==='⌫'?[...ta.value].slice(0,-1).join(''):ta.value+c;ta.dispatchEvent(new Event('input'))});
+
+/* Ol Chiki कीबोर्ड (सर्च के लिए) */
+let OKT=null;
+function olPad(inp){OKT=inp;let p=$('#olpad');if(!p){p=document.createElement('div');p.id='olpad';document.body.appendChild(p);
+ p.innerHTML=`<div class="okh"><b>Ol Chiki कीबोर्ड</b><button data-ok="x" aria-label="बंद करें">✕</button></div><div class="okk">${OCL.map(x=>`<button data-ok="${x[0]}" title="${x[2]}"><b class="olc">${x[0]}</b><small>${x[2].split(' ')[0]}</small></button>`).join('')}${['ᱹ','ᱸ','ᱽ'].map(c=>`<button data-ok="${c}"><b class="olc">◌${c}</b></button>`).join('')}</div><div class="okf"><button data-ok="⌫">⌫</button><button data-ok=" " class="sp">स्पेस</button><button data-ok="go" class="go">खोजें 🔍</button></div>`;
+ p.addEventListener('mousedown',e=>e.preventDefault());
+ p.addEventListener('click',e=>{const b=e.target.closest('[data-ok]');if(!b||!OKT)return;const c=b.dataset.ok;
+  if(c==='x'){p.classList.remove('on');return}if(c==='go'){p.classList.remove('on');const bx=OKT.closest('.searchbox');const g=bx&&bx.querySelector('button.go');g?g.click():0;return}
+  OKT.value=c==='⌫'?[...OKT.value].slice(0,-1).join(''):OKT.value+c;OKT.dispatchEvent(new Event('input',{bubbles:true}));OKT.focus()})}
+ p.classList.add('on')}
+function olInit(){document.querySelectorAll('.searchbox .sact').forEach(s=>{if(s.querySelector('.olkb'))return;s.insertAdjacentHTML('afterbegin','<button type="button" class="olkb" title="Ol Chiki कीबोर्ड" aria-label="Ol Chiki कीबोर्ड"><span class="olc">ᱚ</span></button>')})}
+document.addEventListener('click',e=>{const b=e.target.closest('.olkb');if(!b)return;e.preventDefault();const inp=b.closest('.searchbox').querySelector('input');const p=$('#olpad');if(p&&p.classList.contains('on')&&OKT===inp){p.classList.remove('on');return}olPad(inp);inp.focus()});
+
+/* सेव (बुकमार्क) */
+document.addEventListener('click',e=>{const b=e.target.closest('[data-bm]');if(!b)return;const k=b.dataset.bm;let a=BM();const on=!a.includes(k);a=on?[k,...a]:a.filter(x=>x!==k);setBM(a);
+ if(b.classList.contains('xrm')){route();return}b.innerHTML=on?'★ सेव है':'☆ सेव करें';b.classList.toggle('on',on)});
+
+/* शेयर कार्ड */
+function wrapT(ctx,t,maxW){const w=(t||'').split(/\s+/),L=[];let l='';w.forEach(x=>{const tt=l?l+' '+x:x;if(ctx.measureText(tt).width>maxW&&l){L.push(l);l=x}else l=tt});if(l)L.push(l);return L}
+async function shareCard(k){const e=entries[k];if(!e)return;const s=first(e);try{await document.fonts.ready}catch(_){}
+ const c=document.createElement('canvas');c.width=c.height=1080;const x=c.getContext('2d');
+ const g=x.createLinearGradient(0,0,1080,1080);g.addColorStop(0,'#011f43');g.addColorStop(.6,'#1f3f8f');g.addColorStop(1,'#4b3a8c');x.fillStyle=g;x.fillRect(0,0,1080,1080);
+ x.fillStyle='rgba(255,255,255,.06)';x.beginPath();x.arc(930,150,260,0,7);x.fill();x.beginPath();x.arc(120,980,200,0,7);x.fill();
+ x.fillStyle='#f3c98b';x.font='700 34px "Open Sans",sans-serif';x.textAlign='center';x.fillText('SANTALSABAD',540,120);
+ x.fillStyle='rgba(255,255,255,.75)';x.font='400 28px "Noto Sans Devanagari",sans-serif';x.fillText('संताली – हिन्दी – अंग्रेज़ी शब्दकोश',540,170);
+ x.fillStyle='#fff';let fs=150;x.font=`700 ${fs}px "DM Serif Display",Georgia,serif`;while(x.measureText(cap(e.w)).width>940&&fs>60){fs-=8;x.font=`700 ${fs}px "DM Serif Display",Georgia,serif`}x.fillText(cap(e.w),540,390);
+ x.fillStyle='#ffb4b8';x.font='600 64px "Noto Sans Devanagari",sans-serif';x.fillText(e.dv||'',540,490);
+ if(e.oc){x.fillStyle='#f3c98b';x.font='400 54px "Noto Sans Ol Chiki",sans-serif';x.fillText(e.oc,540,570)}
+ x.fillStyle='rgba(255,255,255,.35)';x.fillRect(390,610,300,3);
+ let y=700;x.fillStyle='#fff';x.font='600 56px "Noto Sans Devanagari",sans-serif';wrapT(x,s.hi||'',900).slice(0,2).forEach(l=>{x.fillText(l,540,y);y+=72});
+ x.fillStyle='rgba(255,255,255,.8)';x.font='italic 400 40px "Open Sans",sans-serif';wrapT(x,s.en||'',900).slice(0,2).forEach(l=>{x.fillText(l,540,y+6);y+=54});
+ x.fillStyle='rgba(255,255,255,.7)';x.font='600 30px "Open Sans",sans-serif';x.fillText('santalsabad.pages.dev  ·  BOSC',540,1020);
+ const blob=await new Promise(r=>c.toBlob(r,'image/png'));const url=URL.createObjectURL(blob),link=location.origin+location.pathname+'#/word/'+encodeURIComponent(k);
+ const txt=`${cap(e.w)} (${e.dv}) = ${s.hi||''}${s.en?' / '+s.en:''}\nSantalSabad शब्दकोश: ${link}`;
+ closeModal();const m=document.createElement('div');m.className='mdl lpm';m.id='mdl';
+ m.innerHTML=`<div class="lpbox shbox" role="dialog" aria-modal="true"><div class="lhd"><div class="lhl"><div class="lem">📤</div><div><p class="lkick">शब्द शेयर करें</p><h2>${esc(cap(e.w))}</h2></div></div><div class="lhb"><button class="lib mx" aria-label="बंद करें">✕</button></div></div>
+ <div class="aebd"><img src="${url}" alt="${esc(cap(e.w))} शेयर कार्ड" class="shimg"></div>
+ <div class="lft"><a class="aebtn sec" href="https://wa.me/?text=${encodeURIComponent(txt)}" target="_blank" rel="noopener">WhatsApp पर लिंक</a><div class="aeact"><a class="aebtn sec" href="${url}" download="santalsabad-${esc(key(e.w).replace(/[^a-z0-9]+/g,'-'))}.png">⬇ फ़ोटो डाउनलोड</a><button class="lok shgo"><span>📤 शेयर करें</span></button></div></div></div>`;
+ document.body.appendChild(m);document.body.style.overflow='hidden';m.addEventListener('click',ev=>{if(ev.target===m||ev.target.closest('.mx'))closeModal()});
+ m.querySelector('.shgo').onclick=async()=>{const f=new File([blob],'santalsabad.png',{type:'image/png'});
+  try{if(navigator.canShare&&navigator.canShare({files:[f]}))await navigator.share({files:[f],title:'SantalSabad',text:txt});else if(navigator.share)await navigator.share({title:'SantalSabad',text:txt,url:link});else{await navigator.clipboard.writeText(txt);alert('लिंक कॉपी हो गया। फ़ोटो के लिए "फ़ोटो डाउनलोड" दबाइए।')}}catch(_){}}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-share]');if(b)shareCard(b.dataset.share)});
+
+/* App इंस्टॉल */
+let DEFER=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();DEFER=e});
+document.addEventListener('click',async e=>{if(!e.target.closest('[data-install]'))return;e.preventDefault();
+ if(matchMedia('(display-mode: standalone)').matches){alert('SantalSabad पहले से ऐप की तरह इंस्टॉल है।');return}
+ if(DEFER){DEFER.prompt();try{await DEFER.userChoice}catch(_){}DEFER=null;return}
+ const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+ alert(ios?'iPhone/iPad पर: Safari में नीचे Share (⬆) बटन दबाइए, फिर "Add to Home Screen" चुनिए।':'Chrome में ऊपर ⋮ मेन्यू खोलिए, फिर "ऐप इंस्टॉल करें" या "Add to Home screen" चुनिए।')});
+
+/* ===== Admin: टिकर के शब्द ===== */
+function tkList(){const src=(TEXTS.tk_words||'').trim()?TEXTS.tk_words.split(','):TKW;return [...new Set(src.map(s=>key(s.trim())).filter(k=>k&&hasHi(k)))]}
+function xModal(kick,title,body,foot){closeModal();const m=document.createElement('div');m.className='mdl lpm aem';m.id='mdl';
+ m.innerHTML=`<div class="lpbox aebox" role="dialog" aria-modal="true"><div class="lhd"><div class="lhl"><div class="lem">✎</div><div><p class="lkick">${kick}</p><h2>${title}</h2></div></div><div class="lhb"><button class="lib mx" aria-label="बंद करें">✕</button></div></div><div class="aebd">${body}<div class="aemsg" id="aemsg"></div></div><div class="lft">${foot}</div></div>`;
+ document.body.appendChild(m);document.body.style.overflow='hidden';m.addEventListener('click',ev=>{if(ev.target===m||ev.target.closest('.mx'))closeModal()});return m}
+async function textsLive(msg){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
+ if(!tok||!navigator.onLine){msg('इस डिवाइस पर सेव है। लाइव करने के लिए "⬆ लाइव पर पब्लिश" दबाइए (GitHub token चाहिए)।',1);return}
+ try{await ghPut('texts.json',JSON.stringify(TEXTS,null,1),tok,repo);localStorage.removeItem('ss_texts_draft');adminBar();msg('लाइव हो गया! 1-2 मिनट में सबको दिखेगा।',1)}catch(err){msg('लाइव नहीं हुआ ('+err.message+')। बदलाव इस डिवाइस पर सेव है।')}}
+function tkEdit(){if(!isAdmin()){openLogin();return}const cur=tkList().map(k=>entries[k].w).join(', ');
+ const m=xModal('ADMIN · टिकर','रोज़ के शब्द (टिकर) बदलें',`<p class="xsub" style="margin:0">संताली शब्द कॉमा (,) से अलग लिखिए। सिर्फ़ वही शब्द दिखेंगे जो शब्दकोश में हैं और जिनका हिन्दी अर्थ है। खाली छोड़ें तो पहले वाली सूची लौट आएगी।</p><textarea id="tkta" class="tkta">${esc(cur)}</textarea><p class="xsub" id="tkc"></p>`,
+  `<button class="aebtn sec" id="tkreset">पहले वाली सूची</button><div class="aeact"><button class="lok" id="tksave"><span>सेव करें और लाइव करें</span></button></div>`);
+ const ta=m.querySelector('#tkta'),msg=(t,ok)=>{const x=m.querySelector('#aemsg');x.className='aemsg on'+(ok?' ok':'');x.textContent=t};
+ const cnt=()=>{const L=ta.value.split(',').map(s=>s.trim()).filter(Boolean),bad=L.filter(s=>!hasHi(key(s)));m.querySelector('#tkc').textContent=`${L.length-bad.length} शब्द दिखेंगे`+(bad.length?` · नहीं मिले / हिन्दी अर्थ नहीं: ${bad.join(', ')}`:'')};ta.oninput=cnt;cnt();
+ m.querySelector('#tkreset').onclick=()=>{ta.value=TKW.join(', ');cnt()};
+ m.querySelector('#tksave').onclick=async()=>{TEXTS.tk_words=ta.value.trim();const d=JSON.parse(localStorage.getItem('ss_texts_draft')||'{}');d.tk_words=TEXTS.tk_words;localStorage.setItem('ss_texts_draft',JSON.stringify(d));adminBar();msg('सेव हो रहा है…',1);await textsLive(msg);if(!location.hash||location.hash==='#/')route()}}
+document.addEventListener('click',e=>{if(e.target.closest('[data-tkedit]')){e.preventDefault();tkEdit()}});
+
+/* ===== Admin: हिन्दी अर्थ भरें ===== */
+const needHi=k=>Object.values(entries[k].pos).some(a=>a.some(x=>!x.hi&&x.en));
+let FILL={i:+(localStorage.getItem('ss_fill_i')||0),done:+(localStorage.getItem('ss_fill_n')||0),q:''};
+XR.fill=()=>{if(!isAdmin()){setTimeout(openLogin);return `<div class="card">${crumb('हिन्दी अर्थ भरें')}<p class="empty">यह पेज सिर्फ़ Admin के लिए है। पहले Admin लॉगिन कीजिए।</p></div>`}
+ return `<div class="card">${crumb('Admin › हिन्दी अर्थ भरें')}<h2 class="dm xh">🈯 हिन्दी अर्थ भरें</h2><div id="fillw"></div></div>`};
+function fillDraw(){const w=$('#fillw');if(!w)return;const all=order.filter(needHi),tot=order.length;let L=FILL.q?all.filter(k=>norm(k).startsWith(norm(FILL.q))):all;
+ if(FILL.i>=L.length)FILL.i=0;const k=L[FILL.i];localStorage.setItem('ss_fill_i',FILL.i);const pend=!!localStorage.getItem('ss_pending');
+ const head=`<div class="fstat"><div><b>${all.length.toLocaleString('en-IN')}</b><small>शब्दों में हिन्दी अर्थ बाकी</small></div><div><b>${(tot-all.length).toLocaleString('en-IN')}</b><small>शब्दों में हिन्दी है</small></div><div><b>${FILL.done}</b><small>आपने भरे</small></div></div>
+ <div class="fbar"><i style="width:${(tot-all.length)/tot*100}%"></i></div>
+ <div class="xact"><input id="fillq" class="xin" placeholder="किस अक्षर/शब्द से शुरू करें? जैसे: ba" value="${esc(FILL.q)}"><button class="xbtn ${pend?'grn':'sec'}" id="filllive">${pend?'⬆ बदलाव लाइव करें':'✓ सब लाइव है'}</button></div><div class="aemsg" id="aemsg"></div>`;
+ if(!k){w.innerHTML=head+'<p class="empty">इस खोज में कोई शब्द बाकी नहीं है। 🎉</p>';fillBind();return}
+ const e=entries[k],S=Object.entries(e.pos).flatMap(([p,a])=>a.map(x=>({...x,p})));
+ w.innerHTML=head+`<div class="fcard"><p class="fcn">${(FILL.i+1).toLocaleString('en-IN')} / ${L.length.toLocaleString('en-IN')}</p><h3><a href="#/word/${encodeURIComponent(k)}">${esc(cap(e.w))}</a> <span>${esc(e.dv)}</span></h3>
+ ${S.map(x=>`<div class="frow"><div><small>${esc(x.p||'—')} · अर्थ ${x.n}</small><p>${esc(x.en||'—')}</p>${x.ex?`<i>${esc(x.ex)}</i>`:''}</div><input data-fi="${x.i}" class="xin" placeholder="हिन्दी अर्थ" value="${esc(x.hi)}"></div>`).join('')}
+ <div class="xact" style="justify-content:space-between"><button class="xbtn sec" id="fillprev">‹ पिछला</button><div class="xact" style="margin:0"><button class="xbtn sec" id="fillskip">छोड़ें ›</button><button class="xbtn grn" id="fillsave">सेव करें और अगला ›</button></div></div>
+ <p class="xsub">टिप: Enter दबाने से भी सेव होगा। बदलाव पहले इस डिवाइस पर सेव होते हैं, फिर “बदलाव लाइव करें” से एक साथ लाइव होते हैं।</p></div>`;fillBind();
+ const f=w.querySelector('[data-fi]');f&&f.focus()}
+function fillBind(){const g=i=>document.getElementById(i),msg=(t,ok)=>{const x=g('aemsg');if(x){x.className='aemsg on'+(ok?' ok':'');x.textContent=t}};
+ const q=g('fillq');if(q)q.onchange=()=>{FILL.q=q.value.trim();FILL.i=0;fillDraw()};
+ const save=()=>{let n=0;document.querySelectorAll('#fillw [data-fi]').forEach(i=>{const v=i.value.trim(),r=ROWS[+i.dataset.fi];if(r&&v&&v!==(r.Hindi||'')){r.Hindi=v;n++}});
+  if(n){saveDraft();build();localStorage.setItem('ss_pending','1');FILL.done+=n;localStorage.setItem('ss_fill_n',FILL.done)}else FILL.i++;fillDraw()};
+ if(g('fillsave'))g('fillsave').onclick=save;if(g('fillskip'))g('fillskip').onclick=()=>{FILL.i++;fillDraw()};if(g('fillprev'))g('fillprev').onclick=()=>{FILL.i=Math.max(0,FILL.i-1);fillDraw()};
+ document.querySelectorAll('#fillw [data-fi]').forEach(i=>i.onkeydown=ev=>{if(ev.key==='Enter'){ev.preventDefault();save()}});
+ if(g('filllive'))g('filllive').onclick=async()=>{if(!localStorage.getItem('ss_pending')){msg('कोई नया बदलाव नहीं है।',1);return}msg('लाइव हो रहा है…',1);const ok=await liveSave(msg);if(ok)setTimeout(fillDraw,1500)}}
+XB.fill=fillDraw;
+
+/* ===== Admin: सुझाव इनबॉक्स ===== */
+const b64u=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const unb64u=s=>{try{s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';return JSON.parse(decodeURIComponent(escape(atob(s))))}catch(_){return null}};
+const sugLink=o=>location.origin+location.pathname+'#/sug/'+b64u(o);
+XR.inbox=()=>{if(!isAdmin()){setTimeout(openLogin);return `<div class="card">${crumb('सुझाव इनबॉक्स')}<p class="empty">यह पेज सिर्फ़ Admin के लिए है।</p></div>`}
+ const L=JSON.parse(localStorage.getItem('ss_feedback')||'[]').slice().reverse();
+ return `<div class="card">${crumb('Admin › सुझाव इनबॉक्स')}<h2 class="dm xh">📥 सुझाव इनबॉक्स</h2>
+ <div class="ibx"><p><b>कैसे काम करता है:</b> हर सुझाव ईमेल (${OWNER}) पर आता है। उस ईमेल में “Admin लिंक” होता है। उस पर क्लिक करते ही यह साइट खुलेगी और सुझाया गया शब्द व अर्थ Admin फ़ॉर्म में भरा मिलेगा। जाँचिए, ज़रूरत हो तो सुधारिए, और “सेव करें और लाइव करें” दबाइए।</p>
+ <label class="flab">ईमेल से Admin लिंक यहाँ पेस्ट करें</label><div class="xact"><input id="ibl" class="xin" placeholder="https://santalsabad.pages.dev/#/sug/…"><button class="xbtn" id="ibgo">फ़ॉर्म खोलें</button></div></div>
+ <h3 class="dm" style="margin:22px 0 8px">इस डिवाइस से भेजे गए सुझाव (${L.length})</h3>
+ ${L.length?`<div class="phl">${L.map(x=>`<div class="ph"><b>${new Date(x.t).toLocaleString('en-IN')}</b><span style="white-space:pre-line">${esc(x.text)}</span>${x.link?`<a href="${esc(x.link)}">फ़ॉर्म में खोलें ›</a>`:''}</div>`).join('')}</div>`:'<p class="empty">इस डिवाइस से अभी कोई सुझाव नहीं भेजा गया।</p>'}</div>`};
+XB.inbox=()=>{const b=$('#ibgo');if(b)b.onclick=()=>{const v=$('#ibl').value.trim(),i=v.indexOf('#/sug/');if(i<0){alert('यह Admin लिंक नहीं लगता। ईमेल में “Admin लिंक” वाली पूरी लाइन कॉपी कीजिए।');return}location.hash=v.slice(i+1)}};
+XR.sug=arg=>{const o=unb64u(arg);if(!o)return `<div class="card">${crumb('सुझाव')}<p class="empty">यह लिंक सही नहीं है।</p></div>`;
+ if(!isAdmin()){setTimeout(openLogin);return `<div class="card">${crumb('सुझाव')}<p class="empty">यह लिंक Admin के लिए है। Admin लॉगिन के बाद लिंक फिर से खोलिए।</p></div>`}
+ setTimeout(()=>{const k=key(o.w||'');openEntry(entries[k]?k:null,{sug:o})},60);return XR.inbox()};
+XB.sug=XB.inbox;
+
+olInit();
+
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
 load();
 </script>
