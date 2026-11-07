@@ -761,6 +761,19 @@ body.embed>*:not(#view):not(main),body.embed header,body.embed footer,body.embed
 .embc{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-radius:16px;background:linear-gradient(135deg,#fff7ec,#eef5ff);border:1.5px solid #f3c98b;font-family:"Open Sans","Noto Sans Devanagari",sans-serif}.embc small{color:#b45309;font-weight:700;letter-spacing:.06em}.embc b{font:700 34px "DM Serif Display",Georgia,serif;color:#011f43}.embc span{color:#475569}.embc i{font-style:normal;color:#b4232a}.embc p{margin:4px 0;color:#0f6b5f;font-weight:600}.embc a{color:#1f5fae;font-weight:700;text-decoration:none}
 @media print{body.pp .pc{border-color:#888}}
 .gdet{margin:10px 0;border:1px solid #e2e8f0;border-radius:14px;padding:8px 12px;background:#fff}.gdet summary{cursor:pointer;font:700 15px "Noto Sans Devanagari",sans-serif;color:#011f43;padding:4px 0}.gdet .gtab{margin-top:8px}
+
+/* ===== v48 व्याकरण पाठ ===== */
+.gsat{font:600 17px "Noto Sans Devanagari",sans-serif;color:#011f43}.grom{display:block;color:#94a3b8;font-size:12.5px;font-style:italic}
+.gno{margin:6px 0 0;color:#b45309;font-weight:700;font-size:13px;letter-spacing:.06em}.gintro{font-size:16.5px;line-height:1.8;color:#334155}
+.gtoc{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}.gtoc a{padding:6px 12px;border-radius:999px;background:#eef5ff;color:#1f5fae;text-decoration:none;font-size:13.5px;font-weight:600}
+.gsec{margin:22px 0 0;padding-top:16px;border-top:1px solid #e2e8f0;scroll-margin-top:90px}.gsec h3{margin:0 0 10px;color:#011f43}.gsec p{line-height:1.8}
+.gul{margin:6px 0;padding-left:20px;line-height:1.9}
+.gtw{overflow-x:auto;margin:10px 0}.gtbl{border-collapse:collapse;min-width:100%;font:15px "Noto Sans Devanagari","Open Sans",sans-serif}.gtbl th{background:#011f43;color:#fff;padding:8px 10px;text-align:left;font-weight:600}.gtbl td{padding:8px 10px;border-bottom:1px solid #e2e8f0}.gtbl tr:nth-child(even) td{background:#f8fafc}
+.gexs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;margin:10px 0}.gex{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:#fffaf0;border:1px solid #f3dcb2}.gex em{display:block;font-style:normal;color:#0f6b5f;font-weight:600;margin-top:2px}
+.gq{margin:12px 0;padding:12px;border-radius:14px;background:#f8fafc}.gq p{margin:0 0 8px}.gq .qzo{max-width:none}.gq .qzo button{padding:10px;font-size:15px}
+.gnav{justify-content:space-between;margin-top:22px}.gtn{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#011f43;color:#fff;align-items:center;justify-content:center;font:700 15px "Open Sans",sans-serif}
+.wll{display:flex;flex-direction:column;gap:6px;margin-top:10px}.wlr{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#fff;border:1px solid #e2e8f0}.wlr>span{color:#b45309;font-weight:700}.wlr em{font-style:normal;color:#0f6b5f;font-weight:600;margin-left:auto}.wlr.wlc{flex-direction:column;align-items:flex-start}.wlw2 .grom{display:inline;margin-right:6px}.wln{font:700 20px "Open Sans",sans-serif;min-width:44px}
+.rdl{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}.rd{padding:14px;border-radius:16px;background:linear-gradient(135deg,#fff7ec,#f5f0ff);border:1px solid #eadcf8}.rd p{margin:0 0 10px}.rda{margin-top:10px!important;color:#047857;font-weight:600}
 </style>
 </head>
 <body>
@@ -1841,7 +1854,7 @@ XR.offline=()=>{const d=localStorage.getItem('ss_offline');return `<div class="c
  <div class="xact"><button class="xbtn" id="offgo">⬇ ${d?'फिर से डाउनलोड करें (नया डेटा)':'अभी डाउनलोड करें'}</button></div><div class="fbar"><i id="offbar" style="width:0"></i></div><p id="offmsg" class="xsub"></p></div>`};
 XB.offline=()=>{$('#offgo').onclick=async()=>{const m=$('#offmsg'),bar=$('#offbar');if(!('caches' in window)){m.textContent='इस ब्राउज़र में ऑफ़लाइन सुविधा नहीं है।';return}
  let S=GAL||SLIDES;if(!S||!S.length){try{S=await (await fetch('slides.json')).json()}catch(_){S=[]}}
- const L=['./','index.html','words.csv','texts.json','slides.json','stories.json','manifest.json','icon.svg',...new Set(S.map(x=>x.img)),...Object.values(AUD())];
+ const L=['./','index.html','words.csv','texts.json','slides.json','stories.json','grammar.json','manifest.json','icon.svg',...new Set(S.map(x=>x.img)),...Object.values(AUD())];
  const c=await caches.open('santalsabad-offline');let n=0,f=0;for(let i=0;i<L.length;i+=6){await Promise.all(L.slice(i,i+6).map(async u=>{try{const r=await fetch(u,{cache:'no-cache'});if(r.ok)await c.put(u,r);else f++}catch(_){f++}n++}));bar.style.width=(n/L.length*100)+'%';m.textContent=`${n}/${L.length} फ़ाइलें…`}
  const d=new Date().toLocaleString('hi-IN',{dateStyle:'medium',timeStyle:'short'});localStorage.setItem('ss_offline',d);m.textContent=f?`${n-f} फ़ाइलें सेव हुईं, ${f} नहीं हुईं। फिर से कोशिश कीजिए।`:'✅ पूरा शब्दकोश ऑफ़लाइन सेव हो गया!'}};
 
@@ -1899,7 +1912,7 @@ window.addEventListener('hashchange',()=>{if(!/^#\/embed/.test(location.hash))do
 
 /* सीखें और खेलें: समूहों में */
 learnBand=function(){const q=LS('ss_quiz',{}),due=srsDue().length,B=badges().filter(b=>b[3]).length,n=BM().filter(k=>entries[k]).length;
- const G=[['सीखें',[['#/lessons','🎓','पाठ','Level 1 से 5 तक'],['#/review','🔁','दोहराव',due?`आज ${due} शब्द`:'सेव किए शब्द दोहराइए'],['#/flash','🃏','फ़्लैशकार्ड','कार्ड पलटकर याद कीजिए'],['#/quiz','🧠','आज का क्विज़',q.last===today()?`आज ${q.score}/5 · 🔥 ${q.streak||1}`:'5 सवाल, रोज़ नए'],['#/topics','📚','विषय के शब्द','परिवार, शरीर, जानवर…'],['#/phrases','💬','छोटे वाक्य','असली संताली वाक्य'],['#/grammar','📐','व्याकरण','सर्वनाम और नियम'],['#/numbers','🔢','गिनती','1 से 10,000, Ol Chiki अंक'],['#/calendar','📅','महीने और दिन','संताली नाम'],['#/proverbs','🪶','कहावतें','अर्थ के साथ']]],
+ const G=[['सीखें',[['#/lessons','🎓','पाठ','Level 1 से 5 तक'],['#/review','🔁','दोहराव',due?`आज ${due} शब्द`:'सेव किए शब्द दोहराइए'],['#/flash','🃏','फ़्लैशकार्ड','कार्ड पलटकर याद कीजिए'],['#/quiz','🧠','आज का क्विज़',q.last===today()?`आज ${q.score}/5 · 🔥 ${q.streak||1}`:'5 सवाल, रोज़ नए'],['#/topics','📚','विषय के शब्द','परिवार, शरीर, जानवर…'],['#/phrases','💬','छोटे वाक्य','असली संताली वाक्य'],['#/grammar','📖','व्याकरण पाठ','22 अध्याय, अभ्यास के साथ'],['#/wordlists','🔀','शब्द-सूचियाँ','उल्टे, समान, एक शब्द'],['#/riddles','❓','कुदुम','संताली पहेलियाँ'],['#/numbers','🔢','गिनती','1 से 10,000, Ol Chiki अंक'],['#/calendar','📅','महीने और दिन','संताली नाम'],['#/proverbs','🪶','कहावतें','अर्थ के साथ']]],
   ['खेल',[['#/games/listen','🔊','सुनकर पहचानो','आवाज़ से शब्द'],['#/games/jumble','🔀','अक्षर जोड़ो','बिखरे अक्षर'],['#/games/match','🧩','जोड़ी मिलाओ','संताली-हिन्दी'],['#/games/ws','🔎','शब्द खोज','अक्षरों के जाल में'],['#/kids','🧒','बच्चों का कोना','चित्र वाले शब्द'],['#/badges','🏅','बैज',`${B} बैज मिले`]]],
   ['लिपि और टूल',[['#/roman','Aa','रोमन चार्ट','अक्षर और चिह्न'],['#/devanagari','अ','देवनागरी चार्ट','अक्षर और मात्राएँ'],['#/olchiki','ᱚ','Ol Chiki चार्ट','संताली लिपि'],['#/convert','🔄','लिपि बदलें','रोमन · देवनागरी · Ol Chiki'],['#/gloss','🧾','वाक्य समझो','हर शब्द का अर्थ'],['#/hindi','🔤','हिन्दी → संताली','हिन्दी से खोजें'],['#/saved','⭐','मेरे शब्द',n?`${n} शब्द सेव`:'⭐ से सेव कीजिए']]],
   ['और देखें',[['#/stories','📖','कहानी और गीत','हिन्दी अर्थ के साथ'],['#/festivals','🎉','त्योहार','सोहराय, बाहा, करम…'],['#/gallery','🖼','चित्र शब्दकोश','तस्वीरों में'],['#/cards/family','✂','फ़्लैशकार्ड प्रिंट','काटने वाले कार्ड'],['#/offline','📴','ऑफ़लाइन',localStorage.getItem('ss_offline')?'✅ तैयार':'बिना इंटरनेट'],['#/stats','📊','आँकड़े','कितने शब्द'],['#/thanks','🙏','धन्यवाद','योगदानकर्ता'],['#/poster','🔳','QR पोस्टर','गाँव-स्कूल के लिए'],['#/developers','🧑‍💻','डेवलपर / डेटा','JSON, widget']]]];
@@ -2188,6 +2201,57 @@ const TIME_EN=['day','night','morning','evening','noon','midnight','dawn','today
   ['🧾','वाक्य पढ़ाकू','10 वाक्य समझे',(S.gloss||0)>=10],['🔄','लिपि जानकार','लिपि बदलने का टूल चलाया',(S.conv||0)>=1],['📴','हर जगह','पूरा शब्दकोश ऑफ़लाइन सेव किया',!!localStorage.getItem('ss_offline')],['✉','मददगार','एक सुझाव भेजा',(S.sug||0)>=1]])}}
 document.addEventListener('click',e=>{if(e.target.closest('[data-say]'))stat('say');if(e.target.closest('#fb_send'))stat('sug')});
 {const _gl=XB.gloss;XB.gloss=()=>{_gl();stat('gloss')};const _cv=XB.convert;XB.convert=()=>{_cv();stat('conv')}}
+
+
+/* ===== v48: व्याकरण पाठ (अपने शब्दों में), शब्द-सूचियाँ, कुदुम, कहावतें ===== */
+let GJ2=null;async function gLoad(){if(GJ2)return GJ2;try{GJ2=await (await fetch('grammar.json',{cache:'no-cache'})).json()}catch(_){GJ2={chapters:[],glossary:[],lists:{}}}return GJ2}
+const dRom=s=>{try{return devaToRoman(s)}catch(_){return''}};
+const satH=s=>`<span class="gsat">${esc(s)}</span>`;
+function gSec(s){return `<section class="gsec"><h3 class="dm">${esc(s.h)}</h3>${(s.p||[]).map(p=>`<p>${esc(p)}</p>`).join('')}${s.list&&s.list.length?`<ul class="gul">${s.list.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`:''}
+ ${s.table&&s.table.rows&&s.table.rows.length?`<div class="gtw"><table class="gtbl"><thead><tr>${(s.table.head||[]).map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}
+ ${s.ex&&s.ex.length?`<div class="gexs">${s.ex.map(x=>`<div class="gex"><button class="wbtn sm" data-tts="${esc(x.sat)}">🔊</button><div>${satH(x.sat)}<em>${esc(x.hi)}</em></div></div>`).join('')}</div>`:''}</section>`}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-tts]');if(!b||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(b.dataset.tts);u.lang='hi-IN';u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)});
+{const _g0=XR.grammar;XR.grammar=arg=>`<div id="gramw">${arg?'<div class="card"><p class="xsub">लोड हो रहा है…</p></div>':'<div id="gramtop"></div>'+_g0().replace('📐 संताली व्याकरण','📐 शब्दकोश के व्याकरण शब्द')}</div>`;
+ XB.grammar=async arg=>{const G=await gLoad(),w=$('#gramw');if(!w)return;const C=G.chapters||[];
+  if(arg==='glossary'){w.innerHTML=`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › शब्दावली')}<h2 class="dm xh">📘 व्याकरण शब्दावली <small>${G.glossary.length}</small></h2><p class="xsub">संताली व्याकरण के शब्द और उनके हिन्दी नाम।</p><input class="xin" id="gglq" placeholder="खोजें…"><div class="hil" id="ggl"></div></div>`;
+   const q=$('#gglq'),L=$('#ggl'),d=()=>{const v=q.value.trim();L.innerHTML=G.glossary.filter(x=>!v||x.sat.includes(v)||x.hi.includes(v)).map(x=>`<div class="hir"><b>${satH(x.sat)}</b><span>${esc(x.hi)}</span></div>`).join('')};q.oninput=d;d();return}
+  const c=C.find(x=>x.id===arg);
+  if(c){const i=C.indexOf(c),pv=C[i-1],nx=C[i+1];
+   w.innerHTML=`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › '+esc(c.hi))}<p class="gno">अध्याय ${c.no}</p><h2 class="dm xh">${esc(c.hi)} <small>${satH(c.sat)}</small></h2><p class="gintro">${esc(c.intro||'')}</p>
+   <nav class="gtoc">${(c.sections||[]).map((s,j)=>`<a href="#" data-gto="${j}">${esc(s.h)}</a>`).join('')}</nav>${(c.sections||[]).map(gSec).join('')}
+   ${c.quiz&&c.quiz.length?`<section class="gsec"><h3 class="dm">📝 अभ्यास (${c.quiz.length} सवाल)</h3><div class="gqz">${c.quiz.map((q,j)=>`<div class="gq" data-gq="${j}"><p><b>${j+1}.</b> ${esc(q.q)}</p><div class="qzo">${q.o.map((o,k)=>`<button data-gqa="${k}">${esc(o)}</button>`).join('')}</div></div>`).join('')}</div><p class="kres" id="gqs"></p></section>`:''}
+   <div class="xact gnav">${pv?`<a class="xbtn sec" href="#/grammar/${pv.id}">‹ ${esc(pv.hi)}</a>`:'<span></span>'}${nx?`<a class="xbtn" href="#/grammar/${nx.id}">${esc(nx.hi)} ›</a>`:''}</div></div>`;
+   w._quiz=c.quiz;return}
+  const top=$('#gramtop');if(top&&C.length)top.innerHTML=`<div class="card" style="margin-bottom:14px">${crumb('व्याकरण')}<h2 class="dm xh">📖 संताली व्याकरण पाठ <small>${C.length} अध्याय</small></h2><p class="xsub">भाषा, ध्वनि और लिपि से लेकर काल और वाक्य तक, आसान हिन्दी में, संताली उदाहरण और अभ्यास के साथ।</p>
+   <div class="tgrid">${C.map(c=>`<a class="ttile" href="#/grammar/${c.id}"><span class="gtn">${c.no}</span><b>${esc(c.hi)}</b><small>${esc(c.sat)}</small></a>`).join('')}${G.glossary&&G.glossary.length?`<a class="ttile" href="#/grammar/glossary"><span>📘</span><b>व्याकरण शब्दावली</b><small>${G.glossary.length} शब्द</small></a>`:''}<a class="ttile" href="#/wordlists"><span>🔀</span><b>शब्द-सूचियाँ</b><small>उल्टे, समान, एक शब्द</small></a><a class="ttile" href="#/riddles"><span>❓</span><b>कुदुम (पहेलियाँ)</b><small>बूझो तो जानें</small></a></div></div>`;
+  const oc=w.querySelector('#gramtop + .card .crumb');oc&&oc.remove()}}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-gto]');if(t){e.preventDefault();const s=document.querySelectorAll('.gsec')[+t.dataset.gto];s&&s.scrollIntoView({behavior:'smooth',block:'start'});return}
+ const b=e.target.closest('[data-gqa]');if(!b)return;const box=b.closest('.gq'),w=$('#gramw');if(!box||box.dataset.done||!w||!w._quiz)return;const q=w._quiz[+box.dataset.gq],k=+b.dataset.gqa;box.dataset.done=1;
+ box.querySelectorAll('button').forEach((x,i)=>{x.disabled=true;if(i===q.a)x.classList.add('ok');else if(i===k)x.classList.add('bad')});box.dataset.ok=k===q.a?1:0;
+ const all=[...document.querySelectorAll('.gq')],dn=all.filter(x=>x.dataset.done);if(dn.length===all.length){const s=dn.filter(x=>x.dataset.ok==='1').length;$('#gqs').textContent=`${s}/${all.length} सही ${s===all.length?'🎉':''}`;stat('gq')}});
+
+/* शब्द-सूचियाँ */
+XR.wordlists=arg=>`<div id="wlw"><div class="card"><p class="xsub">लोड हो रहा है…</p></div></div>`;
+XB.wordlists=async arg=>{const L=(await gLoad()).lists||{},w=$('#wlw');if(!w)return;const T={antonyms:'↔ उल्टे अर्थ',synonyms:'≈ समान अर्थ',homophones:'🔉 एक ध्वनि, अलग अर्थ',oneword:'🎯 कई शब्दों के लिए एक शब्द',numbers:'🔢 गिनती'};
+ const tab=T[arg]?arg:'antonyms',D=L[tab]||[];let body='';
+ if(tab==='antonyms')body=D.map(x=>`<div class="wlr"><div>${satH(x.a)}</div><span>↔</span><div>${satH(x.b)}</div><em>${esc(x.hi||'')}</em></div>`).join('');
+ else if(tab==='synonyms')body=D.map(x=>`<div class="wlr"><div class="wlw2">${x.words.map(satH).join('<i>,</i> ')}</div><em>${esc(x.hi||'')}</em></div>`).join('');
+ else if(tab==='homophones')body=D.map(x=>`<div class="wlr wlc"><div>${satH(x.sat)}</div><ul class="gul">${(x.senses||[]).map(s=>`<li>${s.sat_ex?`<span class="gsat">${esc(s.sat_ex)}</span> · `:''}${esc(s.hi)}</li>`).join('')}</ul></div>`).join('');
+ else if(tab==='oneword')body=D.map(x=>`<div class="wlr"><em>${esc(x.phrase_hi)}</em><span>→</span><div>${satH(x.sat)}</div></div>`).join('');
+ else body=D.map(x=>`<div class="wlr"><b class="wln">${x.n}</b><span class="olc">${ocNum(x.n)}</span><div>${satH(x.sat)}</div></div>`).join('');
+ w.innerHTML=`<div class="card">${crumb('<a href="#/grammar">व्याकरण</a> › शब्द-सूचियाँ')}<h2 class="dm xh">🔀 शब्द-सूचियाँ</h2><div class="xact">${Object.entries(T).filter(([k])=>(L[k]||[]).length).map(([k,t])=>`<a class="xchip${k===tab?' on':''}" href="#/wordlists/${k}">${t} <small>${L[k].length}</small></a>`).join('')}</div><div class="wll">${body||'<p class="empty">अभी कुछ नहीं।</p>'}</div></div>`};
+
+/* कुदुम */
+XR.riddles=()=>`<div id="rdw"><div class="card"><p class="xsub">लोड हो रहा है…</p></div></div>`;
+XB.riddles=async()=>{const R=((await gLoad()).lists||{}).riddles||[],w=$('#rdw');if(!w)return;
+ w.innerHTML=`<div class="card">${crumb('कुदुम')}<h2 class="dm xh">❓ कुदुम (संताली पहेलियाँ) <small>${R.length}</small></h2><p class="xsub">पहेली पढ़िए, सोचिए, फिर “जवाब देखें” दबाइए। कुदुम संताल समाज की पुरानी लोक-परंपरा है।</p>
+ <div class="rdl">${R.map((r,i)=>`<div class="rd"><p><b>${i+1}.</b> ${satH(r.sat)}</p><button class="xbtn sec" data-rd="${i}">जवाब देखें</button><p class="rda" hidden>✅ ${r.ans_sat?satH(r.ans_sat)+' · ':''}${esc(r.ans_hi||'')}</p></div>`).join('')}</div></div>`};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-rd]');if(!b)return;const a=b.nextElementSibling;a.hidden=!a.hidden;b.textContent=a.hidden?'जवाब देखें':'छिपाएँ'});
+
+/* कहावतें: किताब-आधारित लोक कहावतें पहले */
+{const _pv=XR.proverbs;XR.proverbs=()=>`<div id="pvw">${_pv()}</div>`;XB.proverbs=async()=>{const P=((await gLoad()).lists||{}).proverbs||[],w=$('#pvw');if(!w||!P.length)return;
+ w.insertAdjacentHTML('afterbegin',`<div class="card" style="margin-bottom:14px">${crumb('कहावतें')}<h2 class="dm xh">🪶 संताली कहावतें (काहतुक) <small>${P.length}</small></h2><div class="fsl">${P.map(p=>`<div class="fs"><p class="pvs">${satH(p.sat)}</p><p><b>अर्थ:</b> ${esc(p.hi)}</p></div>`).join('')}</div></div>`);const old=w.querySelector('.card:nth-child(2) .crumb');old&&old.remove()}}
+
 
 </script>
 </body>
