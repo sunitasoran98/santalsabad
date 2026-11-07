@@ -112,13 +112,13 @@ em.dv{font-style:normal;font-weight:400;color:var(--muted);font-size:.8em;margin
 table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min-width:680px;background:#fff}
 .et th{color:#fff;text-align:left;font-weight:700;font-size:16px;padding:14px 14px 12px;vertical-align:bottom;font-family:'Noto Sans Devanagari','Open Sans',sans-serif}
 .et th small{display:block;font-weight:400;opacity:.8;font-size:11px;letter-spacing:.8px;text-transform:uppercase;font-family:'Open Sans',sans-serif}
-.et th.c1{background:#011f43}.et th.c2{background:#b4232a}.et th.c3h{background:#c46a12}.et th.c4{background:#0f6b5f}.et th.c5{background:#4b3a8c}.et th.c6{background:#011f43;width:44px}
+.et th.c1{background:#1f5fae}.et th.c2{background:#b4232a}.et th.c3h{background:#c46a12}.et th.c4{background:#0f6b5f}.et th.c5{background:#4b3a8c}.et th.c6{background:#1f5fae;width:44px}
 .et td{padding:13px 14px;border-top:1px solid #e6e8ee;vertical-align:top}
-.et td.c1{background:#f1f4fa;border-left:4px solid #011f43}
+.et td.c1{background:#eef4fc;border-left:4px solid #1f5fae}
 .et td.c2{background:#fdf2f2}.et td.c3h{background:#fff6ea}.et td.c4{background:#ecf7f5}.et td.c5{background:#f4f1fb}
 .et tbody tr:hover td{filter:brightness(.97)}
-.et .rw{font-weight:700;font-size:17px;display:block;color:#011f43}
-.et .pn{display:inline-block;margin-top:5px;background:#011f43;color:#fff;border-radius:20px;padding:1px 10px;font-size:13px;font-family:'Noto Sans Devanagari',sans-serif}
+.et .rw{font-weight:700;font-size:17px;display:block;color:#1f5fae}
+.et .pn{display:inline-block;margin-top:5px;background:#1f5fae;color:#fff;border-radius:20px;padding:1px 10px;font-size:13px;font-family:'Noto Sans Devanagari',sans-serif}
 .et .dvc{font-family:'Noto Sans Devanagari',sans-serif;color:#b4232a;font-size:19px;font-weight:600}
 .et .c3h{font-family:'Noto Sans Devanagari',sans-serif;font-size:17px}
 .et .exs{display:block;font-style:italic;color:#2c2350}.et .exe{display:block;color:var(--muted);font-size:14px;margin-top:4px}
@@ -237,6 +237,18 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .searchbox{transition:box-shadow .2s}
 .searchbox:focus-within{box-shadow:0 0 0 3px #fff,0 0 0 6px #d6262f,0 0 0 9px rgba(169,143,214,.55)}
 .inw:after{display:none}
+/* ticker */
+.tk{display:flex;align-items:stretch;margin:0 0 14px;border-radius:14px;overflow:hidden;background:#fff;border:1.5px solid #cfe0f6;box-shadow:0 4px 14px rgba(1,31,67,.07)}
+.tk .tkl{flex:none;display:flex;align-items:center;gap:6px;padding:9px 14px;background:linear-gradient(135deg,#1f5fae,#4b3a8c);color:#fff;font:700 13.5px "Noto Sans Devanagari",sans-serif;white-space:nowrap}
+.tk .tkv{flex:1;overflow:hidden;position:relative;-webkit-mask:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);mask:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+.tk .tkr{display:inline-flex;white-space:nowrap;animation:tkm var(--tkd,120s) linear infinite;padding:9px 0}
+.tk:hover .tkr,.tk:focus-within .tkr{animation-play-state:paused}
+.tk .tkr a{display:inline-flex;align-items:baseline;gap:6px;padding:0 18px;color:#1f2a44;text-decoration:none;font:400 15px "Noto Sans Devanagari","Open Sans",sans-serif;border-right:1px dashed #d5dcea}
+.tk .tkr a b{color:#1f5fae;font:700 15.5px "Open Sans",sans-serif}.tk .tkr a em{color:#b4232a;font-style:normal;font-size:14px}.tk .tkr a span{color:#0f6b5f;font-weight:600}
+.tk .tkr a:hover b{text-decoration:underline}
+@keyframes tkm{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tk .tkr{animation:none}.tk .tkv{overflow-x:auto}}
+@media(max-width:640px){.tk .tkl{padding:8px 10px;font-size:12px}.tk .tkl i{display:none}.tk .tkr a{font-size:14px;padding:0 14px}.tk .tkr a b{font-size:14.5px}}
 /* slider */
 .sl{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px -18px rgba(1,31,67,.55);background:#011f43;aspect-ratio:1200/540}
 .sl .sli{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;pointer-events:none}
@@ -579,7 +591,8 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 @media print{.lpbox{height:auto;max-height:none;border:0;box-shadow:none}.lside,.lft,.lhb{display:none!important}.lgrid{display:block}.lmain{overflow:visible}}
 
 .brandcol{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:none}
-.brandcol .sdt{margin:0;padding:4px 12px;font-size:12px;gap:7px;box-shadow:0 2px 8px rgba(1,31,67,.06)}
+.brandcol .sdt{margin:0;padding:5px 13px;font-size:12.5px;gap:7px;font-weight:700;background:linear-gradient(135deg,#fff7ec,#eef5ff);border:1.5px solid #f3c98b;box-shadow:0 0 0 3px rgba(243,201,139,.18),0 2px 8px rgba(1,31,67,.06)}
+.brandcol .sdt .t{font-weight:800}.brandcol .sdt .d{color:#1f3a63;font-weight:600}
 .brandcol .sdt .d{display:inline!important}
 @media(max-width:640px){.brandcol{gap:4px}.brandcol .sdt{order:0;margin:0;font-size:11px;padding:3px 10px;gap:6px}}
 
@@ -708,6 +721,7 @@ function deva(w){
 
 const $=s=>document.querySelector(s);
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cap=s=>(s||'').replace(/^([^\p{L}]*)(\p{L})/u,(m,a,b)=>a+b.toLocaleUpperCase());
 const key=s=>(s||'').toLowerCase().replace(/[’`]/g,"'").trim();
 const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’`]/g,"'").trim();
 
@@ -758,20 +772,20 @@ function search(q,mode='all'){q=norm(q);if(!q)return[];const out=[];
 
 const first=e=>Object.values(e.pos)[0][0];
 function gloss(e){const s=first(e);return [s.hi,s.en].filter(Boolean).join(' · ')}
-const wlink=k=>`<a href="#/word/${encodeURIComponent(k)}">${esc(entries[k].w)}</a>`;
+const wlink=k=>`<a href="#/word/${encodeURIComponent(k)}">${esc(cap(entries[k].w))}</a>`;
 
 const POS=['संज्ञा','क्रिया','विशेषण','सर्वनाम','क्रिया-विशेषण','संख्यावाचक','निपात','निर्धारक','समुच्चयबोधक','संबंधबोधक','विस्मयादिबोधक','वाक्यांश'];
 const ed=(i,f,v,cls='')=>EDIT?`<span class="ed ${cls}" contenteditable="true" data-i="${i}" data-f="${esc(f)}">${esc(v)}</span>`:(v?`<span class="${cls}">${esc(v)}</span>`:'<span class="na">—</span>');
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">यह शब्द अभी शब्दकोश में नहीं है।</p></div>`;
-  let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(e.w)}</div>
-  <h1 class="hw"${EDIT?` contenteditable="true" data-word="${esc(k)}"`:''}>${esc(e.w)}</h1>
+  let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(cap(e.w))}</div>
+  <h1 class="hw"${EDIT?` contenteditable="true" data-word="${esc(k)}"`:''}>${esc(EDIT?e.w:cap(e.w))}</h1>
   <div class="dvh"><span${EDIT?` contenteditable="true" data-dv="${esc(k)}"`:''}>${esc(e.dv)}</span></div>
   ${e.ipa?`<div class="meta">उच्चारण: /${esc(e.ipa)}/</div>`:''}
   <div class="tabs"><span>अर्थ और प्रयोग</span></div>
   <div class="tw"><table class="et"><thead><tr><th class="c1">रोमन<small>Roman</small></th><th class="c2">देवनागरी<small>Devanagari</small></th><th class="c3h">हिन्दी<small>Hindi</small></th><th class="c4">अंग्रेज़ी<small>English</small></th><th class="c5">उदाहरण<small>संताली · अंग्रेज़ी</small></th>${EDIT?'<th class="c6"></th>':''}</tr></thead><tbody>`;
   const all=[];for(const p in e.pos)e.pos[p].forEach(s=>all.push([p,s]));all.sort((a,b)=>a[1].n-b[1].n||a[1].i-b[1].i);
   all.forEach(([p,s])=>{const en=s.ex?((s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr):s.tr;
-    h+=`<tr><td class="c1"><span class="rw">${esc(e.w)}</span><span class="pn">${EDIT?`<span class="ed" contenteditable="true" data-i="${s.i}" data-f="Arth no.">${s.n}</span>`:s.n} · ${EDIT?`<select data-i="${s.i}" class="possel"><option value="">—</option>${POS.concat(POS.includes(p)||!p?[]:[p]).map(x=>`<option${x===p?' selected':''}>${esc(x)}</option>`).join('')}</select>`:esc(p||'—')}</span></td>
+    h+=`<tr><td class="c1"><span class="rw">${esc(cap(e.w))}</span><span class="pn">${EDIT?`<span class="ed" contenteditable="true" data-i="${s.i}" data-f="Arth no.">${s.n}</span>`:s.n} · ${EDIT?`<select data-i="${s.i}" class="possel"><option value="">—</option>${POS.concat(POS.includes(p)||!p?[]:[p]).map(x=>`<option${x===p?' selected':''}>${esc(x)}</option>`).join('')}</select>`:esc(p||'—')}</span></td>
       <td class="c2 dvc">${esc(e.dv)}</td><td class="c3h">${ed(s.i,'Hindi',s.hi)}</td><td class="c4">${ed(s.i,'English',s.en)}</td>
       <td class="c5">${EDIT?`${ed(s.i,'Udaharan (Santali)',s.ex,'exs')}${ed(s.i,'Udaharan ka anuvad',s.tr,'exe')}`:(s.ex?`<i class="exs">${esc(s.ex)}</i>${en?`<span class="exe">${esc(en)}</span>`:''}`:'<span class="na">—</span>')}</td>
       ${EDIT?`<td class="c6"><button class="del" data-del="${s.i}" title="यह अर्थ हटाएँ">✕</button></td>`:''}</tr>`});
@@ -779,10 +793,10 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ नया अर्थ जोड़ें</button><button class="abtn red" data-delword="${esc(k)}">पूरा शब्द हटाएँ</button></div>`;
   if(e.rel)h+=`<div class="rel"><b>संबंधित शब्द:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
   h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
-  h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
+  h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(cap(e.w))}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>
-  <div class="list">${keys.length?keys.slice(0,5000).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join(''):'<p class="empty">कोई शब्द नहीं मिला।</p>'}</div></div>`}
+  <div class="list">${keys.length?keys.slice(0,5000).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(entries[k].w))} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join(''):'<p class="empty">कोई शब्द नहीं मिला।</p>'}</div></div>`}
 
 function recentList(){return JSON.parse(localStorage.getItem('ss_recent')||'[]').filter(k=>entries[k])}
 function wotdKey(){const d=new Date();const pool=order.filter(k=>first(entries[k]).hi);return pool[(d.getFullYear()*372+d.getMonth()*31+d.getDate())*7919%pool.length]}
@@ -792,11 +806,11 @@ function home(){const k=wotdKey(),e=entries[k],s=first(e);
   const pos=Object.keys(e.pos)[0];
   return `<section class="band"><div class="wrap cols">
     <div><h4 class="dm" data-t="t36">नए जोड़े गए</h4><div class="wl">${window.added.map(wlink).join('')}</div></div>
-    <div class="wotd"><h4 class="dm" data-t="t37">आज का शब्द</h4><p class="w">${esc(e.w)}</p><div class="oc">${esc(e.dv)}</div><div class="pos">${esc(pos||'')}</div>
+    <div class="wotd"><h4 class="dm" data-t="t37">आज का शब्द</h4><p class="w">${esc(cap(e.w))}</p><div class="oc">${esc(e.dv)}</div><div class="pos">${esc(pos||'')}</div>
       <div class="d">${esc(s.hi)}${s.hi&&s.en?' — ':''}${esc(s.en)}</div><a class="more" href="#/word/${encodeURIComponent(k)}">पूरा अर्थ देखिए</a></div>
     <div><h4 class="dm">${recentList().length?'हाल में देखे':'और शब्द'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
   </div></section>
-  <section class="feat"><div class="wrap"><h2 class="dm sec" data-t="sl_title">संताल संस्कृति की झलक</h2>${sliderHTML()}</div></section>`}
+  <section class="feat"><div class="wrap"><h2 class="dm sec" data-t="sl_title">संताल संस्कृति की झलक</h2>${tickerHTML()}${sliderHTML()}</div></section>`}
 
 function side(){const rec=recentList();const cnt={};order.forEach(k=>{const l=norm(k).replace(/^[^a-z]+/,'')[0];if(l)cnt[l]=(cnt[l]||0)+1});
   return `<aside class="side"><div class="box azbox"><h3 class="dm" data-t="az_title">A–Z शब्द सूची</h3><div class="az">${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>cnt[l]?`<a href="#/browse/${l}">${l.toUpperCase()}<small>${cnt[l]}</small></a>`:`<span class="off">${l.toUpperCase()}<small>0</small></span>`).join('')}</div></div>
@@ -829,6 +843,11 @@ function stats(){let hi=new Set(),en=new Set(),dv=0;order.forEach(k=>{const e=en
 let SLIDES=[],SLI=0,SLT=null;
 async function loadSlides(){const d=localStorage.getItem('ss_slides_draft');if(d){SLIDES=JSON.parse(d);return}try{SLIDES=await (await fetch('slides.json',{cache:'no-cache'})).json()}catch(e){SLIDES=[]}}
 function slN(){return SLIDES.length}
+const TKW=["johar","dak'","daka","orak'","hor","gidră","baba","ayo","gate","bahu","jawae","hopon","koṛa","kuṛi","ńutum","ato","disom","roṛ","jom","ńu","ńel","calak'","daran","seren","enec'","bes","ba","mit'","bar","pe","pon","moṇe","siń","ńĩdă","gapa","cando","ipil","dhărti","dare","bir","sakam","ul","jel","sim","seta","gai","merom","ti","jaṅga","bohok'","lutur","sendra"];
+function tickerHTML(){const L=TKW.map(key).filter(k=>entries[k]&&first(entries[k]).hi);if(!L.length)return'';
+ const d=new Date(),st=(d.getDate()*7)%L.length,K=L.slice(st).concat(L.slice(0,st));
+ const one=K.map(k=>{const e=entries[k],s=first(e);return `<a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(e.w))}</b><em>${esc(e.dv)}</em>– <span>${esc((s.hi||'').split(/[;,]/)[0])}</span></a>`}).join('');
+ return `<div class="tk" role="marquee" aria-label="रोज़ के संताली शब्द"><div class="tkl">📢 <span>रोज़ के शब्द</span><i style="font-style:normal;opacity:.85">· Daily words</i></div><div class="tkv"><div class="tkr" style="--tkd:${Math.round(K.length*3.2)}s">${one}${one}</div></div></div>`}
 function sliderHTML(){const n=slN();if(!EDIT&&n>15&&!window._sld){window._sld=1;SLI=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5)%n}if(!n&&!EDIT)return'';SLI=Math.min(SLI,Math.max(0,n-1));
  const ce=(i,f,v)=>EDIT?`contenteditable="true" data-sl="${i}" data-slf="${f}"`:'';
  return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img ${Math.abs(i-SLI)<=1?'src':'data-src'}="${esc(x.img)}" alt="${esc(x.title)}" decoding="async"><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p>${x.credit?`<small class="crd">📷 ${x.link?`<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.credit)}</a>`:esc(x.credit)}</small>`:''}</div></div>`).join('')}
@@ -901,7 +920,7 @@ function advRun(){const g=i=>$('#'+i),w=norm(g('av_w').value),m=g('av_m').value,
   const ss=[];for(const q in e.pos)e.pos[q].forEach(s=>ss.push([q,s]));
   return ss.some(([q,s])=>(!p||q===p)&&(!hi||norm(s.hi).includes(hi))&&(!en||norm(s.en).includes(en))&&(!x||s.ex))});
  g('av_n').textContent=any?`${r.length.toLocaleString('en-IN')} शब्द मिले${r.length>300?' (पहले 300 दिखा रहे हैं)':''}`:'ऊपर कोई भी खाना भरिए, परिणाम तुरंत दिखेंगे।';
- g('av_r').innerHTML=r.slice(0,300).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join('')}
+ g('av_r').innerHTML=r.slice(0,300).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(entries[k].w))} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join('')}
 
 /* ===== AI search (smart, offline) ===== */
 const STOP=new Set(('ka ki ke ko kya kise kaise kahte kahate kehte kahenge kahen hai hain he ho tha thi mein me main se par aur ya bhi koi ek is us iska uska matlab arth meaning mean means santali santhali sathali shabd word words hindi english bolte bole bolo bataiye batao bata batayen what is the a an of in for to how do you say called call tell me please plz word translate translation and or me ka?'+
@@ -939,8 +958,8 @@ function aiBind(q){const f=$('#aif');if(!f)return;f.onsubmit=e=>{e.preventDefaul
  if(!q){$('#aiq').focus();return}const r=aiRun(q),o=$('#aio');
  if(!r||!r.res.length){o.innerHTML=`<div class="aians">माफ़ कीजिए, इसका जवाब अभी शब्दकोश में नहीं मिला। दूसरे शब्दों में पूछकर देखिए, या <a href="#/advanced">Advance search</a> आज़माइए।</div>`;return}
  const top=r.res[0],e=entries[top.k],s=first(e),qw=esc(r.toks.join(' '));
- let ans=top.why==='sat'?`<b><a href="#/word/${encodeURIComponent(top.k)}">${esc(e.w)}</a></b> (${esc(e.dv)}) का अर्थ है: <b>${esc(s.hi||'—')}</b>${s.en?` · <i>${esc(s.en)}</i>`:''}`
-  :`“${qw}” को संताली में <b><a href="#/word/${encodeURIComponent(top.k)}">${esc(e.w)}</a></b> (${esc(e.dv)}) कहते हैं।${s.hi||s.en?`<div style="font-size:15px;color:var(--muted);margin-top:4px">${esc([s.hi,s.en].filter(Boolean).join(' · '))}</div>`:''}`;
+ let ans=top.why==='sat'?`<b><a href="#/word/${encodeURIComponent(top.k)}">${esc(cap(e.w))}</a></b> (${esc(e.dv)}) का अर्थ है: <b>${esc(s.hi||'—')}</b>${s.en?` · <i>${esc(s.en)}</i>`:''}`
+  :`“${qw}” को संताली में <b><a href="#/word/${encodeURIComponent(top.k)}">${esc(cap(e.w))}</a></b> (${esc(e.dv)}) कहते हैं।${s.hi||s.en?`<div style="font-size:15px;color:var(--muted);margin-top:4px">${esc([s.hi,s.en].filter(Boolean).join(' · '))}</div>`:''}`;
  const ex=Object.values(e.pos).flat().find(x=>x.ex);if(ex)ans+=`<div class="ex"><i>${esc(ex.ex)}</i><span>${esc(ex.tr||'')}</span></div>`;
  o.innerHTML=`<div class="aians">${ans}</div>${r.res.length>1?`<h3 class="dm" style="font-size:22px;margin:18px 0 4px">और मिलते-जुलते शब्द</h3>`+r.res.slice(1,10).map(x=>`<a class="aicard" href="#/word/${encodeURIComponent(x.k)}"><b>${esc(entries[x.k].w)} <em class="dv">${esc(entries[x.k].dv)}</em></b><span>${esc(gloss(entries[x.k]))}</span></a>`).join(''):''}`}
 
@@ -1056,7 +1075,7 @@ document.querySelectorAll('.searchbox').forEach(box=>{
   q.addEventListener('input',()=>w.classList.toggle('typing',!!q.value));
   const go=()=>{if(q.value.trim()){location.hash='#/search/'+encodeURIComponent(q.value.trim()+'|'+sel.value);sug.style.display='none';q.blur()}};
   q.addEventListener('input',()=>{const r=search(q.value,sel.value).slice(0,8);on=-1;
-    sug.innerHTML=r.map(k=>`<div data-k="${esc(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><small>${esc(gloss(entries[k]))}</small></div>`).join('');sug.style.display=r.length?'block':'none'});
+    sug.innerHTML=r.map(k=>`<div data-k="${esc(k)}"><b>${esc(cap(entries[k].w))} <em class="dv">${esc(entries[k].dv)}</em></b><small>${esc(gloss(entries[k]))}</small></div>`).join('');sug.style.display=r.length?'block':'none'});
   sug.addEventListener('click',e=>{const d=e.target.closest('div[data-k]');if(d){location.hash='#/word/'+encodeURIComponent(d.dataset.k);sug.style.display='none';q.value=''}});
   q.addEventListener('keydown',e=>{const it=[...sug.children];
     if((e.key==='ArrowDown'||e.key==='ArrowUp')&&it.length){on=(on+(e.key==='ArrowDown'?1:-1)+it.length)%it.length;it.forEach((x,i)=>x.classList.toggle('on',i===on));e.preventDefault()}
@@ -1084,7 +1103,7 @@ function wsl(){if(WSL)return WSL;if(!order.length)return [];
 const WSG=['linear-gradient(135deg,#7a1630,#d6262f)','linear-gradient(135deg,#a3400f,#e08a1e)','linear-gradient(135deg,#0f5d54,#14917f)','linear-gradient(135deg,#2d2a6e,#4b3a8c)','linear-gradient(135deg,#011f43,#2b5fa8)','linear-gradient(135deg,#5b1d6e,#c0397a)'];
 function wsHTML(i){const L=wsl();if(!L.length)return'';const j=Math.max(0,i-SLIDES.length)%L.length,k=L[j],e=entries[k];if(!e)return'';const s=first(e);
  const ex=Object.values(e.pos).flat().find(x=>x.ex);const pos=Object.keys(e.pos).find(Boolean)||'';
- return `<div class="wsbg" style="position:absolute;inset:0;background:${WSG[j%WSG.length]}"></div><div class="wsin" style="position:relative"><span class="tag">दिन का शब्द · ${j+1} / ${L.length}${j===0?' · आज':''}</span><h3>${esc(e.w)}</h3><div class="dv">${esc(e.dv)}${pos?' · '+esc(pos):''}</div><p class="m"><b>${esc(s.hi||'')}</b>${s.hi&&s.en?' — ':''}${esc(s.en||'')}</p>${ex?`<div class="x">“${esc(ex.ex)}”${ex.tr?' — '+esc(ex.tr):''}</div>`:''}<a href="#/word/${encodeURIComponent(k)}">पूरा अर्थ देखिए ›</a></div>`}
+ return `<div class="wsbg" style="position:absolute;inset:0;background:${WSG[j%WSG.length]}"></div><div class="wsin" style="position:relative"><span class="tag">दिन का शब्द · ${j+1} / ${L.length}${j===0?' · आज':''}</span><h3>${esc(cap(e.w))}</h3><div class="dv">${esc(e.dv)}${pos?' · '+esc(pos):''}</div><p class="m"><b>${esc(s.hi||'')}</b>${s.hi&&s.en?' — ':''}${esc(s.en||'')}</p>${ex?`<div class="x">“${esc(ex.ex)}”${ex.tr?' — '+esc(ex.tr):''}</div>`:''}<a href="#/word/${encodeURIComponent(k)}">पूरा अर्थ देखिए ›</a></div>`}
 
 /* search chip filter */
 const CHL={all:'All',sat:'संताली',hi:'हिन्दी',en:'अंग्रेज़ी'};
@@ -1158,7 +1177,7 @@ function lHero(k,t,intro){return `<div class="lhero"><div class="lhr"><div><h3>$
 const lSec=(h,b)=>`<div class="lsec"><div class="lsh"><span class="lck">${CHK}</span><h4>${h}</h4></div><div class="lsb">${b}</div></div>`;
 function exKeys(){if(!window._exk)window._exk=order.filter(k=>Object.values(entries[k].pos).some(a=>a.some(x=>x.ex)));return window._exk}
 function rndCard(){const k=order[Math.floor(Math.random()*order.length)],e=entries[k];const sns=Object.entries(e.pos).flatMap(([p,a])=>a.map(x=>({p,...x}))).slice(0,4);
- return `<div class="lsec rnd"><div class="rw"><b>${esc(e.w)}</b>${e.dv?`<span>${esc(e.dv)}</span>`:''}</div>${sns.map((x,i)=>`<p><small>${i+1}. ${esc(x.p||'')}</small> ${esc(x.hi||'')}${x.hi&&x.en?' · ':''}<i>${esc(x.en||'')}</i></p>${x.ex?`<p class="rex">${esc(x.ex)}${x.tr?`<br><small>${esc(x.tr)}</small>`:''}</p>`:''}`).join('')}
+ return `<div class="lsec rnd"><div class="rw"><b>${esc(cap(e.w))}</b>${e.dv?`<span>${esc(e.dv)}</span>`:''}</div>${sns.map((x,i)=>`<p><small>${i+1}. ${esc(x.p||'')}</small> ${esc(x.hi||'')}${x.hi&&x.en?' · ':''}<i>${esc(x.en||'')}</i></p>${x.ex?`<p class="rex">${esc(x.ex)}${x.tr?`<br><small>${esc(x.tr)}</small>`:''}</p>`:''}`).join('')}
  <div class="racts"><button class="lok" data-rnd="1">दूसरा शब्द</button><a class="rlink" href="#/word/${encodeURIComponent(k)}">पूरा अर्थ देखिए →</a></div></div>`}
 function mgBody(k){
  if(k==='sources')return mpCards('credits').replace(/<h3>[^<]*<\/h3>/,'<h3>स्रोत</h3>').replace(/<p class="lhi">[^<]*/,'<p class="lhi">Sources');
@@ -1166,7 +1185,7 @@ function mgBody(k){
  if(k==='az'){const cnt={};order.forEach(x=>{const l=(x[0]||'').toLowerCase();cnt[l]=(cnt[l]||0)+1});
   return lHero(k,'A–Z शब्द सूची',`अक्षर चुनिए, उस अक्षर से शुरू होने वाले सारे संताली शब्द खुल जाएँगे। कुल ${order.length.toLocaleString('en-IN')} शब्द।`)+`<div class="lsec"><div class="maz">${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>cnt[l]?`<a href="#/browse/${l}"><b>${l.toUpperCase()}</b><small>${cnt[l].toLocaleString('en-IN')}</small></a>`:`<span><b>${l.toUpperCase()}</b><small>0</small></span>`).join('')}</div></div>`}
  if(k==='examples'){const K=exKeys(),d=Math.floor(Date.now()/864e5),pick=[];for(let i=0;i<12&&K.length;i++)pick.push(K[(d*12+i*7919)%K.length]);
-  return lHero(k,'उदाहरण सहित शब्द',`${K.length.toLocaleString('en-IN')} शब्दों के साथ असली संताली वाक्य दिए गए हैं। यहाँ आज के 12 उदाहरण हैं।`)+`<div class="lsecs">${pick.map(x=>{const e=entries[x],s=Object.values(e.pos).flat().find(y=>y.ex)||first(e);return lSec(`<a href="#/word/${encodeURIComponent(x)}">${esc(e.w)}</a> <small style="font-weight:400;color:#64748b">${esc(gloss(e).slice(0,70))}</small>`,`<i>${esc(s.ex||'')}</i>${s.tr?`<br>${esc(s.tr)}`:''}`)}).join('')}</div><a class="rlink" href="#/examples">सारे उदाहरण सहित शब्द देखिए →</a>`}
+  return lHero(k,'उदाहरण सहित शब्द',`${K.length.toLocaleString('en-IN')} शब्दों के साथ असली संताली वाक्य दिए गए हैं। यहाँ आज के 12 उदाहरण हैं।`)+`<div class="lsecs">${pick.map(x=>{const e=entries[x],s=Object.values(e.pos).flat().find(y=>y.ex)||first(e);return lSec(`<a href="#/word/${encodeURIComponent(x)}">${esc(cap(e.w))}</a> <small style="font-weight:400;color:#64748b">${esc(gloss(e).slice(0,70))}</small>`,`<i>${esc(s.ex||'')}</i>${s.tr?`<br>${esc(s.tr)}`:''}`)}).join('')}</div><a class="rlink" href="#/examples">सारे उदाहरण सहित शब्द देखिए →</a>`}
  if(k==='random')return lHero(k,'कोई भी एक शब्द','हर बार शब्दकोश से एक नया शब्द। "दूसरा शब्द" दबाइए।')+`<div class="rbox">${rndCard()}</div>`;
  if(k==='searchhelp')return lHero(k,'सर्च कैसे करें','ऊपर के सर्च बॉक्स में संताली, हिन्दी या अंग्रेज़ी कुछ भी लिखिए।')+`<div class="lsecs">${[
   ['संताली शब्द','रोमन (dak\') या देवनागरी (दाक्) दोनों में लिख सकते हैं। ă, ạ, ñ जैसे निशान न भी लगाएँ तो भी शब्द मिल जाएगा।'],
@@ -1216,8 +1235,8 @@ function fbHTML(){return `<div class="fb"><div class="fwel"><div class="fwi"><sv
 <div class="acts"><button type="button" class="sec fcancel">रद्द करें</button><button type="button" class="sec" id="fb_copy">कॉपी करें</button><button type="button" class="pri" id="fb_send">सुझाव भेजें</button></div></div>`}
 function fbBind(pre){const g=i=>document.getElementById(i);let type='गलत अर्थ',stars=0;const w=g('fb_w'),sg=w.parentNode.querySelector('.sg');
  document.querySelectorAll('.fb .types button').forEach(b=>b.onclick=()=>{type=b.dataset.ft;document.querySelectorAll('.fb .types button').forEach(x=>x.classList.toggle('on',x===b))});
- const showCur=k=>{const c=g('fb_cur');if(k&&entries[k]){const e=entries[k],s=first(e);c.innerHTML=`<b>${esc(e.w)}</b> (${esc(e.dv)}) — अभी का अर्थ: ${esc(s.hi||'—')} · <i>${esc(s.en||'')}</i>`;c.classList.add('on')}else c.classList.remove('on')};
- w.oninput=()=>{const r=w.value.trim()?search(w.value,'sat').slice(0,6):[];sg.innerHTML=r.map(k=>`<div data-k="${esc(k)}">${esc(entries[k].w)}<small>${esc(gloss(entries[k]).slice(0,50))}</small></div>`).join('');sg.style.display=r.length?'block':'none';showCur(entries[key(w.value)]?key(w.value):null)};
+ const showCur=k=>{const c=g('fb_cur');if(k&&entries[k]){const e=entries[k],s=first(e);c.innerHTML=`<b>${esc(cap(e.w))}</b> (${esc(e.dv)}) — अभी का अर्थ: ${esc(s.hi||'—')} · <i>${esc(s.en||'')}</i>`;c.classList.add('on')}else c.classList.remove('on')};
+ w.oninput=()=>{const r=w.value.trim()?search(w.value,'sat').slice(0,6):[];sg.innerHTML=r.map(k=>`<div data-k="${esc(k)}">${esc(cap(entries[k].w))}<small>${esc(gloss(entries[k]).slice(0,50))}</small></div>`).join('');sg.style.display=r.length?'block':'none';showCur(entries[key(w.value)]?key(w.value):null)};
  sg.onclick=e=>{const d=e.target.closest('[data-k]');if(d){w.value=entries[d.dataset.k].w;sg.style.display='none';showCur(d.dataset.k)}};
  g('fb_s').onclick=e=>{const sp=[...g('fb_s').children],i=sp.indexOf(e.target);if(i>=0){stars=i+1;sp.forEach((x,j)=>x.classList.toggle('on',j<stars))}};
  if(pre&&entries[pre]){w.value=entries[pre].w;showCur(pre)}
@@ -1244,7 +1263,7 @@ function aeNum(m){m.querySelectorAll('.aes .aen').forEach((b,i)=>b.textContent='
 function openEntry(k,o={}){closeModal();const e=k&&entries[k];const rows=(e?e.rows.map(i=>ROWS[i]).filter(hasMeaning):[]);if(e&&!rows.length)rows.push(ROWS[e.rows[0]]);if(!e)rows.push({});if(o.addSense)rows.push({Shabd:e.w,'Arth no.':String(rows.length+1)});const r0=rows[0]||{};const v=n=>esc(r0[n]||'');
  const m=document.createElement('div');m.className='mdl lpm aem';m.id='mdl';
  m.innerHTML=`<div class="lpbox aebox" role="dialog" aria-modal="true" aria-labelledby="aet">
- <div class="lhd"><div class="lhl"><div class="lem">✎</div><div><p class="lkick">ADMIN · शब्द एंट्री</p><h2 id="aet">${e?'शब्द बदलें: '+esc(e.w):'नया शब्द जोड़ें'}</h2></div></div>
+ <div class="lhd"><div class="lhl"><div class="lem">✎</div><div><p class="lkick">ADMIN · शब्द एंट्री</p><h2 id="aet">${e?'शब्द बदलें: '+esc(cap(e.w)):'नया शब्द जोड़ें'}</h2></div></div>
   <div class="lhb"><span class="aest ${isAdmin()?'on':''}">${isAdmin()?'Admin लॉगिन है':'सेव के लिए Admin लॉगिन चाहिए'}</span><button class="lib mx" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div></div>
  <div class="aebd"><datalist id="aepos">${POSL.map(x=>`<option value="${x}">`).join('')}</datalist>
   <div class="lsec"><div class="lsh"><span class="lck">${CHK}</span><h4>मुख्य शब्द</h4></div><div class="aeg">
