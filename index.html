@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SantalSabad: Santali Hindi English Dictionary</title>
 <meta name="description" content="SantalSabad – Santali, Hindi aur English ka shabdkosh. By BOSC (Baski Online Service Center).">
-<meta name="theme-color" content="#10172a">
+<meta name="theme-color" content="#f5f8fd">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@ a{color:inherit}
 .tools .star{font-size:24px}
 
 /* hero */
-.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero{background:radial-gradient(1200px 500px at 15% 0%,#0d2f5c,transparent),var(--navy);color:#fff;position:relative;overflow:hidden}
 .rays{position:absolute;left:0;top:0;width:620px;height:100%;pointer-events:none}
 .hero .center{position:relative;z-index:2;text-align:center;padding:16px 0 30px}
 .title{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap;margin:18px 0 18px}
@@ -297,12 +297,38 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
  .searchbox select{width:110px;font-size:15px}
  .rays{opacity:.4}.logo{font-size:20px;letter-spacing:5px}
 }
+
+/* ===== LIGHT THEME ===== */
+:root{--navy:#011f43}
+.hero{background:linear-gradient(180deg,#f5f8fd 0%,#e9eff9 100%)!important;color:#13203a;border-bottom:1px solid #d6deeb}
+.logo{color:#011f43!important;font-weight:600}
+.tools a{color:#13203a!important}
+.tools .circ{background:#011f43;color:#fff}
+.title .abbr,.title .full,.hero h2{color:#011f43}
+.hero p.lead{color:#33405c!important}
+.hero .btn{border-color:#011f43;color:#011f43}.hero .btn:hover{background:#011f43;color:#fff}
+.searchbox{border:1px solid #c5cfe0;box-shadow:0 8px 22px rgba(1,31,67,.08)}
+.searchbox:focus-within{border-color:transparent;box-shadow:0 0 0 3px #fff,0 0 0 6px #d6262f,0 0 0 9px rgba(61,79,160,.35)}
+.stat{background:#fff!important;border:1px solid #d9e0ec!important;color:#13203a;box-shadow:0 14px 34px rgba(1,31,67,.12)!important;backdrop-filter:none!important}
+.stat h6{color:#b4232a!important}.donut .mid b{color:#011f43}.donut .mid small{color:#5c6170;opacity:1}
+.leg span{color:#5c6170;opacity:1}
+.c3 h3,.c3 p{color:#fff}
+.azbox{background:#fff!important;border:1px solid #d9e0ec!important;color:#13203a;box-shadow:0 8px 22px rgba(1,31,67,.08)}
+.azbox h3{color:#011f43!important;border-bottom-color:#d6262f!important}
+.az a{background:#eef2fa!important;border-color:#d5ddec!important;color:#011f43!important}
+.az a:hover{background:#011f43!important;color:#fff!important}
+.az span.off{background:#f5f6f8!important;color:#9aa1ae!important;border-color:#e6e8ee!important;opacity:1!important}
+footer{background:#eef2f8!important;color:#1b2540!important;border-top:4px solid #011f43}
+.fbox{background:#fff!important;border:1px solid #d5dbe6!important;border-top:4px solid #d6262f!important;box-shadow:0 6px 16px rgba(1,31,67,.06)}
+.fbox h6{color:#5c6170!important}.fcols a{color:#1b2540!important}.fcols a:hover{color:#d6262f!important}
+.fbrand .mark .ring{border-color:#011f43!important;color:#011f43}.fbrand .mark b{color:#011f43!important}
+.legal{border-color:#d0d7e3!important}.legal a{color:#2f3f8f!important;border-right-color:#c7cfdd!important}.legal a:hover{color:#d6262f!important}
+.copy{color:#5c6170!important}
 </style>
 </head>
 <body>
 
 <header class="hero" id="hero">
-  <svg class="rays" viewBox="0 0 620 900" preserveAspectRatio="xMinYMin slice" aria-hidden="true" id="rays"></svg>
   <div class="wrap">
     <div class="top">
       <a class="logo" href="#/">SANTALSABAD</a>
@@ -360,7 +386,7 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
     <div class="copy">Copyright © <span id="yr"></span> BOSC (Baski Online Service Center) · SantalSabad. Sarvadhikar surakshit.<br>Shabd-data ke kuch hisse CC BY-SA 4.0 aur public domain sources se liye gaye hain.</div>
   </div>
 </footer>
-<div class="hebtn"><button class="h" title="Sabse upar (Home)" onclick="scrollTo({top:0,behavior:'smooth'})"><span>▲</span>Home</button><button class="e" title="Sabse neeche (End)" onclick="scrollTo({top:document.body.scrollHeight,behavior:'smooth'})"><span>▼</span>End</button></div>
+<div class="hebtn"><button class="h" title="Sabse upar (Home)" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span>▲</span>Home</button><button class="e" title="Sabse neeche (End)" onclick="window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})"><span>▼</span>End</button></div>
 
 <script>
 let entries={}, order=[];
@@ -369,7 +395,7 @@ function deva(w){
   const C=[['kh','ख'],['gh','घ'],['ch','छ'],['jh','झ'],['ṭh','ठ'],['ḍh','ढ'],['th','थ'],['dh','ध'],['ph','फ'],['bh','भ'],['ṛh','ढ़'],
     ['k','क'],['g','ग'],['ṅ','ङ'],['c','च'],['j','ज'],['ń','ञ'],['ñ','ञ'],['ṭ','ट'],['ḍ','ड'],['ṇ','ण'],['t','त'],['d','द'],['n','न'],
     ['p','प'],['b','ब'],['m','म'],['y','य'],['r','र'],['ṛ','ड़'],['l','ल'],['w','व'],['v','व'],['s','स'],['h','ह'],['f','फ़'],['z','ज़'],['q','क'],['x','क्स']];
-  const V=[['ai','ऐ','ै'],['au','औ','ौ'],['ă','अ',''],['a','अ',''],['ā','आ','ा'],['e','ए','े'],['ĕ','ए','े'],['i','इ','ि'],['ī','ई','ी'],['o','ओ','ो'],['ŏ','ओ','ो'],['ô','ओ','ो'],['u','उ','ु'],['ū','ऊ','ू']];
+  const V=[['ai','ऐ','ै'],['au','औ','ौ'],['ă','अ',''],['ạ','अ',''],['ǝ','अ',''],['a','अ',''],['ā','आ','ा'],['e','ए','े'],['ĕ','ए','े'],['i','इ','ि'],['ī','ई','ी'],['o','ओ','ो'],['ŏ','ओ','ो'],['ô','ओ','ो'],['u','उ','ु'],['ū','ऊ','ू']];
   let out='',prevC=false,i=0;const str=s.normalize('NFD').replace(/([aeiou])\u0303/g,'$1~').normalize('NFC');
   while(i<str.length){let m;
     if((m=C.find(([r])=>str.startsWith(r,i)))){if(prevC)out+='्';out+=m[1];prevC=true;i+=m[0].length;continue}
@@ -392,13 +418,7 @@ const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"
 const key=s=>(s||'').toLowerCase().replace(/[’`]/g,"'").trim();
 const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’`]/g,"'").trim();
 
-/* Santal-art inspired motif */
-(function(){const g=$('#rays');let s='',r=7;const rnd=()=>(r=(r*9301+49297)%233280)/233280;
- const cx=-60,cy=760,cols=['#f2b8c6','#e7a3c0','#c9a0dc','#a98fd6','#8f86d1','#f6d3dc'];
- for(let k=0;k<150;k++){const a=-Math.PI/2+ (k/150)*Math.PI*0.62+rnd()*0.02,r0=180+rnd()*140,r1=r0+60+rnd()*420,w=rnd()<.25?14+rnd()*16:2+rnd()*6;
-  s+=`<line x1="${cx+Math.cos(a)*r0}" y1="${cy+Math.sin(a)*r0}" x2="${cx+Math.cos(a)*r1}" y2="${cy+Math.sin(a)*r1}" stroke="${cols[k%cols.length]}" stroke-opacity="${.35+rnd()*.55}" stroke-width="${w}"/>`}
- for(let k=0;k<7;k++){const a=-1.45+k*.18,r1=520+rnd()*260;s+=`<line x1="${cx+Math.cos(a)*150}" y1="${cy+Math.sin(a)*150}" x2="${cx+Math.cos(a)*r1}" y2="${cy+Math.sin(a)*r1}" stroke="#fff" stroke-opacity=".9" stroke-width="1.6"/>`}
- g.innerHTML=s})();
+
 
 function parseCSV(t){const rows=[];let r=[],f='',q=false;
   for(let i=0;i<t.length;i++){const c=t[i];
@@ -467,7 +487,7 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>
-  <div class="list">${keys.length?keys.slice(0,500).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join(''):'<p class="empty">Koi shabd nahi mila.</p>'}</div></div>`}
+  <div class="list">${keys.length?keys.slice(0,5000).map(k=>`<a class="item" href="#/word/${encodeURIComponent(k)}"><b>${esc(entries[k].w)} <em class="dv">${esc(entries[k].dv)}</em></b><span>${esc(gloss(entries[k]))}</span></a>`).join(''):'<p class="empty">Koi shabd nahi mila.</p>'}</div></div>`}
 
 function recentList(){return JSON.parse(localStorage.getItem('ss_recent')||'[]').filter(k=>entries[k])}
 function wotdKey(){const d=new Date();const pool=order.filter(k=>first(entries[k]).hi);return pool[(d.getFullYear()*372+d.getMonth()*31+d.getDate())*7919%pool.length]}
@@ -496,18 +516,18 @@ function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;fo
  <p><b>k' c' t' p'</b> mein apostrophe Santali ki "ruki hui" dhwani dikhata hai, jaise dak'.</p>
  <p>Search mein Santali (Roman ya Devanagari), Hindi ya English kuch bhi likhiye. Bhasha chun kar search ko seemit kar sakte hain.</p></div>`}
 
-function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan, Roman aur Devanagari lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
+function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan, Roman aur Devanagari lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: P. O. Bodding, A Santal Dictionary (5 khand, 1929–36, public domain, National Library of Norway), A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain aur naye jode gaye shabdon ke Hindi arth abhi jode ja rahe hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
 
 
 
 
 /* ===== Stats donut ===== */
 function stats(){let hi=new Set(),en=new Set(),dv=0;order.forEach(k=>{const e=entries[k];if(e.dv)dv++;for(const p in e.pos)e.pos[p].forEach(x=>{(x.hi||'').split(/[;,]/).forEach(t=>{t=t.trim();if(t)hi.add(t)});(x.en||'').split(/[;,]/).forEach(t=>{t=norm(t);if(t)en.add(t)})})});
- const d=[['Santali (Roman)',order.length,'#f2b8c6'],['Santali (देवनागरी)',dv,'#ffb347'],['हिन्दी',hi.size,'#4fd1a5'],['English',en.size,'#7cb7ff']];
+ const d=[['Santali (Roman)',order.length,'#e0457b'],['Santali (देवनागरी)',dv,'#f59e0b'],['हिन्दी',hi.size,'#10b981'],['English',en.size,'#3b82f6']];
  const tot=d.reduce((a,x)=>a+x[1],0),C=2*Math.PI*60;let off=0;
  const arcs=d.map(([n,v,c])=>{const L=v/tot*C;const a=`<circle r="60" cx="80" cy="80" fill="none" stroke="${c}" stroke-width="30" stroke-dasharray="${L-2} ${C-L+2}" stroke-dashoffset="${-off}"/>`;off+=L;return a}).join('');
  const el=$('#stat');if(!el)return;
- el.innerHTML=`<h6>Shabd ginti</h6><div class="donut"><svg viewBox="0 0 160 160"><g transform="rotate(-90 80 80)">${arcs}</g><circle r="44" cx="80" cy="80" fill="rgba(1,31,67,.85)"/></svg><div class="mid"><b>${tot.toLocaleString('en-IN')}</b><small>KUL SHABD</small></div></div>
+ el.innerHTML=`<h6>Shabd ginti</h6><div class="donut"><svg viewBox="0 0 160 160"><g transform="rotate(-90 80 80)">${arcs}</g><circle r="44" cx="80" cy="80" fill="#fff"/></svg><div class="mid"><b>${tot.toLocaleString('en-IN')}</b><small>KUL SHABD</small></div></div>
  <ul class="leg">${d.map(([n,v,c])=>`<li><i style="background:${c}"></i>${n}<b>${(v/tot*100).toFixed(1)}%</b><span>${v.toLocaleString('en-IN')}</span></li>`).join('')}</ul>`}
 
 /* ===== Slider ===== */
@@ -559,9 +579,9 @@ privacy:['Privacy Policy (गोपनीयता नीति)',`<p>SantalSaba
 <h3>Teesre paksh ki sevayein</h3><ul><li><b>Cloudflare Pages</b> site host karta hai aur suraksha ke liye saamanya server logs (jaise IP address) rakh sakta hai.</li><li><b>Google Fonts</b> se font load hote hain, jisse Google ko aapka IP address dikh sakta hai.</li></ul>
 <p>Hum koi advertising ya tracking cookie istemaal nahi karte.</p>`],
 copyright:['Copyright &amp; Licence',`<p>Site ka design, code aur BOSC dwara likhi saamagri © BOSC (Baski Online Service Center). Sarvadhikar surakshit.</p>
-<h3>Shabd-data</h3><ul><li><b>A Santal Dictionary</b>, Rev. A. Campbell (1899): public domain.</li><li><b>Wiktionary</b> (kaikki.org ke madhyam se): <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Is hisse ka upyog usi licence ke tahat credit ke saath kiya ja sakta hai.</li><li>Hindi arth aur Devanagari roop: SantalSabad / BOSC.</li></ul>
+<h3>Shabd-data</h3><ul><li><b>A Santal Dictionary</b> (5 khand), Rev. P. O. Bodding (Oslo, 1929–1936): public domain; scan National Library of Norway (nb.no).</li><li><b>A Santali-English Dictionary</b>, Rev. A. Campbell (1899): public domain.</li><li><b>Wiktionary</b> (kaikki.org ke madhyam se): <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Is hisse ka upyog usi licence ke tahat credit ke saath kiya ja sakta hai.</li><li>Hindi arth aur Devanagari roop: SantalSabad / BOSC.</li></ul>
 <p>Data ya saamagri ka vyavsayik upyog karna ho to pehle BOSC se anumati lein.</p>`],
-credits:['Sources &amp; Credits',`<ul><li>Rev. A. Campbell, <i>A Santal Dictionary</i> (1899), public domain.</li><li>Wiktionary contributors, kaikki.org dwara nikala gaya data (CC BY-SA 4.0).</li><li>Fonts: DM Serif Display, Open Sans, Noto Sans Devanagari (Google Fonts, SIL Open Font License).</li><li>Hosting: Cloudflare Pages.</li></ul><p>Sabhi Santali shabd asli sources se liye gaye hain. Sujhav aur sudhaar ka swagat hai.</p>`],
+credits:['Sources &amp; Credits',`<ul><li>Rev. P. O. Bodding, <i>A Santal Dictionary</i>, 5 khand (Oslo, 1929–1936), public domain; digital copy: National Library of Norway.</li><li>Rev. A. Campbell, <i>A Santali-English Dictionary</i> (1899), public domain.</li><li>Wiktionary contributors, kaikki.org dwara nikala gaya data (CC BY-SA 4.0).</li><li>Fonts: DM Serif Display, Open Sans, Noto Sans Devanagari (Google Fonts, SIL Open Font License).</li><li>Hosting: Cloudflare Pages.</li></ul><p>Sabhi Santali shabd asli sources se liye gaye hain. Sujhav aur sudhaar ka swagat hai.</p>`],
 accessibility:['Accessibility (सुगम्यता)',`<p>Hum chahte hain ki SantalSabad har kisi ke liye aasaan ho.</p><ul><li>Mobile, tablet aur desktop par chalta hai, aur ek baar khulne ke baad offline bhi.</li><li>Keyboard se search: likhiye, ↑ ↓ se chuniye, Enter dabaiye.</li><li>Browser zoom (Ctrl +) se akshar bade kiye ja sakte hain.</li><li>Home / End button se page ke upar ya neeche turant jaaiye.</li></ul><p>Koi dikkat ho to humein zaroor bataiye.</p>`],
 contact:['Contact (सम्पर्क)',`<p><b>BOSC (Baski Online Service Center)</b></p><p data-t="contact_info">Galat arth, naya shabd ya koi sujhav bhejne ke liye BOSC se sampark karein.</p><p>Shabd bhejte samay Roman Santali shabd, Hindi arth, English arth aur ho sake to ek udaharan vakya zaroor likhiye.</p>`]};
 function legalHTML(v){const [t,b]=LEGAL[v];return `<div class="card lp"><div class="crumb"><a href="#/">Home</a> › ${t}</div><h2 class="dm" style="margin-top:0;font-size:32px">${t}</h2>${b}<p class="upd">Antim badlav: ${UPD}</p></div>`}
