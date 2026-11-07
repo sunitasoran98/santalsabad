@@ -486,6 +486,97 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .sl .cap small.crd{display:block;margin-top:8px;font-size:11.5px;opacity:.8}.sl .cap small.crd a{color:#fff}
 .slprog{position:absolute;left:40px;right:40px;bottom:18px;height:4px;border-radius:4px;background:rgba(255,255,255,.3);z-index:3}.slprog i{display:block;height:100%;border-radius:4px;background:#fff;transition:width .4s}
 @media(max-width:640px){.slprog{left:18px;right:18px;bottom:12px}.sl .cap small.crd{font-size:10px}}
+
+/* ===== v27: HorKatha-match modals (light) ===== */
+.mdl.lpm,.mdl.fbm{position:fixed;inset:0;z-index:600;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(15,23,42,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:fade .2s ease;font-family:"Open Sans","Noto Sans Devanagari",system-ui,sans-serif}
+@media(min-width:640px){.mdl.lpm,.mdl.fbm{padding:20px}}
+.lbox{position:relative;width:100%;max-width:1024px;height:90vh;max-height:820px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:#fff;color:#0f172a;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+.lhd{flex:none;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid #e2e8f0;background:#fff}
+.lhl{display:flex;align-items:center;gap:12px}
+.lem{width:40px;height:40px;border-radius:16px;background:#ecfdf5;border:1px solid rgba(16,185,129,.4);color:#059669;display:flex;align-items:center;justify-content:center;font:700 20px "Noto Sans Devanagari",sans-serif}
+.lkick{margin:0;font-size:11px;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:.1em;line-height:1}
+.lhd h2{margin:4px 0 0;font-size:16px;font-weight:700;color:#0f172a;letter-spacing:-.01em;font-family:"Noto Sans Devanagari","Open Sans",sans-serif}
+@media(min-width:640px){.lhd h2{font-size:18px}}
+.lhb{display:flex;align-items:center;gap:8px}
+.lib{border:0;background:none;padding:8px;border-radius:12px;color:#64748b;cursor:pointer;display:flex;transition:color .15s,background .15s}
+.lib:hover{color:#0f172a;background:#f1f5f9}
+.lgrid{flex:1;display:grid;grid-template-columns:1fr;overflow:hidden;background:#f8fafc;min-height:0}
+@media(min-width:768px){.lgrid{grid-template-columns:4fr 8fr}}
+.lside{padding:16px;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;justify-content:space-between;gap:16px;overflow-y:auto;background:#fff}
+.lsel{display:block;padding:0 8px;margin-bottom:8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b}
+.llist{display:flex;flex-direction:column;gap:6px}
+.llist button{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:16px;font:600 12px "Open Sans","Noto Sans Devanagari",sans-serif;cursor:pointer;transition:all .15s;background:#f8fafc;color:#334155;border:1px solid #e2e8f0;text-align:left}
+@media(min-width:640px){.llist button{font-size:13px}}
+.llist button .lbl{display:flex;align-items:center;gap:10px}
+.llist button svg{color:#94a3b8;flex:none}.llist button .chv{color:#94a3b8}
+.llist button:hover{background:#f1f5f9;color:#0f172a}
+.llist button.on{background:#059669;color:#fff;border-color:#059669;box-shadow:0 4px 6px -1px rgba(5,150,105,.3)}
+.llist button.on svg{color:#fff}
+.lcom{padding:14px;background:#ecfdf5;border:1px solid rgba(16,185,129,.3);border-radius:16px;font-size:12px}
+.lcom span{display:block;font-size:11px;font-weight:700;color:#059669;margin-bottom:4px}
+.lcom p{margin:0;font-size:11px;color:#475569;line-height:1.6}
+.lmain{padding:20px;overflow-y:auto;display:flex;flex-direction:column;gap:20px;background:#f8fafc}
+@media(min-width:640px){.lmain{padding:28px}}
+.lhero{padding:20px;background:#fff;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 1px 3px rgba(15,23,42,.05)}
+.lhr{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:8px}
+.lhero h3{margin:0;font-size:20px;font-weight:900;color:#0f172a;letter-spacing:-.02em;font-family:"Noto Sans Devanagari","Open Sans",sans-serif}
+@media(min-width:640px){.lhero h3{font-size:24px}}
+.lhi{margin:2px 0 0;font-size:12px;font-weight:600;color:#059669}
+.lver{font-size:10px;font-weight:600;color:#64748b;background:#f1f5f9;padding:4px 10px;border-radius:999px;border:1px solid #e2e8f0;white-space:nowrap}
+.llead{padding-top:6px;font-size:13px;color:#475569;line-height:1.7}
+@media(min-width:640px){.llead{font-size:14px}}
+.llead p{margin:0 0 6px}.llead p:last-child{margin:0}.llead ul{margin:6px 0;padding-left:20px}
+.lsecs{display:flex;flex-direction:column;gap:14px}
+.lsec{padding:16px;background:#fff;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+@media(min-width:640px){.lsec{padding:20px}}
+.lsh{display:flex;align-items:flex-start;gap:10px}
+.lck{width:20px;height:20px;flex:none;margin-top:2px;border-radius:50%;background:#ecfdf5;border:1px solid rgba(16,185,129,.5);color:#059669;display:flex;align-items:center;justify-content:center}
+.lck svg{width:12px;height:12px}
+.lsec h4{margin:0;font-size:14px;font-weight:700;color:#0f172a;letter-spacing:-.01em}
+.lsb{padding-left:30px;margin-top:8px;font-size:13px;color:#475569;line-height:1.7}
+@media(min-width:640px){.lsb{font-size:14px}}
+.lsb p{margin:0 0 6px}.lsb p:last-child{margin:0}.lsb ul{margin:4px 0;padding-left:18px}
+.lft{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 24px;border-top:1px solid #e2e8f0;background:#fff}
+.lft .sdt{margin:0;box-shadow:none}
+.lok{border:0;padding:10px 24px;background:#059669;color:#fff;border-radius:12px;font:700 13px "Noto Sans Devanagari","Open Sans",sans-serif;box-shadow:0 4px 6px -1px rgba(5,150,105,.3);cursor:pointer;transition:background .15s;display:flex;align-items:center;gap:6px}
+@media(min-width:640px){.lok{font-size:14px}}
+.lok:hover{background:#10b981}
+@media(max-width:767px){.lside{border-right:0;border-bottom:1px solid #e2e8f0;max-height:38vh}.lcom{display:none}.lft .sdt{display:none}.lft{justify-content:flex-end}}
+/* feedback */
+.fbox{position:relative;width:100%;max-width:576px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+.fhd{flex:none;display:flex;align-items:center;justify-content:space-between;padding:20px;color:#fff;background:linear-gradient(90deg,#d97706,#ea580c,#b45309)}
+.fhl{display:flex;align-items:center;gap:12px}
+.fic{padding:10px;background:rgba(255,255,255,.2);border-radius:16px;display:flex;color:#fef3c7}
+.fk{margin:0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fde68a}
+.fhd h2{margin:0;font-size:18px;font-weight:900;color:#fff;font-family:"Noto Sans Devanagari","Open Sans",sans-serif}
+.fx{border:0;padding:6px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;display:flex}.fx:hover{background:rgba(255,255,255,.2)}
+.fbd{padding:24px;overflow-y:auto}
+.fbm .fb{display:flex;flex-direction:column;gap:4px;font-size:12px}
+.fwel{display:flex;gap:12px;align-items:flex-start;padding:16px;background:linear-gradient(135deg,#fffbeb,#fff7ed);border:1px solid rgba(253,230,138,.9);border-radius:16px;margin-bottom:12px}
+.fwi{padding:8px;background:#f59e0b;color:#fff;border-radius:12px;display:flex;flex:none;margin-top:2px}
+.fwt{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.fwt b{font-size:14px;color:#451a03}.fwt span{font:700 10px Georgia,serif;padding:2px 8px;background:rgba(253,230,138,.7);color:#78350f;border-radius:6px}
+.fwel p{margin:4px 0 0;font-size:12px;color:rgba(120,53,15,.9);line-height:1.6}.fwel .fwq{font-size:11px;font-weight:600;color:#92400e}
+.fbm .flab{display:block;font-size:11px;font-weight:700;color:#334155;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 6px}
+.fbm .flab small{text-transform:none;letter-spacing:0;font-weight:400;color:#94a3b8;margin-left:6px}
+.fbm .types{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0}
+@media(min-width:640px){.fbm .types{grid-template-columns:repeat(3,1fr)}}
+.fbm .types button{padding:8px;border-radius:12px;text-align:center;border:1px solid #e2e8f0;background:#f8fafc;color:#475569;font:600 12px "Noto Sans Devanagari",sans-serif;cursor:pointer}
+.fbm .types button.on{background:#fffbeb;border-color:#f59e0b;color:#b45309;box-shadow:0 0 0 1px #f59e0b}
+.fbm input,.fbm textarea{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #e2e8f0;border-radius:12px;background:#f8fafc;font:13px "Open Sans","Noto Sans Devanagari",sans-serif;outline:0}
+.fbm input:focus,.fbm textarea:focus{border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.15);background:#fff}
+.fbm textarea{min-height:90px;resize:vertical}
+.fbm .grid{display:grid;grid-template-columns:1fr;gap:0 12px}@media(min-width:640px){.fbm .grid{grid-template-columns:1fr 1fr}}
+.fbm .stars{font-size:26px;gap:2px}.fbm .stars span{transition:transform .15s}.fbm .stars span:hover{transform:scale(1.1)}
+.fbm .cur{font-size:12px}
+.fbm .acts{display:flex;justify-content:flex-end;gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid #f1f5f9}
+.fbm .acts button{padding:10px 18px;border-radius:12px;font:700 13px "Noto Sans Devanagari",sans-serif;cursor:pointer;border:0}
+.fbm .acts .sec{background:#f1f5f9;color:#475569}.fbm .acts .sec:hover{background:#e2e8f0}
+.fbm .acts .pri{background:linear-gradient(90deg,#d97706,#ea580c);color:#fff;box-shadow:0 4px 6px -1px rgba(234,88,12,.3)}
+.fdoneb{text-align:center;padding:32px 0;animation:pop .2s ease}
+.fdi{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:#d1fae5;color:#059669;display:flex;align-items:center;justify-content:center}
+.fdoneb h3{margin:0;font:700 18px Georgia,"Noto Sans Devanagari",serif;color:#0f172a}.fdh{margin:4px 0;font-weight:700;color:#065f46}.fds{font-size:12px;color:#64748b;max-width:360px;margin:0 auto 16px}
+.fdone{padding:10px 24px;border:0;border-radius:12px;background:#0f172a;color:#fff;font:700 12px "Noto Sans Devanagari",sans-serif;cursor:pointer}
+@media print{.lbox{height:auto;max-height:none;border:0;box-shadow:none}.lside,.lft,.lhb{display:none!important}.lgrid{display:block}.lmain{overflow:visible}}
 </style>
 </head>
 <body>
@@ -699,10 +790,10 @@ async function loadSlides(){const d=localStorage.getItem('ss_slides_draft');if(d
 function slN(){return SLIDES.length}
 function sliderHTML(){const n=slN();if(!EDIT&&n>15&&!window._sld){window._sld=1;SLI=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5)%n}if(!n&&!EDIT)return'';SLI=Math.min(SLI,Math.max(0,n-1));
  const ce=(i,f,v)=>EDIT?`contenteditable="true" data-sl="${i}" data-slf="${f}"`:'';
- return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img ${Math.abs(i-SLI)<=1||EDIT?'src':'data-src'}="${esc(x.img)}" alt="${esc(x.title)}" decoding="async"><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p>${x.credit?`<small class="crd">📷 ${x.link?`<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.credit)}</a>`:esc(x.credit)}</small>`:''}</div></div>`).join('')}
+ return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img ${Math.abs(i-SLI)<=1?'src':'data-src'}="${esc(x.img)}" alt="${esc(x.title)}" decoding="async"><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p>${x.credit?`<small class="crd">📷 ${x.link?`<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.credit)}</a>`:esc(x.credit)}</small>`:''}</div></div>`).join('')}
   ${n>1?`<button class="nav prev" data-sn="-1" aria-label="पिछला">‹</button><button class="nav next" data-sn="1" aria-label="अगला">›</button>${n<=15?`<div class="dots">${SLIDES.map((x,i)=>`<button data-sd="${i}" class="${i===SLI?'on':''}" aria-label="स्लाइड ${i+1}"></button>`).join('')}</div>`:`<div class="slprog"><i style="width:${(SLI+1)/n*100}%"></i></div>`}`:''}
   <span class="cnt">${n?SLI+1:0} / ${n}</span><div class="bar"></div>
-  ${EDIT?`<div class="sladm"><label>+ नई स्लाइड (फ़ोटो)<input type="file" accept="image/*" id="slup" hidden></label>${n?`<label>फ़ोटो बदलें<input type="file" accept="image/*" id="slrep" hidden></label><button class="x" data-sx="1">✕ यह स्लाइड हटाएँ</button>`:''}</div>`:''}</div>`}
+  ${EDIT?`<div class="sladm"><label>+ नई स्लाइड (फ़ोटो)<input type="file" accept="image/*" id="slup" hidden></label>${n?`<label>फ़ोटो बदलें<input type="file" accept="image/*" id="slrep" hidden></label><button class="x" data-sx="1">✕ यह स्लाइड हटाएँ</button><label>स्लाइड नं. <input type="number" id="slj" min="1" max="${n}" value="${SLI+1}" style="width:80px"></label>`:''}</div>`:''}</div>`}
 function slGo(i){const el=$('#sl'),N=slN();if(!el||!N)return;SLI=(i+N)%N;const S=el.querySelectorAll('.sli');[SLI-1,SLI,SLI+1,SLI+2].forEach(j=>{const im=S[(j+N)%N]&&S[(j+N)%N].querySelector('img[data-src]');if(im){im.src=im.dataset.src;im.removeAttribute('data-src')}});const pg=el.querySelector('.slprog i');if(pg)pg.style.width=((SLI+1)/N*100)+'%';
  S.forEach((x,j)=>x.classList.toggle('on',j===SLI));el.querySelectorAll('.dots button').forEach((x,j)=>x.classList.toggle('on',j===SLI));
  const c=el.querySelector('.cnt');if(c)c.textContent=`${SLI+1} / ${N}`;slPlay()}
@@ -714,7 +805,7 @@ function imgToWebp(file){return new Promise((res,rej)=>{const r=new FileReader()
 document.addEventListener('click',e=>{const t=e.target;
  if(t.dataset.sn){slGo(SLI+ +t.dataset.sn)}else if(t.dataset.sd!=null){slGo(+t.dataset.sd)}
  else if(t.dataset.sx&&confirm('यह स्लाइड हटा दें?')){SLIDES.splice(SLI,1);slSave();route()}});
-document.addEventListener('change',async e=>{const t=e.target;if(t.id!=='slup'&&t.id!=='slrep')return;const f=t.files[0];if(!f)return;
+document.addEventListener('change',async e=>{const t=e.target;if(t.id==='slj'){slGo((+t.value||1)-1);return}if(t.id!=='slup'&&t.id!=='slrep')return;const f=t.files[0];if(!f)return;
  try{const img=await imgToWebp(f);if(t.id==='slup'){SLIDES.push({img,title:'नया शीर्षक',text:'यहाँ जानकारी लिखिए'});SLI=SLIDES.length-1}else SLIDES[SLI].img=img;slSave();route()}catch(err){alert('फ़ोटो लोड नहीं हुई')}});
 document.addEventListener('focusout',e=>{const el=e.target;if(el.dataset&&el.dataset.sl!=null&&EDIT){SLIDES[+el.dataset.sl][el.dataset.slf]=el.innerText.trim();slSave()}});
 let slx=0;document.addEventListener('touchstart',e=>{if(e.target.closest('#sl'))slx=e.touches[0].clientX},{passive:true});
@@ -1000,39 +1091,51 @@ function voiceSearch(box){const SR=window.SpeechRecognition||window.webkitSpeech
 document.querySelectorAll('.searchbox input').forEach(q=>q.defaultPh=q.getAttribute('placeholder'));
 
 /* one-box modal for footer / about pages */
-const MP=[['about','SantalSabad के बारे में'],['guide','शब्द कैसे पढ़ें'],['feedback','सुझाव / फ़ीडबैक'],['contact','सम्पर्क'],['disclaimer','अस्वीकरण'],['terms','उपयोग की शर्तें'],['privacy','गोपनीयता नीति'],['copyright','कॉपीराइट और लाइसेंस'],['credits','स्रोत और श्रेय'],['accessibility','सुगम्यता']];
-function mpBody(k){if(k==='about')return about();if(k==='guide')return guide();if(k==='feedback')return fbHTML();const [t,b]=LEGAL[k];return `<h2>${t}</h2>${b}`}
-function closeModal(){const m=$('#mdl');if(m)m.remove();document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel()}
-const MI={about:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',guide:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/>',feedback:'<path d="M4 5h16v11H8l-4 4z"/>',contact:'<path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>',disclaimer:'<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/>',terms:'<path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/>',privacy:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',copyright:'<circle cx="12" cy="12" r="9"/><path d="M15 9.5a4 4 0 100 5"/>',credits:'<path d="M6 3h12v18l-6-4-6 4z"/>',accessibility:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>'};
-const MSUB={about:'About SantalSabad',guide:'How to read an entry',feedback:'Feedback',contact:'Contact',disclaimer:'Disclaimer',terms:'Terms of Use',privacy:'Privacy Policy',copyright:'Copyright & Licence',credits:'Sources & Credits',accessibility:'Accessibility'};
-const ico=(k,sz=18)=>`<svg viewBox="0 0 24 24" width="${sz}" height="${sz}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${MI[k]||MI.about}</svg>`;
-function mpCards(k){let h=mpBody(k).replace(/<div class="crumb">.*?<\/div>/,'').replace(/<p class="upd">.*?<\/p>/,'').replace(/class="card[^"]*"/g,'');
- if(k==='feedback')return h;const t=(MP.find(x=>x[0]===k)||[])[1];h=h.replace(/<h2[^>]*>.*?<\/h2>/,'');
- const parts=h.split(/<h3>/);const intro=parts.shift();let n=0;
- const secs=parts.map(p=>{const i=p.indexOf('</h3>');n++;return `<div class="msec"><h4><span class="ck">✓</span>${n}. ${p.slice(0,i)}</h4><div>${p.slice(i+5)}</div></div>`}).join('');
- const mon=SMON[new Date().getMonth()];
- return `<div class="mhero"><h2>${t}</h2><div class="sub">${MSUB[k]||''}</div><span class="ver">${mon} ${new Date().getFullYear()} · SantalSabad v26</span><div class="intro">${intro}</div></div>${secs}`}
-function openModal(k,pre){closeModal();const m=document.createElement('div');m.className='mdl';m.id='mdl';
- m.innerHTML=`<div class="box" role="dialog" aria-modal="true" aria-labelledby="mtitle"><div class="mh"><span class="mlogo">स</span><div class="mt"><small>SANTALSABAD · BOSC · नीति और जानकारी</small><b id="mtitle">आधिकारिक नीतियाँ और जानकारी</b></div><button class="mp" title="प्रिंट करें" aria-label="प्रिंट करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6M6 17H4v-6h16v6h-2M7 14h10v7H7z"/></svg></button><button class="mx" aria-label="बंद करें">×</button></div>
- <div class="mb"><nav class="tabs"><div class="tl">दस्तावेज़ चुनें</div>${MP.map(([x,t])=>`<button data-mt="${x}">${ico(x)}<span>${t}</span><i>›</i></button>`).join('')}<div class="commit"><b>BOSC प्रतिबद्धता:</b> संताली भाषा के लिए 100% मुफ़्त शैक्षिक शब्दकोश। कोई विज्ञापन नहीं, कोई लॉगिन ज़रूरी नहीं।</div></nav><div class="mc"></div></div>
- <div class="mf"><div class="sdt">${sdtHTML()}</div><button class="mok">समझ गया, बंद करें</button></div></div>`;
+const MP=[['disclaimer','अस्वीकरण'],['privacy','गोपनीयता नीति'],['terms','उपयोग की शर्तें'],['copyright','कॉपीराइट और लाइसेंस'],['credits','स्रोत और श्रेय'],['accessibility','सुगम्यता'],['about','SantalSabad के बारे में'],['guide','शब्द कैसे पढ़ें'],['contact','सम्पर्क']];
+const MSUB={about:'About SantalSabad',guide:'How to Read an Entry',contact:'Contact',disclaimer:'Disclaimer & Advisory',terms:'Terms of Use',privacy:'Privacy Policy',copyright:'Copyright & Licence',credits:'Sources & Credits',accessibility:'Accessibility'};
+const MI={about:'<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',guide:'<path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/>',contact:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/>',disclaimer:'<path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/><path d="M12 9v4M12 17h.01"/>',terms:'<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>',privacy:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',copyright:'<circle cx="12" cy="12" r="10"/><path d="M14.8 9a4 4 0 100 6"/>',credits:'<path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>',accessibility:'<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>'};
+const ico=(k,sz=16)=>`<svg viewBox="0 0 24 24" width="${sz}" height="${sz}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${MI[k]||MI.about}</svg>`;
+const CHV='<svg class="chv" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
+const CHK='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+function mpBody(k){if(k==='about')return about();if(k==='guide')return guide();const [t,b]=LEGAL[k];return `<h2>${t}</h2>${b}`}
+function mpCards(k){let h=mpBody(k).replace(/<div class="crumb">.*?<\/div>/,'').replace(/<p class="upd">.*?<\/p>/,'').replace(/class="card[^"]*"/g,'').replace(/<h2[^>]*>.*?<\/h2>/,'');
+ const t=((MP.find(x=>x[0]===k)||[])[1]||'');const parts=h.split(/<h3[^>]*>/);const intro=parts.shift();
+ const secs=parts.map(q=>{const i=q.indexOf('</h3>');return `<div class="lsec"><div class="lsh"><span class="lck">${CHK}</span><h4>${q.slice(0,i)}</h4></div><div class="lsb">${q.slice(i+5)}</div></div>`}).join('');
+ return `<div class="lhero"><div class="lhr"><div><h3>${t}</h3><p class="lhi">${MSUB[k]||''}</p></div><span class="lver">${SMON[new Date().getMonth()]} ${new Date().getFullYear()} (SantalSabad v27)</span></div><div class="llead">${intro}</div></div><div class="lsecs">${secs}</div>`}
+function closeModal(){document.querySelectorAll('.mdl').forEach(m=>m.remove());document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel()}
+function openModal(k){if(k==='feedback'){openFeedback();return}closeModal();const m=document.createElement('div');m.className='mdl lpm';m.id='mdl';
+ m.innerHTML=`<div class="lbox" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+ <div class="lhd"><div class="lhl"><div class="lem">स</div><div><p class="lkick">SANTALSABAD नीति और जानकारी · BOSC</p><h2 id="mtitle">आधिकारिक नीतियाँ और जानकारी</h2></div></div>
+  <div class="lhb"><button class="lib mp" title="प्रिंट करें" aria-label="प्रिंट करें"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button><button class="lib mx" title="बंद करें" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div></div>
+ <div class="lgrid"><div class="lside"><div><span class="lsel">दस्तावेज़ चुनें</span><div class="llist">${MP.map(([x,t])=>`<button data-mt="${x}"><span class="lbl">${ico(x)}<span>${t}</span></span>${CHV}</button>`).join('')}</div></div>
+  <div class="lcom"><span>BOSC प्रतिबद्धता:</span><p>संताली भाषा के लिए 100% मुफ़्त शैक्षिक शब्दकोश। कोई बाहरी विज्ञापन नहीं, कोई लॉगिन ज़रूरी नहीं।</p></div></div>
+  <div class="lmain"></div></div>
+ <div class="lft"><div class="sdt">${sdtHTML()}</div><button class="lok"><span>समझ गया, बंद करें</span></button></div></div>`;
  document.body.appendChild(m);document.body.style.overflow='hidden';
- const show=x=>{m.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.mc');c.innerHTML=mpCards(x);c.scrollTop=0;if(x==='feedback')fbBind(pre);const on=m.querySelector('.tabs .on');if(on&&innerWidth<=720)on.scrollIntoView({block:'nearest',inline:'center'})};
- m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.mok'))closeModal();if(e.target.closest('.mp'))window.print();const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);const a=e.target.closest('.mc a[href^="#/"]');if(a){const kk=a.getAttribute('href').slice(2);if(MP.some(x=>x[0]===kk)){e.preventDefault();show(kk)}else closeModal()}});
- show(k)}
+ const show=x=>{m.querySelectorAll('.llist button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.lmain');c.innerHTML=mpCards(x);c.scrollTop=0};
+ m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.lok'))closeModal();if(e.target.closest('.mp'))window.print();const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);const a=e.target.closest('.lmain a[href^="#/"]');if(a){const kk=a.getAttribute('href').slice(2);if(kk==='feedback'){e.preventDefault();openFeedback()}else if(MP.some(x=>x[0]===kk)){e.preventDefault();show(kk)}else closeModal()}});
+ show(MP.some(x=>x[0]===k)?k:'disclaimer')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-document.addEventListener('click',e=>{const a=e.target.closest('footer a[href^="#/"],a[data-modal],.tools a[href="#/about"]');if(!a)return;const k=(a.dataset.modal||a.getAttribute('href').slice(2));if(MP.some(x=>x[0]===k)){e.preventDefault();openModal(k)}});
+document.addEventListener('click',e=>{const a=e.target.closest('footer a[href^="#/"],a[data-modal],.tools a[href="#/about"]');if(!a)return;const k=(a.dataset.modal||a.getAttribute('href').slice(2));if(k==='feedback'){e.preventDefault();openFeedback();return}if(MP.some(x=>x[0]===k)){e.preventDefault();openModal(k)}});
 
-/* feedback modal (dictionary based) */
-function openFeedback(w){openModal('feedback',w)}
-function fbHTML(){return `<div class="fb"><h2>सुझाव / फ़ीडबैक</h2><p style="margin-top:0;color:#6b7387">गलत अर्थ, नया शब्द या स्पेलिंग सुधार बताइए। शब्द लिखते ही शब्दकोश में मौजूद अर्थ दिख जाएगा।</p>
-<div class="types">${['गलत अर्थ','नया शब्द','स्पेलिंग सुधार','उदाहरण जोड़ें','साइट पर राय'].map((t,i)=>`<button type="button" data-ft="${t}" class="${i?'':'on'}">${t}</button>`).join('')}</div>
-<div class="acl"><label>संताली शब्द (रोमन या देवनागरी)</label><input id="fb_w" autocomplete="off" placeholder="जैसे: dak'"><div class="sg"></div></div>
+/* feedback modal (HorKatha style, light) */
+function openFeedback(w){closeModal();const m=document.createElement('div');m.className='mdl fbm';m.id='mdl';
+ m.innerHTML=`<div class="fbox" role="dialog" aria-modal="true" aria-labelledby="fbt"><div class="fhd"><div class="fhl"><div class="fic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div><p class="fk">समुदाय की आवाज़ और सुझाव</p><h2 id="fbt">सुझाव / फ़ीडबैक</h2></div></div><button class="fx mx" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+ <div class="fbd">${fbHTML()}</div></div>`;
+ document.body.appendChild(m);document.body.style.overflow='hidden';
+ m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.fcancel,.fdone'))closeModal()});
+ fbBind(w);const g=i=>document.getElementById(i);
+ g('fb_send').addEventListener('click',()=>{if(/^धन्यवाद/.test(g('fb_ok').textContent)){m.querySelector('.fbd').innerHTML=`<div class="fdoneb"><div class="fdi">${CHK.replace(/14/g,'36')}</div><h3>सारहाव! आमाक् काथा ञामेना!</h3><p class="fdh">धन्यवाद! आपका सुझाव मिल गया।</p><p class="fds">आपके सुझाव से SantalSabad के शब्द और अर्थ और बेहतर होंगे।</p><button class="fdone">बंद करें और आगे देखें</button></div>`}})}
+function fbHTML(){return `<div class="fb"><div class="fwel"><div class="fwi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><div><div class="fwt"><b>जोहार! SantalSabad फ़ीडबैक में आपका स्वागत है</b><span>जोहार</span></div><p>नया संताली शब्द, गलत अर्थ का सुधार, स्पेलिंग या उदाहरण, कुछ भी बताइए। शब्द लिखते ही शब्दकोश में मौजूद अर्थ दिख जाएगा।</p><p class="fwq">“हमारी भाषा, हमारी पहचान · BOSC”</p></div></div>
+<label class="flab">आप क्या बताना चाहते हैं?</label><div class="types">${['गलत अर्थ','नया शब्द','स्पेलिंग सुधार','उदाहरण जोड़ें','साइट पर राय'].map((t,i)=>`<button type="button" data-ft="${t}" class="${i?'':'on'}">${t}</button>`).join('')}</div>
+<div class="acl"><label class="flab">संताली शब्द (रोमन या देवनागरी)</label><input id="fb_w" autocomplete="off" placeholder="जैसे: dak'"><div class="sg"></div></div>
 <div class="cur" id="fb_cur"></div>
-<div class="grid"><div><label>सही हिन्दी अर्थ</label><input id="fb_hi" placeholder="जैसे: पानी"></div><div><label>सही अंग्रेज़ी अर्थ</label><input id="fb_en" placeholder="e.g. water"></div></div>
-<label>उदाहरण वाक्य या टिप्पणी</label><textarea id="fb_note" placeholder="संताली वाक्य, उसका अर्थ, या आपका सुझाव"></textarea>
-<div class="grid"><div><label>आपका नाम (वैकल्पिक)</label><input id="fb_n" placeholder="नाम / गाँव"></div><div><label>साइट को रेटिंग दें</label><div class="stars" id="fb_s">${'<span>★</span>'.repeat(5)}</div></div></div>
-<div class="acts"><button type="button" class="pri" id="fb_send">भेजें</button><button type="button" class="sec" id="fb_copy">कॉपी करें</button></div><div class="ok" id="fb_ok"></div></div>`}
+<div class="grid"><div><label class="flab">सही हिन्दी अर्थ</label><input id="fb_hi" placeholder="जैसे: पानी"></div><div><label class="flab">सही अंग्रेज़ी अर्थ</label><input id="fb_en" placeholder="e.g. water"></div></div>
+<label class="flab">अनुभव रेटिंग</label><div class="stars" id="fb_s">${'<span>★</span>'.repeat(5)}</div>
+<div class="grid"><div><label class="flab">आपका नाम (वैकल्पिक)</label><input id="fb_n" placeholder="नाम"></div><div><label class="flab">गाँव / जगह (वैकल्पिक)</label><input id="fb_loc" placeholder="गाँव, ज़िला"></div></div>
+<label class="flab">आपका संदेश / सुझाव / शब्द <small>संताली देवनागरी और रोमन दोनों चलेंगे</small></label><textarea id="fb_note" placeholder="संताली वाक्य, उसका अर्थ, या आपका सुझाव"></textarea>
+<div class="ok" id="fb_ok"></div>
+<div class="acts"><button type="button" class="sec fcancel">रद्द करें</button><button type="button" class="sec" id="fb_copy">कॉपी करें</button><button type="button" class="pri" id="fb_send">सुझाव भेजें</button></div></div>`}
 function fbBind(pre){const g=i=>document.getElementById(i);let type='गलत अर्थ',stars=0;const w=g('fb_w'),sg=w.parentNode.querySelector('.sg');
  document.querySelectorAll('.fb .types button').forEach(b=>b.onclick=()=>{type=b.dataset.ft;document.querySelectorAll('.fb .types button').forEach(x=>x.classList.toggle('on',x===b))});
  const showCur=k=>{const c=g('fb_cur');if(k&&entries[k]){const e=entries[k],s=first(e);c.innerHTML=`<b>${esc(e.w)}</b> (${esc(e.dv)}) — अभी का अर्थ: ${esc(s.hi||'—')} · <i>${esc(s.en||'')}</i>`;c.classList.add('on')}else c.classList.remove('on')};
@@ -1040,7 +1143,7 @@ function fbBind(pre){const g=i=>document.getElementById(i);let type='गलत �
  sg.onclick=e=>{const d=e.target.closest('[data-k]');if(d){w.value=entries[d.dataset.k].w;sg.style.display='none';showCur(d.dataset.k)}};
  g('fb_s').onclick=e=>{const sp=[...g('fb_s').children],i=sp.indexOf(e.target);if(i>=0){stars=i+1;sp.forEach((x,j)=>x.classList.toggle('on',j<stars))}};
  if(pre&&entries[pre]){w.value=entries[pre].w;showCur(pre)}
- const txt=()=>`SantalSabad सुझाव\nप्रकार: ${type}\nशब्द: ${w.value}\nहिन्दी अर्थ: ${g('fb_hi').value}\nअंग्रेज़ी अर्थ: ${g('fb_en').value}\nटिप्पणी: ${g('fb_note').value}\nनाम: ${g('fb_n').value}\nरेटिंग: ${stars?stars+'/5':'-'}\nपेज: ${location.href}`;
+ const txt=()=>`SantalSabad सुझाव\nप्रकार: ${type}\nशब्द: ${w.value}\nहिन्दी अर्थ: ${g('fb_hi').value}\nअंग्रेज़ी अर्थ: ${g('fb_en').value}\nटिप्पणी: ${g('fb_note').value}\nनाम: ${g('fb_n').value} (${(g('fb_loc')||{}).value||''})\nरेटिंग: ${stars?stars+'/5':'-'}\nपेज: ${location.href}`;
  const ok=m=>{const o=g('fb_ok');o.textContent=m;o.classList.add('on')};
  const valid=()=>{if(!w.value.trim()&&!g('fb_note').value.trim()){ok('कृपया शब्द या टिप्पणी लिखिए।');return false}return true};
  const save=()=>{const L=JSON.parse(localStorage.getItem('ss_feedback')||'[]');L.push({t:Date.now(),text:txt()});localStorage.setItem('ss_feedback',JSON.stringify(L.slice(-50)))};
