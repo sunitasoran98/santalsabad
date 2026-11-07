@@ -241,13 +241,10 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .tk{display:flex;align-items:stretch;margin:0 0 14px;border-radius:14px;overflow:hidden;background:#fff;border:1.5px solid #cfe0f6;box-shadow:0 4px 14px rgba(1,31,67,.07)}
 .tk .tkl{flex:none;display:flex;align-items:center;gap:6px;padding:9px 14px;background:linear-gradient(135deg,#1f5fae,#4b3a8c);color:#fff;font:700 13.5px "Noto Sans Devanagari",sans-serif;white-space:nowrap}
 .tk .tkv{flex:1;overflow:hidden;position:relative;-webkit-mask:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);mask:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
-.tk .tkr{display:inline-flex;white-space:nowrap;animation:tkm var(--tkd,120s) linear infinite;padding:9px 0}
-.tk:hover .tkr,.tk:focus-within .tkr{animation-play-state:paused}
+.tk .tkr{display:inline-flex;white-space:nowrap;padding:9px 0;will-change:transform}
 .tk .tkr a{display:inline-flex;align-items:baseline;gap:6px;padding:0 18px;color:#1f2a44;text-decoration:none;font:400 15px "Noto Sans Devanagari","Open Sans",sans-serif;border-right:1px dashed #d5dcea}
 .tk .tkr a b{color:#1f5fae;font:700 15.5px "Open Sans",sans-serif}.tk .tkr a em{color:#b4232a;font-style:normal;font-size:14px}.tk .tkr a span{color:#0f6b5f;font-weight:600}
 .tk .tkr a:hover b{text-decoration:underline}
-@keyframes tkm{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.tk .tkr{animation:none}.tk .tkv{overflow-x:auto}}
 @media(max-width:640px){.tk .tkl{padding:8px 10px;font-size:12px}.tk .tkl i{display:none}.tk .tkr a{font-size:14px;padding:0 14px}.tk .tkr a b{font-size:14.5px}}
 /* slider */
 .sl{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px -18px rgba(1,31,67,.55);background:#011f43;aspect-ratio:1200/540}
@@ -847,7 +844,16 @@ const TKW=["johar","dak'","daka","orak'","hor","gidră","baba","ayo","gate","bah
 function tickerHTML(){const L=TKW.map(key).filter(k=>entries[k]&&first(entries[k]).hi);if(!L.length)return'';
  const d=new Date(),st=(d.getDate()*7)%L.length,K=L.slice(st).concat(L.slice(0,st));
  const one=K.map(k=>{const e=entries[k],s=first(e);return `<a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(e.w))}</b><em>${esc(e.dv)}</em>– <span>${esc((s.hi||'').split(/[;,]/)[0])}</span></a>`}).join('');
- return `<div class="tk" role="marquee" aria-label="रोज़ के संताली शब्द"><div class="tkl">📢 <span>रोज़ के शब्द</span><i style="font-style:normal;opacity:.85">· Daily words</i></div><div class="tkv"><div class="tkr" style="--tkd:${Math.round(K.length*3.2)}s">${one}${one}</div></div></div>`}
+ return `<div class="tk" role="marquee" aria-label="रोज़ के संताली शब्द"><div class="tkl">📢 <span>रोज़ के शब्द</span><i style="font-style:normal;opacity:.85">· Daily words</i></div><div class="tkv"><div class="tkr">${one}${one}</div></div></div>`}
+/* ticker: JS se right-to-left chalana (Windows animation-off setting par bhi chale) */
+(function(){let x=0,last=0,hold=false;
+ document.addEventListener('mouseover',e=>{hold=!!(e.target.closest&&e.target.closest('.tk'))});
+ document.addEventListener('touchstart',e=>{hold=!!(e.target.closest&&e.target.closest('.tk'))},{passive:true});
+ document.addEventListener('touchend',()=>setTimeout(()=>hold=false,1500),{passive:true});
+ function f(t){const r=document.querySelector('.tk .tkr');const dt=last?Math.min(t-last,100):0;last=t;
+  if(r){const half=r.scrollWidth/2;if(!hold&&half>0){x-=dt*0.055;if(-x>=half)x+=half}r.style.transform='translateX('+x.toFixed(1)+'px)'}
+  requestAnimationFrame(f)}
+ if(window.requestAnimationFrame)requestAnimationFrame(f)})();
 function sliderHTML(){const n=slN();if(!EDIT&&n>15&&!window._sld){window._sld=1;SLI=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5)%n}if(!n&&!EDIT)return'';SLI=Math.min(SLI,Math.max(0,n-1));
  const ce=(i,f,v)=>EDIT?`contenteditable="true" data-sl="${i}" data-slf="${f}"`:'';
  return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img ${Math.abs(i-SLI)<=1?'src':'data-src'}="${esc(x.img)}" alt="${esc(x.title)}" decoding="async"><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p>${x.credit?`<small class="crd">📷 ${x.link?`<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.credit)}</a>`:esc(x.credit)}</small>`:''}</div></div>`).join('')}
