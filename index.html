@@ -582,6 +582,18 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .brandcol .sdt{margin:0;padding:4px 12px;font-size:12px;gap:7px;box-shadow:0 2px 8px rgba(1,31,67,.06)}
 .brandcol .sdt .d{display:inline!important}
 @media(max-width:640px){.brandcol{gap:4px}.brandcol .sdt{order:0;margin:0;font-size:11px;padding:3px 10px;gap:6px}}
+
+.maz{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.maz a,.maz span{display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-radius:14px;border:1px solid #e2e8f0;background:#f8fafc;text-decoration:none;color:#0f172a;transition:all .15s}
+.maz a:hover{background:#059669;color:#fff;border-color:#059669}.maz a:hover small{color:#d1fae5}
+.maz b{font-size:18px}.maz small{font-size:10px;color:#64748b}.maz span{opacity:.4}
+.lmain .lsec h4 a{color:#047857;text-decoration:none}.lmain .lsec h4 a:hover{text-decoration:underline}
+.rlink{align-self:flex-start;color:#047857;font-weight:700;font-size:13px;text-decoration:none}.rlink:hover{text-decoration:underline}
+.rnd .rw{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}.rnd .rw b{font-size:28px;color:#0f172a}.rnd .rw span{font-size:18px;color:#059669}
+.rnd p{margin:4px 0;font-size:14px;color:#334155}.rnd p small{color:#64748b}.rnd .rex{border-left:3px solid #10b981;padding-left:10px;font-style:italic;color:#475569}
+.racts{display:flex;align-items:center;gap:16px;margin-top:14px;flex-wrap:wrap}
+.lmain .fbin{padding:20px}
+.lmain .fbin .fwel{display:none}
 </style>
 </head>
 <body>
@@ -633,14 +645,14 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 <footer>
   <div class="wrap">
     <div class="fcols">
-      <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-t="t17">SantalSabad के बारे में</a><a href="#/credits" data-t="t18">स्रोत</a><a href="#/feedback" data-t="t19">सुझाव भेजिए</a></div>
-      <div class="fbox"><h6 data-t="t14">शब्दकोश</h6><a href="#/browse/a" data-t="t20">A–Z शब्द सूची</a><a href="#/examples" data-t="t21">उदाहरण सहित शब्द</a><a href="#/random" data-t="t22">कोई भी एक शब्द</a></div>
-      <div class="fbox"><h6 data-t="t15">सहायता</h6><a href="#/guide" data-t="t23">शब्द कैसे पढ़ें</a><a href="#/guide" data-t="t24">सर्च कैसे करें</a><a href="#/contact" data-t="t25">सम्पर्क</a></div>
+      <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-modal="ss:about" data-t="t17">SantalSabad के बारे में</a><a href="#/credits" data-modal="ss:sources" data-t="t18">स्रोत</a><a href="#/feedback" data-modal="ss:feedback" data-t="t19">सुझाव भेजिए</a></div>
+      <div class="fbox"><h6 data-t="t14">शब्दकोश</h6><a href="#/browse/a" data-modal="dict:az" data-t="t20">A–Z शब्द सूची</a><a href="#/examples" data-modal="dict:examples" data-t="t21">उदाहरण सहित शब्द</a><a href="#/random" data-modal="dict:random" data-t="t22">कोई भी एक शब्द</a></div>
+      <div class="fbox"><h6 data-t="t15">सहायता</h6><a href="#/guide" data-modal="help:guide" data-t="t23">शब्द कैसे पढ़ें</a><a href="#/guide" data-modal="help:searchhelp" data-t="t24">सर्च कैसे करें</a><a href="#/contact" data-modal="help:contact" data-t="t25">सम्पर्क</a></div>
       <div class="fbox fbrand"><h6 data-t="t16">BOSC</h6>SantalSabad, BOSC की एक पहल है, जिसका उद्देश्य संताली भाषा को हर किसी तक पहुँचाना है।
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
       </div>
     </div>
-    <div class="legal"><a href="#/disclaimer">अस्वीकरण</a><a href="#/terms">उपयोग की शर्तें</a><a href="#/privacy">गोपनीयता नीति</a><a href="#/copyright">कॉपीराइट और लाइसेंस</a><a href="#/credits">स्रोत और श्रेय</a><a href="#/accessibility">सुगम्यता</a><a href="#/contact">सम्पर्क</a></div>
+    <div class="legal"><a href="#/disclaimer" data-modal="legal:disclaimer">अस्वीकरण</a><a href="#/terms" data-modal="legal:terms">उपयोग की शर्तें</a><a href="#/privacy" data-modal="legal:privacy">गोपनीयता नीति</a><a href="#/copyright" data-modal="legal:copyright">कॉपीराइट और लाइसेंस</a><a href="#/credits" data-modal="legal:credits">स्रोत और श्रेय</a><a href="#/accessibility" data-modal="legal:accessibility">सुगम्यता</a><a href="#/contact" data-modal="legal:contact">सम्पर्क</a></div>
     <div class="copy">कॉपीराइट © <span id="yr"></span> BOSC (Baski Online Service Center) · SantalSabad. सर्वाधिकार सुरक्षित।<br>शब्द-डेटा के कुछ हिस्से CC BY-SA 4.0 और पब्लिक डोमेन स्रोतों से लिए गए हैं।</div>
   </div>
 </footer>
@@ -1108,20 +1120,55 @@ function mpCards(k){let h=mpBody(k).replace(/<div class="crumb">.*?<\/div>/,'').
  const secs=parts.map(q=>{const i=q.indexOf('</h3>');return `<div class="lsec"><div class="lsh"><span class="lck">${CHK}</span><h4>${q.slice(0,i)}</h4></div><div class="lsb">${q.slice(i+5)}</div></div>`}).join('');
  return `<div class="lhero"><div class="lhr"><div><h3>${t}</h3><p class="lhi">${MSUB[k]||''}</p></div><span class="lver">${SMON[new Date().getMonth()]} ${new Date().getFullYear()} (SantalSabad v27)</span></div><div class="llead">${intro}</div></div><div class="lsecs">${secs}</div>`}
 function closeModal(){document.querySelectorAll('.mdl').forEach(m=>m.remove());document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel()}
-function openModal(k){if(k==='feedback'){openFeedback();return}closeModal();const m=document.createElement('div');m.className='mdl lpm';m.id='mdl';
+const MG={
+ ss:{kick:'SANTALSABAD · BOSC',title:'SantalSabad',com:['SantalSabad क्या है?','संताली शब्दों के हिन्दी-अंग्रेज़ी अर्थ, उच्चारण और उदाहरण, एक ही जगह, मुफ़्त।'],items:[['about','SantalSabad के बारे में'],['sources','स्रोत'],['feedback','सुझाव भेजिए']]},
+ dict:{kick:'शब्दकोश · SANTALSABAD',title:'शब्दकोश',com:['शब्दकोश में:',''],items:[['az','A–Z शब्द सूची'],['examples','उदाहरण सहित शब्द'],['random','कोई भी एक शब्द']]},
+ help:{kick:'सहायता · SANTALSABAD',title:'सहायता',com:['मदद चाहिए?','कोई गलती दिखे तो "सुझाव भेजिए" से बताइए।'],items:[['guide','शब्द कैसे पढ़ें'],['searchhelp','सर्च कैसे करें'],['contact','सम्पर्क']]},
+ legal:{kick:'SANTALSABAD नीति और जानकारी · BOSC',title:'आधिकारिक नीतियाँ और जानकारी',com:['BOSC प्रतिबद्धता:','संताली भाषा के लिए 100% मुफ़्त शैक्षिक शब्दकोश। कोई बाहरी विज्ञापन नहीं, कोई लॉगिन ज़रूरी नहीं।'],items:[['disclaimer','अस्वीकरण'],['terms','उपयोग की शर्तें'],['privacy','गोपनीयता नीति'],['copyright','कॉपीराइट और लाइसेंस'],['credits','स्रोत और श्रेय'],['accessibility','सुगम्यता'],['contact','सम्पर्क']]}};
+Object.assign(MSUB,{sources:'Sources',feedback:'Feedback & Suggestions',az:'A–Z Word List',examples:'Words with Examples',random:'A Random Word',searchhelp:'How to Search'});
+Object.assign(MI,{sources:MI.credits,feedback:'<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>',az:'<path d="M4 7V4h16v3M9 20h6M12 4v16"/>',examples:'<path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4M14 21c3 0 7-1 7-8V5c0-1.25-.76-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4"/>',random:'<path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>',searchhelp:'<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>'});
+function mgOf(k){if(MG.legal.items.some(x=>x[0]===k)&&!['contact'].includes(k))return 'legal';for(const g in MG)if(MG[g].items.some(x=>x[0]===k))return g;return null}
+function lHero(k,t,intro){return `<div class="lhero"><div class="lhr"><div><h3>${t}</h3><p class="lhi">${MSUB[k]||''}</p></div><span class="lver">${SMON[new Date().getMonth()]} ${new Date().getFullYear()} (SantalSabad v30)</span></div><div class="llead">${intro}</div></div>`}
+const lSec=(h,b)=>`<div class="lsec"><div class="lsh"><span class="lck">${CHK}</span><h4>${h}</h4></div><div class="lsb">${b}</div></div>`;
+function exKeys(){if(!window._exk)window._exk=order.filter(k=>Object.values(entries[k].pos).some(a=>a.some(x=>x.ex)));return window._exk}
+function rndCard(){const k=order[Math.floor(Math.random()*order.length)],e=entries[k];const sns=Object.entries(e.pos).flatMap(([p,a])=>a.map(x=>({p,...x}))).slice(0,4);
+ return `<div class="lsec rnd"><div class="rw"><b>${esc(e.w)}</b>${e.dv?`<span>${esc(e.dv)}</span>`:''}</div>${sns.map((x,i)=>`<p><small>${i+1}. ${esc(x.p||'')}</small> ${esc(x.hi||'')}${x.hi&&x.en?' · ':''}<i>${esc(x.en||'')}</i></p>${x.ex?`<p class="rex">${esc(x.ex)}${x.tr?`<br><small>${esc(x.tr)}</small>`:''}</p>`:''}`).join('')}
+ <div class="racts"><button class="lok" data-rnd="1">दूसरा शब्द</button><a class="rlink" href="#/word/${encodeURIComponent(k)}">पूरा अर्थ देखिए →</a></div></div>`}
+function mgBody(k){
+ if(k==='sources')return mpCards('credits').replace(/<h3>[^<]*<\/h3>/,'<h3>स्रोत</h3>').replace(/<p class="lhi">[^<]*/,'<p class="lhi">Sources');
+ if(k==='feedback')return lHero(k,'सुझाव भेजिए','नया शब्द, गलत अर्थ या स्पेलिंग का सुधार बताइए। शब्द लिखते ही शब्दकोश में मौजूद अर्थ दिख जाएगा।')+`<div class="lsec fbm fbin">${fbHTML()}</div>`;
+ if(k==='az'){const cnt={};order.forEach(x=>{const l=(x[0]||'').toLowerCase();cnt[l]=(cnt[l]||0)+1});
+  return lHero(k,'A–Z शब्द सूची',`अक्षर चुनिए, उस अक्षर से शुरू होने वाले सारे संताली शब्द खुल जाएँगे। कुल ${order.length.toLocaleString('en-IN')} शब्द।`)+`<div class="lsec"><div class="maz">${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>cnt[l]?`<a href="#/browse/${l}"><b>${l.toUpperCase()}</b><small>${cnt[l].toLocaleString('en-IN')}</small></a>`:`<span><b>${l.toUpperCase()}</b><small>0</small></span>`).join('')}</div></div>`}
+ if(k==='examples'){const K=exKeys(),d=Math.floor(Date.now()/864e5),pick=[];for(let i=0;i<12&&K.length;i++)pick.push(K[(d*12+i*7919)%K.length]);
+  return lHero(k,'उदाहरण सहित शब्द',`${K.length.toLocaleString('en-IN')} शब्दों के साथ असली संताली वाक्य दिए गए हैं। यहाँ आज के 12 उदाहरण हैं।`)+`<div class="lsecs">${pick.map(x=>{const e=entries[x],s=Object.values(e.pos).flat().find(y=>y.ex)||first(e);return lSec(`<a href="#/word/${encodeURIComponent(x)}">${esc(e.w)}</a> <small style="font-weight:400;color:#64748b">${esc(gloss(e).slice(0,70))}</small>`,`<i>${esc(s.ex||'')}</i>${s.tr?`<br>${esc(s.tr)}`:''}`)}).join('')}</div><a class="rlink" href="#/examples">सारे उदाहरण सहित शब्द देखिए →</a>`}
+ if(k==='random')return lHero(k,'कोई भी एक शब्द','हर बार शब्दकोश से एक नया शब्द। "दूसरा शब्द" दबाइए।')+`<div class="rbox">${rndCard()}</div>`;
+ if(k==='searchhelp')return lHero(k,'सर्च कैसे करें','ऊपर के सर्च बॉक्स में संताली, हिन्दी या अंग्रेज़ी कुछ भी लिखिए।')+`<div class="lsecs">${[
+  ['संताली शब्द','रोमन (dak\') या देवनागरी (दाक्) दोनों में लिख सकते हैं। ă, ạ, ñ जैसे निशान न भी लगाएँ तो भी शब्द मिल जाएगा।'],
+  ['हिन्दी या अंग्रेज़ी से','"पानी" या "water" लिखिए, जिन संताली शब्दों का यह अर्थ है वे आ जाएँगे।'],
+  ['भाषा फ़िल्टर','सर्च बॉक्स के बाएँ फ़िल्टर बटन से All, संताली, हिन्दी या अंग्रेज़ी चुनिए। × से फ़िल्टर हटता है।'],
+  ['आवाज़ से सर्च','माइक बटन दबाकर बोलिए (Chrome/Edge में)। स्पीकर बटन शब्द पढ़कर सुनाता है।'],
+  ['सुझाव सूची','लिखते समय नीचे सुझाव आते हैं, ↑ ↓ से चुनिए और Enter दबाइए।'],
+  ['Advance और AI सर्च','ऊपर के मेनू से शब्द-भेद, उदाहरण वाले शब्द या पूरे वाक्य जैसे "पानी को संताली में क्या कहते हैं" से खोजिए।']].map(x=>lSec(x[0],x[1])).join('')}</div>`;
+ return mpCards(k)}
+function openModal(k,g){if(k==='feedback'&&!g){openFeedback();return}g=g||mgOf(k)||'legal';const G=MG[g];closeModal();const m=document.createElement('div');m.className='mdl lpm';m.id='mdl';
+ const com=g==='dict'?['शब्दकोश में:',`${order.length.toLocaleString('en-IN')} संताली शब्द, ${exKeys().length.toLocaleString('en-IN')} उदाहरण सहित।`]:G.com;
  m.innerHTML=`<div class="lpbox" role="dialog" aria-modal="true" aria-labelledby="mtitle">
- <div class="lhd"><div class="lhl"><div class="lem">स</div><div><p class="lkick">SANTALSABAD नीति और जानकारी · BOSC</p><h2 id="mtitle">आधिकारिक नीतियाँ और जानकारी</h2></div></div>
+ <div class="lhd"><div class="lhl"><div class="lem">स</div><div><p class="lkick">${G.kick}</p><h2 id="mtitle">${G.title}</h2></div></div>
   <div class="lhb"><button class="lib mp" title="प्रिंट करें" aria-label="प्रिंट करें"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button><button class="lib mx" title="बंद करें" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div></div>
- <div class="lgrid"><div class="lside"><div><span class="lsel">दस्तावेज़ चुनें</span><div class="llist">${MP.map(([x,t])=>`<button data-mt="${x}"><span class="lbl">${ico(x)}<span>${t}</span></span>${CHV}</button>`).join('')}</div></div>
-  <div class="lcom"><span>BOSC प्रतिबद्धता:</span><p>संताली भाषा के लिए 100% मुफ़्त शैक्षिक शब्दकोश। कोई बाहरी विज्ञापन नहीं, कोई लॉगिन ज़रूरी नहीं।</p></div></div>
+ <div class="lgrid"><div class="lside"><div><span class="lsel">चुनिए</span><div class="llist">${G.items.map(([x,t])=>`<button data-mt="${x}"><span class="lbl">${ico(x)}<span>${t}</span></span>${CHV}</button>`).join('')}</div></div>
+  <div class="lcom"><span>${com[0]}</span><p>${com[1]}</p></div></div>
   <div class="lmain"></div></div>
- <div class="lft"><div class="sdt">${sdtHTML()}</div><button class="lok"><span>समझ गया, बंद करें</span></button></div></div>`;
+ <div class="lft"><div class="sdt">${sdtHTML()}</div><button class="lok lclose"><span>समझ गया, बंद करें</span></button></div></div>`;
  document.body.appendChild(m);document.body.style.overflow='hidden';
- const show=x=>{m.querySelectorAll('.llist button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.lmain');c.innerHTML=mpCards(x);c.scrollTop=0};
- m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.lok'))closeModal();if(e.target.closest('.mp'))window.print();const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);const a=e.target.closest('.lmain a[href^="#/"]');if(a){const kk=a.getAttribute('href').slice(2);if(kk==='feedback'){e.preventDefault();openFeedback()}else if(MP.some(x=>x[0]===kk)){e.preventDefault();show(kk)}else closeModal()}});
- show(MP.some(x=>x[0]===k)?k:'disclaimer')}
+ const show=x=>{m.querySelectorAll('.llist button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.lmain');c.innerHTML=mgBody(x);c.scrollTop=0;
+  if(x==='feedback'){fbBind();const gg=i=>document.getElementById(i);gg('fb_send').addEventListener('click',()=>{if(/^धन्यवाद/.test(gg('fb_ok').textContent))c.querySelector('.fbin').innerHTML=`<div class="fdoneb"><div class="fdi">${CHK.replace(/14/g,'36')}</div><h3>सारहाव! आमाक् काथा ञामेना!</h3><p class="fdh">धन्यवाद! आपका सुझाव मिल गया।</p><p class="fds">आपके सुझाव से SantalSabad के शब्द और अर्थ और बेहतर होंगे।</p></div>`})}};
+ m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.lclose,.fcancel'))closeModal();if(e.target.closest('.mp'))window.print();
+  if(e.target.closest('[data-rnd]')){m.querySelector('.rbox').innerHTML=rndCard();return}
+  const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);
+  const a=e.target.closest('.lmain a[href^="#/"]');if(a){const kk=a.getAttribute('href').slice(2);if(G.items.some(x=>x[0]===kk)){e.preventDefault();show(kk)}else if(kk==='feedback'){e.preventDefault();openFeedback()}else closeModal()}});
+ show(G.items.some(x=>x[0]===k)?k:G.items[0][0])}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-document.addEventListener('click',e=>{const a=e.target.closest('footer a[href^="#/"],a[data-modal],.tools a[href="#/about"]');if(!a)return;const k=(a.dataset.modal||a.getAttribute('href').slice(2));if(k==='feedback'){e.preventDefault();openFeedback();return}if(MP.some(x=>x[0]===k)){e.preventDefault();openModal(k)}});
+document.addEventListener('click',e=>{const a=e.target.closest('footer a[href^="#/"],a[data-modal],.tools a[href="#/about"]');if(!a)return;const dm=a.dataset.modal;if(dm){e.preventDefault();const [g,k]=dm.split(':');openModal(k,g);return}const k=a.getAttribute('href').slice(2);if(k==='feedback'){e.preventDefault();openFeedback();return}const g=mgOf(k);if(g){e.preventDefault();openModal(k,g)}});
 
 /* feedback modal (HorKatha style, light) */
 function openFeedback(w){closeModal();const m=document.createElement('div');m.className='mdl fbm';m.id='mdl';
