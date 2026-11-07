@@ -616,6 +616,7 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .aebtn.sec{background:#f1f5f9;color:#475569}.aebtn.sec:hover{background:#e2e8f0}.aebtn.red{background:#fef2f2;color:#dc2626}.aebtn.red:hover{background:#fee2e2}
 .aest{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}.aest.on{background:#ecfdf5;color:#047857;border-color:#a7f3d0}
 @media(max-width:640px){.aest{display:none}.lft .aeact button{padding:9px 12px;font-size:12px}}
+.aes.aenew{border-left-color:#f59e0b;box-shadow:0 0 0 2px rgba(245,158,11,.25)}.aes.aenew .aen:after{content:" (नया)";color:#d97706}
 </style>
 </head>
 <body>
@@ -722,7 +723,8 @@ function parseCSV(t){const rows=[];let r=[],f='',q=false;
 
 let HEAD=[],ROWS=[],TEXTS={};
 const COLS=['Shabd','Uchcharan','Shabd-bhed','Arth no.','Hindi','English','Udaharan (Santali)','Udaharan ka anuvad','Ol Chiki','Sambandhit shabd','Devanagari'];
-function build(){entries={};order=[];AIX=null;
+const hasMeaning=r=>['Shabd-bhed','Hindi','English','Udaharan (Santali)','Udaharan ka anuvad'].some(c=>(r[c]||'').trim());
+function build(){entries={};order=[];AIX=null;ROWS=ROWS.filter(r=>(r['Shabd']||'').trim()&&hasMeaning(r));
   ROWS.forEach((r,i)=>{const g=n=>(r[n]||'').trim();const w=g('Shabd');if(!w)return;const k=key(w);
     if(!entries[k]){entries[k]={w,dv:g('Devanagari')||deva(w),ipa:g('Uchcharan'),oc:g('Ol Chiki'),rel:g('Sambandhit shabd'),pos:{},rows:[]};order.push(k)}
     const e=entries[k];e.rows.push(i);if(!e.ipa)e.ipa=g('Uchcharan');if(!e.rel)e.rel=g('Sambandhit shabd');if(g('Devanagari'))e.dv=g('Devanagari');
@@ -960,14 +962,13 @@ function adminBar(){let b=$('#abar');if(!isAdmin()){if(b)b.remove();return}
 document.addEventListener('click',async e=>{const t=e.target;
   const a=t.closest('#abar [data-a]')?.dataset.a;
   if(a==='edit'){EDIT=!EDIT;localStorage.setItem('ss_edit',EDIT?'1':'0');adminBar();route();return}
-  if(a==='new'){const w=prompt('नया संताली शब्द (रोमन में):');if(!w||!w.trim())return;
-    const r={};COLS.forEach(c=>r[c]='');r['Shabd']=w.trim();r['Arth no.']='1';ROWS.push(r);saveDraft();build();EDIT=true;localStorage.setItem('ss_edit','1');adminBar();location.hash='#/word/'+encodeURIComponent(key(w));route();return}
+  if(a==='new'){openEntry(null);return}
   if(a==='csv'){dl('words.csv',toCSV(),'csv');dl('texts.json',JSON.stringify(TEXTS,null,1),'json');return}
   if(a==='discard'){if(confirm('सारे बिना सेव बदलाव हटा दें?')){localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');localStorage.removeItem('ss_slides_draft');location.reload()}return}
   if(a==='publish'){publish();return}
   if(a==='settings'){openLogin();return}
   if(t.dataset.del){if(confirm('यह अर्थ हटाएँ?')){ROWS[+t.dataset.del]={};saveDraft();build();route()}return}
-  if(t.dataset.addsense){const e2=entries[t.dataset.addsense];const r={};COLS.forEach(c=>r[c]='');r['Shabd']=e2.w;r['Devanagari']=ROWS[e2.rows[0]]['Devanagari']||'';r['Arth no.']=String(e2.rows.length+1);ROWS.push(r);saveDraft();build();route();return}
+  if(t.dataset.addsense){openEntry(t.dataset.addsense,{addSense:1});return}
   if(t.dataset.delword){if(confirm('पूरा शब्द "'+entries[t.dataset.delword].w+'" हटाएँ?')){entries[t.dataset.delword].rows.forEach(i=>ROWS[i]={});saveDraft();build();location.hash='#/'}return}
   if(EDIT&&t.closest('[contenteditable="true"]')&&t.closest('a'))e.preventDefault();
 },true);
@@ -1240,7 +1241,7 @@ function aeSense(x={}){const v=n=>esc(x[n]||'');return `<div class="aes"><div cl
  <label>हिन्दी अर्थ<input data-c="Hindi" value="${v('Hindi')}"></label><label>अंग्रेज़ी अर्थ<input data-c="English" value="${v('English')}"></label>
  <label class="w2">उदाहरण (संताली)<textarea data-c="Udaharan (Santali)">${v('Udaharan (Santali)')}</textarea></label><label class="w2">उदाहरण का अनुवाद<textarea data-c="Udaharan ka anuvad">${v('Udaharan ka anuvad')}</textarea></label></div></div>`}
 function aeNum(m){m.querySelectorAll('.aes .aen').forEach((b,i)=>b.textContent='अर्थ '+(i+1))}
-function openEntry(k){closeModal();const e=k&&entries[k];const rows=e?e.rows.map(i=>ROWS[i]):[{}];const r0=rows[0]||{};const v=n=>esc(r0[n]||'');
+function openEntry(k,o={}){closeModal();const e=k&&entries[k];const rows=(e?e.rows.map(i=>ROWS[i]).filter(hasMeaning):[]);if(e&&!rows.length)rows.push(ROWS[e.rows[0]]);if(!e)rows.push({});if(o.addSense)rows.push({Shabd:e.w,'Arth no.':String(rows.length+1)});const r0=rows[0]||{};const v=n=>esc(r0[n]||'');
  const m=document.createElement('div');m.className='mdl lpm aem';m.id='mdl';
  m.innerHTML=`<div class="lpbox aebox" role="dialog" aria-modal="true" aria-labelledby="aet">
  <div class="lhd"><div class="lhl"><div class="lem">✎</div><div><p class="lkick">ADMIN · शब्द एंट्री</p><h2 id="aet">${e?'शब्द बदलें: '+esc(e.w):'नया शब्द जोड़ें'}</h2></div></div>
@@ -1265,12 +1266,12 @@ function openEntry(k){closeModal();const e=k&&entries[k];const rows=e?e.rows.map
  const go=nk=>{closeModal();location.hash='#/word/'+encodeURIComponent(nk);route()};
  m.addEventListener('click',async ev=>{const t=ev.target;
   if(t===m||t.closest('.mx'))return closeModal();
-  if(t.closest('.aeadd')){m.querySelector('.aess').insertAdjacentHTML('beforeend',aeSense({'Shabd-bhed':(m.querySelector('.aes [data-c="Shabd-bhed"]')||{}).value||''}));aeNum(m);return}
+  if(t.closest('.aeadd')){m.querySelector('.aess').insertAdjacentHTML('beforeend',aeSense({'Arth no.':String(m.querySelectorAll('.aes').length+1)}));aeNum(m);const L=[...m.querySelectorAll('.aes')].pop();L.classList.add('aenew');L.scrollIntoView({block:'center',behavior:'smooth'});L.querySelector('[data-c="Shabd-bhed"]').focus();return}
   if(t.closest('.aedel')){if(m.querySelectorAll('.aes').length>1){t.closest('.aes').remove();aeNum(m)}else msg('कम से कम एक अर्थ रहना चाहिए।');return}
   if(t.closest('.aedw')){if(!need())return;if(!confirm('पूरा शब्द "'+e.w+'" हटाएँ?'))return;[...e.rows].sort((a,b)=>b-a).forEach(i=>ROWS.splice(i,1));saveDraft();build();await liveSave(msg);closeModal();location.hash='#/';route();return}
   if(t.closest('.aeoff')){if(!need())return;const nk=apply();if(!nk)return;localStorage.setItem('ss_pending','1');msg('इस डिवाइस पर सेव हो गया। ऑनलाइन होने पर "सेव करें और लाइव करें" या Publish दबाइए।',1);setTimeout(()=>go(nk),900);return}
   if(t.closest('.aelive')){if(!need())return;const nk=apply();if(!nk)return;const b=t.closest('.aelive');b.disabled=true;msg('सेव हो रहा है…',1);const ok=await liveSave(msg);b.disabled=false;if(ok)setTimeout(()=>go(nk),1200)}});
- setTimeout(()=>{const f=m.querySelector('#ae_w');f&&f.focus()},50)}
+ setTimeout(()=>{if(o.addSense){const L=[...m.querySelectorAll('.aes')].pop();L.classList.add('aenew');L.scrollIntoView({block:'center'});const f=L.querySelector('[data-c="Hindi"]');f&&f.focus()}else{const f=m.querySelector('#ae_w');f&&f.focus()}},80)}
 async function liveSave(msg){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
  if(!navigator.onLine){localStorage.setItem('ss_pending','1');msg('आप ऑफ़लाइन हैं। बदलाव इस डिवाइस पर सेव है, इंटरनेट आते ही अपने आप लाइव होगा।',1);return true}
  if(!tok){localStorage.setItem('ss_pending','1');msg('इस डिवाइस पर सेव हो गया। लाइव करने के लिए Admin सेटिंग्स में GitHub token डालिए।');return false}
