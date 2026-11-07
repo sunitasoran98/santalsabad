@@ -725,6 +725,8 @@ html.dark img,html.dark .sl,html.dark .li,html.dark .ttile span,html.dark .kt sp
 .sprow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed #e2e8f0}.sprow>span{min-width:220px;font:600 14px "Noto Sans Devanagari",sans-serif;color:#475569}.sprow div{display:flex;flex-wrap:wrap;gap:6px}
 .spk{min-width:44px;padding:8px 10px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;font:600 20px "Open Sans",sans-serif;cursor:pointer;color:#011f43}.spk:hover{border-color:#1f5fae;background:#eef5ff}
 .kbt{display:inline-flex;align-items:center;gap:6px;margin:8px 0 0;font:600 14px "Noto Sans Devanagari",sans-serif;color:#1f3a63;cursor:pointer}
+.hero{overflow:visible!important;overflow-x:clip!important;z-index:60}
+.dym{padding:6px 0}.dym p{margin:0 0 8px}.fsb{font:800 15px "Open Sans",sans-serif!important}
 </style>
 </head>
 <body>
@@ -887,7 +889,7 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   h+='</tbody></table></div>';
   if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ नया अर्थ जोड़ें</button><button class="abtn red" data-delword="${esc(k)}">पूरा शब्द हटाएँ</button></div>`;
   if(e.rel)h+=`<div class="rel"><b>संबंधित शब्द:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
-  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn wbm${BM().includes(k)?' on':''}" data-bm="${esc(k)}">${BM().includes(k)?'★ सेव है':'☆ सेव करें'}</button><button type="button" class="wbtn" data-share="${esc(k)}">📤 शेयर</button>${isAdmin()?`<button type="button" class="wbtn wadm" data-rec="${esc(k)}">🎙 ${AUD()[k]?'आवाज़ बदलें':'आवाज़ रिकॉर्ड'}</button>`:''}<button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
+  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn wbm${BM().includes(k)?' on':''}" data-bm="${esc(k)}">${BM().includes(k)?'★ सेव है':'☆ सेव करें'}</button><button type="button" class="wbtn" data-share="${esc(k)}">📤 शेयर</button><button type="button" class="wbtn" data-copy="${esc(k)}">📋 कॉपी</button>${isAdmin()?`<button type="button" class="wbtn wadm" data-rec="${esc(k)}">🎙 ${AUD()[k]?'आवाज़ बदलें':'आवाज़ रिकॉर्ड'}</button>`:''}<button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(cap(e.w))}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>${keys.length?'<div class="xact noprint"><button class="xbtn sec" data-print="1">🖨 प्रिंट / PDF</button></div>':''}
@@ -1165,7 +1167,7 @@ function route(){const [,v,a]=(location.hash||'#/').split('/');const arg=decodeU
   clearTimeout(SLT);
   if(XR[v]){const hx=XR[v](arg);$('#view').innerHTML=`<div class="inner"><section>${hx}</section>${side()}</div>`;applyTexts();window.scrollTo(0,0);setTimeout(()=>XB[v]&&XB[v](arg));return}
   if(v==='word'){h=entryHTML(arg);if(entries[arg]){remember(arg);document.title=entries[arg].w+' – SantalSabad'}}
-  else if(v==='search'){const [qq,mode]=arg.split('|');const mi=$('#sb2 input');if(mi){mi.value=qq;mi.parentNode.classList.add('typing');$('#sb2 select').value=mode||'all'}const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
+  else if(v==='search'){const [qq,mode]=arg.split('|');const mi=$('#sb2 input');if(mi){mi.value=qq;mi.parentNode.classList.add('typing');$('#sb2 select').value=mode||'all'}const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r);if(!r.length)h=h.replace('<p class="empty">कोई शब्द नहीं मिला।</p>',dymHTML(qq))}
   else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).replace(/^[^a-z]+/,'').startsWith(arg)));
   else if(v==='admin')h=adminPage();
   else if(LEGAL[v])h=legalHTML(v);
@@ -1215,13 +1217,14 @@ function wsHTML(i){const L=wsl();if(!L.length)return'';const j=Math.max(0,i-SLID
 const CHL={all:'All',sat:'संताली',hi:'हिन्दी',en:'अंग्रेज़ी'};
 document.querySelectorAll('.searchbox').forEach(box=>{const sel=box.querySelector('select'),chip=box.querySelector('.chip'),menu=box.querySelector('.chipmenu');if(!chip)return;
  const sync=()=>{chip.querySelector('.cl').textContent=CHL[sel.value]||'All';chip.classList.toggle('set',sel.value!=='all');menu.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===sel.value))};
- chip.addEventListener('click',e=>{if(e.target.classList.contains('cx')){sel.value='all';sel.dispatchEvent(new Event('change'));sync();e.stopPropagation();return}menu.classList.toggle('open');e.stopPropagation()});
+ chip.addEventListener('click',e=>{if(e.target.classList.contains('cx')){sel.value='all';sel.dispatchEvent(new Event('change'));sync();e.stopPropagation();return}const op=menu.classList.toggle('open');if(op){const r=chip.getBoundingClientRect();menu.style.position='fixed';menu.style.left=Math.max(8,r.left)+'px';menu.style.top=(r.bottom+8)+'px';menu.style.zIndex='700'}e.stopPropagation()});
  menu.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sel.value=b.dataset.v;sel.dispatchEvent(new Event('change'));sync();menu.classList.remove('open');box.querySelector('input').focus();e.stopPropagation()});
  sel.addEventListener('change',sync);box._sync=sync;sync();
  {const iw=box.querySelector('.inw'),sa=box.querySelector('.sact');if(iw&&sa)iw.appendChild(sa)}
  box.querySelector('.mic').onclick=()=>voiceSearch(box);
  box.querySelector('.spk').onclick=()=>{const v=box.querySelector('input').value.trim();if(v)say(v,box.querySelector('.spk'));else{const k=wotdKey();if(k)sayWord(k,box.querySelector('.spk'))}};
  box.querySelector('.vsel').onclick=e=>{e.stopPropagation();voicePop(e.currentTarget)};});
+window.addEventListener('scroll',()=>document.querySelectorAll('.chipmenu.open').forEach(m=>m.classList.remove('open')),{passive:true});window.addEventListener('resize',()=>document.querySelectorAll('.chipmenu.open').forEach(m=>m.classList.remove('open')));
 document.addEventListener('click',e=>{if(!e.target.closest('.chipmenu'))document.querySelectorAll('.chipmenu.open').forEach(m=>m.classList.remove('open'));if(!e.target.closest('.vpop,.vsel'))document.querySelectorAll('.vpop').forEach(p=>p.remove())});
 window.addEventListener('hashchange',()=>setTimeout(()=>document.querySelectorAll('.searchbox').forEach(b=>b._sync&&b._sync())));
 
@@ -1626,6 +1629,20 @@ XR.sug=arg=>{const o=unb64u(arg);if(!o)return `<div class="card">${crumb('सु
 XB.sug=XB.inbox;
 
 olInit();
+
+/* ===== v44 ===== */
+function dymHTML(q){const n=norm(q||'').trim();let L=[];if(n){const c=[];for(const k of order){const w=norm(entries[k].w);if(Math.abs(w.length-n.length)>2)continue;const d=lev(n,w);if(d<=2)c.push([d,k])}c.sort((a,b)=>a[0]-b[0]||(hasHi(b[1])-hasHi(a[1])));L=c.slice(0,8).map(x=>x[1])}
+ return `<div class="dym"><p class="empty" style="margin:0 0 10px">“${esc(q)}” नहीं मिला।</p>${L.length?`<p><b>क्या आपका मतलब यह था?</b></p><div class="wl">${L.map(wlink).join('')}</div>`:''}
+ <div class="xact"><a class="xbtn sec" href="#/ai">✦ AI search से पूछें</a><button class="xbtn" onclick="openFeedback()">+ यह शब्द सुझाइए</button></div></div>`}
+document.addEventListener('click',ev=>{const b=ev.target.closest('[data-copy]');if(!b)return;const e=entries[b.dataset.copy];if(!e)return;const s=first(e);
+ const t=`${cap(e.w)} (${e.dv})${e.oc?' '+e.oc:''}\nहिन्दी: ${s.hi||'-'}\nEnglish: ${s.en||'-'}\n${location.origin+location.pathname}#/word/${encodeURIComponent(b.dataset.copy)}`;
+ const ok=()=>{const o=b.innerHTML;b.innerHTML='✓ कॉपी हो गया';setTimeout(()=>b.innerHTML=o,1500)};
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,()=>prompt('कॉपी कीजिए:',t));else prompt('कॉपी कीजिए:',t)});
+const FSZ=[100,112,125];function fsSet(i){i=((i%3)+3)%3;document.documentElement.style.zoom=FSZ[i]===100?'':FSZ[i]/100;localStorage.setItem('ss_fs',i);document.querySelectorAll('.fsb').forEach(x=>x.textContent=['A','A+','A++'][i])}
+(function(){const t=document.querySelector('.tools');if(t&&!t.querySelector('.fsb'))t.insertAdjacentHTML('afterbegin','<a href="#" title="अक्षर का आकार (छोटा / बड़ा)" onclick="fsSet((+localStorage.getItem(\'ss_fs\')||0)+1);return false"><span class="circ fsb">A</span><span class="lbl">Text<br>size</span></a>');fsSet(+localStorage.getItem('ss_fs')||0)})();
+document.addEventListener('keydown',ev=>{if(ev.key!=='/'||ev.ctrlKey||ev.altKey||ev.metaKey)return;const a=document.activeElement;if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable))return;
+ const i=[...document.querySelectorAll('#sb1 input,#sb2 input')].find(x=>x.offsetParent!==null)||$('#sb2 input');if(i){ev.preventDefault();i.focus()}});
+
 /* ===== v43: डायक्रिटिक्स, संयुक्ताक्षर, चिह्न, कीबोर्ड मैपिंग ===== */
 const DIAC=[['\u0331','नीचे रेखा (macron below)'],['\u0323','नीचे बिंदु (dot below)'],['\u0303','अनुनासिक (tilde)'],['\u0304','दीर्घ (macron)'],['\u0301','acute'],['\u0300','grave'],['\u0302','circumflex'],['\u0306','ह्रस्व (breve)'],
  ['\u0307','ऊपर बिंदु'],['\u0308','diaeresis'],['\u0327','cedilla'],['\u0328','ogonek'],['\u0324','नीचे दो बिंदु'],['\u0325','नीचे गोला'],['\u031D','up tack'],['\u031E','down tack'],['\u030D','ऊपर खड़ी रेखा'],['\u030C','caron'],['\u030A','ऊपर गोला'],['\u0313','ऊपर कॉमा'],['\u0326','नीचे कॉमा'],['\u032F','नीचे उल्टा breve'],['\u0329','नीचे खड़ी रेखा'],['\u030B','double acute']];
