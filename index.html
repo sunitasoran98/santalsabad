@@ -855,7 +855,7 @@ copyright:['कॉपीराइट और लाइसेंस',`<p>साइ
 <p>डेटा या सामग्री का व्यावसायिक उपयोग करना हो तो पहले BOSC से अनुमति लें।</p>`],
 credits:['स्रोत और श्रेय',`<ul><li>स्लाइडर की 372 तस्वीरें: Wikimedia Commons (संताल संस्कृति, बाहा परब, संताल संस्कृति संग्रहालय बिष्णुबाटी आदि श्रेणियाँ), CC BY / CC BY-SA / CC0 / पब्लिक डोमेन। हर फ़ोटो पर फ़ोटोग्राफ़र, लाइसेंस और मूल पेज का लिंक दिया गया है।</li><li>Rev. P. O. Bodding, <i>A Santal Dictionary</i>, 5 खंड (Oslo, 1929–1936), पब्लिक डोमेन; डिजिटल प्रति: National Library of Norway।</li><li>Rev. A. Campbell, <i>A Santali-English Dictionary</i> (1899), पब्लिक डोमेन।</li><li>Wiktionary योगदानकर्ता, kaikki.org द्वारा निकाला गया डेटा (CC BY-SA 4.0)।</li><li>फ़ॉन्ट: DM Serif Display, Open Sans, Noto Sans Devanagari (Google Fonts, SIL Open Font License)।</li><li>होस्टिंग: Cloudflare Pages।</li></ul><p>सभी संताली शब्द असली स्रोतों से लिए गए हैं। सुझाव और सुधार का स्वागत है।</p>`],
 accessibility:['सुगम्यता (Accessibility)',`<p>हम चाहते हैं कि SantalSabad हर किसी के लिए आसान हो।</p><ul><li>मोबाइल, टैबलेट और डेस्कटॉप पर चलता है, और एक बार खुलने के बाद ऑफ़लाइन भी।</li><li>कीबोर्ड से सर्च: लिखिए, ↑ ↓ से चुनिए, Enter दबाइए।</li><li>ब्राउज़र ज़ूम (Ctrl +) से अक्षर बड़े किए जा सकते हैं।</li><li>Home / End बटन से पेज के ऊपर या नीचे तुरंत जाइए।</li></ul><p>कोई दिक्कत हो तो हमें ज़रूर बताइए।</p>`],
-contact:['सम्पर्क (Contact)',`<p><b>BOSC (Baski Online Service Center)</b></p><p data-t="contact_info">गलत अर्थ, नया शब्द या कोई सुझाव भेजने के लिए BOSC से सम्पर्क करें।</p><p>शब्द भेजते समय रोमन संताली शब्द, हिन्दी अर्थ, अंग्रेज़ी अर्थ और हो सके तो एक उदाहरण वाक्य ज़रूर लिखिए।</p>`]};
+contact:['सम्पर्क (Contact)',`<p><b>BOSC (Baski Online Service Center)</b></p><p data-t="contact_info">गलत अर्थ, नया शब्द या कोई सुझाव भेजने के लिए BOSC से सम्पर्क करें।</p><p>ईमेल: <a href="mailto:bosctechedu@gmail.com">bosctechedu@gmail.com</a></p><p><a href="#/feedback">सुझाव फ़ॉर्म खोलिए →</a></p><p>शब्द भेजते समय रोमन संताली शब्द, हिन्दी अर्थ, अंग्रेज़ी अर्थ और हो सके तो एक उदाहरण वाक्य ज़रूर लिखिए।</p>`]};
 function legalHTML(v){const [t,b]=LEGAL[v];return `<div class="card lp"><div class="crumb"><a href="#/">Home</a> › ${t}</div><h2 class="dm" style="margin-top:0;font-size:32px">${t}</h2>${b}<p class="upd">Antim badlav: ${UPD}</p></div>`}
 
 /* ===== Advance search ===== */
@@ -922,7 +922,9 @@ function aiBind(q){const f=$('#aif');if(!f)return;f.onsubmit=e=>{e.preventDefaul
 
 /* ================= ADMIN / EDIT MODE ================= */
 let EDIT=localStorage.getItem('ss_edit')==='1';
-const isAdmin=()=>localStorage.getItem('ss_admin')==='1';
+const OWNER='bosctechedu@gmail.com';
+const isAdmin=()=>localStorage.getItem('ss_admin')==='1'&&(localStorage.getItem('ss_user')||'').toLowerCase()===OWNER;
+if(!isAdmin()){EDIT=false;localStorage.setItem('ss_edit','0')}
 function saveDraft(){localStorage.setItem('ss_draft',JSON.stringify(ROWS));adminBar()}
 function applyTexts(){setTimeout(()=>{const c=$('#count');if(c)c.textContent=order.length.toLocaleString('en-IN')});document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(TEXTS[k]!=null)el.innerHTML=TEXTS[k];el.contentEditable=EDIT?'true':'false';el.classList.toggle('edt',EDIT)})}
 function toCSV(){const H=[...new Set(COLS.concat(HEAD))];const q=v=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
@@ -975,14 +977,14 @@ const IC={user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strok
 const fld=(id,ic,ph,type='text',val='')=>`<div class="lf"><span class="lfi">${IC[ic]}</span><input id="${id}" type="${type}" placeholder="${ph}" value="${esc(val)}" autocomplete="off">${type==='password'?`<button type="button" class="eyeb" onclick="const i=$('#${id}');i.type=i.type==='password'?'text':'password'">${IC.eye}</button>`:''}</div>`;
 function adminPage(){setTimeout(openLogin);return listHTML('Admin',[]).replace('<p class="empty">कोई शब्द नहीं मिला।</p>','<p>Admin लॉगिन खुल रहा है…</p>')}
 function openLogin(){let m=$('#lmodal');if(!m){m=document.createElement('div');m.id='lmodal';document.body.appendChild(m)}
-  const set=!!localStorage.getItem('ss_pw'),on=isAdmin(),u=localStorage.getItem('ss_user')||'admin';
+  const set=!!localStorage.getItem('ss_pw')&&(localStorage.getItem('ss_user')||'').toLowerCase()===OWNER,on=isAdmin(),u=localStorage.getItem('ss_user')||'';
   let body;
   if(on)body=`<div class="lbox"><h4>${IC.git} लाइव पब्लिश (GitHub)</h4>${fld('atok','key','GitHub token (github_pat_...)','password',localStorage.getItem('ss_gh_token')||'')}${fld('arepo','git','Repo','text',localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}
      <button class="lbtn" onclick="adminSave()">सेव करें</button></div>
      <div class="lbox"><h4>${IC.lock} पासवर्ड बदलें</h4>${fld('opw','lock','पुराना पासवर्ड','password')}${fld('npw','key','नया पासवर्ड (कम से कम 6 अक्षर)','password')}<button class="lbtn ghost" onclick="changePw()">पासवर्ड बदलें</button></div>
      <button class="lbtn red" onclick="adminOff()">लॉगआउट</button>`;
-  else if(!set)body=`<p class="lnote">पहली बार सेटअप: अपना Admin यूज़रनेम और पासवर्ड बनाइए।</p>${fld('lu','user','Admin यूज़रनेम','text','admin')}${fld('lp','lock','पासवर्ड (कम से कम 6 अक्षर)','password')}${fld('lp2','key','पासवर्ड दोबारा (Confirm)','password')}<button class="lbtn" onclick="doSetup()">सेटअप करें</button>`;
-  else body=`${fld('lu','user','यूज़रनेम','text',u)}${fld('lp','lock','पासवर्ड डालिए','password')}<label class="lrem"><input type="checkbox" id="lrem" checked> मुझे याद रखें</label><button class="lbtn" onclick="doLogin()">Login</button>
+  else if(!set)body=`<p class="lnote">पहली बार सेटअप: सिर्फ़ BOSC का admin ईमेल ही यहाँ पासवर्ड बना सकता है।</p>${fld('lu','user','Admin ईमेल','email','')}${fld('lp','lock','पासवर्ड (कम से कम 6 अक्षर)','password')}${fld('lp2','key','पासवर्ड दोबारा (Confirm)','password')}<button class="lbtn" onclick="doSetup()">सेटअप करें</button>`;
+  else body=`${fld('lu','user','Admin ईमेल','email',u)}${fld('lp','lock','पासवर्ड डालिए','password')}<label class="lrem"><input type="checkbox" id="lrem" checked> मुझे याद रखें</label><button class="lbtn" onclick="doLogin()">Login</button>
      <button class="lbtn amber" onclick="forgotPw()">पासवर्ड भूल गए? <small>(इस ब्राउज़र में रीसेट)</small></button>`;
   m.innerHTML=`<div class="lov" onclick="if(event.target===this)closeLogin()"><div class="lcard"><div class="ltag"><b>SantalSabad</b><small>Admin प्रमाणीकरण</small></div>
     <button class="lx" onclick="closeLogin()">${IC.x}</button><div class="lin"><div class="lav">${IC.shield}</div><span class="lrole">${IC.shield} ${on?'ADMIN · ACTIVE':'ADMIN'}</span>
@@ -991,11 +993,12 @@ function openLogin(){let m=$('#lmodal');if(!m){m=document.createElement('div');m
   m.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter'){const b=m.querySelector('.lbtn');b&&b.click()}}))}
 function closeLogin(){const m=$('#lmodal');if(m)m.style.display='none';if(location.hash==='#/admin')location.hash='#/'}
 const lmsg=(t,ok)=>{$('#lmsg').innerHTML=`<div class="lalert ${ok?'ok':''}">${t}</div>`};
-async function doSetup(){const u=$('#lu').value.trim(),p=$('#lp').value,p2=$('#lp2').value;
-  if(!u)return lmsg('यूज़रनेम डालिए');if(p.length<6)return lmsg('पासवर्ड कम से कम 6 अक्षर का हो');if(p!==p2)return lmsg('दोनों पासवर्ड एक जैसे नहीं हैं');
+async function doSetup(){const u=$('#lu').value.trim().toLowerCase(),p=$('#lp').value,p2=$('#lp2').value;
+  if(u!==OWNER)return lmsg('यह ईमेल admin नहीं है। सिर्फ़ BOSC का admin ईमेल ही लॉगिन कर सकता है।');if(p.length<6)return lmsg('पासवर्ड कम से कम 6 अक्षर का हो');if(p!==p2)return lmsg('दोनों पासवर्ड एक जैसे नहीं हैं');
   localStorage.setItem('ss_user',u);localStorage.setItem('ss_pw',await sha256(u+':'+p));localStorage.setItem('ss_admin','1');adminBar();route();openLogin();lmsg('सेटअप हो गया! Admin मोड चालू है।',1)}
-async function doLogin(){const u=$('#lu').value.trim(),p=$('#lp').value;
-  if(u!==localStorage.getItem('ss_user')||await sha256(u+':'+p)!==localStorage.getItem('ss_pw'))return lmsg('गलत यूज़रनेम या पासवर्ड');
+async function doLogin(){const u=$('#lu').value.trim().toLowerCase(),p=$('#lp').value;
+  if(u!==OWNER)return lmsg('यह ईमेल admin नहीं है। सिर्फ़ BOSC का admin ईमेल ही लॉगिन कर सकता है।');
+  if(u!==localStorage.getItem('ss_user')||await sha256(u+':'+p)!==localStorage.getItem('ss_pw'))return lmsg('गलत ईमेल या पासवर्ड');
   localStorage.setItem('ss_admin','1');EDIT=true;localStorage.setItem('ss_edit','1');adminBar();closeLogin();route()}
 async function changePw(){const u=localStorage.getItem('ss_user'),o=$('#opw').value,n=$('#npw').value;
   if(await sha256(u+':'+o)!==localStorage.getItem('ss_pw'))return lmsg('पुराना पासवर्ड गलत है');if(n.length<6)return lmsg('नया पासवर्ड कम से कम 6 अक्षर का हो');
@@ -1161,7 +1164,7 @@ function openModal(k,g){if(k==='feedback'&&!g){openFeedback();return}g=g||mgOf(k
  <div class="lft"><div class="sdt">${sdtHTML()}</div><button class="lok lclose"><span>समझ गया, बंद करें</span></button></div></div>`;
  document.body.appendChild(m);document.body.style.overflow='hidden';
  const show=x=>{m.querySelectorAll('.llist button').forEach(b=>b.classList.toggle('on',b.dataset.mt===x));const c=m.querySelector('.lmain');c.innerHTML=mgBody(x);c.scrollTop=0;
-  if(x==='feedback'){fbBind();const gg=i=>document.getElementById(i);gg('fb_send').addEventListener('click',()=>{if(/^धन्यवाद/.test(gg('fb_ok').textContent))c.querySelector('.fbin').innerHTML=`<div class="fdoneb"><div class="fdi">${CHK.replace(/14/g,'36')}</div><h3>सारहाव! आमाक् काथा ञामेना!</h3><p class="fdh">धन्यवाद! आपका सुझाव मिल गया।</p><p class="fds">आपके सुझाव से SantalSabad के शब्द और अर्थ और बेहतर होंगे।</p></div>`})}};
+  if(x==='feedback'){fbBind();const gg=i=>document.getElementById(i);window._fbDone=()=>{const f=c.querySelector('.fbin');if(f)f.innerHTML=`<div class="fdoneb"><div class="fdi">${CHK.replace(/14/g,'36')}</div><h3>सारहाव! आमाक् काथा ञामेना!</h3><p class="fdh">धन्यवाद! आपका सुझाव मिल गया।</p><p class="fds">आपके सुझाव से SantalSabad के शब्द और अर्थ और बेहतर होंगे।</p></div>`}}};
  m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.lclose,.fcancel'))closeModal();if(e.target.closest('.mp'))window.print();
   if(e.target.closest('[data-rnd]')){m.querySelector('.rbox').innerHTML=rndCard();return}
   const t=e.target.closest('[data-mt]');if(t)show(t.dataset.mt);
@@ -1177,7 +1180,7 @@ function openFeedback(w){closeModal();const m=document.createElement('div');m.cl
  document.body.appendChild(m);document.body.style.overflow='hidden';
  m.addEventListener('click',e=>{if(e.target===m||e.target.closest('.mx,.fcancel,.fdone'))closeModal()});
  fbBind(w);const g=i=>document.getElementById(i);
- g('fb_send').addEventListener('click',()=>{if(/^धन्यवाद/.test(g('fb_ok').textContent)){m.querySelector('.fbd').innerHTML=`<div class="fdoneb"><div class="fdi">${CHK.replace(/14/g,'36')}</div><h3>सारहाव! आमाक् काथा ञामेना!</h3><p class="fdh">धन्यवाद! आपका सुझाव मिल गया।</p><p class="fds">आपके सुझाव से SantalSabad के शब्द और अर्थ और बेहतर होंगे।</p><button class="fdone">बंद करें और आगे देखें</button></div>`}})}
+ window._fbDone=()=>{if(document.body.contains(m)){m.querySelector('.fbd').innerHTML=`<div class="fdoneb"><div class="fdi">${CHK.replace(/14/g,'36')}</div><h3>सारहाव! आमाक् काथा ञामेना!</h3><p class="fdh">धन्यवाद! आपका सुझाव मिल गया।</p><p class="fds">आपके सुझाव से SantalSabad के शब्द और अर्थ और बेहतर होंगे।</p><button class="fdone">बंद करें और आगे देखें</button></div>`}}}
 function fbHTML(){return `<div class="fb"><div class="fwel"><div class="fwi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><div><div class="fwt"><b>जोहार! SantalSabad फ़ीडबैक में आपका स्वागत है</b><span>जोहार</span></div><p>नया संताली शब्द, गलत अर्थ का सुधार, स्पेलिंग या उदाहरण, कुछ भी बताइए। शब्द लिखते ही शब्दकोश में मौजूद अर्थ दिख जाएगा।</p><p class="fwq">“हमारी भाषा, हमारी पहचान · BOSC”</p></div></div>
 <label class="flab">आप क्या बताना चाहते हैं?</label><div class="types">${['गलत अर्थ','नया शब्द','स्पेलिंग सुधार','उदाहरण जोड़ें','साइट पर राय'].map((t,i)=>`<button type="button" data-ft="${t}" class="${i?'':'on'}">${t}</button>`).join('')}</div>
 <div class="acl"><label class="flab">संताली शब्द (रोमन या देवनागरी)</label><input id="fb_w" autocomplete="off" placeholder="जैसे: dak'"><div class="sg"></div></div>
@@ -1200,10 +1203,12 @@ function fbBind(pre){const g=i=>document.getElementById(i);let type='गलत �
  const valid=()=>{if(!w.value.trim()&&!g('fb_note').value.trim()){ok('कृपया शब्द या टिप्पणी लिखिए।');return false}return true};
  const save=()=>{const L=JSON.parse(localStorage.getItem('ss_feedback')||'[]');L.push({t:Date.now(),text:txt()});localStorage.setItem('ss_feedback',JSON.stringify(L.slice(-50)))};
  g('fb_copy').onclick=async()=>{if(!valid())return;try{await navigator.clipboard.writeText(txt());ok('कॉपी हो गया। अब इसे BOSC को भेज दीजिए।')}catch(e){ok(txt())}};
- g('fb_send').onclick=()=>{if(!valid())return;save();const em=(TEXTS.fb_email||'').replace(/<[^>]*>/g,'').trim(),wa=(TEXTS.fb_whatsapp||'').replace(/\D/g,'');
-  if(wa){open('https://wa.me/'+wa+'?text='+encodeURIComponent(txt()),'_blank');ok('धन्यवाद! WhatsApp खुल रहा है।')}
-  else if(em){location.href='mailto:'+em+'?subject='+encodeURIComponent('SantalSabad सुझाव: '+(w.value||type))+'&body='+encodeURIComponent(txt());ok('धन्यवाद! ईमेल ऐप खुल रहा है।')}
-  else{navigator.clipboard&&navigator.clipboard.writeText(txt()).catch(()=>{});ok('धन्यवाद! आपका सुझाव सेव और कॉपी हो गया है। BOSC का ईमेल/WhatsApp जल्द जोड़ा जाएगा।')}}}
+ g('fb_send').onclick=async()=>{if(!valid())return;save();const bt=g('fb_send');bt.disabled=true;ok('भेजा जा रहा है…');
+  const data={_subject:'SantalSabad सुझाव: '+(w.value||type),_template:'table',_captcha:'false','प्रकार':type,'शब्द':w.value,'हिन्दी अर्थ':g('fb_hi').value,'अंग्रेज़ी अर्थ':g('fb_en').value,'संदेश':g('fb_note').value,'नाम':g('fb_n').value,'गाँव/जगह':(g('fb_loc')||{}).value||'','रेटिंग':stars?stars+'/5':'-','पेज':location.href};
+  try{const r=await fetch('https://formsubmit.co/ajax/'+(TEXTS.fb_formid||OWNER),{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});const j=await r.json().catch(()=>({}));
+   if(!r.ok||j.success==='false'||j.success===false)throw 0;ok('धन्यवाद! आपका सुझाव BOSC को भेज दिया गया।');window._fbDone&&window._fbDone()}
+  catch(e){ok('इंटरनेट या सर्वर की दिक़्क़त से नहीं भेजा जा सका। ईमेल ऐप खुल रहा है।');location.href='mailto:'+OWNER+'?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(txt())}
+  finally{bt.disabled=false}}}
 
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
 load();
