@@ -209,6 +209,69 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .aians b a{color:#011f43}.aians .ex{font-size:15px}
 .aicard{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #eceef2;text-decoration:none}.aicard b{font-size:19px;color:var(--navy2)}.aicard span{color:var(--muted);text-align:right}
 .ainote{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* stats donut */
+.stat{position:relative;z-index:2;width:250px;margin:26px auto 0;background:rgba(1,31,67,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:22px;padding:18px 18px 14px;box-shadow:0 18px 40px rgba(0,0,0,.35);text-align:left}
+@media(min-width:1280px){.stat{position:absolute;width:224px;left:calc(50% - 50vw + max(20px,(100vw - 1180px)/2 - 110px));top:210px;margin:0}.hero p.lead{max-width:740px}}
+.compact .stat{display:none}
+.donut{position:relative;width:170px;height:170px;margin:0 auto 12px}
+.donut svg{width:100%;height:100%;animation:spin 24s linear infinite;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.donut:hover svg{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+.donut .mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.1}
+.donut .mid b{font-size:26px;font-weight:800}.donut .mid small{font-size:11px;opacity:.8;letter-spacing:1px}
+.leg{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.leg li{display:flex;align-items:center;gap:8px;font-size:13.5px}
+.leg i{width:12px;height:12px;border-radius:4px;flex:none}
+.leg b{margin-left:auto;font-weight:800}.leg span{opacity:.75;font-size:12px;margin-left:4px}
+.stat h6{margin:0 0 10px;text-align:center;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#f2b8c6}
+/* colourful cards */
+.c3{border:0!important;border-radius:20px;backdrop-filter:none;box-shadow:0 22px 44px -14px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .2s,box-shadow .2s;margin-bottom:40px}
+.c3:hover{transform:translateY(-6px);box-shadow:0 30px 56px -14px rgba(0,0,0,.6)}
+.c3:nth-child(1){background:linear-gradient(150deg,#d6262f,#7a1630)}
+.c3:nth-child(2){background:linear-gradient(150deg,#e08a1e,#a3400f)}
+.c3:nth-child(3){background:linear-gradient(150deg,#14917f,#4b3a8c)}
+.c3 .btn{border:0;border-radius:999px;background:#fff;color:#011f43;font-weight:700;font-size:16px;padding:12px 26px;box-shadow:0 8px 18px rgba(0,0,0,.25);transition:.2s}
+.c3 .btn:hover{background:#011f43;color:#fff;transform:scale(1.04)}
+/* search focus ring */
+.searchbox{transition:box-shadow .2s}
+.searchbox:focus-within{box-shadow:0 0 0 3px #fff,0 0 0 6px #d6262f,0 0 0 9px rgba(169,143,214,.55)}
+.inw:after{display:none}
+/* slider */
+.sl{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px -18px rgba(1,31,67,.55);background:#011f43;aspect-ratio:1200/540}
+.sl .sli{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;pointer-events:none}
+.sl .sli.on{opacity:1;pointer-events:auto}
+.sl img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06);transition:transform 6.5s ease}
+.sl .sli.on img{transform:scale(1)}
+.sl .cap{position:absolute;left:0;right:0;bottom:0;padding:70px 40px 54px;background:linear-gradient(transparent,rgba(1,15,35,.88));color:#fff}
+.sl .cap h3{margin:0 0 8px;font-size:34px;font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+.sl .cap p{margin:0;font-size:18px;max-width:780px}
+.sl .nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.85);color:#011f43;font-size:24px;cursor:pointer;z-index:3;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.sl .nav:hover{background:#fff}.sl .prev{left:16px}.sl .next{right:16px}
+.sl .dots{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:7px;z-index:3}
+.sl .dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,.5);cursor:pointer;padding:0;transition:.3s}
+.sl .dots button.on{width:30px;background:#f2b8c6}
+.sl .cnt{position:absolute;top:16px;right:18px;z-index:3;background:rgba(0,0,0,.45);color:#fff;font-size:13px;padding:4px 12px;border-radius:999px}
+.sl .bar{position:absolute;top:0;left:0;height:4px;background:linear-gradient(90deg,#d6262f,#f2b8c6);z-index:3;width:0}
+.sl .bar.run{animation:slbar 6s linear forwards}@keyframes slbar{to{width:100%}}
+.feat h2.sec{font-size:34px;margin:0 0 22px;text-align:center}
+.sladm{position:absolute;top:14px;left:14px;z-index:4;display:flex;gap:8px;flex-wrap:wrap}
+.sladm button,.sladm label{background:#fffbeb;border:2px solid #fcd34d;color:#78350f;border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.sladm .x{background:#fef2f2;border-color:#fca5a5;color:#b91c1c}
+.sl [contenteditable=true]{outline:2px dashed #fcd34d;outline-offset:3px}
+@media(max-width:700px){.sl{aspect-ratio:4/3}.sl .cap{padding:50px 18px 44px}.sl .cap h3{font-size:22px}.sl .cap p{font-size:14px}.sl .nav{width:38px;height:38px;font-size:18px}}
+/* legal */
+.legal{gap:0!important;margin-top:40px!important;padding:18px 0;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);font-size:15px!important}
+.legal a{padding:4px 16px;border-right:1px solid rgba(255,255,255,.25);color:#dfe6f3}
+.legal a:last-child{border-right:0}.legal a:hover{color:#f2b8c6;text-decoration:underline}
+.copy{text-align:center;font-size:13.5px;color:#aab6cc;margin-top:18px;line-height:1.7}
+.lp h3{font-size:20px;margin:24px 0 6px;color:var(--navy)}.lp p,.lp li{font-size:16.5px}.lp .upd{font-size:13px;color:var(--muted)}
+/* home / end */
+.hebtn{position:fixed;right:18px;bottom:96px;z-index:150;display:flex;flex-direction:column;gap:10px}
+.hebtn button{width:52px;height:52px;border-radius:50%;border:0;cursor:pointer;color:#fff;font:inherit;font-size:11px;font-weight:800;line-height:1.05;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(1,31,67,.35);transition:.2s}
+.hebtn button span{font-size:17px}
+.hebtn .h{background:linear-gradient(135deg,#d6262f,#7a1630)}.hebtn .e{background:linear-gradient(135deg,#3d4fa0,#011f43)}
+.hebtn button:hover{transform:scale(1.08)}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr;gap:24px;align-items:stretch}
@@ -270,6 +333,7 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
       <h2 data-t="t1">Santali – Hindi – English shabdkosh</h2>
       <p class="lead" data-t="t2">Santali bhasha ke <b id="count">hazaron</b> shabd, unke Hindi aur English arth, Roman aur Devanagari dono lipi mein, uchcharan aur udaharan ke saath.</p>
       <a class="btn" href="#/about" data-t="t9">SantalSabad ke baare mein </a>
+      <div class="stat" id="stat"></div>
     </div>
 
     <div class="cards3">
@@ -285,16 +349,18 @@ footer{background:var(--navy);color:#fff;padding:64px 0 30px}
 <footer>
   <div class="wrap">
     <div class="fcols">
-      <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-t="t17">About SantalSabad</a><a href="#/about" data-t="t18">Sources</a><a href="#/about" data-t="t19">Sujhav bhejiye</a></div>
+      <div class="fbox"><h6 data-t="t13">SantalSabad</h6><a href="#/about" data-t="t17">About SantalSabad</a><a href="#/credits" data-t="t18">Sources</a><a href="#/contact" data-t="t19">Sujhav bhejiye</a></div>
       <div class="fbox"><h6 data-t="t14">Shabdkosh</h6><a href="#/browse/a" data-t="t20">A–Z Shabd suchi</a><a href="#/examples" data-t="t21">Udaharan sahit shabd</a><a href="#/random" data-t="t22">Koi bhi ek shabd</a></div>
-      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/about" data-t="t25">Contact</a></div>
+      <div class="fbox"><h6 data-t="t15">Sahayata</h6><a href="#/guide" data-t="t23">Shabd kaise padhein</a><a href="#/guide" data-t="t24">Search kaise karein</a><a href="#/contact" data-t="t25">Contact</a></div>
       <div class="fbox fbrand"><h6 data-t="t16">BOSC</h6>SantalSabad, BOSC ki ek pahal hai, jiska uddeshya Santali bhasha ko har kisi tak pahunchana hai.
         <div class="mark"><span class="ring">स</span><div><b>BOSC</b><small>BASKI ONLINE SERVICE CENTER</small></div></div>
       </div>
     </div>
-    <div class="legal"><a href="#/about" data-t="t26">Sources &amp; credits</a><a href="#/about" data-t="t27">Privacy</a><span>Copyright © <span id="yr"></span> BOSC · SantalSabad</span></div>
+    <div class="legal"><a href="#/disclaimer">Disclaimer</a><a href="#/terms">Terms of Use</a><a href="#/privacy">Privacy Policy</a><a href="#/copyright">Copyright &amp; Licence</a><a href="#/credits">Sources &amp; Credits</a><a href="#/accessibility">Accessibility</a><a href="#/contact">Contact</a></div>
+    <div class="copy">Copyright © <span id="yr"></span> BOSC (Baski Online Service Center) · SantalSabad. Sarvadhikar surakshit.<br>Shabd-data ke kuch hisse CC BY-SA 4.0 aur public domain sources se liye gaye hain.</div>
   </div>
 </footer>
+<div class="hebtn"><button class="h" title="Sabse upar (Home)" onclick="scrollTo({top:0,behavior:'smooth'})"><span>▲</span>Home</button><button class="e" title="Sabse neeche (End)" onclick="scrollTo({top:document.body.scrollHeight,behavior:'smooth'})"><span>▼</span>End</button></div>
 
 <script>
 let entries={}, order=[];
@@ -360,6 +426,7 @@ async function load(){
     ROWS=rows.map(r=>{const o={};HEAD.forEach((h,j)=>o[h]=r[j]||'');return o})}
   try{TEXTS=await (await fetch('texts.json',{cache:'no-cache'})).json()}catch(e){TEXTS={}}
   Object.assign(TEXTS,JSON.parse(localStorage.getItem('ss_texts_draft')||'{}'));
+  await loadSlides();
   build();applyTexts();adminBar();route();
 }
 
@@ -414,12 +481,7 @@ function home(){const k=wotdKey(),e=entries[k],s=first(e);
       <div class="d">${esc(s.hi)}${s.hi&&s.en?' — ':''}${esc(s.en)}</div><a class="more" href="#/word/${encodeURIComponent(k)}">Poora arth dekhiye</a></div>
     <div><h4 class="dm">${recentList().length?'Haal mein dekhe':'Aur shabd'}</h4><div class="wl">${rec.slice(0,16).map(wlink).join('')}</div></div>
   </div></section>
-  <section class="feat"><div class="wrap tiles">
-    <a class="tile" href="#/about"><img src="img/t1.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t28">Santali bhasha</h5><p data-t="t29">Santali bhasha, uske bolne walon aur is shabdkosh ke baare mein padhiye</p></div></a>
-    <a class="tile" href="#/browse/a"><img src="img/t2.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t30">Shabd suchi</h5><p data-t="t31">Akshar-vaar saare shabd, Hindi aur English arth ke saath</p></div></a>
-    <a class="tile" href="#/examples"><img src="img/t3.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t32">Udaharan sahit shabd</h5><p data-t="t33">Vakyon mein prayog hue Santali shabd, English anuvad ke saath</p></div></a>
-    <a class="tile" href="#/random"><img src="img/t4.webp" alt="" loading="lazy"><div class="tx"><h5 data-t="t34">Koi bhi ek shabd</h5><p data-t="t35">Har baar ek naya Santali shabd seekhiye</p></div></a>
-  </div></section>`}
+  <section class="feat"><div class="wrap"><h2 class="dm sec" data-t="sl_title">Santal sanskriti ki jhalak</h2>${sliderHTML()}</div></section>`}
 
 function side(){const rec=recentList();const cnt={};order.forEach(k=>{const l=norm(k).replace(/^[^a-z]+/,'')[0];if(l)cnt[l]=(cnt[l]||0)+1});
   return `<aside class="side"><div class="box azbox"><h3 class="dm" data-t="az_title">A–Z Shabd suchi</h3><div class="az">${'abcdefghijklmnopqrstuvwxyz'.split('').map(l=>cnt[l]?`<a href="#/browse/${l}">${l.toUpperCase()}<small>${cnt[l]}</small></a>`:`<span class="off">${l.toUpperCase()}<small>0</small></span>`).join('')}</div></div>
@@ -437,6 +499,72 @@ function guide(){return `<div class="card"><h2 class="dm" style="margin-top:0;fo
 function about(){return `<div class="card"><h2 class="dm" style="margin-top:0;font-size:32px">About SantalSabad</h2><p>SantalSabad Santali bhasha ke shabdon ko Hindi aur English arth, uchcharan, udaharan, Roman aur Devanagari lipi ke saath ek jagah laata hai. Abhi isme ${order.length.toLocaleString('en-IN')} shabd hain.</p><p>Prastut karta: <b>BOSC – Baski Online Service Center</b></p><p style="font-size:14px;color:#555">Shabd sources: A. Campbell, A Santali-English Dictionary (1899, public domain) aur Wiktionary (CC BY-SA). Hindi arth machine-assisted hain; sudhaar ke sujhav ka swagat hai.</p></div>`}
 
 
+
+
+/* ===== Stats donut ===== */
+function stats(){let hi=new Set(),en=new Set(),dv=0;order.forEach(k=>{const e=entries[k];if(e.dv)dv++;for(const p in e.pos)e.pos[p].forEach(x=>{(x.hi||'').split(/[;,]/).forEach(t=>{t=t.trim();if(t)hi.add(t)});(x.en||'').split(/[;,]/).forEach(t=>{t=norm(t);if(t)en.add(t)})})});
+ const d=[['Santali (Roman)',order.length,'#f2b8c6'],['Santali (देवनागरी)',dv,'#ffb347'],['हिन्दी',hi.size,'#4fd1a5'],['English',en.size,'#7cb7ff']];
+ const tot=d.reduce((a,x)=>a+x[1],0),C=2*Math.PI*60;let off=0;
+ const arcs=d.map(([n,v,c])=>{const L=v/tot*C;const a=`<circle r="60" cx="80" cy="80" fill="none" stroke="${c}" stroke-width="30" stroke-dasharray="${L-2} ${C-L+2}" stroke-dashoffset="${-off}"/>`;off+=L;return a}).join('');
+ const el=$('#stat');if(!el)return;
+ el.innerHTML=`<h6>Shabd ginti</h6><div class="donut"><svg viewBox="0 0 160 160"><g transform="rotate(-90 80 80)">${arcs}</g><circle r="44" cx="80" cy="80" fill="rgba(1,31,67,.85)"/></svg><div class="mid"><b>${tot.toLocaleString('en-IN')}</b><small>KUL SHABD</small></div></div>
+ <ul class="leg">${d.map(([n,v,c])=>`<li><i style="background:${c}"></i>${n}<b>${(v/tot*100).toFixed(1)}%</b><span>${v.toLocaleString('en-IN')}</span></li>`).join('')}</ul>`}
+
+/* ===== Slider ===== */
+let SLIDES=[],SLI=0,SLT=null;
+async function loadSlides(){const d=localStorage.getItem('ss_slides_draft');if(d){SLIDES=JSON.parse(d);return}try{SLIDES=await (await fetch('slides.json',{cache:'no-cache'})).json()}catch(e){SLIDES=[]}}
+function sliderHTML(){if(!SLIDES.length&&!EDIT)return'';const n=SLIDES.length;SLI=Math.min(SLI,Math.max(0,n-1));
+ const ce=(i,f,v)=>EDIT?`contenteditable="true" data-sl="${i}" data-slf="${f}"`:'';
+ return `<div class="sl" id="sl">${SLIDES.map((x,i)=>`<div class="sli${i===SLI?' on':''}"><img src="${esc(x.img)}" alt="${esc(x.title)}" ${i>1?'loading="lazy"':''}><div class="cap"><h3 ${ce(i,'title')}>${esc(x.title)}</h3><p ${ce(i,'text')}>${esc(x.text)}</p></div></div>`).join('')}
+  ${n>1?`<button class="nav prev" data-sn="-1" aria-label="Pichhla">‹</button><button class="nav next" data-sn="1" aria-label="Agla">›</button><div class="dots">${SLIDES.map((x,i)=>`<button data-sd="${i}" class="${i===SLI?'on':''}" aria-label="Slide ${i+1}"></button>`).join('')}</div>`:''}
+  <span class="cnt">${n?SLI+1:0} / ${n}</span><div class="bar"></div>
+  ${EDIT?`<div class="sladm"><label>+ Nayi slide (photo)<input type="file" accept="image/*" id="slup" hidden></label>${n?`<label>Photo badlo<input type="file" accept="image/*" id="slrep" hidden></label><button class="x" data-sx="1">✕ Ye slide hatao</button>`:''}</div>`:''}</div>`}
+function slGo(i){const el=$('#sl');if(!el||!SLIDES.length)return;SLI=(i+SLIDES.length)%SLIDES.length;
+ el.querySelectorAll('.sli').forEach((x,j)=>x.classList.toggle('on',j===SLI));el.querySelectorAll('.dots button').forEach((x,j)=>x.classList.toggle('on',j===SLI));
+ const c=el.querySelector('.cnt');if(c)c.textContent=`${SLI+1} / ${SLIDES.length}`;slPlay()}
+function slPlay(){clearTimeout(SLT);const el=$('#sl');if(!el||EDIT||SLIDES.length<2)return;const b=el.querySelector('.bar');if(b){b.classList.remove('run');void b.offsetWidth;b.classList.add('run')}
+ SLT=setTimeout(()=>{if(!el.matches(':hover'))slGo(SLI+1);else slPlay()},6000)}
+function slSave(){localStorage.setItem('ss_slides_draft',JSON.stringify(SLIDES));adminBar()}
+function imgToWebp(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const W=1200,H=540,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
+  const s=Math.max(W/im.width,H/im.height),w=im.width*s,h=im.height*s;g.drawImage(im,(W-w)/2,(H-h)/2,w,h);res(c.toDataURL('image/webp',.78))};im.onerror=rej;im.src=r.result};r.readAsDataURL(file)})}
+document.addEventListener('click',e=>{const t=e.target;
+ if(t.dataset.sn){slGo(SLI+ +t.dataset.sn)}else if(t.dataset.sd!=null){slGo(+t.dataset.sd)}
+ else if(t.dataset.sx&&confirm('Ye slide hata dein?')){SLIDES.splice(SLI,1);slSave();route()}});
+document.addEventListener('change',async e=>{const t=e.target;if(t.id!=='slup'&&t.id!=='slrep')return;const f=t.files[0];if(!f)return;
+ try{const img=await imgToWebp(f);if(t.id==='slup'){SLIDES.push({img,title:'Naya shirshak',text:'Yahan jaankari likhiye'});SLI=SLIDES.length-1}else SLIDES[SLI].img=img;slSave();route()}catch(err){alert('Photo load nahi hui')}});
+document.addEventListener('focusout',e=>{const el=e.target;if(el.dataset&&el.dataset.sl!=null&&EDIT){SLIDES[+el.dataset.sl][el.dataset.slf]=el.innerText.trim();slSave()}});
+let slx=0;document.addEventListener('touchstart',e=>{if(e.target.closest('#sl'))slx=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchend',e=>{if(e.target.closest('#sl')&&slx){const d=e.changedTouches[0].clientX-slx;if(Math.abs(d)>50)slGo(SLI+(d<0?1:-1));slx=0}},{passive:true});
+async function ghPutB64(path,b64,tok,repo){const api=`https://api.github.com/repos/${repo}/contents/${path}`;const H={Authorization:'Bearer '+tok,Accept:'application/vnd.github+json'};
+ const cur=await fetch(api+'?ref=main',{headers:H});const sha=cur.ok?(await cur.json()).sha:undefined;
+ const r=await fetch(api,{method:'PUT',headers:H,body:JSON.stringify({message:'Slide photo '+path,content:b64,sha,branch:'main'})});if(!r.ok)throw new Error((await r.json()).message||r.status)}
+async function publishSlides(tok,repo){if(!localStorage.getItem('ss_slides_draft'))return;
+ for(const x of SLIDES){if(x.img.startsWith('data:')){const path='img/slides/u'+Date.now()+Math.floor(Math.random()*1000)+'.webp';await ghPutB64(path,x.img.split(',')[1],tok,repo);x.img=path}}
+ await ghPut('slides.json',JSON.stringify(SLIDES,null,1),tok,repo);localStorage.removeItem('ss_slides_draft')}
+
+/* ===== Legal pages ===== */
+const UPD='7 November 2026';
+const LEGAL={
+disclaimer:['Disclaimer (अस्वीकरण)',`<p>SantalSabad ek muft, shaikshik shabdkosh hai jise BOSC (Baski Online Service Center) chalata hai. Hum shabdon aur arthon ko sahi rakhne ki poori koshish karte hain, lekin <b>kisi bhi jaankari ki poornata ya shuddhta ki guarantee nahi dete</b>.</p>
+<h3>Hindi arth</h3><p>Kai Hindi arth machine-sahayata se taiyar kiye gaye hain aur abhi native Santali bolne walon dwara jaanch ke daur mein hain. Kripya mahatvapurn kaam (kanooni, sarkari, chikitsa, pariksha) ke liye kisi visheshagya se pushti karein.</p>
+<h3>Devanagari roop</h3><p>Devanagari roop Roman Santali se apne aap (auto lipyantaran) banaya gaya hai, isme galti ho sakti hai.</p>
+<h3>Bahari links aur tasveerein</h3><p>Slider ki kuch tasveerein pratinidhi (AI se bani) chitra hain, kisi vyakti ya ghatna ki asli photo nahi. Bahari websites ki saamagri ke liye hum zimmedar nahi hain.</p>
+<p>Is site ke upyog se hone wale kisi bhi nuksan ke liye BOSC zimmedar nahi hoga.</p>`],
+terms:['Terms of Use (उपयोग की शर्तें)',`<p>SantalSabad ka upyog karke aap in sharton se sahmat hote hain.</p><ul>
+<li>Ye site vyaktigat, shaikshik aur gair-vyavsayik upyog ke liye muft hai.</li><li>Site ke data ka upyog karte samay sources ka credit dena zaroori hai (dekhiye Copyright &amp; Licence).</li>
+<li>Site ko nuksan pahunchana, bot se bhaari maatra mein data utaarna ya galat jaankari failana mana hai.</li><li>Admin suvidha sirf BOSC dwara adhikrit vyaktiyon ke liye hai.</li>
+<li>BOSC bina poorv soochna ke site, data aur in sharton mein badlav kar sakta hai.</li></ul>`],
+privacy:['Privacy Policy (गोपनीयता नीति)',`<p>SantalSabad par koi account, login ya registration zaroori nahi hai. Hum aapka naam, phone ya email <b>ikattha nahi karte</b>.</p>
+<h3>Aapke device par kya save hota hai</h3><ul><li>Haal mein dekhe shabd, aur offline upyog ke liye site ki files (browser cache / localStorage).</li><li>Admin ke liye: password ka hash, drafts aur GitHub token, sirf usi browser mein.</li></ul><p>Ye jaankari kabhi hamare server par nahi bheji jaati. Browser ka data saaf karke ise hata sakte hain.</p>
+<h3>Teesre paksh ki sevayein</h3><ul><li><b>Cloudflare Pages</b> site host karta hai aur suraksha ke liye saamanya server logs (jaise IP address) rakh sakta hai.</li><li><b>Google Fonts</b> se font load hote hain, jisse Google ko aapka IP address dikh sakta hai.</li></ul>
+<p>Hum koi advertising ya tracking cookie istemaal nahi karte.</p>`],
+copyright:['Copyright &amp; Licence',`<p>Site ka design, code aur BOSC dwara likhi saamagri © BOSC (Baski Online Service Center). Sarvadhikar surakshit.</p>
+<h3>Shabd-data</h3><ul><li><b>A Santal Dictionary</b>, Rev. A. Campbell (1899): public domain.</li><li><b>Wiktionary</b> (kaikki.org ke madhyam se): <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Is hisse ka upyog usi licence ke tahat credit ke saath kiya ja sakta hai.</li><li>Hindi arth aur Devanagari roop: SantalSabad / BOSC.</li></ul>
+<p>Data ya saamagri ka vyavsayik upyog karna ho to pehle BOSC se anumati lein.</p>`],
+credits:['Sources &amp; Credits',`<ul><li>Rev. A. Campbell, <i>A Santal Dictionary</i> (1899), public domain.</li><li>Wiktionary contributors, kaikki.org dwara nikala gaya data (CC BY-SA 4.0).</li><li>Fonts: DM Serif Display, Open Sans, Noto Sans Devanagari (Google Fonts, SIL Open Font License).</li><li>Hosting: Cloudflare Pages.</li></ul><p>Sabhi Santali shabd asli sources se liye gaye hain. Sujhav aur sudhaar ka swagat hai.</p>`],
+accessibility:['Accessibility (सुगम्यता)',`<p>Hum chahte hain ki SantalSabad har kisi ke liye aasaan ho.</p><ul><li>Mobile, tablet aur desktop par chalta hai, aur ek baar khulne ke baad offline bhi.</li><li>Keyboard se search: likhiye, ↑ ↓ se chuniye, Enter dabaiye.</li><li>Browser zoom (Ctrl +) se akshar bade kiye ja sakte hain.</li><li>Home / End button se page ke upar ya neeche turant jaaiye.</li></ul><p>Koi dikkat ho to humein zaroor bataiye.</p>`],
+contact:['Contact (सम्पर्क)',`<p><b>BOSC (Baski Online Service Center)</b></p><p data-t="contact_info">Galat arth, naya shabd ya koi sujhav bhejne ke liye BOSC se sampark karein.</p><p>Shabd bhejte samay Roman Santali shabd, Hindi arth, English arth aur ho sake to ek udaharan vakya zaroor likhiye.</p>`]};
+function legalHTML(v){const [t,b]=LEGAL[v];return `<div class="card lp"><div class="crumb"><a href="#/">Home</a> › ${t}</div><h2 class="dm" style="margin-top:0;font-size:32px">${t}</h2>${b}<p class="upd">Antim badlav: ${UPD}</p></div>`}
 
 /* ===== Advance search ===== */
 function advHTML(){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › Advance search</div><h2 class="dm" style="margin-top:0;font-size:32px">Advance search</h2>
@@ -510,7 +638,7 @@ function toCSV(){const H=[...new Set(COLS.concat(HEAD))];const q=v=>/[",\n]/.tes
 function dl(name,txt,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\uFEFF'.repeat(type==='csv'?1:0)+txt],{type:type==='csv'?'text/csv':'application/json'}));a.download=name;a.click()}
 function adminBar(){let b=$('#abar');if(!isAdmin()){if(b)b.remove();return}
   if(!b){b=document.createElement('div');b.id='abar';document.body.appendChild(b)}
-  const dirty=localStorage.getItem('ss_draft')||localStorage.getItem('ss_texts_draft');
+  const dirty=localStorage.getItem('ss_draft')||localStorage.getItem('ss_texts_draft')||localStorage.getItem('ss_slides_draft');
   b.innerHTML=`<span class="abtxt"><b>एडमिन लाइव मोड सक्रिय</b> नया जोड़ें (Add), सुधारें (Edit) या हटाएँ (Delete)</span><button data-a="edit" class="${EDIT?'on':''}">${EDIT?'✎ Edit mode: ON':'✎ Edit mode: OFF'}</button><button data-a="new">+ Naya shabd</button>
    <button data-a="publish" class="pub">⬆ Live par publish</button><button data-a="csv">⬇ words.csv</button>${dirty?'<span class="dot">Unsaved badlav</span><button data-a="discard">Badlav hatao</button>':''}<button data-a="settings">⚙ Settings</button>`}
 document.addEventListener('click',async e=>{const t=e.target;
@@ -519,7 +647,7 @@ document.addEventListener('click',async e=>{const t=e.target;
   if(a==='new'){const w=prompt('Naya Santali shabd (Roman mein):');if(!w||!w.trim())return;
     const r={};COLS.forEach(c=>r[c]='');r['Shabd']=w.trim();r['Arth no.']='1';ROWS.push(r);saveDraft();build();EDIT=true;localStorage.setItem('ss_edit','1');adminBar();location.hash='#/word/'+encodeURIComponent(key(w));route();return}
   if(a==='csv'){dl('words.csv',toCSV(),'csv');dl('texts.json',JSON.stringify(TEXTS,null,1),'json');return}
-  if(a==='discard'){if(confirm('Saare unsaved badlav hata dein?')){localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');location.reload()}return}
+  if(a==='discard'){if(confirm('Saare unsaved badlav hata dein?')){localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');localStorage.removeItem('ss_slides_draft');location.reload()}return}
   if(a==='publish'){publish();return}
   if(a==='settings'){openLogin();return}
   if(t.dataset.del){if(confirm('Ye arth delete karein?')){ROWS[+t.dataset.del]={};saveDraft();build();route()}return}
@@ -542,7 +670,7 @@ async function ghPut(path,content,tok,repo){const api=`https://api.github.com/re
 async function publish(){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
   if(!tok){alert('Pehle Admin settings (⚙) mein GitHub token daaliye.');openLogin();return}
   const b=$('#abar .pub');b.textContent='Publish ho raha hai…';b.disabled=true;
-  try{await ghPut('words.csv',toCSV(),tok,repo);await ghPut('texts.json',JSON.stringify(TEXTS,null,1),tok,repo);
+  try{await publishSlides(tok,repo);await ghPut('words.csv',toCSV(),tok,repo);await ghPut('texts.json',JSON.stringify(TEXTS,null,1),tok,repo);
     localStorage.removeItem('ss_draft');localStorage.removeItem('ss_texts_draft');adminBar();alert('Publish ho gaya! 1-2 minute mein site par dikhega.')}
   catch(err){alert('Publish nahi hua: '+err.message);adminBar()}}
 const IC={user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
@@ -590,11 +718,13 @@ function remember(k){if(EDIT)return;let r=recentList();r=[k,...r.filter(x=>x!==k
 function route(){const [,v,a]=(location.hash||'#/').split('/');const arg=decodeURIComponent(a||'');let h;
   const isHome=!v;$('#hero').classList.toggle('compact',!isHome);document.title='SantalSabad: Santali Hindi English Dictionary';
   if(v==='random'){location.hash='#/word/'+encodeURIComponent(order[Math.floor(Math.random()*order.length)]);return}
-  if(isHome){$('#view').innerHTML=home();applyTexts();window.scrollTo(0,0);return}
+  if(isHome){$('#view').innerHTML=home();applyTexts();stats();slPlay();window.scrollTo(0,0);return}
+  clearTimeout(SLT);
   if(v==='word'){h=entryHTML(arg);if(entries[arg]){remember(arg);document.title=entries[arg].w+' – SantalSabad'}}
   else if(v==='search'){const [qq,mode]=arg.split('|');const mi=$('#sb2 input');if(mi){mi.value=qq;mi.parentNode.classList.add('typing');$('#sb2 select').value=mode||'all'}const r=search(qq,mode||'all');h=r.length===1?entryHTML(r[0]):listHTML(`“${qq}” ke results (${r.length})`,r)}
   else if(v==='browse')h=listHTML(arg.toUpperCase(),order.filter(k=>norm(k).replace(/^[^a-z]+/,'').startsWith(arg)));
   else if(v==='admin')h=adminPage();
+  else if(LEGAL[v])h=legalHTML(v);
   else if(v==='advanced'){h=advHTML();setTimeout(advBind)}
   else if(v==='ai'){h=aiHTML(arg);setTimeout(()=>aiBind(arg))}
   else if(v==='examples')h=listHTML('Udaharan sahit shabd',order.filter(k=>Object.values(entries[k].pos).some(a=>a.some(x=>x.ex))));
