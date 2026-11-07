@@ -760,6 +760,7 @@ html.dark img,html.dark .sl,html.dark .li,html.dark .ttile span,html.dark .kt sp
 body.embed>*:not(#view):not(main),body.embed header,body.embed footer,body.embed .side,body.embed .fbfab,body.embed .hebtn,body.embed #abar{display:none!important}body.embed{background:transparent}body.embed .inner{display:block;padding:0}
 .embc{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-radius:16px;background:linear-gradient(135deg,#fff7ec,#eef5ff);border:1.5px solid #f3c98b;font-family:"Open Sans","Noto Sans Devanagari",sans-serif}.embc small{color:#b45309;font-weight:700;letter-spacing:.06em}.embc b{font:700 34px "DM Serif Display",Georgia,serif;color:#011f43}.embc span{color:#475569}.embc i{font-style:normal;color:#b4232a}.embc p{margin:4px 0;color:#0f6b5f;font-weight:600}.embc a{color:#1f5fae;font-weight:700;text-decoration:none}
 @media print{body.pp .pc{border-color:#888}}
+.gdet{margin:10px 0;border:1px solid #e2e8f0;border-radius:14px;padding:8px 12px;background:#fff}.gdet summary{cursor:pointer;font:700 15px "Noto Sans Devanagari",sans-serif;color:#011f43;padding:4px 0}.gdet .gtab{margin-top:8px}
 </style>
 </head>
 <body>
@@ -1537,7 +1538,7 @@ XR.topic=arg=>{const t=TOPICS.find(x=>x[0]===arg);if(!t)return XR.topics();const
  return `<div class="card">${crumb(`<a href="#/topics">विषय</a> › ${t[2]}`)}<h2 class="dm xh">${t[1]} ${t[2]} <small>${t[3]}</small></h2><div class="xact noprint"><a class="xbtn" href="#/flash/${t[0]}">🃏 इनसे फ़्लैशकार्ड</a><button class="xbtn sec" data-print="1">🖨 प्रिंट / PDF</button></div>
  <div class="twl">${K.map(k=>{const e=entries[k];return `<a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(e.w))}</b><span>${esc(e.dv)}</span><em>${esc(hi1(e))}</em></a>`}).join('')}</div></div>`};
 
-XR.phrases=()=>{const P=[];ROWS.forEach(r=>{const s=(r['Udaharan (Santali)']||'').trim(),t=(r['Udaharan ka anuvad']||'').trim();if(s&&t&&s.split(/\s+/).length<=7&&!P.some(x=>x.s===s))P.push({s,t,k:key(r.Shabd)})});
+XR.phrases=()=>{const P=[];ROWS.forEach(r=>{const s=(r['Udaharan (Santali)']||'').trim(),t=(r['Udaharan ka anuvad']||'').trim();if(s&&t&&!P.some(x=>x.s===s))P.push({s,t,k:key(r.Shabd)})});
  return `<div class="card">${crumb('छोटे वाक्य')}<h2 class="dm xh">💬 छोटे संताली वाक्य <small>${P.length}</small></h2><p class="xsub">शब्दकोश के उदाहरणों से लिए गए असली वाक्य। शब्द पर क्लिक करके उसका पूरा अर्थ देखिए।</p>
  <div class="phl">${P.map(p=>`<div class="ph"><b>${esc(p.s)}</b><span>${esc(p.t)}</span>${entries[p.k]?`<a href="#/word/${encodeURIComponent(p.k)}">${esc(cap(entries[p.k].w))} ›</a>`:''}</div>`).join('')}</div></div>`};
 
@@ -2127,6 +2128,67 @@ document.addEventListener('click',e=>{if(!e.target.closest('[data-fsed]'))return
 
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
 load();
+
+/* ===== v47: हर सेक्शन में 30+ (सिर्फ़ शब्दकोश के डेटा से) ===== */
+const TOPIC_EN={
+ family:['father','mother','elder sister','elder brother','younger brother','younger sister','son','daughter','child','boy','girl','husband','wife','grandfather','grandmother','grandson','granddaughter','uncle','aunt','nephew','niece','son-in-law','daughter-in-law','father-in-law','mother-in-law','brother-in-law','sister-in-law','family','relative','relation','orphan','widow','widower','twin','baby','infant','old man','old woman','man','woman','friend','guest','bride','bridegroom','brother','sister','parents','ancestor','kinsman','household','clan'],
+ body:['head','hair','eye','ear','nose','mouth','tooth','teeth','tongue','lip','neck','throat','shoulder','arm','hand','finger','nail','chest','breast','belly','stomach','back','waist','leg','foot','knee','toe','skin','bone','blood','heart','liver','face','forehead','cheek','chin','beard','moustache','elbow','thigh','heel','palm','navel','brain','sweat','tear','tears','eyebrow','body','vein','rib','lungs','wrist','ankle'],
+ numbers:['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','thirty','forty','fifty','hundred','thousand','first','second','third','half','double','once','twice','pair','number','count','many','few','all','each','every','some','quarter'],
+ food:['rice','cooked rice','water','meat','fish','egg','salt','oil','milk','curry','vegetable','vegetables','bread','flour','pulse','dal','sugar','honey','mango','banana','jackfruit','fruit','food','meal','breakfast','spice','chilli','turmeric','onion','garlic','potato','pumpkin','gourd','cucumber','maize','millet','wheat','beer','rice beer','liquor','tea','sweet','sour','bitter','pot','plate','cup','spoon','eat','drink','hunger','hungry','thirst','cook','boil','fry','roast','bake'],
+ animals:['dog','cat','cow','ox','bullock','buffalo','goat','sheep','pig','hen','cock','fowl','duck','horse','elephant','tiger','bear','monkey','jackal','fox','deer','rabbit','hare','rat','mouse','snake','frog','fish','crab','bird','crow','parrot','peacock','pigeon','vulture','owl','eagle','ant','bee','fly','mosquito','spider','scorpion','lizard','tortoise','butterfly','worm','leech','calf','kid','squirrel','wolf','hyena','porcupine','bat'],
+ nature:['sun','moon','star','sky','cloud','rain','wind','storm','thunder','lightning','earth','soil','stone','rock','sand','mud','water','river','stream','pond','tank','lake','sea','hill','mountain','forest','jungle','tree','leaf','flower','fruit','seed','root','branch','grass','fire','smoke','ash','light','darkness','shade','shadow','dew','fog','mist','rainbow','field','valley','spring','waterfall','wood','bamboo','sal tree','mahua','world'],
+ time:['day','night','morning','evening','noon','midnight','dawn','today','tomorrow','yesterday','day after tomorrow','day before yesterday','week','month','year','time','hour','moment','season','summer','winter','rainy season','spring','autumn','now','then','soon','late','early','always','never','sometimes','again','before','after','old','new','age','sunday','monday','afternoon','last year','next year','daily','every day','lifetime'],
+ actions:['eat','drink','see','go','come','sit','stand','sleep','walk','run','speak','say','hear','listen','give','take','bring','do','make','write','read','sing','dance','laugh','cry','weep','play','work','wash','bathe','cook','buy','sell','open','close','throw','catch','beat','strike','cut','dig','plough','sow','reap','carry','climb','fall','fly','swim','jump','think','know','learn','teach','call','ask','tell','search','find','die','live','kill','sew','weave','build','burn','fight','love','fear','forget','remember'],
+ describe:['red','white','black','green','yellow','blue','big','large','small','little','long','short','tall','high','low','hot','cold','warm','good','bad','beautiful','ugly','new','old','young','sweet','sour','bitter','salty','heavy','light','strong','weak','fat','thin','rich','poor','wet','dry','clean','dirty','full','empty','fast','slow','hard','soft','deep','shallow','wide','narrow','straight','crooked','round','sharp','blunt','happy','sad','angry','true','false','right','wrong','near','far'],
+ village:['house','home','village','door','wall','roof','courtyard','road','path','well','field','market','school','temple','sacred grove','headman','village headman','priest','king','chief','cart','plough','axe','sickle','knife','bow','arrow','drum','flute','basket','mat','rope','pot','lamp','bed','cot','broom','granary','cowshed','pigsty','fence','garden','bridge','festival','dance','song','meeting','work','money','cloth','dress','ornament','bangle','comb','oil','cultivation','paddy']};
+function augTopics(){const firstEn=e=>Object.values(e.pos).flat().map(s=>(s.en||'').toLowerCase().split(/[;,(]/)[0].trim().replace(/^(a|an|the|to)\s+/,''));
+ const ix=new Map();order.forEach(k=>{if(!hasHi(k)||k.length>14||/\s/.test(k))return;const e=entries[k];firstEn(e).forEach(g=>{if(!g)return;if(!ix.has(g))ix.set(g,[]);if(!ix.get(g).includes(k))ix.get(g).push(k)})});
+ TOPICS.forEach(t=>{const L=TOPIC_EN[t[0]];if(!L)return;const have=new Set(t[4].map(key));L.forEach(g=>{(ix.get(g)||[]).slice(0,2).forEach(k=>{if(!have.has(k)){have.add(k);t[4].push(entries[k].w)}})})})}
+{const _bd=build;build=function(){_bd();augTopics();GPOOL=null}}
+
+/* व्याकरण: सर्वनाम के साथ बाकी व्याकरण शब्द (शब्द-भेद से) */
+const GRAM_POS=[['सर्वनाम','सर्वनाम (Pronouns)'],['संबंधबोधक','संबंधबोधक (Postpositions)'],['समुच्चयबोधक','समुच्चयबोधक (जोड़ने वाले शब्द)'],['निपात','निपात (Particles)'],['निर्धारक','निर्धारक (Determiners)'],['विस्मयादिबोधक','विस्मयादिबोधक (Interjections)']];
+const QW=['who','what','where','when','why','how','which','how many','how much','whose','this','that','here','there','these','those','now','then','yes','no','not','and','or','but','because','if','with','without','from','to','in','on','for','near','upon','under','behind','before','after'];
+function gramGroups(){const G={};order.forEach(k=>{const e=entries[k];for(const p in e.pos)if(GRAM_POS.some(g=>g[0]===p)){(G[p]=G[p]||[]).includes(k)||G[p].push(k)}});
+ const fe=k=>Object.values(entries[k].pos).flat().map(s=>(s.en||'').toLowerCase().split(/[;,(]/)[0].trim());G.q=order.filter(k=>hasHi(k)&&!/\s/.test(k)&&fe(k).some(g=>QW.includes(g))).slice(0,80);return G}
+{const _g=XR.grammar;XR.grammar=()=>{const G=gramGroups(),row=k=>`<div>${wsay(k)}<a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(entries[k].w))}</b></a><span>${esc(entries[k].dv)}</span><em>${esc(hi1(entries[k])||'')}</em><small>${esc((first(entries[k]).en||'').slice(0,40))}</small></div>`;
+ const tot=Object.values(G).reduce((a,b)=>a+b.length,0);
+ return _g().replace('<div class="xact"><a class="xbtn sec" href="#/numbers">',`<h3 class="dm" style="margin:18px 0 8px">सवाल, इशारे और जोड़ने वाले शब्द <small>${G.q.length}</small></h3><div class="gtab">${G.q.map(row).join('')}</div>
+ ${GRAM_POS.filter(g=>G[g[0]]&&G[g[0]].length).map(([p,h])=>`<details class="gdet"${p==='संबंधबोधक'?' open':''}><summary>${h} <small>${G[p].length}</small></summary><div class="gtab">${G[p].map(row).join('')}</div></details>`).join('')}
+ <p class="xsub">कुल ${tot} व्याकरण वाले शब्द, शब्दकोश के “शब्द-भेद” से।</p><div class="xact"><a class="xbtn sec" href="#/numbers">`)}}
+
+/* गिनती: चार्ट 1–40 और बड़ी संख्याएँ */
+{const _n=XR.numbers;XR.numbers=()=>_n().replace(/<h3 class="dm" style="margin:20px 0 8px">1 से 20<\/h3><div class="ocg chg">[\s\S]*?<\/div>\s*<p class="xsub">✓/,()=>{const N=[...Array(40)].map((_,i)=>i+1).concat([50,60,80,100,200,500,1000]);
+ return `<h3 class="dm" style="margin:20px 0 8px">गिनती चार्ट (${N.length})</h3><div class="ocg chg">${N.map(n=>{const w=satNum(n),ok=!!entries[key(w)];return `<button class="occ chc" data-nn="${n}"><b>${n}</b><span class="olc">${ocNum(n)}</span><em>${esc(cap(w))}${ok?' ✓':''}</em></button>`}).join('')}</div>\n <p class="xsub">✓`})}
+
+/* महीने और दिन: समय के शब्द भी */
+const TIME_EN=['day','night','morning','evening','noon','midnight','dawn','today','tomorrow','yesterday','day after tomorrow','day before yesterday','week','month','year','hour','season','summer','winter','rainy season','rains','hot season','cold season','spring','now','last year','next year','afternoon','daily','time','sunrise','sunset','moon','full moon','new moon'];
+{const _c=XR.calendar;XR.calendar=()=>{const fe=k=>Object.values(entries[k].pos).flat().map(s=>(s.en||'').toLowerCase().split(/[;,(]/)[0].trim().replace(/^(a|an|the)\s+/,''));
+ const T=[];TIME_EN.forEach(g=>order.filter(k=>hasHi(k)&&!/\s{2}/.test(k)&&fe(k).includes(g)).slice(0,2).forEach(k=>{if(!T.includes(k))T.push(k)}));
+ return _c().replace('<p class="xsub">अपने इलाके',`<h3 class="dm" style="margin:20px 0 8px">समय और ऋतु के शब्द <small>${T.length}</small></h3><div class="calg">${T.map(k=>`<div><b>${esc(hi1(entries[k]))}</b><a href="#/word/${encodeURIComponent(k)}">${esc(cap(entries[k].w))} <i class="olc">${esc(entries[k].oc||romanToOl(entries[k].w))}</i></a></div>`).join('')}</div><p class="xsub">अपने इलाके`)}}
+
+/* त्योहार: शब्दकोश के पर्व और पूजा शब्द */
+{const _f=XR.festivals;XR.festivals=()=>{const re=/\b(festival|feast|sacrifice|worship|ceremony|bonga|spirit|ritual|offering)\b/i;
+ const L=order.filter(k=>Object.values(entries[k].pos).flat().some(s=>re.test((s.en||'').split(/[.;]/)[0]))).slice(0,120);
+ return _f()+`<div class="card" style="margin-top:14px"><h3 class="dm" style="margin:0 0 6px">📜 शब्दकोश में पर्व, पूजा और रीति के शब्द <small>${L.length}</small></h3><p class="xsub">Bodding और Campbell के शब्दकोश से। अर्थ अंग्रेज़ी में हो तो “हिन्दी भरें” से जोड़ा जा सकता है।</p>
+ <div class="hil">${L.map(k=>`<div class="hir"><a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(entries[k].w))}</b></a><span>${esc(hi1(entries[k])||(first(entries[k]).en||'').slice(0,90))}</span></div>`).join('')}</div></div>`}}
+
+/* कहावतें: जब तक Admin न जोड़ें, शब्दकोश के असली उदाहरण-वाक्य */
+{const _p=XR.proverbs;XR.proverbs=()=>{if(PROV().length>=30)return _p();const P=[];ROWS.forEach(r=>{const s=(r['Udaharan (Santali)']||'').trim(),t=(r['Udaharan ka anuvad']||'').trim();if(s&&t&&!P.some(x=>x.s===s))P.push({s,t,k:key(r.Shabd)})});
+ return _p()+`<div class="card" style="margin-top:14px"><h3 class="dm" style="margin:0 0 6px">💬 शब्दकोश के असली संताली वाक्य <small>${P.length}</small></h3><p class="xsub">कहावतें जुड़ने तक, Bodding के शब्दकोश के ये वाक्य पढ़िए। हर शब्द पर क्लिक करके अर्थ देखिए।</p>
+ <div class="fsl">${P.map(x=>`<div class="fs"><p class="pvs">${linkWords(x.s)}</p><p>${esc(x.t)}</p></div>`).join('')}</div></div>`}}
+
+/* छोटे वाक्य: सारे उदाहरण दिखें (शब्द-सीमा हटाई) */
+
+/* बैज: 30 */
+{const _b=badges;badges=function(){const S=LS('ss_stats',{}),Q=LS('ss_quiz',{}),L=Object.keys(LS('ss_lessons',{})).length,n=BM().length,R=LS('ss_recent',[]).length||LS('ss_hist',[]).length;
+ return _b().concat([['🌟','50 शब्द','50 शब्द सेव किए',n>=50],['💯','250 शब्द','250 शब्द सेव किए',n>=250],['📆','15 दिन लगातार','15 दिन लगातार क्विज़',(Q.streak||0)>=15],['🗓','30 दिन लगातार','30 दिन लगातार क्विज़',(Q.streak||0)>=30],
+  ['📗','3 पाठ','3 पाठ पूरे',L>=3],['📘','7 पाठ','7 पाठ पूरे',L>=7],['🧠','याद की ताकत','100 शब्द दोहराए',(S.srs||0)>=100],['🎧','सुर-पारखी','50 बार सुनकर पहचाना',(S.listen||0)>=50],
+  ['✍','शब्द कारीगर','50 शब्द जोड़े',(S.jumble||0)>=50],['🃏','याददाश्त','10 बार जोड़ी खेल जीता',(S.match||0)>=10],['🗺','महाखोजी','10 शब्द खोज पूरे',(S.ws||0)>=10],['🔊','पहली आवाज़','किसी शब्द की आवाज़ सुनी',(S.say||0)>=1],
+  ['🧾','वाक्य पढ़ाकू','10 वाक्य समझे',(S.gloss||0)>=10],['🔄','लिपि जानकार','लिपि बदलने का टूल चलाया',(S.conv||0)>=1],['📴','हर जगह','पूरा शब्दकोश ऑफ़लाइन सेव किया',!!localStorage.getItem('ss_offline')],['✉','मददगार','एक सुझाव भेजा',(S.sug||0)>=1]])}}
+document.addEventListener('click',e=>{if(e.target.closest('[data-say]'))stat('say');if(e.target.closest('#fb_send'))stat('sug')});
+{const _gl=XB.gloss;XB.gloss=()=>{_gl();stat('gloss')};const _cv=XB.convert;XB.convert=()=>{_cv();stat('conv')}}
+
 </script>
 </body>
 </html>
