@@ -148,7 +148,7 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .ain{width:100%;max-width:420px;padding:9px 12px;border:1px solid #c9ccd5;border-radius:6px;font:inherit;margin-top:4px}
 
 /* login modal (Hor Katha style) */
-#lmodal{display:none;position:fixed;inset:0;z-index:200}
+#lmodal{display:none;position:fixed;inset:0;z-index:900}
 .lov{position:fixed;inset:0;overflow-y:auto;background:rgba(2,6,23,.6);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:48px 12px 24px}
 .lcard{position:relative;width:100%;max-width:420px;border-radius:32px;border:1px solid rgba(255,255,255,.8);background:linear-gradient(180deg,#f0f9ff,#f8fafc 45%,#dbeafe);box-shadow:0 30px 70px -20px rgba(30,64,175,.45),0 8px 24px -12px rgba(15,23,42,.25);font-family:'Open Sans','Noto Sans Devanagari',sans-serif}
 .ltag{position:absolute;top:-28px;left:50%;transform:translateX(-50%);padding:8px 34px;border-radius:999px;background:#fff;border:1px solid #dbeafe;box-shadow:0 10px 25px -10px rgba(37,99,235,.5);text-align:center;white-space:nowrap}
@@ -594,6 +594,28 @@ html{-webkit-text-size-adjust:100%}img{max-width:100%}
 .racts{display:flex;align-items:center;gap:16px;margin-top:14px;flex-wrap:wrap}
 .lmain .fbin{padding:20px}
 .lmain .fbin .fwel{display:none}
+
+.wbtn.wadm{border-color:#059669!important;color:#047857!important}.wbtn.wadm:hover{background:#059669!important;color:#fff!important}
+.aebox{max-width:900px}
+.aebd{flex:1;overflow-y:auto;padding:20px;background:#f8fafc;display:flex;flex-direction:column;gap:14px}
+@media(min-width:640px){.aebd{padding:24px 28px}}
+.aeg{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+@media(min-width:640px){.aeg{grid-template-columns:1fr 1fr}.aeg .w2{grid-column:1/-1}}
+.aeg label{display:flex;flex-direction:column;gap:5px;font-size:11px;font-weight:700;color:#334155;text-transform:uppercase;letter-spacing:.04em}
+.aeg input,.aeg textarea{font:14px "Open Sans","Noto Sans Devanagari",sans-serif;text-transform:none;letter-spacing:0;padding:10px 12px;border:1px solid #e2e8f0;border-radius:12px;background:#fff;outline:0;color:#0f172a}
+.aeg textarea{min-height:60px;resize:vertical}
+.aeg input:focus,.aeg textarea:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.15)}
+.aess{display:flex;flex-direction:column;gap:12px}
+.aes{padding:16px 18px;background:#fff;border:1px solid #e2e8f0;border-left:4px solid #10b981;border-radius:16px;box-shadow:0 1px 3px rgba(15,23,42,.05)}
+.aesh{display:flex;justify-content:space-between;align-items:center}.aesh b{font-size:14px;color:#047857}
+.aedel{border:0;background:#fef2f2;color:#dc2626;width:28px;height:28px;border-radius:50%;cursor:pointer}
+.aeadd{align-self:flex-start;border:1px dashed #10b981;background:#ecfdf5;color:#047857;font:700 13px "Noto Sans Devanagari",sans-serif;padding:10px 18px;border-radius:12px;cursor:pointer}
+.aemsg{display:none;padding:10px 14px;border-radius:12px;background:#fef2f2;color:#b91c1c;font-size:13px}.aemsg.on{display:block}.aemsg.ok{background:#ecfdf5;color:#047857}
+.aeact{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.aebtn{border:0;padding:10px 16px;border-radius:12px;font:700 13px "Noto Sans Devanagari",sans-serif;cursor:pointer}
+.aebtn.sec{background:#f1f5f9;color:#475569}.aebtn.sec:hover{background:#e2e8f0}.aebtn.red{background:#fef2f2;color:#dc2626}.aebtn.red:hover{background:#fee2e2}
+.aest{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}.aest.on{background:#ecfdf5;color:#047857;border-color:#a7f3d0}
+@media(max-width:640px){.aest{display:none}.lft .aeact button{padding:9px 12px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -754,7 +776,7 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
   h+='</tbody></table></div>';
   if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ नया अर्थ जोड़ें</button><button class="abtn red" data-delword="${esc(k)}">पूरा शब्द हटाएँ</button></div>`;
   if(e.rel)h+=`<div class="rel"><b>संबंधित शब्द:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
-  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button></div>`;
+  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(e.w)}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>
@@ -1210,6 +1232,52 @@ function fbBind(pre){const g=i=>document.getElementById(i);let type='गलत �
   catch(e){ok('इंटरनेट या सर्वर की दिक़्क़त से नहीं भेजा जा सका। ईमेल ऐप खुल रहा है।');location.href='mailto:'+OWNER+'?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(txt())}
   finally{bt.disabled=false}}}
 
+
+/* ===== v32: Admin entry form (full format) ===== */
+const POSL=['संज्ञा','क्रिया','विशेषण','सर्वनाम','क्रिया-विशेषण','अव्यय','समुच्चयबोधक','विस्मयादिबोधक','संबंधबोधक','संख्या','प्रत्यय','उपसर्ग'];
+function aeSense(x={}){const v=n=>esc(x[n]||'');return `<div class="aes"><div class="aesh"><b class="aen">अर्थ</b><button type="button" class="aedel" title="यह अर्थ हटाएँ">✕</button></div>
+ <div class="aeg"><label>शब्द-भेद<input data-c="Shabd-bhed" list="aepos" value="${v('Shabd-bhed')}"></label><label>अर्थ नं.<input data-c="Arth no." type="number" min="1" value="${v('Arth no.')||1}"></label>
+ <label>हिन्दी अर्थ<input data-c="Hindi" value="${v('Hindi')}"></label><label>अंग्रेज़ी अर्थ<input data-c="English" value="${v('English')}"></label>
+ <label class="w2">उदाहरण (संताली)<textarea data-c="Udaharan (Santali)">${v('Udaharan (Santali)')}</textarea></label><label class="w2">उदाहरण का अनुवाद<textarea data-c="Udaharan ka anuvad">${v('Udaharan ka anuvad')}</textarea></label></div></div>`}
+function aeNum(m){m.querySelectorAll('.aes .aen').forEach((b,i)=>b.textContent='अर्थ '+(i+1))}
+function openEntry(k){closeModal();const e=k&&entries[k];const rows=e?e.rows.map(i=>ROWS[i]):[{}];const r0=rows[0]||{};const v=n=>esc(r0[n]||'');
+ const m=document.createElement('div');m.className='mdl lpm aem';m.id='mdl';
+ m.innerHTML=`<div class="lpbox aebox" role="dialog" aria-modal="true" aria-labelledby="aet">
+ <div class="lhd"><div class="lhl"><div class="lem">✎</div><div><p class="lkick">ADMIN · शब्द एंट्री</p><h2 id="aet">${e?'शब्द बदलें: '+esc(e.w):'नया शब्द जोड़ें'}</h2></div></div>
+  <div class="lhb"><span class="aest ${isAdmin()?'on':''}">${isAdmin()?'Admin लॉगिन है':'सेव के लिए Admin लॉगिन चाहिए'}</span><button class="lib mx" aria-label="बंद करें"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div></div>
+ <div class="aebd"><datalist id="aepos">${POSL.map(x=>`<option value="${x}">`).join('')}</datalist>
+  <div class="lsec"><div class="lsh"><span class="lck">${CHK}</span><h4>मुख्य शब्द</h4></div><div class="aeg">
+   <label>शब्द (रोमन संताली) *<input id="ae_w" data-m="Shabd" value="${v('Shabd')}"></label><label>देवनागरी<input data-m="Devanagari" value="${v('Devanagari')}" placeholder="${e?esc(e.dv):'खाली छोड़ें तो अपने आप बनेगा'}"></label>
+   <label>उच्चारण<input data-m="Uchcharan" value="${v('Uchcharan')}"></label><label>Ol Chiki<input data-m="Ol Chiki" value="${v('Ol Chiki')}"></label>
+   <label class="w2">सम्बन्धित शब्द<input data-m="Sambandhit shabd" value="${v('Sambandhit shabd')}" placeholder="कॉमा से अलग करें"></label></div></div>
+  <div class="aess">${rows.map(aeSense).join('')}</div>
+  <button type="button" class="aeadd">+ नया अर्थ जोड़ें</button><div class="aemsg" id="aemsg"></div></div>
+ <div class="lft">${e?'<button class="aebtn red aedw">पूरा शब्द हटाएँ</button>':'<span></span>'}<div class="aeact"><button class="aebtn sec aeoff">सिर्फ़ इस डिवाइस पर सेव</button><button class="lok aelive"><span>सेव करें और लाइव करें</span></button></div></div></div>`;
+ document.body.appendChild(m);document.body.style.overflow='hidden';aeNum(m);
+ const msg=(t,ok)=>{const x=m.querySelector('#aemsg');x.className='aemsg on'+(ok?' ok':'');x.textContent=t};
+ const need=()=>{if(isAdmin())return true;msg('सेव करने के लिए पहले Admin लॉगिन कीजिए (bosctechedu@gmail.com)। लॉगिन के बाद फिर से बटन दबाइए।');openLogin();return false};
+ const collect=()=>{const M={};m.querySelectorAll('[data-m]').forEach(i=>M[i.dataset.m]=i.value.trim());
+  return [...m.querySelectorAll('.aes')].map(d=>{const r={};COLS.forEach(c=>r[c]='');Object.assign(r,M);d.querySelectorAll('[data-c]').forEach(i=>r[i.dataset.c]=i.value.trim());return r}).filter(r=>r.Hindi||r.English||r['Udaharan (Santali)']||r['Shabd-bhed'])};
+ const apply=()=>{const nr=collect();if(!nr.length){msg('कम से कम एक अर्थ (हिन्दी या अंग्रेज़ी) भरिए।');return null}if(!nr[0].Shabd){msg('शब्द भरिए।');return null}
+  const nk=key(nr[0].Shabd);if(nk!==k&&entries[nk]&&!confirm(`"${nr[0].Shabd}" पहले से है। इन अर्थों को उसमें जोड़ दें?`))return null;
+  let pos=ROWS.length;if(e){const idx=[...e.rows].sort((a,b)=>b-a);pos=Math.min(...idx);idx.forEach(i=>ROWS.splice(i,1))}
+  ROWS.splice(Math.min(pos,ROWS.length),0,...nr);saveDraft();build();return nk};
+ const go=nk=>{closeModal();location.hash='#/word/'+encodeURIComponent(nk);route()};
+ m.addEventListener('click',async ev=>{const t=ev.target;
+  if(t===m||t.closest('.mx'))return closeModal();
+  if(t.closest('.aeadd')){m.querySelector('.aess').insertAdjacentHTML('beforeend',aeSense({'Shabd-bhed':(m.querySelector('.aes [data-c="Shabd-bhed"]')||{}).value||''}));aeNum(m);return}
+  if(t.closest('.aedel')){if(m.querySelectorAll('.aes').length>1){t.closest('.aes').remove();aeNum(m)}else msg('कम से कम एक अर्थ रहना चाहिए।');return}
+  if(t.closest('.aedw')){if(!need())return;if(!confirm('पूरा शब्द "'+e.w+'" हटाएँ?'))return;[...e.rows].sort((a,b)=>b-a).forEach(i=>ROWS.splice(i,1));saveDraft();build();await liveSave(msg);closeModal();location.hash='#/';route();return}
+  if(t.closest('.aeoff')){if(!need())return;const nk=apply();if(!nk)return;localStorage.setItem('ss_pending','1');msg('इस डिवाइस पर सेव हो गया। ऑनलाइन होने पर "सेव करें और लाइव करें" या Publish दबाइए।',1);setTimeout(()=>go(nk),900);return}
+  if(t.closest('.aelive')){if(!need())return;const nk=apply();if(!nk)return;const b=t.closest('.aelive');b.disabled=true;msg('सेव हो रहा है…',1);const ok=await liveSave(msg);b.disabled=false;if(ok)setTimeout(()=>go(nk),1200)}});
+ setTimeout(()=>{const f=m.querySelector('#ae_w');f&&f.focus()},50)}
+async function liveSave(msg){const tok=localStorage.getItem('ss_gh_token'),repo=localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad';
+ if(!navigator.onLine){localStorage.setItem('ss_pending','1');msg('आप ऑफ़लाइन हैं। बदलाव इस डिवाइस पर सेव है, इंटरनेट आते ही अपने आप लाइव होगा।',1);return true}
+ if(!tok){localStorage.setItem('ss_pending','1');msg('इस डिवाइस पर सेव हो गया। लाइव करने के लिए Admin सेटिंग्स में GitHub token डालिए।');return false}
+ try{await ghPut('words.csv',toCSV(),tok,repo);localStorage.removeItem('ss_draft');localStorage.removeItem('ss_pending');adminBar();msg('लाइव हो गया! 1-2 मिनट में सबको दिखेगा।',1);return true}
+ catch(err){localStorage.setItem('ss_pending','1');msg('लाइव नहीं हुआ ('+err.message+')। बदलाव इस डिवाइस पर सेव है।');return false}}
+window.addEventListener('online',()=>{if(isAdmin()&&localStorage.getItem('ss_pending')&&localStorage.getItem('ss_gh_token'))liveSave(()=>{}).then(ok=>ok&&console.log('pending changes published'))});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-aedit]');if(b)openEntry(b.dataset.aedit)});
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
 load();
 </script>
