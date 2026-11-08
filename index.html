@@ -6,6 +6,7 @@
 <title>SantalSabad: Santali Hindi English Dictionary</title>
 <meta name="description" content="SantalSabad – Santali, Hindi aur English ka shabdkosh. By BOSC (Baski Online Service Center).">
 <meta name="theme-color" content="#f5f8fd">
+<meta name="keywords" content="Santali dictionary, Santali Hindi, Santali English, संताली शब्दकोश, Ol Chiki, ᱥᱟᱱᱛᱟᱲᱤ"><link rel="canonical" href="https://santalsabad.pages.dev/"><meta property="og:title" content="SantalSabad: Santali Hindi English Dictionary"><meta property="og:description" content="संताली, हिन्दी और अंग्रेज़ी शब्दकोश, व्याकरण, कहानियाँ और खेल। By BOSC."><meta property="og:type" content="website"><meta property="og:url" content="https://santalsabad.pages.dev/"><meta name="twitter:card" content="summary">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -822,6 +823,18 @@ body.embed>*:not(#view):not(main),body.embed header,body.embed footer,body.embed
 #lmodal .lfoot{padding:10px;border-top:1px solid #eef2f7;font-size:10px;letter-spacing:.12em;color:#94a3b8;gap:0}
 #lmodal .lfoot span{display:none}
 </style>
+<style>
+.ddw{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}.ddb{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}.ddb.rg{background:#fff7ed;color:#9a3412;border-color:#fed7aa}.ddb.lk{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;text-decoration:none}
+.enl{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px}.enr{padding:8px 10px;border:1px solid #e2e8f0;border-radius:10px;background:#fff}.enr b{display:block;font-size:14px}.enr span{font-size:13px}
+.cul{display:flex;flex-direction:column;gap:10px}.cui{padding:12px 14px;border:1px solid #e2e8f0;border-radius:12px;background:#fff}.cui b{font-size:15.5px}.cui small{color:#64748b}.cui p{margin:4px 0 0;font-size:14px;line-height:1.6}.cuy{float:right;font-size:12px;font-weight:800;color:#1d4ed8;background:#eff6ff;border-radius:8px;padding:2px 8px}
+.cusrc{margin-top:14px;font-size:13px}.cusrc a{display:block;margin:3px 0;word-break:break-all}
+.lband{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}.lband .lt{display:flex;flex-direction:column;gap:2px;padding:14px;border:1px solid #e2e8f0;border-radius:14px;background:#fff;text-decoration:none;color:#0f172a}.lband .lt:hover{border-color:#93c5fd;background:#f8fbff}.lband .lt span{font-size:24px}.lband .lt small{color:#64748b}
+.spk{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin:10px 0}.spk b{font-size:34px}.spk span{font-size:18px}.spk small{color:#64748b}
+.trw{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}#trc{width:min(320px,100%);aspect-ratio:1;border:2px dashed #cbd5e1;border-radius:16px;background:#fff;touch-action:none}.occ.on{outline:2px solid #2563eb}
+.colg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.colc{border:1px solid #cbd5e1;border-radius:12px;padding:10px;text-align:center;background:#fff;break-inside:avoid}.colc b.olc{display:block;font-size:96px;line-height:1.1;color:#fff;-webkit-text-stroke:2px #0f172a}.colc.w span{font-size:56px;display:block;filter:grayscale(1) contrast(1.6);opacity:.55}.colc small{display:block;color:#475569}
+.qopts{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:8px}
+.ctf{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}.ctf label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:#334155}
+</style>
 </head>
 <body>
 
@@ -1554,7 +1567,7 @@ function ocRoman(s){let o='';const a=[...(s||'')];for(let i=0;i<a.length;i++){co
 function learnBand(){const n=BM().filter(k=>entries[k]).length,q=JSON.parse(localStorage.getItem('ss_quiz')||'{}');
  const T=[['#/flash','🃏','फ़्लैशकार्ड','रोज़ के शब्द कार्ड पलटकर याद कीजिए'],['#/quiz','🧠','आज का क्विज़',q.last===today()?`आज का स्कोर ${q.score}/5 · 🔥 ${q.streak||1} दिन`:'5 सवाल, रोज़ नए'+(q.streak?` · 🔥 ${q.streak} दिन`:'')],
   ['#/topics','📚','विषय के शब्द','परिवार, शरीर, गिनती, जानवर…'],['#/phrases','💬','छोटे वाक्य','असली संताली वाक्य, अनुवाद के साथ'],
-  ['#/hindi','🔤','हिन्दी → संताली','हिन्दी शब्द से संताली खोजिए'],['#/kids','🧒','बच्चों का कोना','चित्र वाले शब्द और खेल'],['#/stories','📖','कहानी और गीत','संताली पाठ, हिन्दी अर्थ के साथ'],['#/festivals','🎉','त्योहार','सोहराय, बाहा, करम…'],['#/stats','📊','आँकड़े','कितने शब्द, कितने अर्थ'],['#/thanks','🙏','धन्यवाद','योगदान देने वाले'],['#/poster','🔳','QR पोस्टर','गाँव-स्कूल में लगाइए'],['#/saved','⭐','मेरे शब्द',n?n+' शब्द सेव हैं':'शब्द पेज पर ☆ दबाकर सेव कीजिए'],['#/roman','Aa','रोमन चार्ट','रोमन अक्षर, देवनागरी और Ol Chiki के साथ'],['#/devanagari','अ','देवनागरी चार्ट','संताली देवनागरी अक्षर और मात्राएँ'],['#/olchiki','ᱚ','Ol Chiki चार्ट','अक्षर, नाम, रोमन और देवनागरी']];
+  ['#/hindi','🔤','हिन्दी → संताली','हिन्दी शब्द से संताली खोजिए'],['#/kids','🧒','बच्चों का कोना','चित्र वाले शब्द और खेल'],['#/stories','📖','कहानी और गीत','संताली पाठ, हिन्दी अर्थ के साथ'],['#/festivals','🎉','त्योहार','सोहराय, बाहा, करम…'],['#/culture','🪶','संस्कृति','लेखक, इतिहास, पारिस, पर्व'],['#/english/a','🔠','English → संताली','English शब्द से खोजिए'],['#/more','✨','और भी','डिक्टेशन, प्रतियोगिता, लिखना सीखें…'],['#/stats','📊','आँकड़े','कितने शब्द, कितने अर्थ'],['#/thanks','🙏','धन्यवाद','योगदान देने वाले'],['#/poster','🔳','QR पोस्टर','गाँव-स्कूल में लगाइए'],['#/saved','⭐','मेरे शब्द',n?n+' शब्द सेव हैं':'शब्द पेज पर ☆ दबाकर सेव कीजिए'],['#/roman','Aa','रोमन चार्ट','रोमन अक्षर, देवनागरी और Ol Chiki के साथ'],['#/devanagari','अ','देवनागरी चार्ट','संताली देवनागरी अक्षर और मात्राएँ'],['#/olchiki','ᱚ','Ol Chiki चार्ट','अक्षर, नाम, रोमन और देवनागरी']];
  return `<section class="learn"><div class="wrap"><h2 class="dm sec">सीखें और खेलें</h2><div class="lrngrid">${T.map(t=>`<a class="ltile" href="${t[0]}"><span class="li">${t[1]}</span><b>${t[2]}</b><small>${t[3]}</small></a>`).join('')}
  <button type="button" class="ltile linst" data-install="1"><span class="li">📲</span><b>App इंस्टॉल करें</b><small>फ़ोन पर ऐप की तरह, बिना इंटरनेट भी</small></button></div></div></section>`}
 
@@ -1912,7 +1925,7 @@ XR.offline=()=>{const d=localStorage.getItem('ss_offline');return `<div class="c
  <div class="xact"><button class="xbtn" id="offgo">⬇ ${d?'फिर से डाउनलोड करें (नया डेटा)':'अभी डाउनलोड करें'}</button></div><div class="fbar"><i id="offbar" style="width:0"></i></div><p id="offmsg" class="xsub"></p></div>`};
 XB.offline=()=>{$('#offgo').onclick=async()=>{const m=$('#offmsg'),bar=$('#offbar');if(!('caches' in window)){m.textContent='इस ब्राउज़र में ऑफ़लाइन सुविधा नहीं है।';return}
  let S=GAL||SLIDES;if(!S||!S.length){try{S=await (await fetch('slides.json')).json()}catch(_){S=[]}}
- const L=['./','index.html','words.csv','texts.json','slides.json','stories.json','grammar.json','manifest.json','icon.svg',...new Set(S.map(x=>x.img)),...Object.values(AUD())];
+ const L=['./','index.html','words.csv','texts.json','slides.json','stories.json','grammar.json','culture.json','dictdata.json','manifest.json','icon.svg',...new Set(S.map(x=>x.img)),...Object.values(AUD())];
  const c=await caches.open('santalsabad-offline');let n=0,f=0;for(let i=0;i<L.length;i+=6){await Promise.all(L.slice(i,i+6).map(async u=>{try{const r=await fetch(u,{cache:'no-cache'});if(r.ok)await c.put(u,r);else f++}catch(_){f++}n++}));bar.style.width=(n/L.length*100)+'%';m.textContent=`${n}/${L.length} फ़ाइलें…`}
  const d=new Date().toLocaleString('hi-IN',{dateStyle:'medium',timeStyle:'short'});localStorage.setItem('ss_offline',d);m.textContent=f?`${n-f} फ़ाइलें सेव हुईं, ${f} नहीं हुईं। फिर से कोशिश कीजिए।`:'✅ पूरा शब्दकोश ऑफ़लाइन सेव हो गया!'}};
 
@@ -2136,7 +2149,7 @@ function linkWords(t){return esc(t).replace(/[A-Za-zÀ-ɏḀ-ỿ̀-ͯ'’]+/g,w=
 XR.stories=arg=>`<div class="card">${crumb(arg?'<a href="#/stories">कहानी और गीत</a>':'कहानी और गीत')}<div id="stw"><p class="xsub">लोड हो रहा है…</p></div></div>`;
 XB.stories=async arg=>{const S=await loadStories(),w=$('#stw');if(!w)return;const adm=isAdmin();
  if(arg!==''&&arg!=null&&S[+arg]){const s=S[+arg];w.innerHTML=`<h2 class="dm xh">${s.type==='geet'?'🎵':'📖'} ${esc(s.title)}</h2>${s.by?`<p class="xsub">${esc(s.by)}</p>`:''}<div class="xact noprint"><button class="xbtn sec" data-print="1">🖨 प्रिंट / PDF</button>${adm?`<button class="xbtn sec" data-sted="${arg}">✎ बदलें</button>`:''}</div>
-  <div class="stg${[s.sat,s.hi,s.en].filter(Boolean).length===1?' st1':''}">${s.sat?`<div><h4>संताली</h4><div class="stx">${linkWords(s.sat).replace(/\n/g,'<br>')}</div></div>`:''}${s.hi?`<div><h4>हिन्दी</h4><div class="stx">${esc(s.hi).replace(/\n/g,'<br>')}</div></div>`:''}${s.en?`<div><h4>English</h4><div class="stx">${esc(s.en).replace(/\n\n/g,'</p><p>').replace(/^/,'<p>')}</p></div></div>`:''}</div>${s.sat?'<p class="xsub">नीले शब्दों पर माउस रखें तो अर्थ दिखेगा, क्लिक करें तो पूरा पेज खुलेगा।</p>':''}${s.url?`<p class="xsub">स्रोत: ${esc(s.source||'')} · <a href="${esc(s.url)}" target="_blank" rel="noopener">archive.org पर मूल किताब</a>. यह अनुवाद पब्लिक डोमेन है। हिन्दी अनुवाद अभी बाकी है।</p>`:''}<div class="xact noprint">${S[+arg-1]?`<a class="xbtn sec" href="#/stories/${+arg-1}">‹ पिछली</a>`:''}${S[+arg+1]?`<a class="xbtn sec" href="#/stories/${+arg+1}">अगली ›</a>`:''}</div>`;return}
+  <div class="stg${[s.sat,s.hi,s.en].filter(Boolean).length===1?' st1':''}">${s.sat?`<div><h4>संताली</h4><div class="stx">${linkWords(s.sat).replace(/\n/g,'<br>')}</div></div>`:''}${s.hi?`<div><h4>हिन्दी</h4><div class="stx">${esc(s.hi).replace(/\n/g,'<br>')}</div></div>`:''}${s.en?`<div><h4>English</h4><div class="stx">${esc(s.en).replace(/\n\n/g,'</p><p>').replace(/^/,'<p>')}</p></div></div>`:''}</div>${s.sat?'<p class="xsub">नीले शब्दों पर माउस रखें तो अर्थ दिखेगा, क्लिक करें तो पूरा पेज खुलेगा।</p>':''}${s.url?`<p class="xsub">स्रोत: ${esc(s.source||'')} · <a href="${esc(s.url)}" target="_blank" rel="noopener">${/archive\.org/.test(s.url)?'archive.org':'Project Gutenberg'} पर मूल किताब</a>. अंग्रेज़ी पाठ पब्लिक डोमेन है।${s.hi?' हिन्दी अनुवाद SantalSabad ने किया है।':' हिन्दी अनुवाद अभी बाकी है।'}</p>`:''}<div class="xact noprint">${S[+arg-1]?`<a class="xbtn sec" href="#/stories/${+arg-1}">‹ पिछली</a>`:''}${S[+arg+1]?`<a class="xbtn sec" href="#/stories/${+arg+1}">अगली ›</a>`:''}</div>`;return}
  w.innerHTML=`<h2 class="dm xh">📖 कहानी और गीत <small>${S.length}</small></h2><p class="xsub">संताली लोक-कहानियाँ और गीत। P. O. Bodding की “Santal Folk Tales” (1925, 1929) की 47 कहानियाँ उनके अंग्रेज़ी अनुवाद में हैं (पब्लिक डोमेन)। हिन्दी अनुवाद धीरे-धीरे जोड़ा जाएगा।</p>${adm?'<div class="xact"><button class="xbtn" data-sted="new">+ नई कहानी / गीत जोड़ें</button></div>':''}
  ${S.length?`<div class="tgrid">${S.map((s,i)=>`<a class="ttile" href="#/stories/${i}"><span>${s.type==='geet'?'🎵':'📖'}</span><b>${esc(s.title)}</b><small>${esc((s.hi||s.en||'').slice(0,60))}…</small></a>`).join('')}</div>`:'<p class="empty">अभी कोई कहानी या गीत नहीं जोड़ा गया है। BOSC जल्द ही जोड़ेगा। आप भी “सुझाव” से अपनी कहानी या गीत भेज सकते हैं।</p>'}`};
 function stEdit(id){if(!isAdmin()){openLogin();return}const S=STORIES||[],s=id==='new'?{type:'kahani'}:S[+id];
@@ -2527,6 +2540,139 @@ new MutationObserver(()=>{if(open&&target&&(!document.body.contains(target)||!ta
 window.addEventListener('resize',pad);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)hide()});
 })();
+
+/* ===== v57: बाकी features (मूल, क्षेत्र, English→संताली, संस्कृति, अभ्यास, योगदान, रिमाइंडर) ===== */
+let DD=null;const ddLoad=()=>DD?Promise.resolve(DD):fetch('dictdata.json').then(r=>r.json()).then(j=>DD=j).catch(()=>DD={origin:{},regional:{}});
+const ORIGIN_HI={'Hindi':'हिन्दी','Bengali':'बांग्ला','Desi':'देसी (आस-पास की बोलियाँ)','Persian (via Hindi)':'फ़ारसी (हिन्दी से होकर)','Arabic (via Hindi)':'अरबी (हिन्दी से होकर)','Persian (via Bengali)':'फ़ारसी (बांग्ला से होकर)','Arabic (via Bengali)':'अरबी (बांग्ला से होकर)','Mundari':'मुंडारी से मिलता','Ho':'हो भाषा से मिलता','English':'अंग्रेज़ी','Sanskrit':'संस्कृत','Kharwari':'खेरवारी (मुंडा भाषाओं में साझा)','Portuguese':'पुर्तगाली'};
+function ddBadges(k){if(!DD)return'';const o=DD.origin[k],r=DD.regional[k];let s='';
+ if(o){const q=o.endsWith('?'),b=o.replace(/\?$/,'');s+=`<span class="ddb" title="Bodding के शब्दकोश के अनुसार${q?' (तुलना, पक्का नहीं)':''}">🌱 मूल: ${esc(ORIGIN_HI[b]||b)}${q?' ?':''}</span>`}
+ if(r)s+=`<span class="ddb rg" title="${esc(r==='C'?'यह रूप Campbell के शब्दकोश में है; Bodding को पूर्वी संताल इलाक़ों में नहीं सुनाई दिया':r)}">📍 ${r==='C'?'क्षेत्रीय / पुराना रूप (Campbell)':'क्षेत्रीय प्रयोग'}</span>`;
+ return s?`<div class="ddw">${s}</div>`:''}
+const _entryHTML57=entryHTML;
+entryHTML=function(k){let h=_entryHTML57(k);if(!entries[k])return h;const b=ddBadges(k);
+ const isV=Object.keys(entries[k].pos||{}).some(p=>/क्रिया|verb|^v/i.test(p));
+ const extra=b+(isV?`<div class="ddw"><a class="ddb lk" href="#/conjugate/${encodeURIComponent(entries[k].dv)}">🔁 इस क्रिया के रूप देखें</a></div>`:'');
+ if(!extra)return h;const i=h.indexOf('</h1>');return i>0?h.slice(0,i+5)+extra+h.slice(i+5):h.replace('</div>',extra+'</div>')};
+ddLoad().then(()=>{if((location.hash||'').startsWith('#/word/'))route()});
+
+/* English → संताली */
+let ENI=null;function enIndex(){if(ENI)return ENI;const M=new Map();for(const k of order){const e=entries[k];for(const p in e.pos)for(const s of e.pos[p]){(s.en||'').split(/[;,]/).forEach(t=>{t=t.trim().replace(/^to /i,'').toLowerCase();if(t&&t.length<40){if(!M.has(t))M.set(t,new Set());M.get(t).add(k)}})}}
+ ENI=[...M.entries()].map(([t,s])=>[t,[...s]]).sort((a,b)=>a[0].localeCompare(b[0]));return ENI}
+XR.english=arg=>{const I=enIndex(),l=(arg||'a').toLowerCase();const L=l.length>1?I.filter(([t])=>t.includes(l)).slice(0,300):I.filter(([t])=>t[0]===l).slice(0,600);
+ return `<div class="card">${crumb('English → संताली')}<h2 class="dm xh">🔠 English → संताली <small>${I.length.toLocaleString('en-IN')} English शब्द</small></h2>
+ <p class="xsub">English शब्द से संताली शब्द खोजिए।</p><div class="xact"><input id="enq" class="tkin" placeholder="जैसे: water, mother, rain" value="${esc(l.length>1?l:'')}" style="flex:1;min-width:200px"><button class="xbtn" id="engo">खोजें</button></div>
+ <div class="az" style="margin:12px 0">${'abcdefghijklmnopqrstuvwxyz'.split('').map(c=>`<a href="#/english/${c}" class="${c===l?'on':''}">${c.toUpperCase()}</a>`).join('')}</div>
+ <div class="enl">${L.length?L.map(([t,ks])=>`<div class="enr"><b>${esc(t)}</b><span>${ks.slice(0,6).map(wlink).join(', ')}</span></div>`).join(''):'<p class="empty">कुछ नहीं मिला।</p>'}</div></div>`};
+XB.english=()=>{const go=()=>{const v=$('#enq').value.trim().toLowerCase();if(v)location.hash='#/english/'+encodeURIComponent(v)};$('#engo').onclick=go;$('#enq').onkeydown=e=>{if(e.key==='Enter')go()}};
+
+/* संस्कृति */
+let CULT=null;const cultLoad=()=>CULT?Promise.resolve(CULT):fetch('culture.json').then(r=>r.json()).then(j=>CULT=j).catch(()=>CULT={sections:[]});
+XR.culture=arg=>`<div class="card">${crumb(arg?'<a href="#/culture">संस्कृति</a>':'संस्कृति')}<div id="cuw"><p class="xsub">लोड हो रहा है…</p></div></div>`;
+XB.culture=async arg=>{const C=await cultLoad(),w=$('#cuw');if(!w)return;const S=C.sections||[];
+ if(arg){const s=S.find(x=>x.id===arg);if(!s){w.innerHTML='<p class="empty">यह हिस्सा नहीं मिला।</p>';return}
+  w.innerHTML=`<h2 class="dm xh">${s.icon||''} ${esc(s.title_hi)}</h2>${s.intro?`<p class="xsub">${esc(s.intro)}</p>`:''}
+  <div class="cul">${(s.items||[]).map(i=>`<div class="cui">${i.year?`<span class="cuy">${esc(String(i.year))}</span>`:''}<b>${esc(i.name)}</b>${i.sat?` <small>${esc(i.sat)}</small>`:''}<p>${esc(i.text||'')}</p></div>`).join('')||''}</div>
+  ${(s.sources||[]).length?`<details class="cusrc"><summary>स्रोत (${s.sources.length})</summary>${s.sources.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//,'').slice(0,70))}</a>`).join('')}</details>`:''}
+  <div class="xact noprint"><a class="xbtn sec" href="#/culture">← सारे हिस्से</a><button class="xbtn sec" data-print="1">🖨 प्रिंट</button><button class="xbtn sec" onclick="openFeedback()">🚩 गलती बताइए</button></div>`;return}
+ w.innerHTML=`<h2 class="dm xh">🪶 संताल संस्कृति</h2><p class="xsub">लेखक, इतिहास, पारिस, वाद्य, खेल, खाना और पर्व। हर हिस्से के नीचे स्रोत दिए हैं।</p>
+ <div class="lband">${S.map(s=>`<a class="lt" href="#/culture/${s.id}"><span>${s.icon||'•'}</span><b>${esc(s.title_hi)}</b><small>${(s.items||[]).length?(s.items.length+' बातें'):'जानकारी'}</small></a>`).join('')}</div>`};
+
+/* डिक्टेशन: सुनो और लिखो */
+const pickHi=n=>{const L=order.filter(k=>hasHi(k)&&entries[k].w.length<9&&!/\s/.test(entries[k].w));const r=Math.random,o=[];for(let i=0;i<n;i++)o.push(L[Math.floor(r()*L.length)]);return o};
+let DCT=null;
+XR.dictation=()=>`<div class="card">${crumb('सुनो और लिखो')}<h2 class="dm xh">🎧 सुनो और लिखो</h2><p class="xsub">शब्द सुनिए और रोमन या देवनागरी में लिखिए। 10 शब्द।</p><div id="dcw"></div></div>`;
+XB.dictation=()=>{DCT={L:pickHi(10),i:0,s:0};dcDraw()};
+function dcDraw(){const w=$('#dcw');if(!w)return;const D=DCT;if(D.i>=D.L.length){w.innerHTML=`<p class="offok">✅ स्कोर: ${D.s}/${D.L.length}</p><div class="xact"><button class="xbtn" onclick="XB.dictation()">फिर से खेलें</button></div>`;return}
+ const k=D.L[D.i];w.innerHTML=`<p><b>${D.i+1}/${D.L.length}</b> · अर्थ: ${esc(hi1(entries[k]))}</p><div class="xact"><button class="xbtn sec" id="dcp">🔊 सुनिए</button></div><div class="xact"><input id="dci" class="tkin" style="flex:1" autocomplete="off" placeholder="यहाँ लिखिए"><button class="xbtn" id="dcc">जाँचें</button></div><div id="dcm"></div>`;
+ const play=()=>kidSay(k);$('#dcp').onclick=play;setTimeout(play,300);
+ const chk=()=>{const v=norm($('#dci').value),e=entries[k],good=v&&(v===norm(e.w)||v===norm(e.dv)||v.replace(/[^a-z]/g,'')===norm(e.w).replace(/[^a-z]/g,''));if(good)D.s++;
+  $('#dcm').innerHTML=`<p class="${good?'offok':'empty'}">${good?'✅ सही!':'❌ सही:'} ${wlink(k)} (${esc(e.dv)})</p><div class="xact"><button class="xbtn" id="dcn">अगला →</button></div>`;$('#dcn').onclick=()=>{D.i++;dcDraw()};$('#dcc').disabled=true};
+ $('#dcc').onclick=chk;$('#dci').onkeydown=e=>{if(e.key==='Enter')chk()};$('#dci').focus()}
+
+/* बोलने का अभ्यास */
+XR.speak=()=>`<div class="card">${crumb('बोलने का अभ्यास')}<h2 class="dm xh">🗣 बोलने का अभ्यास</h2><p class="xsub">शब्द सुनिए, फिर अपनी आवाज़ रिकॉर्ड करके दोनों मिलाइए। रिकॉर्डिंग सिर्फ़ आपके फ़ोन में रहती है।</p><div id="spw"></div></div>`;
+let SPK=null;XB.speak=()=>{SPK=pickHi(1)[0];spDraw()};
+function spDraw(){const w=$('#spw');if(!w)return;const k=SPK,e=entries[k];
+ w.innerHTML=`<div class="spk"><b>${esc(cap(e.w))}</b><span>${esc(e.dv)}</span><small>${esc(hi1(e))}</small></div><div class="xact"><button class="xbtn sec" id="sp1">🔊 सुनिए</button><button class="xbtn" id="sp2">🎙 रिकॉर्ड</button><button class="xbtn sec" id="sp3" disabled>▶ मेरी आवाज़</button><button class="xbtn sec" id="sp4">अगला शब्द →</button></div><p class="xsub" id="spm"></p>`;
+ let url=null,rec=null;$('#sp1').onclick=()=>kidSay(k);$('#sp4').onclick=()=>{SPK=pickHi(1)[0];spDraw()};
+ $('#sp2').onclick=async()=>{if(rec&&rec.state==='recording'){rec.stop();return}
+  if(!navigator.mediaDevices||!window.MediaRecorder){$('#spm').textContent='इस ब्राउज़र में रिकॉर्डिंग नहीं चलती।';return}
+  try{const st=await navigator.mediaDevices.getUserMedia({audio:true});const ch=[];rec=new MediaRecorder(st);rec.ondataavailable=x=>ch.push(x.data);
+   rec.onstop=()=>{st.getTracks().forEach(t=>t.stop());url=URL.createObjectURL(new Blob(ch));$('#sp3').disabled=false;$('#sp2').textContent='🎙 फिर रिकॉर्ड';$('#spm').textContent='अब “मेरी आवाज़” दबाकर सुनिए और मिलाइए।'};
+   rec.start();$('#sp2').textContent='⏹ रोकें';$('#spm').textContent='बोलिए… (रुकने के लिए फिर दबाइए)';setTimeout(()=>rec.state==='recording'&&rec.stop(),5000)}catch(_){$('#spm').textContent='माइक की अनुमति नहीं मिली।'}};
+ $('#sp3').onclick=()=>url&&new Audio(url).play()}
+
+/* Ol Chiki लिखना सीखें (tracing) */
+XR.trace=arg=>{const i=Math.max(0,Math.min(OCL.length-1,+arg||0)),x=OCL[i];return `<div class="card">${crumb('<a href="#/olchiki">Ol Chiki</a> › लिखना सीखें')}<h2 class="dm xh">✍️ Ol Chiki लिखना सीखें</h2><p class="xsub">हल्के अक्षर के ऊपर उँगली या माउस से लिखिए।</p>
+ <div class="trw"><canvas id="trc" width="320" height="320"></canvas><div><p class="spk"><b class="olc">${x[0]}</b><span>${esc(x[1])}</span><small>${esc(x[2])} · ${esc(x[3])}</small></p>
+ <div class="xact"><button class="xbtn sec" id="trx">मिटाएँ</button>${i>0?`<a class="xbtn sec" href="#/trace/${i-1}">← पिछला</a>`:''}${i<OCL.length-1?`<a class="xbtn" href="#/trace/${i+1}">अगला →</a>`:''}</div></div></div>
+ <div class="ocg" style="margin-top:14px">${OCL.map((y,j)=>`<a class="occ${j===i?' on':''}" href="#/trace/${j}"><b class="olc">${y[0]}</b></a>`).join('')}</div></div>`};
+XB.trace=arg=>{const i=Math.max(0,Math.min(OCL.length-1,+arg||0)),c=$('#trc');if(!c)return;const x=c.getContext('2d');
+ const bg=()=>{x.clearRect(0,0,320,320);x.fillStyle='#e2e8f0';x.font='240px "Noto Sans Ol Chiki",sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(OCL[i][0],160,175);x.lineWidth=14;x.lineCap=x.lineJoin='round';x.strokeStyle='#1d4ed8'};
+ bg();let d=false;const p=e=>{const r=c.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return[(t.clientX-r.left)*320/r.width,(t.clientY-r.top)*320/r.height]};
+ const s=e=>{d=true;const[a,b]=p(e);x.beginPath();x.moveTo(a,b);e.preventDefault()},m=e=>{if(!d)return;const[a,b]=p(e);x.lineTo(a,b);x.stroke();e.preventDefault()},u=()=>d=false;
+ c.onmousedown=s;c.onmousemove=m;window.addEventListener('mouseup',u);c.addEventListener('touchstart',s,{passive:false});c.addEventListener('touchmove',m,{passive:false});c.addEventListener('touchend',u);$('#trx').onclick=bg};
+
+/* रंग भरने के पन्ने */
+XR.color=()=>{const L=(typeof kidList==='function'?kidList():[]).slice(0,12);return `<div class="card">${crumb('<a href="#/kids">बच्चों का कोना</a> › रंग भरें')}<h2 class="dm xh">🖍 रंग भरने के पन्ने</h2><p class="xsub">प्रिंट कीजिए और बच्चे अक्षरों में रंग भरें। हर अक्षर के साथ उसका रोमन और देवनागरी रूप।</p>
+ <div class="xact noprint"><button class="xbtn" data-print="1">🖨 प्रिंट / PDF</button></div>
+ <div class="colg">${OCL.map(x=>`<div class="colc"><b class="olc">${x[0]}</b><small>${esc(x[2])} · ${esc(x[3])}</small></div>`).join('')}</div>
+ ${L.length?`<h3 class="dm" style="margin:20px 0 8px">चित्र वाले शब्द</h3><div class="colg">${L.map(([k,i])=>`<div class="colc w"><span>${i}</span><b>${esc(cap(entries[k].w))}</b><small>${esc(entries[k].dv)}</small></div>`).join('')}</div>`:''}</div>`};
+
+/* कीबोर्ड गाइड */
+XR.keyboards=()=>`<div class="card">${crumb('कीबोर्ड गाइड')}<h2 class="dm xh">⌨️ फ़ोन और कंप्यूटर में संताली कैसे टाइप करें</h2>
+ ${gSec({h:'Android (Gboard)',list:['1. Play Store से Gboard इंस्टॉल/अपडेट करें','2. Settings › System › Languages & input › On-screen keyboard › Gboard › Languages','3. “Add keyboard” दबाइए और Santali खोजिए','4. Ol Chiki या देवनागरी वाला लेआउट चुनिए','5. टाइप करते समय 🌐 बटन से भाषा बदलिए']})}
+ ${gSec({h:'Windows 10 / 11',list:['1. Settings › Time & language › Language & region','2. “Add a language” › Santali (Ol Chiki) चुनिए','3. Win + Space से कीबोर्ड बदलिए']})}
+ ${gSec({h:'iPhone',list:['iPhone में अभी संताली कीबोर्ड पहले से नहीं आता। Play/App Store के तीसरे पक्ष वाले कीबोर्ड या इस साइट का “लिपि बदलें” पेज इस्तेमाल कीजिए।']})}
+ ${gSec({h:'बिना कीबोर्ड के',list:['रोमन में लिखिए और “लिपि बदलें” पेज से Ol Chiki या देवनागरी बनाइए।','Ol Chiki चार्ट पेज पर अक्षर दबाकर भी लिख सकते हैं।']})}
+ <div class="xact"><a class="xbtn" href="#/convert">🔄 लिपि बदलें</a><a class="xbtn sec" href="#/olchiki">Ol Chiki चार्ट</a></div></div>`;
+
+/* साप्ताहिक प्रतियोगिता */
+const weekNo=()=>{const d=new Date(),j=new Date(d.getFullYear(),0,1);return d.getFullYear()*100+Math.ceil(((d-j)/864e5+j.getDay()+1)/7)};
+XR.contest=()=>`<div class="card">${crumb('हफ़्ते की प्रतियोगिता')}<h2 class="dm xh">🏆 हफ़्ते की प्रतियोगिता</h2><p class="xsub">हर हफ़्ते सबके लिए वही 10 सवाल। स्कोर शेयर करके दोस्तों को चुनौती दीजिए।</p><div id="ctw"></div></div>`;
+let CT=null;XB.contest=()=>{const R=rng(weekNo()),L=order.filter(hasHi),q=[];while(q.length<10){const a=L[Math.floor(R()*L.length)];if(q.some(x=>x.a===a))continue;const o=[a];while(o.length<4){const b=L[Math.floor(R()*L.length)];if(!o.includes(b)&&hi1(entries[b])!==hi1(entries[a]))o.push(b)}q.push({a,o:o.sort(()=>R()-.5)})}
+ const best=JSON.parse(localStorage.getItem('ss_contest')||'{}');CT={q,i:0,s:0,best:best.w===weekNo()?best.s:null};ctDraw()};
+function ctDraw(){const w=$('#ctw');if(!w)return;const C=CT;if(C.i>=10){const b=Math.max(C.s,C.best||0);localStorage.setItem('ss_contest',JSON.stringify({w:weekNo(),s:b}));const t=`मैंने SantalSabad की हफ़्ते की प्रतियोगिता में ${C.s}/10 पाए! आप भी खेलिए: ${location.origin+location.pathname}#/contest`;
+  w.innerHTML=`<p class="offok">🎉 आपका स्कोर ${C.s}/10 · इस हफ़्ते का सबसे अच्छा: ${b}/10</p><div class="xact"><a class="xbtn" href="https://wa.me/?text=${encodeURIComponent(t)}" target="_blank" rel="noopener">WhatsApp पर चुनौती दीजिए</a><button class="xbtn sec" onclick="XB.contest()">फिर से</button></div>`;return}
+ const x=C.q[C.i];w.innerHTML=`<p><b>${C.i+1}/10</b> · “${esc(cap(entries[x.a].w))}” का हिन्दी अर्थ?</p><div class="qopts">${x.o.map(k=>`<button class="xbtn sec" data-cto="${esc(k)}">${esc(hi1(entries[k]))}</button>`).join('')}</div>`;
+ w.querySelectorAll('[data-cto]').forEach(b=>b.onclick=()=>{const ok=b.dataset.cto===x.a;if(ok)C.s++;b.style.background=ok?'#dcfce7':'#fee2e2';w.querySelectorAll('[data-cto]').forEach(y=>{y.disabled=true;if(y.dataset.cto===x.a)y.style.background='#dcfce7'});setTimeout(()=>{C.i++;ctDraw()},700)})}
+
+/* शब्द जोड़िए (सबके लिए) */
+XR.contribute=()=>`<div class="card">${crumb('शब्द जोड़िए')}<h2 class="dm xh">➕ नया शब्द या अर्थ भेजिए</h2><p class="xsub">आपका भेजा शब्द पहले BOSC की टीम जाँचेगी, फिर शब्दकोश में आएगा। आपका नाम धन्यवाद पेज पर जुड़ेगा।</p>
+ <div class="ctf"><label>संताली शब्द (रोमन या देवनागरी)*<input id="cw1" class="tkin"></label><label>हिन्दी अर्थ<input id="cw2" class="tkin"></label><label>English अर्थ<input id="cw3" class="tkin"></label><label>उदाहरण वाक्य (संताली)<textarea id="cw4" class="tkta"></textarea></label><label>वाक्य का अर्थ<input id="cw5" class="tkin"></label><label>इलाक़ा (गाँव/ज़िला)<input id="cw6" class="tkin"></label><label>आपका नाम<input id="cw7" class="tkin"></label></div>
+ <div class="xact"><button class="xbtn" id="cwgo">📨 भेजिए</button></div><p class="xsub" id="cwm"></p></div>`;
+XB.contribute=()=>{$('#cwgo').onclick=async()=>{const v=i=>$('#cw'+i).value.trim();if(!v(1)){$('#cwm').textContent='शब्द लिखिए।';return}if(!v(2)&&!v(3)){$('#cwm').textContent='हिन्दी या English अर्थ लिखिए।';return}
+ const data={_subject:'SantalSabad: नया शब्द – '+v(1),_template:'table',शब्द:v(1),हिन्दी:v(2),English:v(3),उदाहरण:v(4),अनुवाद:v(5),इलाक़ा:v(6),नाम:v(7)||'अनाम'};$('#cwgo').disabled=true;$('#cwm').textContent='भेज रहे हैं…';
+ try{const r=await fetch('https://formsubmit.co/ajax/'+(TEXTS.fb_formid||OWNER),{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});if(!r.ok)throw 0;$('#cwm').textContent='✅ धन्यवाद! आपका शब्द भेज दिया गया।';[1,2,3,4,5,6].forEach(i=>$('#cw'+i).value='')}
+ catch(_){location.href='mailto:'+OWNER+'?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(Object.entries(data).filter(([k])=>!k.startsWith('_')).map(([k,x])=>k+': '+x).join('\n'))}finally{$('#cwgo').disabled=false}}};
+
+/* जाँच सूची (native speakers के लिए) */
+XR.review=()=>`<div class="card">${crumb('जाँच में मदद')}<h2 class="dm xh">🔍 जानकार लोग जाँच में मदद करें</h2><p class="xsub">इन बातों को संताली जानने वाले लोग देखें। गलती दिखे तो “गलती बताइए” दबाइए।</p>
+ ${gSec({h:'व्याकरण',list:['आलाङ/आबो़ (हम, सुनने वाला शामिल) और आ़लिञ्/आले (हम, सुनने वाला शामिल नहीं) के लेबल','क्रिया-रूप पेज के अपने-आप बने रूप','पहेलियों के उत्तर, संख्या 97 और 99','चिट्ठी और निबंध पाठ के तथ्य (सोहराय का समय, तिलका माँझी)']})}
+ ${gSec({h:'शब्द',list:['“सा़ङगिञ् ञेलेनेम” (टीवी) की वर्तनी','ale = “हम (सुनने वाला शामिल)”: शायद गलत','बाहा, करम और पर्वों के हिन्दी अर्थ','माघ, फागुन, चैत महीनों के नाम']})}
+ ${gSec({h:'कहानियाँ',list:['कहानियों के हिन्दी अनुवाद (मशीन से नहीं, फिर भी जाँच ज़रूरी)','नाम और जगहों की देवनागरी वर्तनी']})}
+ <div class="xact"><button class="xbtn" onclick="openFeedback()">🚩 गलती बताइए</button><a class="xbtn sec" href="#/contribute">➕ शब्द जोड़िए</a></div></div>`;
+
+/* रोज़ का रिमाइंडर */
+XR.reminder=()=>`<div class="card">${crumb('रोज़ का रिमाइंडर')}<h2 class="dm xh">🔔 रोज़ “आज का शब्द”</h2><p class="xsub">अनुमति दीजिए तो हर दिन पहली बार साइट या ऐप खोलने पर आज का शब्द नोटिफ़िकेशन में आएगा। इंस्टॉल किए ऐप (Android Chrome) में ऐप बंद होने पर भी कभी-कभी आ सकता है।</p>
+ <div class="xact"><button class="xbtn" id="rmon">${localStorage.getItem('ss_rem')==='1'?'✅ चालू है · बंद करें':'🔔 चालू करें'}</button></div><p class="xsub" id="rmm"></p></div>`;
+XB.reminder=()=>{$('#rmon').onclick=async()=>{if(localStorage.getItem('ss_rem')==='1'){localStorage.removeItem('ss_rem');route();return}
+ if(!('Notification' in window)){$('#rmm').textContent='इस ब्राउज़र में नोटिफ़िकेशन नहीं चलते।';return}const p=await Notification.requestPermission();if(p!=='granted'){$('#rmm').textContent='अनुमति नहीं मिली। ब्राउज़र की सेटिंग में Notifications चालू कीजिए।';return}
+ localStorage.setItem('ss_rem','1');localStorage.removeItem('ss_remd');remTick();try{const r=await navigator.serviceWorker.ready;if(r.periodicSync)await r.periodicSync.register('wotd',{minInterval:864e5})}catch(_){}route()}};
+async function remTick(){try{if(localStorage.getItem('ss_rem')!=='1'||Notification.permission!=='granted'||localStorage.getItem('ss_remd')===today()||!order.length)return;
+ const L=order.filter(hasHi),k=L[Math.floor(rng(+today().replace(/-/g,''))()*L.length)],e=entries[k];localStorage.setItem('ss_remd',today());
+ const r=await navigator.serviceWorker.ready;r.showNotification('आज का शब्द: '+cap(e.w),{body:e.dv+' — '+hi1(e),icon:'icon.svg',tag:'wotd',data:{url:'#/word/'+encodeURIComponent(k)}})}catch(_){}}
+setTimeout(remTick,4000);
+
+/* सब नए पेज एक जगह */
+XR.more=()=>{const T=[['#/english/a','🔠','English → संताली','English शब्द से खोजिए'],['#/culture','🪶','संस्कृति','लेखक, इतिहास, पारिस, पर्व'],['#/stories','📖','कहानियाँ','हिन्दी अनुवाद के साथ'],['#/dictation','🎧','सुनो और लिखो','डिक्टेशन खेल'],['#/speak','🗣','बोलने का अभ्यास','रिकॉर्ड करके मिलाइए'],['#/trace','✍️','Ol Chiki लिखें','उँगली से अक्षर बनाइए'],['#/color','🖍','रंग भरें','बच्चों के पन्ने'],['#/contest','🏆','हफ़्ते की प्रतियोगिता','10 सवाल, सबके लिए एक'],['#/contribute','➕','शब्द जोड़िए','नया शब्द भेजिए'],['#/review','🔍','जाँच में मदद','जानकारों के लिए'],['#/keyboards','⌨️','कीबोर्ड गाइड','फ़ोन में संताली टाइप'],['#/reminder','🔔','रोज़ का रिमाइंडर','आज का शब्द नोटिफ़िकेशन में'],['#/developers','🧑‍💻','डेवलपर API','खुला डेटा']];
+ return `<div class="card">${crumb('और भी')}<h2 class="dm xh">✨ और भी सीखिए</h2><div class="lband">${T.map(t=>`<a class="lt" href="${t[0]}"><span>${t[1]}</span><b>${t[2]}</b><small>${t[3]}</small></a>`).join('')}</div></div>`};
+
+/* खोज: कुछ न मिले तो मिलते-जुलते शब्द (ạ/a, ñ/n आदि बराबर) */
+const _search57=search;const flat=s=>norm(s).replace(/[^a-z]/g,'');
+search=function(q,mode){const r=_search57(q,mode);if(r.length||!q||q.length<3||/[\u0900-\u097F\u1C50-\u1C7F]/.test(q))return r;const f=flat(q);if(!f)return r;
+ const o=[];for(const k of order){const w=flat(entries[k].w);if(w===f)o.push([0,k]);else if(Math.abs(w.length-f.length)<=1&&w.length>3&&typeof lev==='function'&&lev(f,w)<=1)o.push([1,k])}return o.sort((a,b)=>a[0]-b[0]).slice(0,30).map(x=>x[1])};
+const _cj57=XB.conjugate;XB.conjugate=arg=>{_cj57(arg);if(arg&&$('#cjv')){$('#cjv').value='x';const x=$('#cjx');if(x){x.value=arg;x.dispatchEvent(new Event('input',{bubbles:true}));$('#cjv').dispatchEvent(new Event('change',{bubbles:true}))}}};
 </script>
 </body>
 </html>

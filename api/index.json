@@ -1,0 +1,32 @@
+{
+ "name": "SantalSabad open API",
+ "by": "BOSC",
+ "license": "Bodding/Campbell public domain; Wiktionary-derived CC BY-SA; credit \"SantalSabad · BOSC\"",
+ "count": 29483,
+ "shards": {
+  "a": "api/a.json",
+  "b": "api/b.json",
+  "c": "api/c.json",
+  "d": "api/d.json",
+  "e": "api/e.json",
+  "f": "api/f.json",
+  "g": "api/g.json",
+  "h": "api/h.json",
+  "i": "api/i.json",
+  "j": "api/j.json",
+  "k": "api/k.json",
+  "l": "api/l.json",
+  "m": "api/m.json",
+  "n": "api/n.json",
+  "o": "api/o.json",
+  "p": "api/p.json",
+  "r": "api/r.json",
+  "s": "api/s.json",
+  "t": "api/t.json",
+  "u": "api/u.json",
+  "w": "api/w.json",
+  "y": "api/y.json",
+  "z": "api/z.json"
+ },
+ "usage": "fetch api/<first latin letter of the word>.json and look up the lowercase word"
+}
