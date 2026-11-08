@@ -2459,6 +2459,70 @@ ${gSec({h:'अभ्यास के विषय',list:['प्रधाना�
 {const _bd=badges;badges=function(){const P=GP(),S=LS('ss_stats',{}),n=Object.values(P).filter(x=>x[0]/x[1]>=.6).length,E=LS('ss_exam',{best:0});
  return _bd().concat([['📖','व्याकरण शुरू','एक अध्याय का अभ्यास पास',n>=1],['📗','आधा व्याकरण','12 अध्याय पास',n>=12],['🎓','व्याकरण विद्वान','सारे अध्याय पास',n>=24],['🎯','परीक्षा वीर','परीक्षा में 16/20 या ज़्यादा',(E.best||0)>=16],['🧩','तालिका उस्ताद','तालिका अभ्यास 25 बार',(S.drill||0)>=25]])}}
 
+
+/* ===== v55: Admin virtual keyboard (Eng default · Santali R · Santali D · हिन्दी) ===== */
+(function(){
+const SP=' ';
+const L={
+ eng:{name:'Eng',rows:[['1','2','3','4','5','6','7','8','9','0','-','='],['q','w','e','r','t','y','u','i','o','p','[',']'],['a','s','d','f','g','h','j','k','l',';',"'"],['z','x','c','v','b','n','m',',','.','/','?','!']],shift:true},
+ satr:{name:'Santali (R)',rows:[['ạ','ă','ã','ẽ','ĕ','é','ĩ','õ','ũ','ṭ','ḍ','ṛ','ṇ','ṅ','ń','ñ'],['q','w','e','r','t','y','u','i','o','p',"'",'’'],['a','s','d','f','g','h','j','k','l','-',';'],['z','x','c','v','b','n','m',',','.','?','!']],extra:['\u0323','\u0303','\u0306','\u0301','\u0304','ŏ','ĭ','ŭ','ā','ē','ī','ō','ū','ɔ','ə','ʔ'],extraT:'चिह्न (पिछले अक्षर पर लगते हैं) व विशेष अक्षर',shift:true},
+ satd:{name:'Santali (D)',rows:[['१','२','३','४','५','६','७','८','९','०','-','’'],['अ','आ','इ','ई','उ','ऊ','ए','ऐ','ओ','औ','अं','अः','ऑ'],['ा','ि','ी','ु','ू','े','ै','ो','ौ','ं','ँ','ः','़','्'],['क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ'],['ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म'],['य','र','ल','व','स','ह','ड़','ढ़','।','॥',',','.','?']],extra:['आ़','ओ़','ा़','ो़','ञ्','ङ्','क्','च्','त्','प्','ट्','ण्','ड़्','क्र','प्र','त्र','द्र','ग्र','ब्र','श्र','क्ष','ज्ञ'],extraT:'संताली देवनागरी संयुक्ताक्षर व मात्राएँ'},
+ hin:{name:'हिन्दी',rows:[['१','२','३','४','५','६','७','८','९','०','-','='],['अ','आ','इ','ई','उ','ऊ','ऋ','ए','ऐ','ओ','औ','अं','अः'],['ा','ि','ी','ु','ू','ृ','े','ै','ो','ौ','ं','ँ','ः','्','़'],['क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ'],['ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म'],['य','र','ल','व','श','ष','स','ह','ड़','ढ़','।',',','?']],extra:['क्ष','त्र','ज्ञ','श्र','क्र','प्र','द्र','ग्र','ब्र','स्त','न्द','द्ध','द्व','ह्म','ऱ','ॐ','₹'],extraT:'हिन्दी संयुक्ताक्षर'}
+};
+let mode=sessionStorage.getItem('ss_vkm')||'eng',shift=false,target=null,open=false;
+const hidden=()=>localStorage.getItem('ss_vkh')==='1';
+const ok=el=>el&&(el.tagName==='TEXTAREA'||(el.tagName==='INPUT'&&/^(text|search|email|url|)$/i.test(el.type)))&&!el.closest('#lmodal')&&!el.closest('#vkb')&&!el.readOnly&&!el.disabled;
+const css=`#vkb{position:fixed;left:0;right:0;bottom:0;z-index:950;background:#f8fafc;border-top:1px solid #cbd5e1;box-shadow:0 -10px 30px -12px rgba(15,23,42,.3);font-family:'Noto Sans Devanagari','Open Sans',sans-serif;transform:translateY(100%);transition:transform .18s}
+#vkb.on{transform:none}#vkb .vkin{max-width:1100px;margin:0 auto;padding:6px 10px 8px}
+#vkb .vkh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+#vkb .vkt{display:flex;gap:2px;padding:3px;background:#e2e8f0;border-radius:9px}
+#vkb .vkt button{border:0;background:none;padding:5px 12px;border-radius:7px;font:inherit;font-size:13px;font-weight:700;color:#475569;cursor:pointer}#vkb .vkt button.on{background:#fff;color:#1d4ed8;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+#vkb .vkn{font-size:11.5px;color:#64748b;margin-left:4px}#vkb .vkx{margin-left:auto;border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:4px 10px;font-size:12px;font-weight:700;color:#334155;cursor:pointer}
+#vkb .vkr{display:flex;gap:4px;margin-bottom:4px;justify-content:center}
+#vkb .vkr button,#vkb .vke button{flex:1 1 0;min-width:0;max-width:64px;height:36px;border:1px solid #cbd5e1;border-bottom-width:2px;background:#fff;border-radius:7px;font:inherit;font-size:16px;color:#0f172a;cursor:pointer;padding:0}
+#vkb .vkr button:hover,#vkb .vke button:hover{background:#eff6ff;border-color:#93c5fd}#vkb .vkr button:active,#vkb .vke button:active{transform:translateY(1px)}
+#vkb .vkr button.w{max-width:110px;font-size:12px;font-weight:700;color:#475569;background:#f1f5f9}#vkb .vkr button.sp{max-width:340px;flex:4}#vkb .vkr button.on{background:#dbeafe;color:#1d4ed8}
+#vkb .vkeT{font-size:11px;font-weight:700;color:#64748b;margin:4px 0 3px}#vkb .vke{display:flex;flex-wrap:wrap;gap:4px}#vkb .vke button{flex:0 0 auto;min-width:38px;max-width:none;padding:0 6px;height:32px;font-size:15px;color:#1d4ed8}
+#vkfab{position:fixed;right:14px;bottom:14px;z-index:949;border:0;border-radius:12px;background:#2563eb;color:#fff;font-size:13px;font-weight:700;padding:9px 12px;box-shadow:0 8px 20px -8px rgba(37,99,235,.7);cursor:pointer;display:none}
+body.vkpad{padding-bottom:var(--vkh,300px)}
+body.vkpad .mdl{bottom:var(--vkh,300px);align-items:flex-start;overflow-y:auto}
+@media(max-width:640px){#vkb .vkr button{height:32px;font-size:14px}#vkb .vkr{gap:2px}#vkb .vkin{padding:4px}}`;
+const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+const box=document.createElement('div');box.id='vkb';box.setAttribute('aria-label','Virtual keyboard');document.body.appendChild(box);
+const fab=document.createElement('button');fab.id='vkfab';fab.type='button';fab.textContent='⌨ कीबोर्ड';document.body.appendChild(fab);
+const esc2=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const cap=c=>shift&&L[mode].shift?c.toUpperCase():c;
+function draw(){const l=L[mode];
+ box.innerHTML=`<div class="vkin"><div class="vkh"><div class="vkt">${Object.keys(L).map(k=>`<button type="button" data-vm="${k}" class="${k===mode?'on':''}">${L[k].name}</button>`).join('')}</div><span class="vkn">${mode==='eng'?'आपका सामान्य कीबोर्ड English में ही चलेगा':'बटन दबाइए · आपका कीबोर्ड English में ही रहेगा'}</span><button type="button" class="vkx" data-vk="hide">✕ छिपाएँ</button></div>
+ ${l.rows.map((r,i)=>`<div class="vkr">${i===l.rows.length-1&&l.shift?`<button type="button" class="w ${shift?'on':''}" data-vk="shift">⇧ Shift</button>`:''}${r.map(c=>`<button type="button" data-ch="${esc2(c)}">${esc2(mode==='satd'||mode==='hin'?(/^[\u093E-\u094D\u0901-\u0903\u093C]$/.test(c)?'◌'+c:c):cap(c))}</button>`).join('')}${i===0?'<button type="button" class="w" data-vk="bs">⌫</button>':''}</div>`).join('')}
+ <div class="vkr"><button type="button" class="w" data-vk="left">←</button><button type="button" class="w sp" data-vk="space">Space</button><button type="button" class="w" data-vk="right">→</button><button type="button" class="w" data-vk="enter">↵ Enter</button></div>
+ ${l.extra?`<div class="vkeT">${l.extraT}</div><div class="vke">${l.extra.map(c=>`<button type="button" data-ch="${esc2(c)}">${esc2(/^[\u0300-\u036F]$/.test(c)?'◌'+c:c)}</button>`).join('')}</div>`:''}</div>`;
+ pad()}
+function pad(){if(open){document.body.style.setProperty('--vkh',(box.offsetHeight+8)+'px');document.body.classList.add('vkpad')}else document.body.classList.remove('vkpad')}
+function show(){if(hidden()){fab.style.display='block';return}open=true;fab.style.display='none';draw();box.classList.add('on');setTimeout(()=>{pad();if(target&&target.scrollIntoView){const r=target.getBoundingClientRect();if(r.bottom>innerHeight-box.offsetHeight)target.scrollIntoView({block:'center',behavior:'smooth'})}},200)}
+function hide(){open=false;box.classList.remove('on');pad()}
+function ins(t){const el=target;if(!el||!document.body.contains(el))return;el.focus();const s=el.selectionStart??el.value.length,e=el.selectionEnd??s;el.setRangeText(t,s,e,'end');el.dispatchEvent(new Event('input',{bubbles:true}))}
+box.addEventListener('mousedown',e=>{if(e.target.closest('button'))e.preventDefault()});
+box.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.vm){mode=b.dataset.vm;sessionStorage.setItem('ss_vkm',mode);shift=false;draw();target&&target.focus();return}
+ const a=b.dataset.vk,el=target;
+ if(a==='hide'){localStorage.setItem('ss_vkh','1');hide();fab.style.display=isAdmin()?'block':'none';return}
+ if(a==='shift'){shift=!shift;draw();return}
+ if(!el||!document.body.contains(el))return;el.focus();
+ if(a==='bs'){const s=el.selectionStart,en=el.selectionEnd;if(s!==en)el.setRangeText('',s,en,'end');else if(s>0){const pre=[...el.value.slice(0,s)];const n=pre.pop().length;el.setRangeText('',s-n,s,'end')}el.dispatchEvent(new Event('input',{bubbles:true}));return}
+ if(a==='space')return ins(' ');
+ if(a==='enter'){if(el.tagName==='TEXTAREA')ins('\n');return}
+ if(a==='left'||a==='right'){const p=Math.max(0,Math.min(el.value.length,(el.selectionStart||0)+(a==='left'?-1:1)));el.setSelectionRange(p,p);return}
+ if(b.dataset.ch!=null){ins(cap(b.dataset.ch));if(shift){shift=false;draw()}}});
+fab.onclick=()=>{localStorage.removeItem('ss_vkh');fab.style.display='none';show();target&&target.focus()};
+document.addEventListener('focusin',e=>{const el=e.target;if(!isAdmin()){if(open)hide();fab.style.display='none';return}
+ if(ok(el)){target=el;if(!open)show()}});
+document.addEventListener('focusout',()=>{setTimeout(()=>{const a=document.activeElement;if(open&&!ok(a)&&!(a&&a.closest&&a.closest('#vkb'))){if(!target||!document.body.contains(target)||!target.offsetParent)hide()}},150)});
+window.addEventListener('hashchange',()=>{hide();target=null});
+new MutationObserver(()=>{if(open&&target&&(!document.body.contains(target)||!target.offsetParent)){hide();target=null}}).observe(document.body,{childList:true,subtree:true});
+window.addEventListener('resize',pad);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)hide()});
+})();
 </script>
 </body>
 </html>
