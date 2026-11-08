@@ -1,4 +1,4 @@
-const C='santalsabad-v66';const F=['./','index.html','words.csv','slides.json','manifest.json','grammar.json','en_ipa.json','pics.json','icon.svg','img/sc/c001.webp'];
+const C='santalsabad-v67';const F=['./','index.html','words.csv','slides.json','manifest.json','grammar.json','en_ipa.json','pics.json','icon.svg','img/sc/c001.webp'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(F)));self.skipWaiting()});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C&&x!=='santalsabad-offline').map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET'||new URL(r.url).origin!==location.origin)return;
