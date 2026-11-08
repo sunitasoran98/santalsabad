@@ -2478,10 +2478,21 @@ ${gSec({h:'अभ्यास के विषय',list:['प्रधाना�
 const SP=' ';
 const L={
  eng:{name:'Eng',rows:[['1','2','3','4','5','6','7','8','9','0','-','='],['q','w','e','r','t','y','u','i','o','p','[',']'],['a','s','d','f','g','h','j','k','l',';',"'"],['z','x','c','v','b','n','m',',','.','/','?','!']],shift:true},
- satr:{name:'Santali (R)',rows:[['ạ','ă','ã','ẽ','ĕ','é','ĩ','õ','ũ','ṭ','ḍ','ṛ','ṇ','ṅ','ń','ñ'],['q','w','e','r','t','y','u','i','o','p',"'",'’'],['a','s','d','f','g','h','j','k','l','-',';'],['z','x','c','v','b','n','m',',','.','?','!']],extra:['\u0323','\u0303','\u0306','\u0301','\u0304','ŏ','ĭ','ŭ','ā','ē','ī','ō','ū','ɔ','ə','ʔ'],extraT:'चिह्न (पिछले अक्षर पर लगते हैं) व विशेष अक्षर',shift:true},
- satd:{name:'Santali (D)',rows:[['१','२','३','४','५','६','७','८','९','०','-','’'],['अ','आ','इ','ई','उ','ऊ','ए','ऐ','ओ','औ','अं','अः','ऑ'],['ा','ि','ी','ु','ू','े','ै','ो','ौ','ं','ँ','ः','़','्'],['क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ'],['ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म'],['य','र','ल','व','स','ह','ड़','ढ़','।','॥',',','.','?']],extra:['आ़','ओ़','ा़','ो़','ञ्','ङ्','क्','च्','त्','प्','ट्','ण्','ड़्','क्र','प्र','त्र','द्र','ग्र','ब्र','श्र','क्ष','ज्ञ'],extraT:'संताली देवनागरी संयुक्ताक्षर व मात्राएँ'},
+ satr:{name:'Santali (R)',rows:[['ạ','ă','ã','ẽ','ĕ','é','ĩ','õ','ũ','ṭ','ḍ','ṛ','ṇ','ṅ','ń','ñ'],['q','w','e','r','t','y','u','i','o','p',"'",'’'],['a','s','d','f','g','h','j','k','l','-',';'],['z','x','c','v','b','n','m',',','.','?','!']],extra:['a̱','e̱','o̱','i̱','u̱','ā','ē','ī','ō','ū','ʼ','\u0323','\u0303','\u0306','\u0301','\u0304','ŏ','ĭ','ŭ','ā','ē','ī','ō','ū','ɔ','ə','ʔ'],extraT:'चिह्न (पिछले अक्षर पर लगते हैं) व विशेष अक्षर',shift:true},
+ satd:{name:'Santali (D)',rows:[['१','२','३','४','५','६','७','८','९','०','-','’'],['अ','आ','इ','ई','उ','ऊ','ए','ऐ','ओ','औ','अं','अः','ऑ'],['ा','ि','ी','ु','ू','े','ै','ो','ौ','ं','ँ','ः','़','्'],['क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ'],['ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म'],['य','र','ल','व','स','ह','ड़','ढ़','।','॥',',','.','?']],extra:['ʼ','कʼ','गʼ','चʼ','जʼ','तʼ','दʼ','पʼ','बʼ','आ़','ओ़','ा़','ो़','ञ्','ङ्','क्','च्','त्','प्','ट्','ण्','ड़्','क्र','प्र','त्र','द्र','ग्र','ब्र','श्र','क्ष','ज्ञ'],extraT:'संताली देवनागरी संयुक्ताक्षर व मात्राएँ'},
+ olc:{name:'ᱚᱞ Ol Chiki',olc:true,rows:[['᱑','᱒','᱓','᱔','᱕','᱖','᱗','᱘','᱙','᱐','-',"'"],['ᱚ','ᱛ','ᱜ','ᱝ','ᱞ','ᱟ','ᱠ','ᱡ','ᱢ','ᱣ','ᱸ','ᱹ'],['ᱤ','ᱥ','ᱦ','ᱧ','ᱨ','ᱩ','ᱪ','ᱫ','ᱬ','ᱭ','ᱺ','ᱻ'],['ᱮ','ᱯ','ᱰ','ᱱ','ᱲ','ᱳ','ᱴ','ᱵ','ᱶ','ᱷ','ᱼ','ᱽ']],extra:['ᱟᱹ','ᱚᱹ','ᱮᱹ','ᱠᱷ','ᱜᱷ','ᱪᱷ','ᱡᱷ','ᱴᱷ','ᱰᱷ','ᱛᱷ','ᱫᱷ','ᱯᱷ','ᱵᱷ','ᱲᱷ','᱾','᱿',',','?'],extraT:'Ol Chiki: जोड़ अक्षर और चिह्न (Hoṛ Katha Suite से)'},
  hin:{name:'हिन्दी',rows:[['१','२','३','४','५','६','७','८','९','०','-','='],['अ','आ','इ','ई','उ','ऊ','ऋ','ए','ऐ','ओ','औ','अं','अः'],['ा','ि','ी','ु','ू','ृ','े','ै','ो','ौ','ं','ँ','ः','्','़'],['क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ'],['ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म'],['य','र','ल','व','श','ष','स','ह','ड़','ढ़','।',',','?']],extra:['क्ष','त्र','ज्ञ','श्र','क्र','प्र','द्र','ग्र','ब्र','स्त','न्द','द्ध','द्व','ह्म','ऱ','ॐ','₹'],extraT:'हिन्दी संयुक्ताक्षर'}
 };
+/* v58: Hoṛ Katha Suite (BOSC) के phonetic key-maps */
+const HDEV={a:'ा',b:'ब',c:'च',d:'द',e:'े',f:'ि',g:'ग',h:'ह',i:'ी',j:'ज',k:'क',l:'ल',m:'म',n:'न',o:'ो',p:'प',q:'्',r:'र',s:'स',t:'त',u:'ु',v:'व',w:'व',x:'ं',y:'य',z:'ज़',A:'आ',B:'भ',C:'छ',D:'ड',E:'ै',F:'ऋ',G:'घ',H:'ढ़',I:'ई',J:'झ',K:'ख',L:'ळ',M:'श',N:'ण',O:'ौ',P:'फ',Q:'ॐ',R:'ड़',S:'ष',T:'ट',U:'ू',V:'ऩ',W:'ङ',X:'ँ',Y:'य़',Z:'ञ','[':'ृ',']':'़','{':'ऱ','}':'़'};
+const HDEVS=Object.assign({},HDEV,{z:'़',L:'ʼ',V:'ॅ',Q:'ऑ','|':'।'});
+const HOLC={a:'ᱚ',b:'ᱵ',c:'ᱪ',d:'ᱫ',e:'ᱮ',f:'ᱯ',g:'ᱜ',h:'ᱷ',i:'ᱤ',j:'ᱡ',k:'ᱠ',l:'ᱞ',m:'ᱢ',n:'ᱱ',o:'ᱳ',p:'ᱯ',q:'ᱥ',r:'ᱨ',s:'ᱥ',t:'ᱛ',u:'ᱩ',v:'ᱶ',w:'ᱣ',x:'ᱠ',y:'ᱭ',z:'ᱲ',
+ A:'ᱟ',H:'ᱦ',G:'ᱝ',Y:'ᱧ',N:'ᱬ',T:'ᱴ',D:'ᱰ',R:'ᱲ',M:'ᱸ',X:'ᱹ',Q:'ᱺ',Z:'ᱻ',K:'ᱼ',J:'ᱽ','|':'᱾','0':'᱐','1':'᱑','2':'᱒','3':'᱓','4':'᱔','5':'᱕','6':'᱖','7':'᱗','8':'᱘','9':'᱙'};
+const HROM={n:'ñ',g:'ṅ',d:'ṇ',r:'ṛ',t:'ṭ',a:'ạ',e:'ē',i:'ī',o:'ō',u:'ū',l:'ḷ',m:'ṃ',s:'ṣ',h:'ḥ',z:'ẓ','[':'a̱',']':'e̱',';':'o̱',"'":'ʼ',',':'ã','.':'ẽ','/':'õ','\\':'ũ','1':'ḍ','2':'ă','3':'ĕ','4':'é','5':'ń','6':'ĩ','7':'ā',
+ N:'Ñ',G:'Ṅ',D:'Ṇ',R:'Ṛ',T:'Ṭ',A:'Ạ',E:'Ē',I:'Ī',O:'Ō',U:'Ū',L:'Ḷ',M:'Ṃ',S:'Ṣ',H:'Ḥ',Z:'Ẓ','{':'A̱','}':'E̱',':':'O̱','"':'ʼ','<':'Ã','>':'Ẽ','?':'Õ','|':'Ũ','!':'Ḍ'};
+const PMAP={satd:HDEVS,hin:HDEV,olc:HOLC,satr:HROM};
+const PH_HINT={satd:'फ़ोनेटिक: k=क K=ख a=ा A=आ f=ि i=ी q=् x=ं R=ड़ L=ʼ z=़',hin:'फ़ोनेटिक: k=क K=ख a=ा A=आ f=ि i=ी u=ु q=् x=ं M=श',olc:'फ़ोनेटिक: a=ᱚ A=ᱟ h=ᱷ H=ᱦ G=ᱝ Y=ᱧ T=ᱴ D=ᱰ M=ᱸ X=ᱹ, अंक सीधे',satr:'Alt+अक्षर: Alt+a=ạ Alt+n=ñ Alt+g=ṅ Alt+r=ṛ Alt+t=ṭ Alt+1=ḍ Alt+,=ã'};
+const phon=()=>localStorage.getItem('ss_vkp')!=='0';
 let mode=sessionStorage.getItem('ss_vkm')||'eng',shift=false,target=null,open=false;
 const hidden=()=>localStorage.getItem('ss_vkh')==='1';
 const ce=el=>el&&el.closest&&el.closest('[contenteditable="true"],[contenteditable=""]');
@@ -2492,7 +2503,7 @@ const css=`#vkb{position:fixed;left:0;right:0;bottom:0;z-index:950;background:#f
 #vkb .vkh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px}
 #vkb .vkt{display:flex;gap:2px;padding:3px;background:#e2e8f0;border-radius:9px}
 #vkb .vkt button{border:0;background:none;padding:5px 12px;border-radius:7px;font:inherit;font-size:13px;font-weight:700;color:#475569;cursor:pointer}#vkb .vkt button.on{background:#fff;color:#1d4ed8;box-shadow:0 1px 2px rgba(0,0,0,.12)}
-#vkb .vkn{font-size:11.5px;color:#64748b;margin-left:4px}#vkb .vkx{margin-left:auto;border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:4px 10px;font-size:12px;font-weight:700;color:#334155;cursor:pointer}
+#vkb .vkn{font-size:11.5px;color:#64748b;margin-left:4px}#vkb .vkp{margin-left:0}#vkb .vkp.on{background:#dcfce7;border-color:#86efac;color:#166534}#vkb button.olc{font-family:'Noto Sans Ol Chiki',sans-serif;font-size:18px}#vkb .vkx{margin-left:auto;border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:4px 10px;font-size:12px;font-weight:700;color:#334155;cursor:pointer}
 #vkb .vkr{display:flex;gap:4px;margin-bottom:4px;justify-content:center}
 #vkb .vkr button,#vkb .vke button{flex:1 1 0;min-width:0;max-width:64px;height:36px;border:1px solid #cbd5e1;border-bottom-width:2px;background:#fff;border-radius:7px;font:inherit;font-size:16px;color:#0f172a;cursor:pointer;padding:0}
 #vkb .vkr button:hover,#vkb .vke button:hover{background:#eff6ff;border-color:#93c5fd}#vkb .vkr button:active,#vkb .vke button:active{transform:translateY(1px)}
@@ -2508,8 +2519,8 @@ const fab=document.createElement('button');fab.id='vkfab';fab.type='button';fab.
 const esc2=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 const cap=c=>shift&&L[mode].shift?c.toUpperCase():c;
 function draw(){const l=L[mode];
- box.innerHTML=`<div class="vkin"><div class="vkh"><div class="vkt">${Object.keys(L).map(k=>`<button type="button" data-vm="${k}" class="${k===mode?'on':''}">${L[k].name}</button>`).join('')}</div><span class="vkn">${mode==='eng'?'आपका सामान्य कीबोर्ड English में ही चलेगा':'बटन दबाइए · आपका कीबोर्ड English में ही रहेगा'}</span><button type="button" class="vkx" data-vk="hide">✕ छिपाएँ</button></div>
- ${l.rows.map((r,i)=>`<div class="vkr">${i===l.rows.length-1&&l.shift?`<button type="button" class="w ${shift?'on':''}" data-vk="shift">⇧ Shift</button>`:''}${r.map(c=>`<button type="button" data-ch="${esc2(c)}">${esc2(mode==='satd'||mode==='hin'?(/^[\u093E-\u094D\u0901-\u0903\u093C]$/.test(c)?'◌'+c:c):cap(c))}</button>`).join('')}${i===0?'<button type="button" class="w" data-vk="bs">⌫</button>':''}</div>`).join('')}
+ box.innerHTML=`<div class="vkin"><div class="vkh"><div class="vkt">${Object.keys(L).map(k=>`<button type="button" data-vm="${k}" class="${k===mode?'on':''}">${L[k].name}</button>`).join('')}</div><span class="vkn">${mode==='eng'?'आपका सामान्य कीबोर्ड English में ही चलेगा':(phon()?PH_HINT[mode]:'बटन दबाइए · अपने कीबोर्ड से टाइपिंग English में रहेगी')}</span>${mode!=='eng'?`<button type="button" class="vkx vkp${phon()?' on':''}" data-vk="phon" title="अपने कीबोर्ड की कुंजियों से सीधे इस लिपि में टाइप करें">⌨ फ़ोनेटिक: ${phon()?'चालू':'बंद'}</button>`:''}<button type="button" class="vkx" data-vk="hide">✕ छिपाएँ</button></div>
+ ${l.rows.map((r,i)=>`<div class="vkr">${i===l.rows.length-1&&l.shift?`<button type="button" class="w ${shift?'on':''}" data-vk="shift">⇧ Shift</button>`:''}${r.map(c=>`<button type="button" data-ch="${esc2(c)}"${l.olc?' class="olc"':''}>${esc2(mode==='satd'||mode==='hin'?(/^[\u093E-\u094D\u0901-\u0903\u093C]$/.test(c)?'◌'+c:c):cap(c))}</button>`).join('')}${i===0?'<button type="button" class="w" data-vk="bs">⌫</button>':''}</div>`).join('')}
  <div class="vkr"><button type="button" class="w" data-vk="left">←</button><button type="button" class="w sp" data-vk="space">Space</button><button type="button" class="w" data-vk="right">→</button><button type="button" class="w" data-vk="enter">↵ Enter</button></div>
  ${l.extra?`<div class="vkeT">${l.extraT}</div><div class="vke">${l.extra.map(c=>`<button type="button" data-ch="${esc2(c)}">${esc2(/^[\u0300-\u036F]$/.test(c)?'◌'+c:c)}</button>`).join('')}</div>`:''}</div>`;
  pad()}
@@ -2523,6 +2534,7 @@ box.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return
  const a=b.dataset.vk,el=target;
  if(a==='hide'){localStorage.setItem('ss_vkh','1');hide();fab.style.display=isAdmin()?'block':'none';return}
  if(a==='shift'){shift=!shift;draw();return}
+ if(a==='phon'){localStorage.setItem('ss_vkp',phon()?'0':'1');draw();target&&target.focus();return}
  if(!el||!document.body.contains(el))return;el.focus();
  if(el.isContentEditable||el.tagName!=='TEXTAREA'&&el.tagName!=='INPUT'){if(a==='bs')return void document.execCommand('delete');if(a==='space')return ins(' ');if(a==='enter')return;if(a==='left'||a==='right'){const s=getSelection();s.modify&&s.modify('move',a==='left'?'backward':'forward','character');return}}
  if(a==='bs'){const s=el.selectionStart,en=el.selectionEnd;if(s!==en)el.setRangeText('',s,en,'end');else if(s>0){const pre=[...el.value.slice(0,s)];const n=pre.pop().length;el.setRangeText('',s-n,s,'end')}el.dispatchEvent(new Event('input',{bubbles:true}));return}
@@ -2539,6 +2551,9 @@ window.addEventListener('hashchange',()=>{hide();target=null});
 new MutationObserver(()=>{if(open&&target&&(!document.body.contains(target)||!target.offsetParent)){hide();target=null}}).observe(document.body,{childList:true,subtree:true});
 window.addEventListener('resize',pad);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)hide()});
+document.addEventListener('keydown',e=>{if(!open||mode==='eng'||!phon()||e.ctrlKey||e.metaKey||e.isComposing)return;const el=e.target;if(!ok(el)||tg(el)!==target)return;
+ const M=PMAP[mode];if(!M)return;if(mode==='satr'){if(!e.altKey)return;const k=e.code&&/^Key[A-Z]$/.test(e.code)?(e.shiftKey?e.code[3]:e.code[3].toLowerCase()):e.code&&/^Digit\d$/.test(e.code)?(e.shiftKey&&e.code==='Digit1'?'!':e.code[5]):e.key;const v=M[k]||M[e.key];if(v){e.preventDefault();ins(v)}return}
+ if(e.altKey||e.key.length!==1)return;const v=M[e.key];if(v!=null){e.preventDefault();ins(v)}},true);
 })();
 
 /* ===== v57: बाकी features (मूल, क्षेत्र, English→संताली, संस्कृति, अभ्यास, योगदान, रिमाइंडर) ===== */
