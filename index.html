@@ -132,7 +132,7 @@ table.et7{border-collapse:collapse;min-width:900px;background:#fff}
 .et7 td.c2,.et7 td.c7{color:#1f5fae;font-weight:600}.et7 .dvc{color:#b4232a}
 .et7 td.c4{color:#0f6b5f;font-weight:600}.et7 td.c8,.et7 .eip{color:#6a3fa0}
 .et7 td.c3h{color:#c46a12;font-weight:600}.et7 .exs{color:#2c2350}.et7 .exe{color:#0f6b5f}
-.et7 .lb{color:#888;font-weight:400}
+.et7 .lb{color:#888;font-weight:400}.et7 .exs a.swd{color:inherit;text-decoration:underline dotted #6a3fa0}
 .et th.c7{background:#7a4b12}.et th.c8{background:#2d6a8f}.et td.c7{background:#fbf5ec}.et td.c8{background:#eef6fb;color:#2d6a8f}.et .eip{font-family:"Lucida Sans Unicode","Segoe UI","Noto Sans",sans-serif;font-size:16px;white-space:nowrap}table.et7{min-width:980px}.et .lb{color:#8a8f9c;font-size:13px;font-style:normal}.et td.c2 .dvc,.et td.c7 .dvc{font-size:17px}
 /* A-Z box */
 .azbox{background:linear-gradient(160deg,#011f43,#0d2f5c)!important;border:0!important;border-radius:12px;color:#fff;box-shadow:0 10px 26px rgba(1,31,67,.25)}
@@ -992,6 +992,7 @@ const POS=['संज्ञा','क्रिया','विशेषण','स�
 const ed=(i,f,v,cls='')=>EDIT?`<span class="ed ${cls}" contenteditable="true" data-i="${i}" data-f="${esc(f)}">${esc(v)}</span>`:(v?`<span class="${cls}">${esc(v)}</span>`:'<span class="na">—</span>');
 let ENIPA=null;fetch('en_ipa.json').then(r=>r.json()).then(j=>{ENIPA=j;if(/^#\/word\//.test(location.hash)&&typeof entries!=="undefined"&&entries&&Object.keys(entries).length)route()}).catch(()=>{});
 function enIpaHTML(en){en=(en||'').trim();if(!ENIPA||!en)return'<span class="na">—</span>';let g=en.split(/[,;\/(\[:]/)[0].trim().toLowerCase().replace(/[.!?]+$/,'').replace(/^(to|a|an|the)\s+/,'');const ws=g.match(/[a-z]+(?:'[a-z]+)?/g);if(!ws||ws.length>4||!ws.every(w=>ENIPA[w]))return'<span class="na">—</span>';const ip='/'+ws.map(w=>ENIPA[w]).join(' ')+'/';const full=en.toLowerCase().replace(/[.!?]+$/,'').replace(/^(to|a|an|the)\s+/,'');return (full===g?'':`<span class="lb">${esc(g)}</span> `)+`<span class="eip">${esc(ip)}</span>`}
+function exLink(t,self){return esc(t).replace(/[A-Za-zÀ-ɏḀ-ỿ̀-ͯ'’]+/g,w=>{const k=key(w.replace(/’/g,"'"));const k2=entries[k]?k:entries[k.replace(/'$/,'')]?k.replace(/'$/,''):null;return k2&&k2!==self?`<a class="swd" href="#/word/${encodeURIComponent(k2)}" title="${esc(gloss(entries[k2]).slice(0,60))}">${w}</a>`:w})}
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">यह शब्द अभी शब्दकोश में नहीं है।</p></div>`;
   let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(cap(e.w))}</div>
   <h1 class="hw"${EDIT?` contenteditable="true" data-word="${esc(k)}"`:''}>${esc(EDIT?e.w:cap(e.w))}</h1>
@@ -1007,12 +1008,12 @@ function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class
       <td class="c4">${ed(s.i,'English',s.en)}</td>
       <td class="c8">${enIpaHTML(s.en)}</td>
       <td class="c3h">${ed(s.i,'Hindi',s.hi)}</td>
-      <td class="c5">${EDIT?`${ed(s.i,'Udaharan (Santali)',s.ex,'exs')}${ed(s.i,'Udaharan ka anuvad',s.tr,'exe')}`:(s.ex?`<span class="exs"><span class="lb">Stl-</span>${esc(s.ex)}</span>${en?`<span class="exe"><span class="lb">Eng-</span>${esc(en)}</span>`:''}`:'<span class="na">—</span>')}</td>
+      <td class="c5">${EDIT?`${ed(s.i,'Udaharan (Santali)',s.ex,'exs')}${ed(s.i,'Udaharan ka anuvad',s.tr,'exe')}`:(s.ex?`<span class="exs"><span class="lb">Stl-</span>${exLink(s.ex,k)}</span>${en?`<span class="exe"><span class="lb">Eng-</span>${esc(en)}</span>`:''}`:'<span class="na">—</span>')}</td>
       ${EDIT?`<td class="c6"><button class="del" data-del="${s.i}" title="यह अर्थ हटाएँ">✕</button></td>`:''}</tr>`});
   h+='</tbody></table></div>';
   if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ नया अर्थ जोड़ें</button><button class="abtn red" data-delword="${esc(k)}">पूरा शब्द हटाएँ</button></div>`;
   if(e.rel)h+=`<div class="rel"><b>संबंधित शब्द:</b> ${e.rel.split(/[;,]/).map(x=>x.trim()).filter(Boolean).map(x=>`<a href="#/word/${encodeURIComponent(key(x))}">${esc(x)}</a>`).join('')}</div>`;
-  h+=`<div class="wtools"><button type="button" class="wbtn" data-say="${esc(k)}">🔊 सुनें</button><button type="button" class="wbtn wbm${BM().includes(k)?' on':''}" data-bm="${esc(k)}">${BM().includes(k)?'★ सेव है':'☆ सेव करें'}</button><button type="button" class="wbtn" data-share="${esc(k)}">📤 शेयर</button><button type="button" class="wbtn" data-copy="${esc(k)}">📋 कॉपी</button>${isAdmin()?`<button type="button" class="wbtn wadm" data-rec="${esc(k)}">🎙 ${AUD()[k]?'आवाज़ बदलें':'आवाज़ रिकॉर्ड'}</button>`:''}<button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
+  h+=`<div class="wtools"><button type="button" class="wbtn" data-sayall="${esc(k)}">🔊 पूरा सुनें</button><button type="button" class="wbtn" data-say="${esc(k)}">🔈 सिर्फ़ शब्द</button><button type="button" class="wbtn wbm${BM().includes(k)?' on':''}" data-bm="${esc(k)}">${BM().includes(k)?'★ सेव है':'☆ सेव करें'}</button><button type="button" class="wbtn" data-share="${esc(k)}">📤 शेयर</button><button type="button" class="wbtn" data-copy="${esc(k)}">📋 कॉपी</button>${isAdmin()?`<button type="button" class="wbtn wadm" data-rec="${esc(k)}">🎙 ${AUD()[k]?'आवाज़ बदलें':'आवाज़ रिकॉर्ड'}</button>`:''}<button type="button" class="wbtn" data-fbw="${esc(k)}">✎ इस शब्द पर सुझाव</button><button type="button" class="wbtn wadm" data-aedit="${esc(k)}">🛡 Admin</button></div>`;
   h+=`<div class="cite">SantalSabad: Santali Hindi English Dictionary, “${esc(cap(e.w))}”, by BOSC.</div></div>`;return h}
 
 function listHTML(title,keys){return `<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(title)}</div><h2 class="dm" style="margin-top:0;font-size:32px">${esc(title)}</h2>${keys.length?'<div class="xact noprint"><button class="xbtn sec" data-print="1">🖨 प्रिंट / PDF</button></div>':''}
@@ -1377,6 +1378,26 @@ function say(text,btn){if(!window.speechSynthesis){alert('इस ब्राउ
 function sayWord(k,btn){if(playAud(k))return;const e=entries[k];if(!e)return;const s=first(e);const v=curVoice();const hi=!v||/^hi/i.test(v.lang);
  say(hi?`${e.dv}। हिन्दी अर्थ: ${s.hi||s.en||''}`:`${e.w}. Meaning: ${s.en||''}`,btn)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(b)sayWord(b.dataset.say,b);const f=e.target.closest('[data-fbw]');if(f)openFeedback(f.dataset.fbw)});
+
+function sayAll(k,btn){const e=entries[k];if(!e)return;if(!window.speechSynthesis){alert('इस ब्राउज़र में पढ़कर सुनाने की सुविधा नहीं है।');return}
+ if(btn&&btn.classList.contains('on')){speechSynthesis.cancel();btn.classList.remove('on');return}
+ const all=[];for(const p in e.pos)e.pos[p].forEach(s=>all.push([p,s]));all.sort((a,b)=>a[1].n-b[1].n||a[1].i-b[1].i);
+ const V=(window.speechSynthesis.getVoices()||[]),cur=curVoice();
+ const hiV=(cur&&/^hi/i.test(cur.lang))?cur:(V.find(v=>/^hi/i.test(v.lang))||null);
+ const enV=(cur&&/^en/i.test(cur.lang))?cur:(V.find(v=>/^en-(GB|IN)/i.test(v.lang))||V.find(v=>/^en/i.test(v.lang))||null);
+ const dv=e.dv||deva(e.w),Q=[];const H=t=>t&&Q.push(['hi',t]),EN=t=>t&&Q.push(['en',t]);
+ all.forEach(([p,s],j)=>{
+  H(`${all.length>1?'अर्थ '+(j+1)+'. ':''}शब्द: ${dv}${p?', '+p:''}।`);
+  H(`संताली उच्चारण: ${dv}।`);
+  if(s.en){H('अंग्रेज़ी अर्थ:');EN(s.en.replace(/[;/]/g,', '))}
+  if(s.hi)H(`हिन्दी अर्थ: ${s.hi}।`);
+  if(s.ex){H(`उदाहरण: ${deva(s.ex)}।`);const tr=(s.tr||'').split(' / ');const te=tr.find(x=>/[a-z]/i.test(x)),th=tr.find(x=>/[\u0900-\u097F]/.test(x));if(th)H(th);if(te){EN(te)}}
+ });
+ speechSynthesis.cancel();if(btn)btn.classList.add('on');
+ const rate=+(localStorage.getItem('ss_rate')||0.9),pitch=+(localStorage.getItem('ss_pitch')||1.05);
+ let i=0;const next=()=>{if(i>=Q.length){btn&&btn.classList.remove('on');return}const [l,t]=Q[i++];const u=new SpeechSynthesisUtterance(t);const v=l==='en'?enV:hiV;if(v){u.voice=v;u.lang=v.lang}else u.lang=l==='en'?'en-IN':'hi-IN';u.rate=rate;u.pitch=pitch;u.onend=next;u.onerror=()=>{btn&&btn.classList.remove('on')};speechSynthesis.speak(u)};
+ const a=AUD()[k];if(a){const x=new Audio(a);x.onended=next;x.onerror=next;x.play().catch(next)}else next()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-sayall]');if(b)sayAll(b.dataset.sayall,b)});
 function voicePop(anchor){document.querySelectorAll('.vpop').forEach(p=>p.remove());const L=voices(),cur=curVoice();const p=document.createElement('div');p.className='vpop';
  p.innerHTML=`<h6>आवाज़ चुनें (टॉप ${L.length||10})</h6><div class="vl">${L.length?L.map((v,i)=>`<button type="button" class="v${cur&&v.name===cur.name?' on':''}" data-vn="${esc(v.name)}"><span>${FEM.test(v.name)?'👩':'🎙'}</span><b>${esc(v.name.replace(/Microsoft |Google |Online \(Natural\)| - .*/g,'').slice(0,28))}</b><small>${esc(v.lang)}</small></button>`).join(''):'<div class="none">इस डिवाइस में कोई आवाज़ नहीं मिली। Chrome या Edge में खोलकर देखिए।</div>'}</div>
  <label>गति<input type="range" min="0.6" max="1.4" step="0.05" value="${localStorage.getItem('ss_rate')||0.9}" data-k="ss_rate"></label><label>सुर<input type="range" min="0.6" max="1.6" step="0.05" value="${localStorage.getItem('ss_pitch')||1.05}" data-k="ss_pitch"></label>`;
