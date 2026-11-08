@@ -792,6 +792,35 @@ body.embed>*:not(#view):not(main),body.embed header,body.embed footer,body.embed
 .wshd{border-bottom:2px solid #011f43;margin-bottom:12px}.wshd p:first-child{color:#b45309;font-weight:700;margin:0}.wsq{margin:10px 0;break-inside:avoid}.wso{margin:4px 0 0 18px}.wsl{color:#94a3b8;margin:8px 0}.wsk{margin-top:28px;padding-top:12px;border-top:2px dashed #94a3b8;break-before:page}
 @media print{.ws .crumb{display:none}}
 .stg.st1{grid-template-columns:1fr}.stg.st1 .stx{max-width:760px;font-size:17px;line-height:1.75}
+
+/* v54 login modal: compact professional */
+#lmodal .lov{padding:16px;overflow:hidden;background:rgba(15,23,42,.55);backdrop-filter:blur(6px)}
+#lmodal .lcard{max-width:380px;max-height:calc(100vh - 32px);overflow:hidden;border-radius:20px;border:1px solid #e2e8f0;background:#fff;box-shadow:0 24px 60px -18px rgba(15,23,42,.45);display:flex;flex-direction:column}
+#lmodal .lhead{display:flex;align-items:center;gap:12px;padding:18px 18px 14px;border-bottom:1px solid #eef2f7}
+#lmodal .lav{width:40px;height:40px;border-radius:12px;box-shadow:none;background:linear-gradient(135deg,#2563eb,#4338ca);flex:none;align-self:auto}#lmodal .lav svg{width:20px;height:20px}
+#lmodal .lttl{flex:1;min-width:0;line-height:1.2}#lmodal .lttl b{display:block;font-size:16px;font-weight:800;color:#0f172a}#lmodal .lttl small{font-size:12px;color:#64748b;font-weight:600}
+#lmodal .lon{color:#059669;font-weight:800;letter-spacing:.06em}
+#lmodal .lx{position:static;flex:none;width:32px;height:32px;padding:8px;border-radius:8px}
+#lmodal .lwho{margin:10px 18px 0;align-self:auto;font-size:12px;color:#475569;background:#f1f5f9;border-radius:8px;padding:6px 10px;text-align:center;font-family:ui-monospace,monospace}
+#lmodal .lin{padding:14px 18px 16px;gap:8px;overflow-y:auto}
+#lmodal .llab{font-size:12px;font-weight:700;color:#334155;margin:2px 0 -2px}
+#lmodal .lhint{margin:0;font-size:12.5px;color:#64748b}
+#lmodal .lf{border-radius:10px;box-shadow:none;border:1px solid #cbd5e1;height:42px}#lmodal .lf:focus-within{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+#lmodal .lfi{width:34px;height:34px;margin:0 0 0 4px;border-radius:8px;background:transparent;color:#64748b;box-shadow:none}#lmodal .lfi svg{width:16px;height:16px}
+#lmodal .lf input{font-size:14px;padding:8px 4px}#lmodal .eyeb{margin-right:4px}
+#lmodal .lrow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0}
+#lmodal .lrem{padding:0;font-size:12.5px;font-weight:600}
+#lmodal .llink{border:0;background:none;padding:4px 0;font:inherit;font-size:12.5px;font-weight:700;color:#2563eb;cursor:pointer}#lmodal .llink:hover{text-decoration:underline}#lmodal .llink.red{color:#dc2626}
+#lmodal .lbtn{border-radius:10px;padding:11px;font-size:14px;margin-top:6px;background:#2563eb;box-shadow:0 6px 14px -6px rgba(37,99,235,.6)}#lmodal .lbtn:hover{background:#1d4ed8;transform:none}
+#lmodal .ltabs{display:flex;gap:4px;padding:4px;background:#f1f5f9;border-radius:10px;margin-bottom:4px}
+#lmodal .ltabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;border:0;background:none;padding:8px;border-radius:8px;font:inherit;font-size:13px;font-weight:700;color:#475569;cursor:pointer}#lmodal .ltabs button svg{width:14px;height:14px}
+#lmodal .ltabs button.on{background:#fff;color:#1d4ed8;box-shadow:0 1px 3px rgba(15,23,42,.12)}
+#lmodal .lpane{display:flex;flex-direction:column;gap:8px}#lmodal .lpane[hidden]{display:none}
+#lmodal .tksaved{border-radius:10px;padding:6px 10px;font-size:12.5px}
+#lmodal .lbar{display:flex;align-items:center;justify-content:space-between;margin-top:8px;padding-top:10px;border-top:1px solid #eef2f7}#lmodal .lok{font-size:12px;color:#64748b}
+#lmodal .lalert{border-radius:10px;padding:8px 12px;font-size:12.5px}
+#lmodal .lfoot{padding:10px;border-top:1px solid #eef2f7;font-size:10px;letter-spacing:.12em;color:#94a3b8;gap:0}
+#lmodal .lfoot span{display:none}
 </style>
 </head>
 <body>
@@ -1193,19 +1222,25 @@ const fld=(id,ic,ph,type='text',val='')=>`<div class="lf"><span class="lfi">${IC
 function adminPage(){setTimeout(openLogin);return listHTML('Admin',[]).replace('<p class="empty">कोई शब्द नहीं मिला।</p>','<p>Admin लॉगिन खुल रहा है…</p>')}
 function openLogin(){let m=$('#lmodal');if(!m){m=document.createElement('div');m.id='lmodal';document.body.appendChild(m)}
   const set=!!localStorage.getItem('ss_pw')&&(localStorage.getItem('ss_user')||'').toLowerCase()===OWNER,on=isAdmin(),u=localStorage.getItem('ss_user')||'';
-  let body;
-  if(on)body=`<div class="lbox"><p class="lmsg ok" style="margin:0 0 10px">🔒 इस डिवाइस पर आप तब तक लॉगिन रहेंगे जब तक “Logout” न दबाएँ।</p><h4>${IC.git} लाइव पब्लिश (GitHub)</h4>${(()=>{const t=localStorage.getItem('ss_gh_token')||'';return t?`<div class="tksaved">✅ Token इस डिवाइस पर सेव है <code>••••${esc(t.slice(-4))}</code><button type="button" class="tkdel" onclick="tokDel()">हटाएँ</button></div>`:''})()}${fld('atok','key',localStorage.getItem('ss_gh_token')?'नया token डालें (बदलना हो तभी)':'GitHub token (github_pat_...)','password','')}${fld('arepo','git','Repo','text',localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}
-     <button class="lbtn" onclick="adminSave()">सेव करें</button></div>
-     <details class="lbox lpw"><summary>${IC.lock} पासवर्ड बदलें</summary>${fld('opw','lock','पुराना पासवर्ड','password')}${fld('npw','key','नया पासवर्ड (कम से कम 6 अक्षर)','password')}<button class="lbtn ghost" onclick="changePw()">पासवर्ड बदलें</button></details>
-     <button class="lbtn red" onclick="adminOff()">लॉगआउट</button>`;
-  else if(!set)body=`<p class="lnote">पहली बार सेटअप: सिर्फ़ BOSC का admin ईमेल ही यहाँ पासवर्ड बना सकता है।</p>${fld('lu','user','Admin ईमेल','email','')}${fld('lp','lock','पासवर्ड (कम से कम 6 अक्षर)','password')}${fld('lp2','key','पासवर्ड दोबारा (Confirm)','password')}<button class="lbtn" onclick="doSetup()">सेटअप करें</button>`;
-  else body=`${fld('lu','user','Admin ईमेल','email',u)}${fld('lp','lock','पासवर्ड डालिए','password')}<label class="lrem"><input type="checkbox" id="lrem" checked> मुझे याद रखें</label><button class="lbtn" onclick="doLogin()">Login</button>
-     <button class="lbtn amber" onclick="forgotPw()">पासवर्ड भूल गए? <small>(इस ब्राउज़र में रीसेट)</small></button>`;
-  m.innerHTML=`<div class="lov" onclick="if(event.target===this)closeLogin()"><div class="lcard"><div class="ltag"><b>SantalSabad</b><small>Admin प्रमाणीकरण</small></div>
-    <button class="lx" onclick="closeLogin()">${IC.x}</button><div class="lin"><div class="lav">${IC.shield}</div><span class="lrole">${IC.shield} ${on?'ADMIN · ACTIVE':'ADMIN'}</span>
-    ${on?`<div class="lwho">${esc(u)}</div>`:''}<div id="lmsg"></div>${body}<div class="lfoot"><span></span>BOSC@TECH&amp;EDU<span></span></div></div></div></div>`;
-  m.style.display='block';setTimeout(()=>{const f=m.querySelector('input');if(f)f.focus()},50);
-  m.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter'){const b=m.querySelector('.lbtn');b&&b.click()}}))}
+  const tok=localStorage.getItem('ss_gh_token')||'';let body,sub;
+  if(on){sub='Admin सेटिंग्स';body=`<div class="ltabs" role="tablist"><button type="button" class="on" data-lt="gh">${IC.git} GitHub पब्लिश</button><button type="button" data-lt="pw">${IC.lock} पासवर्ड</button></div>
+     <div class="lpane" data-lp="gh">${tok?`<div class="tksaved">✅ Token सेव है <code>••••${esc(tok.slice(-4))}</code><button type="button" class="tkdel" onclick="tokDel()">हटाएँ</button></div>`:'<p class="lhint">Token एक बार सेव करें, यह इस डिवाइस पर बना रहेगा।</p>'}
+      <label class="llab">${tok?'नया token (बदलना हो तभी)':'GitHub token'}</label>${fld('atok','key','github_pat_...','password','')}
+      <label class="llab">Repo</label>${fld('arepo','git','owner/repo','text',localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}
+      <button class="lbtn pri" onclick="adminSave()">सेव करें</button></div>
+     <div class="lpane" data-lp="pw" hidden><label class="llab">पुराना पासवर्ड</label>${fld('opw','lock','••••••','password')}<label class="llab">नया पासवर्ड</label>${fld('npw','key','कम से कम 6 अक्षर','password')}<button class="lbtn pri" onclick="changePw()">पासवर्ड बदलें</button></div>
+     <div class="lbar"><span class="lok">🔒 Logout तक लॉगिन रहेगा</span><button type="button" class="llink red" onclick="adminOff()">लॉगआउट</button></div>`}
+  else if(!set){sub='पहली बार सेटअप';body=`<p class="lhint">सिर्फ़ BOSC का admin ईमेल ही पासवर्ड बना सकता है।</p><label class="llab">Admin ईमेल</label>${fld('lu','user','name@example.com','email','')}<label class="llab">पासवर्ड</label>${fld('lp','lock','कम से कम 6 अक्षर','password')}<label class="llab">पासवर्ड दोबारा</label>${fld('lp2','key','Confirm','password')}<button class="lbtn pri" onclick="doSetup()">सेटअप करें</button>`}
+  else{sub='Admin लॉगिन';body=`<label class="llab">ईमेल</label>${fld('lu','user','name@example.com','email',u)}<label class="llab">पासवर्ड</label>${fld('lp','lock','पासवर्ड डालिए','password')}
+     <div class="lrow"><label class="lrem"><input type="checkbox" id="lrem" checked> मुझे याद रखें</label><button type="button" class="llink" onclick="forgotPw()">पासवर्ड भूल गए?</button></div>
+     <button class="lbtn pri" onclick="doLogin()">Login</button>`}
+  m.innerHTML=`<div class="lov" onclick="if(event.target===this)closeLogin()"><div class="lcard" role="dialog" aria-modal="true" aria-label="SantalSabad Admin">
+    <div class="lhead"><div class="lav">${IC.shield}</div><div class="lttl"><b>SantalSabad</b><small>${sub}${on?` · <span class="lon">ACTIVE</span>`:''}</small></div><button class="lx" onclick="closeLogin()" aria-label="बंद करें">${IC.x}</button></div>
+    ${on?`<div class="lwho">${esc(u)}</div>`:''}<div class="lin"><div id="lmsg"></div>${body}</div><div class="lfoot">BOSC@TECH&amp;EDU</div></div></div>`;
+  m.style.display='block';
+  m.querySelectorAll('[data-lt]').forEach(b=>b.onclick=()=>{m.querySelectorAll('[data-lt]').forEach(x=>x.classList.toggle('on',x===b));m.querySelectorAll('[data-lp]').forEach(p=>p.hidden=p.dataset.lp!==b.dataset.lt);$('#lmsg').innerHTML='';const f=m.querySelector(`[data-lp="${b.dataset.lt}"] input`);f&&f.focus()});
+  setTimeout(()=>{const f=m.querySelector('.lin input:not([type=checkbox])');if(f&&!on)f.focus()},50);
+  m.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter'){const p=i.closest('.lpane')||m;const b=p.querySelector('.lbtn.pri');b&&b.click()}}))}
 function closeLogin(){const m=$('#lmodal');if(m)m.style.display='none';if(location.hash==='#/admin')location.hash='#/'}
 const lmsg=(t,ok)=>{$('#lmsg').innerHTML=`<div class="lalert ${ok?'ok':''}">${t}</div>`};
 async function doSetup(){const u=$('#lu').value.trim().toLowerCase(),p=$('#lp').value,p2=$('#lp2').value;
