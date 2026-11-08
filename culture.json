@@ -417,6 +417,291 @@
    ]
   },
   {
+   "id": "parissub",
+   "icon": "🌿",
+   "title_hi": "उप-गोत्र (खूँट)",
+   "intro": "हर पारिस (गोत्र) आगे कई खूँट (उप-गोत्र) में बँटा है। 1930 के इंडियन एंटिक्वेरी लेख (बिरेन बनर्जी) में 12 गोत्रों के 198 उप-गोत्र गिनाए गए हैं; रिज़्ली (1891) कुछ के अर्थ भी देते हैं। पुराने छपे स्रोतों की वर्तनी (OCR) में फ़र्क है, इसलिए नाम अंग्रेज़ी में भी दिए गए हैं। उसी लेख के अनुसार कोई अपने गोत्र या उप-गोत्र में शादी नहीं कर सकता, और माँ के उप-गोत्र में भी नहीं।",
+   "items": [
+    {
+     "name": "नीज (Nij) — सभी गोत्र",
+     "text": "रिज़्ली के अनुसार यह संतालों के सभी 12 गोत्रों में पाया जाने वाला उप-गोत्र है, जैसे नीज हांसदा, नीज मुर्मू।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "सभी गोत्र"
+    },
+    {
+     "name": "सादा (Sada) — सोरेन (रिज़्ली के अनुसार सादा उप-गोत्र सभी गोत्रों में है)",
+     "text": "1930 के एक लेख के अनुसार सादा-सोरेन लोग शादी में सिंदूर नहीं लगाते और लाल किनारी वाले कपड़े नहीं पहनते। वे उस रस्म में भी नहीं जाते जिसमें पुजारी अपना खून चढ़ाता है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "सोरेन (रिज़्ली के अनुसार सादा उप-गोत्र सभी गोत्रों में है)"
+    },
+    {
+     "name": "जुगी सोरेन (Jugi Saren) — सोरेन",
+     "text": "1930 के लेख के अनुसार इस उप-गोत्र के लोग फसल के पर्व पर माथे पर सिंदूर लगाकर भीख माँगते हैं। उस चावल से छोटे पीठे बनाकर देवताओं को चढ़ाते हैं। जुगी पाउरिया भी इसी लेख की सूची में है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "सोरेन"
+    },
+    {
+     "name": "माँझी खिल (Manjhi khil) — हांसदा, मरांडी, टुडू",
+     "text": "माना जाता है कि इनके पुरखे गाँव के माँझी (मुखिया) थे। रिज़्ली इसे हांसदा, मरांडी और टुडू का उप-गोत्र बताते हैं।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "हांसदा, मरांडी, टुडू"
+    },
+    {
+     "name": "नायके खिल (Naeke khil) — सोरेन, हांसदा, हेम्ब्रम, मरांडी, टुडू आदि",
+     "text": "ये गाँव के नायके (पुजारी) के वंशज माने जाते हैं। 1930 के लेख के अनुसार सोरेन के नायके खिल लोगों का अपना अलग जाहेरथान होता है और वे छूत वाले घर में नहीं जाते।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "सोरेन, हांसदा, हेम्ब्रम, मरांडी, टुडू आदि"
+    },
+    {
+     "name": "सिदुप (Sidup / Sidhup) — सोरेन, टुडू, मरांडी",
+     "text": "'सिदुप' का अर्थ पुआल का गट्ठर बताया गया है। सिदुप सोरेन लोग जनवरी की फसल पर गोहाल के दरवाज़े पर धान का गट्ठर रखते हैं, जिसे दूसरे उप-गोत्र का आदमी ही हटाता है। यह टुडू और मरांडी में भी है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "सोरेन, टुडू, मरांडी"
+    },
+    {
+     "name": "ओक् (Ok / Okh) — सोरेन और अन्य",
+     "text": "1930 के लेख के अनुसार ओक् सोरेन लोग घर के अंदर दरवाज़े बंद करके बकरे या सूअर की बलि देते हैं। यह उप-गोत्र मुर्मू, किस्कू, बास्के और बेसरा में भी दर्ज है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "सोरेन और अन्य"
+    },
+    {
+     "name": "लात (Lat) — किस्कू, सोरेन, टुडू",
+     "text": "रिज़्ली के अनुसार इनके पुरखे ने पत्ते के पत्तल पर मांस सेंका था, इसी से नाम पड़ा। यह किस्कू, सोरेन और टुडू में मिलता है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "किस्कू, सोरेन, टुडू"
+    },
+    {
+     "name": "रोह-लुतुर (Roh-lutur) — हांसदा, हेम्ब्रम, किस्कू, टुडू",
+     "text": "इसका अर्थ है 'छिदे कान वाले'। रिज़्ली इसे हांसदा, हेम्ब्रम, किस्कू और टुडू में बताते हैं।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "हांसदा, हेम्ब्रम, किस्कू, टुडू"
+    },
+    {
+     "name": "रोहत (Roht) — मरांडी",
+     "text": "रिज़्ली के अनुसार इसका नाम एक पेड़ से है। यह मरांडी गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "मरांडी"
+    },
+    {
+     "name": "बादाड़ (Badar) — सोरेन और अन्य",
+     "text": "रिज़्ली इसका अर्थ 'घना जंगल' बताते हैं और इसे सोरेन का उप-गोत्र कहते हैं। 1930 की सूची में यह मुर्मू, किस्कू, हेम्ब्रम और चोंड़े में भी है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "सोरेन और अन्य"
+    },
+    {
+     "name": "सिकिया (Sikiya) — मुर्मू",
+     "text": "इसका अर्थ 'ज़ंजीर' है। रिज़्ली के अनुसार यह मुर्मू गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "सोमाल (Somal) — किस्कू",
+     "text": "इसका अर्थ हिरण बताया गया है। रिज़्ली के अनुसार यह किस्कू गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "किस्कू"
+    },
+    {
+     "name": "शंख (Sankh) — सोरेन",
+     "text": "शंख के नाम वाला उप-गोत्र। रिज़्ली इसे सोरेन का उप-गोत्र बताते हैं।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "सोरेन"
+    },
+    {
+     "name": "सोन (Son) — बेसरा, किस्कू",
+     "text": "रिज़्ली के अनुसार बेसरा का उप-गोत्र। 1930 की सूची में किस्कू में भी 'सोन किस्कू' दर्ज है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "बेसरा, किस्कू"
+    },
+    {
+     "name": "सुंग (Sung) — बेसरा, टुडू",
+     "text": "रिज़्ली के अनुसार यह बेसरा और टुडू गोत्रों का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "बेसरा, टुडू"
+    },
+    {
+     "name": "सिबाला (Sibala) — बेसरा",
+     "text": "रिज़्ली के अनुसार यह बेसरा गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "बेसरा"
+    },
+    {
+     "name": "उह (Uh) — हेम्ब्रम",
+     "text": "रिज़्ली के अनुसार यह हेम्ब्रम गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "हेम्ब्रम"
+    },
+    {
+     "name": "लाहेर (Laher) — हेम्ब्रम, मरांडी",
+     "text": "रिज़्ली के अनुसार यह हेम्ब्रम और मरांडी गोत्रों का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "हेम्ब्रम, मरांडी"
+    },
+    {
+     "name": "मुरो (Muro) — मुर्मू",
+     "text": "रिज़्ली के अनुसार यह मुर्मू गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "सांगडा (Sangda) — मुर्मू",
+     "text": "रिज़्ली के अनुसार यह मुर्मू गोत्र का उप-गोत्र है।",
+     "src": "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "काहु (Kahu) — हांसदा, बेसरा",
+     "text": "'काहु' का अर्थ कौआ बताया गया है। 1930 की सूची में काहु हासदाक् और काहु बेसरा दोनों दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "हांसदा, बेसरा"
+    },
+    {
+     "name": "चिल बिंधा (Cil bindha) — हांसदा",
+     "text": "1930 के लेख में इसका अर्थ चील (बाज़ जैसा पक्षी) बताया गया है। उसी लेख की सूची में यह हांसदा का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "हांसदा"
+    },
+    {
+     "name": "दांतेला (Dantela) — कई गोत्र",
+     "text": "1930 के लेख के अनुसार यह नाम बहुत बड़े दाँत वाले सूअर पालने से पड़ा। यह सोरेन, टुडू, हेम्ब्रम, पाउरिया और चोंड़े में दर्ज है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "हांडी (Handi) — मुर्मू",
+     "text": "'हांडी' यानी मिट्टी का बर्तन। 1930 की सूची में यह मुर्मू का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "बारचिर (Barchir) — सोरेन",
+     "text": "'बरछी' यानी भाला चलाने वाले। 1930 की सूची में यह सोरेन का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/101",
+     "clan": "सोरेन"
+    },
+    {
+     "name": "टिका / तिलोक (Tika / Tilok) — कई गोत्र",
+     "text": "1930 की सूची में यह मुर्मू, किस्कू, सोरेन, टुडू, मरांडी, बेसरा, पाउरिया और बेदिया में मिलता है। इसका अर्थ स्रोत में नहीं दिया गया है।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "बिटोल (Bitol) — कई गोत्र",
+     "text": "1930 की सूची में यह लगभग हर गोत्र में दर्ज है, जैसे बिटोल मुर्मू, बिटोल हेम्ब्रम, बिटोल बेदिया। स्रोत इसका अर्थ नहीं बताता।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "ओबोर (Obor) — कई गोत्र",
+     "text": "1930 की सूची में ओबोर नाम का उप-गोत्र हांसदा, मुर्मू, किस्कू, हेम्ब्रम, मरांडी, सोरेन, टुडू, बास्के, बेसरा, चोंड़े और बेदिया में है।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "गड़ (Garh) — कई गोत्र",
+     "text": "1930 की सूची में गड़ उप-गोत्र मुर्मू, किस्कू, हेम्ब्रम, मरांडी, टुडू, बेसरा, पाउरिया और बेदिया में है।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "जिहु (Jihu) — कई गोत्र",
+     "text": "1930 की सूची में यह हांसदा, मुर्मू, सोरेन, बास्के और चोंड़े में दर्ज है।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "कुडाम (Kudam) — मुर्मू, टुडू",
+     "text": "1930 की सूची में कुडाम मुर्मू और कुडाम टुडू दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "मुर्मू, टुडू"
+    },
+    {
+     "name": "तुरकु लुमाम (Turku lumam) — मुर्मू, सोरेन, मरांडी",
+     "text": "1930 की सूची में यह मुर्मू, सोरेन और मरांडी में दर्ज है। रिज़्ली भी 'तुरकु' को सोरेन का उप-गोत्र बताते हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "मुर्मू, सोरेन, मरांडी"
+    },
+    {
+     "name": "सारजोम (Sarjom) — मुर्मू",
+     "text": "1930 की सूची में यह मुर्मू का उप-गोत्र है। स्रोत इसका अर्थ नहीं बताता।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "बाबरे (Babre) — टुडू, मरांडी, पाउरिया",
+     "text": "1930 की सूची में बाबरे टुडू, बाबरे मरांडी और बाबरे पाउरिया दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "टुडू, मरांडी, पाउरिया"
+    },
+    {
+     "name": "लाठ (Lath) — कई गोत्र",
+     "text": "1930 की सूची में यह मुर्मू, हेम्ब्रम, टुडू, बास्के, बेसरा, पाउरिया और बेदिया में दर्ज है। रिज़्ली का 'लात' (ऊपर) शायद यही है।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "कई गोत्र"
+    },
+    {
+     "name": "कुही (Kuhi) — हांसदा, बास्के, बेसरा",
+     "text": "1930 की सूची में कुही हासदाक्, कुही बास्के और कुही बेसरा दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "हांसदा, बास्के, बेसरा"
+    },
+    {
+     "name": "मुंडा (Munda) — मुर्मू, बास्के",
+     "text": "1930 की सूची में मुंडा मुर्मू और मुंडा बास्के उप-गोत्र दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "मुर्मू, बास्के"
+    },
+    {
+     "name": "मल (Mal) — सोरेन, चोंड़े",
+     "text": "1930 की सूची में मल सोरेन और मल चोंड़े दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "सोरेन, चोंड़े"
+    },
+    {
+     "name": "कोल्हा (Kolha) — मुर्मू",
+     "text": "1930 की सूची में यह मुर्मू का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/71",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "बोदरा (Bodra) — मुर्मू",
+     "text": "1930 की सूची में यह मुर्मू का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/71",
+     "clan": "मुर्मू"
+    },
+    {
+     "name": "पोंड (Pond) — मुर्मू, सोरेन, मरांडी",
+     "text": "1930 की सूची में पोंड मुर्मू, पोंड सोरेन और पोंड मरांडी दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "मुर्मू, सोरेन, मरांडी"
+    },
+    {
+     "name": "काटवा (Katwa) — किस्कू",
+     "text": "1930 की सूची में यह किस्कू का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "किस्कू"
+    },
+    {
+     "name": "पाटी (Pati) — किस्कू",
+     "text": "1930 की सूची में यह किस्कू का उप-गोत्र है।",
+     "src": "https://jainqq.org/explore/032551/72",
+     "clan": "किस्कू"
+    },
+    {
+     "name": "बिंदार (Bindar) — बास्के, बेसरा",
+     "text": "1930 की सूची में बिंदार बास्के और बिंदार बेसरा दर्ज हैं।",
+     "src": "https://jainqq.org/explore/032551/100",
+     "clan": "बास्के, बेसरा"
+    }
+   ],
+   "sources": [
+    "https://archive.org/stream/TheTribesAndCastesOfBengal_201509/The_Tribes_and_Castes_of_Bengal_djvu.txt",
+    "https://jainqq.org/explore/032551/101",
+    "https://jainqq.org/explore/032551/72",
+    "https://jainqq.org/explore/032551/100",
+    "https://jainqq.org/explore/032551/71"
+   ]
+  },
+  {
    "id": "instruments",
    "icon": "🥁",
    "title_hi": "वाद्य यंत्र",
@@ -461,6 +746,121 @@
     {
      "name": "बुआंग (Buang)",
      "text": "सूखी लौकी, बाँस और रस्सी से बना धनुष जैसा वाद्य। इसकी गूँजती 'बुआंग' आवाज़ से नाम पड़ा। यह दासाय नाच से जुड़ा है, जो आश्विन (सितंबर–अक्टूबर) में होता है।"
+    },
+    {
+     "name": "सारपा (Sarpa)",
+     "text": "लकड़ी का ताल वाद्य। एक खड़ी डंडी पर लकड़ी की पट्टियाँ लगी होती हैं और डोरी खींचने पर छोटे लकड़ी के टुकड़े उनसे टकराकर बजते हैं। सोहराय में महिलाएँ इसे बजाकर 'सारपा' नाच करती हैं।",
+     "src": "https://www.daricha.org/sub_genre.aspx?ID=2158&Name=Sarpa"
+    },
+    {
+     "name": "सिंगा (Singa)",
+     "text": "पीतल या ताँबे का 'S' आकार का फूँकने वाला बाजा। यह तीन हिस्सों को जोड़कर बनता है। शादियों में इसे जोड़ी में बजाया जाता है।",
+     "src": "https://indiantribalheritage.org/santal-musical-instruments-wesanthals-e-group/"
+    },
+    {
+     "name": "ढाक (Dhak)",
+     "text": "बड़ा ढोल। दारिचा फ़ाउंडेशन के अनुसार सोहराय में होने वाले नटुआ नाच के साथ ढाक ज़रूर बजता है।",
+     "src": "https://www.daricha.org/videoplay.aspx?ID=190"
+    },
+    {
+     "name": "ढोल (Dhol)",
+     "text": "बेलन जैसे आकार का बड़ा ढोल, जिसे मुड़ी हुई (हुक जैसी) डंडी से बजाते हैं। बोडिंग के अनुसार इसे ज़्यादातर बजाने वाली डोम जाति बनाती और बजाती थी, और यह नाच में काम आता है।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "नगाड़ा (Nagara)",
+     "text": "पीटकर बजाने वाला बड़ा ढोल। सहपीडिया के लेख में यह उन वाद्यों में गिना गया है जिन्हें संताल धार्मिक और सांस्कृतिक मौकों पर बजाते हैं।",
+     "src": "https://www.sahapedia.org/hajaara-rauupaon-hajaara-sauraon-aura-hajaara-kahaanaiyaon-vaalaa-santaalai-vaadayayantara-baanaama"
+    },
+    {
+     "name": "घंटा (Ghanta)",
+     "text": "लोहे की घंटी। ओडिशा सरकार के संताल प्रोफ़ाइल में इसे नाच के समय बजने वाले वाद्यों में गिना गया है।",
+     "src": "https://kbk.nic.in/tribalprofile/Santal.pdf"
+    },
+    {
+     "name": "सारंगी (Sarangi)",
+     "text": "गज़ से बजने वाला तार वाद्य। ओडिशा के संताल नाच में तमाक्, तुमदाक्, तिरियो और बानाम के साथ सारंगी भी बजती है।",
+     "src": "https://kbk.nic.in/tribalprofile/Santal.pdf"
+    },
+    {
+     "name": "हारमोनियम (Harmonium)",
+     "text": "हाथ से हवा भरकर बजने वाला बाजा, जिसे अंग्रेज़ भारत लाए थे। आज कई संताल गायक-बजैये इसे भी बजाते हैं।",
+     "src": "https://en.wikipedia.org/wiki/Santal_music"
+    },
+    {
+     "name": "बोंगा तिरियो (Bonga tirio)",
+     "text": "बिना सिर वाली बाँसुरी। बोडिंग लिखते हैं कि बलि में जानवर का सिर पूरा काट दिया जाता है, इसलिए इसका नाम 'बोंगा' तिरियो पड़ा। इसे 'तारप् तिरियो' भी कहते हैं।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "जोड़ा मुरली (Jora murli)",
+     "text": "दो बाँसुरियाँ जिन्हें एक ही आदमी एक साथ फूँकता है। 'जोड़ा' का मतलब है जोड़ी। ये सिरे से फूँकी जाती हैं।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "भेरी (Bheri)",
+     "text": "संतालों का अपना बनाया फूँकने वाला बाजा, जिसका नाम उसकी आवाज़ से पड़ा। बोडिंग के अनुसार यह ज़्यादातर 'पाता' मेले में शोर करने के लिए बजता था, सुर के लिए नहीं।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "सोगोर (Sogor)",
+     "text": "बाँस का एक सिरा चीरकर बनाया गया शोर करने वाला बाजा, जिस पर धनुष जैसी डंडी रगड़ी जाती है। यह नाच में और खासकर 'पाता' मेले में बजता था।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "थाप (Thap')",
+     "text": "हाथ पर पहनी जाने वाली लकड़ी की कठपुतली, जिसके दो हाथ ताली बजाते हैं। दूसरे हाथ में छोटी घंटियाँ हिलाई जाती हैं और साथ में गाना-नाच होता है। बोडिंग इसे एक तरह का कठपुतली खेल कहते हैं।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "पेपरेत (Pepret)",
+     "text": "शहनाई जैसा फूँकने वाला बाजा। बोडिंग के संग्रह के अनुसार इसे बजाने वाली डोम जाति बजाती थी।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "ताल पेपरेत (Tale pepret)",
+     "text": "ताड़ के पत्ते से बनी तुरही। इसे संताल लड़के खुद बनाते और बजाते हैं।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "बाकेया (Bakea)",
+     "text": "तुरही जैसा बाजा। इसे हिंदू कारीगर बनाते थे, पर संताल भी इसे खासकर उत्सवों में बजाते थे। बोडिंग के अनुसार यह आम नहीं था।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "डेडगर (Dedger)",
+     "text": "एक तरह का ढोल। बोडिंग के अनुसार ऐसे ढोल नाच में और शिकार के समय बजाए जाते थे।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "बच्चों का छोटा ढोल",
+     "text": "बच्चों के बजाने के लिए बना छोटा ढोल। बोडिंग ने इसे अपने संताल संग्रह में अलग से दर्ज किया है।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "मदन भेरी (Mandan bheri)",
+     "text": "लंबा फूँकने वाला बाजा, जिसे हिंदू बजैये बजाते थे। संताल शादी को शानदार बनाने के लिए इन बजैयों को बुलाया जाता था और इसकी आवाज़ शुभ मानी जाती थी।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "लिपुर (Lipur)",
+     "text": "घंटियों वाला पट्टा, जिसे पुरुष नाचते समय टखने पर बाँधते हैं। बोडिंग के अनुसार यह खासकर दासाय नाच में पहना जाता है।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "उरमाल (Urmal)",
+     "text": "घंटियों वाला कमरबंद। नाच के समय कमर पर बाँधा जाता है, ताकि हर कदम पर खनक हो।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "पीतल की थाली और कटोरी",
+     "text": "सोहराय के सारपा नाच में कुछ महिलाएँ सारपा की जगह पीतल की कटोरी को पीतल की थाली पर धीरे-धीरे बजाती हैं। इससे नाच की ताल मिलती है।",
+     "src": "https://www.daricha.org/sub_genre.aspx?ID=2164&Name=Sarpa+Enech"
+    },
+    {
+     "name": "गोंग (पवित्र घंटा)",
+     "text": "बाहा पर्व की तैयारी में नायके (पुजारी) जिन चीज़ों को तेल लगाकर शुद्ध करता है, उनमें एक पवित्र गोंग और शिकार का सींग भी होता है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
     }
    ],
    "sources": [
@@ -470,7 +870,13 @@
     "http://www.daricha.org/sub_genre.aspx?ID=146&Name=Tirio",
     "https://indiantribalheritage.org/santal-musical-instruments-wesanthals-e-group/",
     "https://aiswacs.org/Santal/festival.htm",
-    "https://kbk.nic.in/tribalprofile/Santal.pdf"
+    "https://kbk.nic.in/tribalprofile/Santal.pdf",
+    "https://www.daricha.org/sub_genre.aspx?ID=2158&Name=Sarpa",
+    "https://www.daricha.org/videoplay.aspx?ID=190",
+    "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf",
+    "https://www.sahapedia.org/hajaara-rauupaon-hajaara-sauraon-aura-hajaara-kahaanaiyaon-vaalaa-santaalai-vaadayayantara-baanaama",
+    "https://www.daricha.org/sub_genre.aspx?ID=2164&Name=Sarpa+Enech",
+    "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
    ]
   },
   {
@@ -498,6 +904,106 @@
     {
      "name": "बच्चों के खेल",
      "text": "2026 के एक अध्ययन में 'पुसी पुसी' जैसे बच्चों के खेल दर्ज हुए हैं। इनके नियमों का भरोसेमंद ब्योरा हमें नहीं मिला। अध्ययन बताता है कि ये खेल अब कम खेले जाते हैं।"
+    },
+    {
+     "name": "लुका-छिपी",
+     "text": "संताल बच्चों का पसंदीदा खेल। एक बच्चा ढूँढता है और बाकी छिप जाते हैं।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "तीर-धनुष से खेलना",
+     "text": "संताल लड़के छोटे तीर-धनुष से खेलते हैं, जैसे उनके पिता शिकार करते हैं। इसी से उनका निशाना पक्का होता है।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "लकड़ी के टुकड़े गिराने का खेल",
+     "text": "इसमें लकड़ी के दो आधे-गोल टुकड़े और लगभग एक मीटर की छड़ी लगती है। ज़मीन में गड्ढा बनाकर एक टुकड़ा उसके पास खड़ा करते हैं और दूर रखे दूसरे टुकड़े पर छड़ी मारकर पहले को गड्ढे में गिराना होता है। हारने वाले को एक पैर पर कुछ दूर दौड़ना पड़ता है।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "खुंटाव (Khuntau) — बैल को छेड़ने का खेल",
+     "text": "सोहराय के तीसरे दिन एक खूँटा गाड़ा जाता है और नहलाए, तेल-सिंदूर लगे बैल को उससे बाँधते हैं। गाँव के लड़के ढोल बजाकर, नाचकर और चिल्लाकर बैल को उछलने पर उकसाते हैं।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "मुर्गा लड़ाई",
+     "text": "पश्चिम मेदिनीपुर के एक संताल गाँव पर हुए अध्ययन के अनुसार जाड़े में हफ़्ते में दो बार मुर्गों की लड़ाई होती है। इसमें भाग लेना वहाँ समाज में इज़्ज़त की बात मानी जाती है। यह खेल कानूनन मना है।",
+     "src": "https://www.rjhssonline.com/HTML_Papers/Research%20Journal%20of%20Humanities%20and%20Social%20Sciences__PID__2018-9-4-8.html"
+    },
+    {
+     "name": "तारूप आर मेरोम (Tarup ar merom)",
+     "text": "चीता और बकरियाँ वाला बोर्ड खेल। यह 1946 की संताली किताब 'होड़ गिदरा एनेच्' में दर्ज है। इसकी बिसात 'बाघ-बकरी' जैसे खेलों से मिलती है; पूरे नियम अनुवाद नहीं हो पाए हैं।",
+     "src": "http://www.indiaboardgamesarchive.in/omekas/s/ancientindianboardgames/item/6408"
+    },
+    {
+     "name": "हाको साप (Hako sap)",
+     "text": "बच्चों का एक खेल, जो 1946 की किताब 'होड़ गिदरा एनेच्' में दर्ज 73 खेलों में है। इसके नियमों का भरोसेमंद ब्योरा हमें नहीं मिला।",
+     "src": "https://eap.bl.uk/archive-file/EAP1300-1-2"
+    },
+    {
+     "name": "दुरुप तेंगोन (Durup tengon)",
+     "text": "'होड़ गिदरा एनेच्' (1946) में दर्ज बच्चों का खेल। किताब खेलों को उम्र और लड़का-लड़की के हिसाब से बाँटती है। नियम हमें नहीं मिले।",
+     "src": "https://eap.bl.uk/archive-file/EAP1300-1-2"
+    },
+    {
+     "name": "ओको ओको (Oko oko)",
+     "text": "'होड़ गिदरा एनेच्' (1946) में दर्ज बच्चों का एक और खेल। इसके नियम हमें नहीं मिले।",
+     "src": "https://eap.bl.uk/archive-file/EAP1300-1-2"
+    },
+    {
+     "name": "मारक बेले (Marak bele)",
+     "text": "'होड़ गिदरा एनेच्' (1946) में दर्ज बच्चों का खेल। इसके नियम हमें नहीं मिले।",
+     "src": "https://eap.bl.uk/archive-file/EAP1300-1-2"
+    },
+    {
+     "name": "शादी में ताकत की होड़",
+     "text": "बीरभूम के संताल गाँवों के एक अध्ययन के अनुसार शादी में दूल्हे और दुल्हन के पक्ष के बीच ताकत के खेल होते हैं। पहले दूल्हे की टोली को गाँव की सीमा पर लड़की वाले गाँव के लड़कों से मुकाबला करना पड़ता था, ताकि पता चले कि वे मज़बूत हैं।",
+     "src": "https://ijcrt.org/papers/IJCRT2210528.pdf"
+    },
+    {
+     "name": "पाइकाहा — नकली लड़ाई",
+     "text": "शादी में 'सारा दाढ़ी' रस्म के समय बाहर लड़के वालों और लड़की वालों के बीच ढोल की ताल पर नकली लड़ाई होती है। इसे पाइकाहा या नटुआ नाच भी कहते हैं।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "करम डाल की खींचतान",
+     "text": "मयूरभंज में सोहराय के दूसरे दिन करम डाल के चारों ओर नाच के बाद लड़के डाल उखाड़कर ले जाना चाहते हैं और लड़कियाँ रोकती हैं। यह ताकत की मज़ेदार होड़ है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "मवेशियों की दौड़",
+     "text": "मयूरभंज में सोहराय के तीसरे दिन मवेशियों के सींगों में धान की गोल 'बिरा' बाँधकर ढोल के शोर में छोड़ा जाता है। आदमी उन पर हांडी छिड़कते हैं और औरतें अंडे फेंकती हैं। सबसे आखिरी जानवर को पकड़कर उसके पैर धोए जाते हैं।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "बाहा का पानी खेल",
+     "text": "बाहा के तीसरे दिन सब लोग एक-दूसरे पर पानी डालते हैं, होली जैसा, पर बिना रंग के। छोटे भाई की पत्नी और पत्नी की बड़ी बहन पर पानी नहीं डाला जाता, क्योंकि उनका खास सम्मान है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "सीप उछालने का खेल",
+     "text": "पुराने समय में सीपियाँ पैसे की तरह चलती थीं। बोडिंग के अनुसार राल भरी सीपियों से एक खेल खेला जाता था, जो सिक्के उछालकर निशाना लगाने वाले खेल जैसा था।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "सुपतिक् (Suptik') — छोटा सूप",
+     "text": "छोटा सूप, जो ज़्यादातर छोटी लड़कियों का खिलौना होता है। इससे खेलते-खेलते वे बड़ा सूप (हाताक्) चलाना सीखती हैं।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "गिदरा ढेंकी — खिलौना ढेंकी",
+     "text": "धान कूटने की ढेंकी का छोटा रूप। बोडिंग के अनुसार संताल और हिंदू इसे छोटी लड़कियों के खिलौने की तरह इस्तेमाल करते थे।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "काकड़ा पासी (Kakra pasi) — छिपकली का फंदा",
+     "text": "छिपकली पकड़ने का छोटा फंदा, जिसे ज़्यादातर बच्चे चलाते हैं और इससे फंदा लगाना सीखते हैं। चाता-पाता मेलों में मसखरे ज़िंदा छिपकलियाँ भीड़ में छोड़कर सबको हँसाते थे।",
+     "src": "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf"
+    },
+    {
+     "name": "चादर बादर (Chadar badar) — कठपुतली",
+     "text": "संतालों का कठपुतली खेल। लकड़ी की छोटी कठपुतलियाँ एक छोटे पिंजरे में रखी जाती हैं, जो मंच का काम करता है।",
+     "src": "https://en.wikipedia.org/wiki/Santal_people"
     }
    ],
    "sources": [
@@ -507,7 +1013,16 @@
     "https://theindiantribal.com/2024/06/27/traditional-tribal-game-kati-gasps-for-breath",
     "https://aiswacs.org/Santal/festival.htm",
     "https://purulia.gov.in/fairs-festivals/",
-    "https://www.tandfonline.com/doi/full/10.1080/27690148.2026.2688364"
+    "https://www.tandfonline.com/doi/full/10.1080/27690148.2026.2688364",
+    "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals",
+    "https://www.rjhssonline.com/HTML_Papers/Research%20Journal%20of%20Humanities%20and%20Social%20Sciences__PID__2018-9-4-8.html",
+    "http://www.indiaboardgamesarchive.in/omekas/s/ancientindianboardgames/item/6408",
+    "https://eap.bl.uk/archive-file/EAP1300-1-2",
+    "https://ijcrt.org/papers/IJCRT2210528.pdf",
+    "http://www.aiswacs.org/Santal/lifecycl.htm",
+    "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+    "https://www.khm.uio.no/english/collections/santali/accession-catalogue-english-and-santali-latin-script.pdf",
+    "https://en.wikipedia.org/wiki/Santal_people"
    ]
   },
   {
@@ -559,6 +1074,141 @@
     {
      "name": "हांडी (Handi)",
      "text": "चावल से बनी पारंपरिक बीयर। महिलाएँ इसे घर में बनाती हैं। त्योहारों पर पी जाती है और मेहमानों को भी दी जाती है।"
+    },
+    {
+     "name": "दाल (Dal)",
+     "text": "संताल कई तरह की दालें उगाते हैं। इन्हें पानी में उबालकर मसाला और नमक मिलाते हैं और भात के साथ खाते हैं।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "ओहोय आरा — जंगली साग",
+     "text": "जंगल से तोड़ी हरी पत्तियाँ थोड़े तेल, लहसुन और हरी मिर्च में पकाई जाती हैं। जाड़े में दोपहर को इसे भात, दाल और सूखी मछली के साथ खाते हैं।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "सिनराक् (Sinarak) — कचनार के पत्ते",
+     "text": "कचनार (Bauhinia purpurea) के पत्ते, जिन्हें संताल साग की तरह खाते हैं। मयूरभंज के संतालों पर हुए अध्ययन में यह दर्ज है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "पुरई आराक् (Purai arak) — पोई साग",
+     "text": "पोई (Basella alba) की पत्तियाँ, जो साग बनाकर खाई जाती हैं।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "केदाक् आराक् (Kedak arak)",
+     "text": "एक जंगली लता (Argyreia speciosa) की पत्तियाँ। ओड़िया में इसे 'केंदो साग' कहते हैं। संताल इसे साग की तरह खाते हैं।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "माथा आराक् (Matha arak)",
+     "text": "एक पौधा (Antidesma diandrum), जिसकी पत्तियाँ संताल साग की तरह पकाकर खाते हैं।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "मुंगा आरा (Munga ara) — सहजन के पत्ते",
+     "text": "सहजन की पत्तियाँ। जाड़े की थाली में शाम को इन्हें दाल और रोटी के साथ खाया जाता है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "फूलों की सब्ज़ी",
+     "text": "संताल कई फूल भी खाते हैं, जैसे महुआ, सहजन के फूल और कद्दू के फूल ('कोंहड़ा बाहा')।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "जंगली मशरूम की तरकारी",
+     "text": "बरसात में जंगल से मशरूम लाकर तेल, अदरक, लहसुन और प्याज़ के साथ तरकारी बनाई जाती है। यह बरसात की थाली का हिस्सा है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "जोन्हरा दाका (Jonra daka)",
+     "text": "सूखे, थोड़े कुचले मक्के को नमक डालकर उबालते हैं। जाड़े में यह सुबह का खाना होता है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "कुरथी दाल (Kurthi dal)",
+     "text": "कुलथी की दाल, जिसमें आलू, बैंगन और टमाटर भी डाले जाते हैं। जाड़े में सुबह मक्के के साथ खाई जाती है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "घांघरा दाल (Ghanghra dal)",
+     "text": "लोबिया (बोड़ा) की दाल। बरसात के मौसम में भात और शकरकंद के पत्तों के साथ खाई जाती है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "मालहान दाल (Malhan dal)",
+     "text": "सेम के बीजों की दाल, जिसमें जीरा, हल्दी और मिर्च पड़ती है। जाड़े में दोपहर के खाने में बनती है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "लुपुंग आरा पीठा",
+     "text": "गेहूँ के आटे की रोटी, जिसमें जंगली हरी पत्तियाँ भी मिलाई जाती हैं।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "मातकोम तिलमिन लाथे",
+     "text": "आधे सूखे महुआ के फूल और तिल को साथ मिलाकर बनी चीज़। बरसात के दिनों में इसे दिन के खाने में खाते हैं।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "सिम बिली उतु — अंडा करी",
+     "text": "मुर्गी के अंडे की तरकारी। 'सिम' मुर्गी और 'उतु' तरकारी है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "उल का अचार — आम का अचार",
+     "text": "कच्चे आम को नमक, हल्दी और तेल में डालकर अचार बनाया जाता है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "लाल चींटी",
+     "text": "संताल रसोई की किताब के मौसमी खानों में लाल चींटियाँ भी गिनी गई हैं। झींगा, सीप-घोंघा, केकड़ा और सूअर का मांस भी इसी सूची में है।",
+     "src": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/"
+    },
+    {
+     "name": "घोंघा",
+     "text": "तालाब के घोंघे भी खाए जाते हैं। मयूरभंज में सकरात के पहले दिन ('बाउंडी') रात के खाने में मछली, घोंघा या केकड़ा ज़रूर होता है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "सुड़ा दाका / सुड़ा जेल",
+     "text": "बलि के मुर्गे या बकरे का मांस चावल के साथ पकाया जाता है। पर्व और भंडान जैसी रस्मों में सब लोग इसे मिलकर खाते हैं।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "खजरी-गुड़",
+     "text": "भुने चावल और गुड़। शादी की 'जवाई धुति' रस्म में मेहमानों को यही खिलाया जाता है और साथ में हांडी पिलाई जाती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "चूड़ा, मूढ़ी और गुड़",
+     "text": "सकरात के लिए चूड़ा, मूढ़ी, गुड़ और पीठा तैयार किया जाता है। पुरखों को भी चूड़ा-गुड़ चढ़ाया जाता है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "पौरा (Paura) — शराब",
+     "text": "हांडी के साथ शराब (पौरा) भी पी जाती है। अंतिम संस्कार में रिश्तेदारों के दिए बर्तन और पैसे से बाद में 'हांडी-पौरा' (चावल की बीयर और शराब) खरीदी जाती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "ताड़ी (खजूर का रस)",
+     "text": "खजूर (date palm) का रस भी संताल पीते हैं। हांडी और महुआ की शराब के साथ यह भी उनके पेयों में गिना जाता है।",
+     "src": "https://kbk.nic.in/tribalprofile/Santal.pdf"
+    },
+    {
+     "name": "मट्ठा और दही",
+     "text": "संतालों के खाने में दूध कम है, पर दही और मक्खन बनाया जाता है। मक्खन निकालने के बाद बचा मट्ठा पौष्टिक मानकर पिया जाता है।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "जंगल के फल",
+     "text": "संताल कटहल, अमरूद, केला, जामुन, इमली और पपीता जैसे फल खाते हैं। जंगल से कंद-मूल भी इकट्ठा करते हैं।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "साल के पत्तों के दोने-पत्तल",
+     "text": "महिलाएँ साल के पत्तों से पत्तल और दोने बनाती हैं, जिनमें खाना परोसा जाता है। इन्हें बाज़ार में बेचकर कुछ कमाई भी होती है।",
+     "src": "https://kbk.nic.in/tribalprofile/Santal.pdf"
     }
    ],
    "sources": [
@@ -568,7 +1218,11 @@
     "https://ksmc.kiit.ac.in/blog/artcultureliterature/a-bite-of-santhali-tradition-unveiling-the-jil-pitha/",
     "https://www.goya.in/blog/zil-pitha-a-traditional-cuisine-of-odishas-santal-tribe",
     "https://www.livemint.com/mint-lounge/food/the-diversity-of-harvest-recipes-in-odisha-111642224525735.html",
-    "https://aiswacs.org/Santal/festival.htm"
+    "https://aiswacs.org/Santal/festival.htm",
+    "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10856898/",
+    "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+    "http://www.aiswacs.org/Santal/lifecycl.htm"
    ]
   },
   {
@@ -631,6 +1285,185 @@
      "name": "सकरात",
      "text": "मकर संक्रांति के आसपास मनाते हैं। पहले दिन मछली-केकड़ा और जिल पीठा बनता है। दूसरे दिन पुरखों को याद करते हैं, फिर शिकार और तीरंदाज़ी होती है। दुमका के संताल इसे साल का आखिरी दिन मानते हैं।",
      "year": "15 जनवरी 2027"
+    },
+    {
+     "name": "जोम सिम (Jom sim)",
+     "text": "सूर्य देव के सम्मान में गोत्र का बलि-पर्व। हर परिवार कोशिश करता है कि जीवन में एक बार इसे ज़रूर करे। यह पूरे गाँव का नहीं, गोत्र का पर्व है।",
+     "src": "https://aiswacs.org/Santal/festival.htm",
+     "year": "कोई तय समय नहीं"
+    },
+    {
+     "name": "दासाय (Dasae)",
+     "text": "आश्विन महीने का पर्व, जो दुर्गा पूजा के साथ पड़ता है। पहले यह ओझा गुरु से सीख पूरी होने का उत्सव था। लड़के औरतों जैसे कपड़े और मोर पंख पहनकर गुरु के साथ घर-घर नाचते-गाते हैं।",
+     "src": "https://www.daricha.org/sub_genre.aspx?ID=126&Name=Dasae",
+     "year": "आश्विन (सितंबर-अक्टूबर)"
+    },
+    {
+     "name": "सारपा एनेच् (Sarpa enech)",
+     "text": "सोहराय के तीसरे दिन (खुंटाव माहा) महिलाओं का नाच। वे दो कतारों में सारपा बजाते हुए गाँव की गलियों में नाचती हैं। मेदिनीपुर, दक्षिण बाँकुड़ा और दक्षिण पुरुलिया में यह खास है।",
+     "src": "https://www.daricha.org/sub_genre.aspx?ID=2164&Name=Sarpa+Enech",
+     "year": "सोहराय के समय"
+    },
+    {
+     "name": "सिंग सादोम (Sing sadom)",
+     "text": "केवल संताल शादियों में होने वाला पुरुषों का नाच। बाँस का रंगीन घोड़ा बनाकर ढोल की ताल पर नाचते हैं। 2020 से बंगाल के कुछ गाँव इसे फिर से जगा रहे हैं।",
+     "src": "https://www.daricha.org/sub_genre.aspx?ID=1155&Name=Sing+Sadom"
+    },
+    {
+     "name": "तोरेया (Torea)",
+     "text": "दिशोम सेंदरा की रातों में होने वाला मनोरंजन। दो बाँसुरी बजाने वाले हँसी-मज़ाक वाले गीत और कहानियाँ सुनाते हैं। AISWACS के अनुसार यह युवाओं के लिए सीख का मौका भी था।",
+     "src": "https://aiswacs.org/Santal/festival.htm",
+     "year": "फागुन, दिशोम सेंदरा के साथ"
+    },
+    {
+     "name": "मेत् हालान (Met' halan)",
+     "text": "बच्चे के जन्म के दिन की छोटी रस्म। माँ और दाई आमने-सामने बैठती हैं और माँ पत्ते के दोने में हांडी भरकर दाई को देती है। यह माँ-बच्चे की सलामती के लिए होती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "बुका़ तोपा (Buka topa)",
+     "text": "बच्चे की नाल तीर से काटकर घर के दरवाज़े के पास ज़मीन में गाड़ी जाती है। इसलिए दो अनजान संताल मिलने पर पूछते हैं, 'तुम्हारा बुका़ तोपा कहाँ है?', यानी तुम्हारा गाँव कौन-सा है।",
+     "src": "https://www.prabhatkhabar.com/state/jharkhand/deoghar/janam-chatiyar-in-santhal-samaj-srn"
+    },
+    {
+     "name": "जानाम छाटियार (Janam chatiar)",
+     "text": "जन्म के बाद की शुद्धि और नामकरण। लड़के के लिए पाँचवें दिन और लड़की के लिए तीसरे दिन होता है। गाँव के लोग आते हैं और नीम वाला पतला भात (नीमदाक् मांडी) बाँटा जाता है।",
+     "src": "https://www.prabhatkhabar.com/state/jharkhand/deoghar/janam-chatiyar-in-santhal-samaj-srn"
+    },
+    {
+     "name": "नरता (Narta) — नामकरण",
+     "text": "मयूरभंज में नामकरण जन्म के एक साल के अंदर होता है। बेटे का नाम दादा पर और बेटी का नाम दादी पर रखा जाता है। पहले हांडी पी जाती है, फिर भोज होता है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "चाचो छाटियार (Caco chatiar)",
+     "text": "बड़े होने पर समाज में पूरा सदस्य बनाने की रस्म। गाँव वालों को तेल-हल्दी लगाई जाती है, हांडी पी जाती है और कोई बुज़ुर्ग सृष्टि और पुरखों के सफ़र की कथा सुनाता है। इसके बाद ही व्यक्ति बलि चढ़ा सकता है और बलि का भोजन खा सकता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "सिका (Sika) — बाँह के निशान",
+     "text": "लड़कों की बाँह पर जलाकर निशान बनाए जाते हैं, हमेशा विषम संख्या में (1, 3, 5...)। मयूरभंज में यह लगभग 12 साल की उम्र में होता है। माना जाता है कि विषम निशान जीवन की रक्षा करते हैं।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "खोदा (Khoda) — गोदना",
+     "text": "लड़कियों की कलाई, बाँह और छाती पर गोदना गुदवाया जाता है, अक्सर सूरज, पक्षी और फूलों के डिज़ाइन में। मयूरभंज में यह आम तौर पर 10-11 साल की उम्र में, शादी से पहले, गुदवाया जाता था।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf"
+    },
+    {
+     "name": "लड़की के बड़े होने की रस्म",
+     "text": "पहली माहवारी पर लड़की 7-9 दिन गोहाल और 'भीतर' (पूजा की जगह) में नहीं जाती। फिर घर गोबर से लीपा जाता है और वह नहाकर शुद्ध होती है।",
+     "src": "https://kbk.nic.in/tribalprofile/Santal.pdf"
+    },
+    {
+     "name": "रायबार (Raebar) — रिश्ता तय करना",
+     "text": "शादी की पहली कड़ी। लड़के का पिता एक बिचौलिया (रायबारिच्) चुनता है, जो लड़की ढूँढता है। फिर हाट, मेले या खेत में लड़का-लड़की और रिश्तेदारों की पहली मुलाकात ('नेपेल') होती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "होरोक् चिखना (Horok' cikhna) — सगाई",
+     "text": "सगाई में दो रस्में होती हैं: 'जवाई धुति' (लड़के के घर) और 'बहू बांदे' (लड़की के घर)। उपहारों को गिनकर सबके सामने बताया जाता है, ताकि यह दोनों परिवारों का पक्का वादा बन जाए।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "दाक् बापला (Dak' bapla) — पानी की शादी",
+     "text": "बारात निकलने से एक दिन पहले की रस्म। गाँव वालों को तेल-हल्दी लगाई जाती है और औरतें नाचती-गाती पानी लाने जाती हैं।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "सिंदूरदान (Sindradan)",
+     "text": "संताल शादी की सबसे ज़रूरी रस्म। दूल्हा पत्ते के दोने से दुल्हन के माथे पर पाँच बार सिंदूर लगाता है। फिर दोनों के कपड़ों में गाँठ बाँधी जाती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "बालाय जोहार (Balaea johar)",
+     "text": "दूल्हे और दुल्हन के रिश्तेदार दो कतारों में आमने-सामने खड़े होकर एक-दूसरे को प्रणाम करते हैं। इससे दो परिवारों और दो गाँवों का नया रिश्ता जुड़ता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "किरिन बहू बापला (Kirin bahu bapla)",
+     "text": "सबसे आम तरह की शादी, जिसमें लड़के का पिता कन्या-मूल्य (गोनोन) देता है और बहू घर लाई जाती है। इसकी रस्में कई महीनों तक चलती हैं।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm",
+     "year": "आम तौर पर मार्च से जून"
+    },
+    {
+     "name": "टुंकी दिपिल बापला (Tunki dipil bapla)",
+     "text": "गरीब परिवारों की सादी शादी। दुल्हन अपना सामान बाँस की टोकरी (टुंकी) में रखकर सिर पर उठाती है और खुद दूल्हे के घर चली जाती है। इसमें कन्या-मूल्य नहीं दिया जाता।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "सांगा बापला (Sanga bapla)",
+     "text": "विधवा या तलाकशुदा स्त्री और विधुर या तलाकशुदा पुरुष की शादी। इसमें कन्या-मूल्य आम शादी का आधा होता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "घरदी जवाई बापला (Ghardi jawae bapla)",
+     "text": "जिस घर में बेटियाँ हों और बेटा न हो, वहाँ दूल्हा शादी के बाद लड़की के घर रहता है। खर्च लड़की वाले उठाते हैं और दूल्हा पाँच साल ससुराल में काम करता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "इतुत् बापला (Itut' bapla)",
+     "text": "बहुत कम होने वाली शादी, जिसमें लड़का हाट या किसी सार्वजनिक जगह पर ज़बरदस्ती लड़की के माथे पर सिंदूर लगा देता है। इससे वह लड़की के घरवालों के विरोध को पार करना चाहता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "निर बोलोक् बापला (Nir bolok bapla)",
+     "text": "यह भी कम होने वाली शादी है। इसमें लड़की खुद लड़के के घर में घुस जाती है और उसे शादी के लिए मजबूर करती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "केसिमेक् (Kesimek')",
+     "text": "विकिपीडिया के अनुसार सबसे ज़्यादा होने वाली शादी का तरीका। लड़का-लड़की खुद तय करके लड़के के घर चले जाते हैं, फिर दोनों गाँवों के बड़े कन्या-मूल्य तय करते हैं।",
+     "src": "https://en.wikipedia.org/wiki/Santal_people"
+    },
+    {
+     "name": "साकाम ओरेच् (Sakam orec') — तलाक",
+     "text": "तलाक की रस्म, जिसका मतलब है 'पत्ते फाड़ना'। तलाक चाहने वाला बाएँ पैर पर खड़ा होकर साल के तीन पत्ते बीच से फाड़ता है और पानी का लोटा लात से गिराता है। गाँव का माँझी इसकी अध्यक्षता करता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "उमुल आदेर (Umul ader) / तेल नाहान",
+     "text": "मौत के लगभग पाँचवें दिन की रस्म। इससे घर और गाँव की छूत दूर होती है और मृत व्यक्ति की 'छाया' (उमुल) बुरी आत्माओं से छुड़ाई जाती है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "भंडान (Bhandan)",
+     "text": "मौत के बाद की आखिरी रस्म, जो परिवार अपनी हैसियत के हिसाब से करता है। बकरे की बलि होती है, सुड़ा (मांस-भात) सब मिलकर खाते हैं और रात भर नाच-गाना होता है। इससे मृत व्यक्ति पुरखों में जा मिलता है।",
+     "src": "http://www.aiswacs.org/Santal/lifecycl.htm"
+    },
+    {
+     "name": "हड्डी बहाना (अस्थि विसर्जन)",
+     "text": "चिता से हड्डियाँ चुनकर रखी जाती हैं और बाद में नदी में बहाई जाती हैं। बहुत से संताल इसके लिए दामोदर नदी जाते हैं। लौटकर पूरे गाँव को भोज दिया जाता है।",
+     "src": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
+    },
+    {
+     "name": "गमहा पूर्णिमा (Gamah purnima)",
+     "text": "मयूरभंज में सावन की पूर्णिमा पर गायों को नमक, महुआ, चावल और घास खिलाई जाती है और सींगों पर तेल लगाया जाता है। फिर करम डाल के चारों ओर नाच होता है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+     "year": "सावन पूर्णिमा (अगस्त)"
+    },
+    {
+     "name": "लागरना (Lagarna)",
+     "text": "मयूरभंज के सोहराय में रात को गाँव के घरों से लौकी, शकरकंद जैसी चीज़ें 'चुराकर' माँझी की हांडी के साथ खाई जाती हैं। इसे अपराध नहीं माना जाता; मान्यता है कि इससे असली चोर दूर रहते हैं।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+     "year": "सोहराय के समय"
+    },
+    {
+     "name": "गाली आसेन / सकरात पाता",
+     "text": "मयूरभंज में सकरात के तीसरे दिन युवक-युवतियाँ गाँव-गाँव नाचते हुए चावल इकट्ठा करते हैं। उसी चावल से भोज होता है और तीन दिन का 'सकरात पाता' नाच चलता है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+     "year": "पूस (जनवरी)"
+    },
+    {
+     "name": "सोहराय का मुखौटा नाच",
+     "text": "मयूरभंज के सोहराय में संताल बाघ, साँप और हाथी के मुखौटे पहनकर नाचते हैं। यह वहाँ के सोहराय की खास बात है।",
+     "src": "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+     "year": "सोहराय के समय"
+    },
+    {
+     "name": "पाता (Pata) परब",
+     "text": "AISWACS के अनुसार छाता, पाता और जात्रा हिंदू मूल के पर्व हैं, जिनमें संताल पूजा नहीं करते, बस देखने जाते हैं।",
+     "src": "https://aiswacs.org/Santal/festival.htm"
     }
    ],
    "sources": [
@@ -640,7 +1473,14 @@
     "https://kbk.nic.in/tribalprofile/Santal.pdf",
     "https://en.wikipedia.org/wiki/Santal_people",
     "https://purulia.gov.in/fairs-festivals/",
-    "https://www.prabhatkhabar.com/state/jharkhand/dumka/makar-sankranti-2021-santal-tribals-of-dumka-start-new-year-with-sakarat-festival-organizing-arrow-bow-competition-smj"
+    "https://www.prabhatkhabar.com/state/jharkhand/dumka/makar-sankranti-2021-santal-tribals-of-dumka-start-new-year-with-sakarat-festival-organizing-arrow-bow-competition-smj",
+    "https://www.daricha.org/sub_genre.aspx?ID=126&Name=Dasae",
+    "https://www.daricha.org/sub_genre.aspx?ID=2164&Name=Sarpa+Enech",
+    "https://www.daricha.org/sub_genre.aspx?ID=1155&Name=Sing+Sadom",
+    "http://www.aiswacs.org/Santal/lifecycl.htm",
+    "https://www.prabhatkhabar.com/state/jharkhand/deoghar/janam-chatiyar-in-santhal-samaj-srn",
+    "https://www.pbjournals.com/image/catalog/Journal%20Papers/SJSS/2025/No%201%20(2025)/1_Ghanashyam%20Giri.pdf",
+    "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/santals"
    ]
   },
   {

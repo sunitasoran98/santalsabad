@@ -124,6 +124,9 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .et .c3h{font-family:'Noto Sans Devanagari',sans-serif;font-size:17px}
 .et .exs{display:block;font-style:italic;color:#2c2350}.et .exe{display:block;color:var(--muted);font-size:14px;margin-top:4px}
 .et .na{color:#b5b9c3}
+.wpic{float:right;margin:0 0 10px 16px;max-width:240px;text-align:center}.wpic img{width:100%;max-height:220px;object-fit:cover;border-radius:12px;border:1px solid #d5d9e2}.wpic figcaption{font-size:11px}.wpic figcaption a{color:#888}@media(max-width:600px){.wpic{float:none;margin:8px auto;max-width:260px}}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.pgrid a{display:flex;flex-direction:column;border:1px solid #dbe7f6;border-radius:14px;overflow:hidden;text-decoration:none;background:#fff}.pgrid img{width:100%;height:120px;object-fit:cover;background:#f1f3f7}.pgrid b{color:#1f5fae;padding:6px 10px 0}.pgrid span{color:#c46a12;font-size:14px;padding:0 10px 8px;font-family:"Noto Sans Devanagari",sans-serif}
+.pqi{display:block;max-width:100%;max-height:320px;margin:10px auto;border-radius:14px}.pqo{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pqo button{padding:12px;border-radius:12px;border:1px solid #cfd4dd;background:#fff;font-size:17px;cursor:pointer}.pqo button.ok{background:#d9f5e3;border-color:#2e9e5b}.pqo button.no{background:#fde2e2;border-color:#c0392b}.pqs{text-align:right;color:#666}.pqa{margin:12px 0 8px;font-size:17px}
 table.et7{border-collapse:collapse;min-width:900px;background:#fff}
 .et7 th,.et7 th.c1,.et7 th.c2,.et7 th.c3h,.et7 th.c4,.et7 th.c5,.et7 th.c6,.et7 th.c7,.et7 th.c8{background:#fff;color:#111;text-align:center;vertical-align:middle;font:700 15px 'Open Sans',sans-serif;padding:10px 8px;border:1px solid #cfd4dd}
 .et7 td,.et7 td.c1,.et7 td.c2,.et7 td.c3h,.et7 td.c4,.et7 td.c5,.et7 td.c7,.et7 td.c8{background:#fff;border:1px solid #cfd4dd;border-left:1px solid #cfd4dd;text-align:center;vertical-align:middle;color:#222}
@@ -996,7 +999,7 @@ function exLink(t,self){return esc(t).replace(/[A-Za-zÀ-ɏḀ-ỿ̀-ͯ'’]+/g,
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">यह शब्द अभी शब्दकोश में नहीं है।</p></div>`;
   let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(cap(e.w))}</div>
   <h1 class="hw"${EDIT?` contenteditable="true" data-word="${esc(k)}"`:''}>${esc(EDIT?e.w:cap(e.w))}</h1>
-  <div class="dvh"><span${EDIT?` contenteditable="true" data-dv="${esc(k)}"`:''}>${esc(e.dv)}</span></div>
+  <div class="dvh"><span${EDIT?` contenteditable="true" data-dv="${esc(k)}"`:''}>${esc(e.dv)}</span></div>${picHTML(k)}
   ${e.ipa?`<div class="meta">उच्चारण: /${esc(e.ipa)}/</div>`:''}
   <div class="tabs"><span>अर्थ और प्रयोग</span></div>
   <div class="tw"><table class="et et7"><thead><tr><th>Words</th><th>Stl. Mean.</th><th>Stl. Ucch.</th><th>Eng. Mean.</th><th>Eng. Ucch.</th><th>Hin. Mean.</th><th>Sent. Ex.</th>${EDIT?'<th></th>':''}</tr></thead><tbody>`;
@@ -2353,7 +2356,7 @@ XB.wordlists=async arg=>{const L=(await gLoad()).lists||{},w=$('#wlw');if(!w)ret
 XR.riddles=()=>`<div id="rdw"><div class="card"><p class="xsub">लोड हो रहा है…</p></div></div>`;
 XB.riddles=async()=>{const R=((await gLoad()).lists||{}).riddles||[],w=$('#rdw');if(!w)return;
  w.innerHTML=`<div class="card">${crumb('कुदुम')}<h2 class="dm xh">❓ कुदुम (संताली पहेलियाँ) <small>${R.length}</small></h2><p class="xsub">पहेली पढ़िए, सोचिए, फिर “जवाब देखें” दबाइए। कुदुम संताल समाज की पुरानी लोक-परंपरा है।</p>
- <div class="rdl">${R.map((r,i)=>`<div class="rd"><p><b>${i+1}.</b> ${satH(r.sat)}</p><button class="xbtn sec" data-rd="${i}">जवाब देखें</button><p class="rda" hidden>✅ ${r.ans_sat?satH(r.ans_sat)+' · ':''}${esc(r.ans_hi||'')}</p></div>`).join('')}</div></div>`};
+ <div class="rdl">${R.map((r,i)=>`<div class="rd"><p><b>${i+1}.</b> ${satH(r.sat)}${r.hi?`<br><small class="xsub">${esc(r.hi)}</small>`:''}</p><button class="xbtn sec" data-rd="${i}">जवाब देखें</button><p class="rda" hidden>✅ ${r.ans_sat?satH(r.ans_sat)+' · ':''}${esc(r.ans_hi||'')}</p></div>`).join('')}</div></div>`};
 document.addEventListener('click',e=>{const b=e.target.closest('[data-rd]');if(!b)return;const a=b.nextElementSibling;a.hidden=!a.hidden;b.textContent=a.hidden?'जवाब देखें':'छिपाएँ'});
 
 /* कहावतें: किताब-आधारित लोक कहावतें पहले */
@@ -2717,7 +2720,19 @@ async function remTick(){try{if(localStorage.getItem('ss_rem')!=='1'||Notificati
 setTimeout(remTick,4000);
 
 /* सब नए पेज एक जगह */
-XR.more=()=>{const T=[['#/english/a','🔠','English → संताली','English शब्द से खोजिए'],['#/culture','🪶','संस्कृति','लेखक, इतिहास, पारिस, पर्व'],['#/stories','📖','कहानियाँ','हिन्दी अनुवाद के साथ'],['#/dictation','🎧','सुनो और लिखो','डिक्टेशन खेल'],['#/speak','🗣','बोलने का अभ्यास','रिकॉर्ड करके मिलाइए'],['#/trace','✍️','Ol Chiki लिखें','उँगली से अक्षर बनाइए'],['#/color','🖍','रंग भरें','बच्चों के पन्ने'],['#/contest','🏆','हफ़्ते की प्रतियोगिता','10 सवाल, सबके लिए एक'],['#/contribute','➕','शब्द जोड़िए','नया शब्द भेजिए'],['#/review','🔍','जाँच में मदद','जानकारों के लिए'],['#/keyboards','⌨️','कीबोर्ड गाइड','फ़ोन में संताली टाइप'],['#/reminder','🔔','रोज़ का रिमाइंडर','आज का शब्द नोटिफ़िकेशन में'],['#/developers','🧑‍💻','डेवलपर API','खुला डेटा']];
+let PICS=null;fetch('pics.json').then(r=>r.json()).then(j=>{PICS=j;if(/^#\/(word|pics|picquiz)/.test(location.hash)&&typeof entries!=="undefined"&&entries&&Object.keys(entries).length)route()}).catch(()=>{});
+const picURL=(f,w)=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(f)+'?width='+(w||320);
+function picHTML(k){const p=PICS&&PICS[k];if(!p)return'';return `<figure class="wpic"><img src="${picURL(p[0],360)}" alt="${esc(entries[k].w)}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><a href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(p[0])}" target="_blank" rel="noopener">चित्र: Wikimedia Commons</a></figcaption></figure>`}
+XR.pics=()=>{if(!PICS)return'<div class="card"><p>तस्वीरें लोड हो रही हैं…</p></div>';const K=Object.keys(PICS).filter(k=>entries[k]).sort();
+ return `<div class="card"><div class="crumb"><a href="#/">Home</a> › चित्र शब्दकोश</div><h2 class="dm" style="margin-top:0">🖼 चित्र शब्दकोश</h2><p class="xsub">${K.length} शब्द तस्वीरों के साथ। तस्वीर पर क्लिक करके पूरा अर्थ देखिए। <a href="#/picquiz">🧩 चित्र पहचानो खेल ›</a></p>
+ <div class="pgrid">${K.map(k=>`<a href="#/word/${encodeURIComponent(k)}"><img src="${picURL(PICS[k][0],220)}" loading="lazy" alt="" onerror="this.parentNode.remove()"><b>${esc(cap(entries[k].w))}</b><span>${esc(hi1(entries[k])||(first(entries[k]).en||'').split(/[;,]/)[0])}</span></a>`).join('')}</div><p class="xsub" style="margin-top:14px">सभी तस्वीरें Wikimedia Commons से हैं; हर तस्वीर का लाइसेंस उसके पेज पर है।</p></div>`};
+XR.picquiz=()=>{if(!PICS)return'<div class="card"><p>तस्वीरें लोड हो रही हैं…</p></div>';return `<div class="card"><div class="crumb"><a href="#/">Home</a> › <a href="#/pics">चित्र शब्दकोश</a> › चित्र पहचानो</div><h2 class="dm" style="margin-top:0">🧩 चित्र पहचानो</h2><p class="xsub">तस्वीर देखिए और सही संताली शब्द चुनिए।</p><div id="pq"></div></div>`};
+XB.picquiz=()=>{const K=Object.keys(PICS||{}).filter(k=>entries[k]);if(K.length<4)return;let sc=0,n=0;const box=$('#pq');
+ const next=()=>{const k=K[Math.floor(Math.random()*K.length)];const op=[k];while(op.length<4){const x=K[Math.floor(Math.random()*K.length)];if(!op.includes(x))op.push(x)}op.sort(()=>Math.random()-.5);
+  box.innerHTML=`<p class="pqs">स्कोर: ${sc} / ${n}</p><img class="pqi" src="${picURL(PICS[k][0],420)}" alt=""><div class="pqo">${op.map(x=>`<button data-o="${esc(x)}">${esc(cap(entries[x].w))}</button>`).join('')}</div>`;
+  box.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{n++;const ok=b.dataset.o===k;if(ok)sc++;box.querySelectorAll('[data-o]').forEach(y=>{y.disabled=true;if(y.dataset.o===k)y.classList.add('ok');else if(y===b)y.classList.add('no')});
+   const s=first(entries[k]);box.insertAdjacentHTML('beforeend',`<p class="pqa">${ok?'✅ सही!':'❌ सही उत्तर:'} <a href="#/word/${encodeURIComponent(k)}"><b>${esc(cap(entries[k].w))}</b></a> = ${esc(s.hi||s.en||'')}</p><button class="xbtn" id="pqn">अगला ›</button>`);$('#pqn').onclick=next})};next()};
+XR.more=()=>{const T=[['#/pics','🖼','चित्र शब्दकोश','तस्वीरों के साथ शब्द'],['#/picquiz','🧩','चित्र पहचानो','तस्वीर देखकर शब्द चुनिए'],['#/english/a','🔠','English → संताली','English शब्द से खोजिए'],['#/culture','🪶','संस्कृति','लेखक, इतिहास, पारिस, पर्व'],['#/stories','📖','कहानियाँ','हिन्दी अनुवाद के साथ'],['#/dictation','🎧','सुनो और लिखो','डिक्टेशन खेल'],['#/speak','🗣','बोलने का अभ्यास','रिकॉर्ड करके मिलाइए'],['#/trace','✍️','Ol Chiki लिखें','उँगली से अक्षर बनाइए'],['#/color','🖍','रंग भरें','बच्चों के पन्ने'],['#/contest','🏆','हफ़्ते की प्रतियोगिता','10 सवाल, सबके लिए एक'],['#/contribute','➕','शब्द जोड़िए','नया शब्द भेजिए'],['#/review','🔍','जाँच में मदद','जानकारों के लिए'],['#/keyboards','⌨️','कीबोर्ड गाइड','फ़ोन में संताली टाइप'],['#/reminder','🔔','रोज़ का रिमाइंडर','आज का शब्द नोटिफ़िकेशन में'],['#/developers','🧑‍💻','डेवलपर API','खुला डेटा']];
  return `<div class="card">${crumb('और भी')}<h2 class="dm xh">✨ और भी सीखिए</h2><div class="lband">${T.map(t=>`<a class="lt" href="${t[0]}"><span>${t[1]}</span><b>${t[2]}</b><small>${t[3]}</small></a>`).join('')}</div></div>`};
 
 /* खोज: कुछ न मिले तो मिलते-जुलते शब्द (ạ/a, ñ/n आदि बराबर) */
