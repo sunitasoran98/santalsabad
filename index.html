@@ -168,6 +168,9 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .lbtn.ghost{background:#fff;color:#1e40af;border:1px solid #bfdbfe;box-shadow:none}
 .lbtn.amber{background:#fffbeb;color:#78350f;border:2px solid #fcd34d;box-shadow:none;font-size:14px;padding:10px}.lbtn.amber small{color:#b45309;font-size:11px}
 .lbtn.red{background:linear-gradient(90deg,#ef4444,#b91c1c)}
+.tksaved{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:#065f46;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:14px;padding:8px 12px}.tksaved code{font-size:12px}.tkdel{margin-left:auto;border:0;background:#fee2e2;color:#b91c1c;border-radius:10px;padding:4px 10px;font-weight:700;cursor:pointer}
+.lpw summary{cursor:pointer;font-size:14px;font-weight:800;color:#0f172a;display:flex;gap:8px;align-items:center;list-style:none}.lpw summary svg{width:16px;height:16px;color:#1d4ed8}.lpw summary::-webkit-details-marker{display:none}.lpw:not([open]){gap:0}
+#lmodal .lov{padding:16px 12px}#lmodal .lcard{max-height:calc(100vh - 32px);overflow-y:auto;overscroll-behavior:contain}
 .lbox{padding:16px;border-radius:24px;background:rgba(255,255,255,.8);border:1px solid #dbeafe;display:flex;flex-direction:column;gap:10px}
 .lbox h4{margin:0;font-size:14px;font-weight:800;color:#0f172a;display:flex;gap:8px;align-items:center}.lbox h4 svg{width:16px;height:16px;color:#1d4ed8}
 .lnote{margin:0;text-align:center;font-size:13px;color:#475569}
@@ -1135,6 +1138,7 @@ function aiBind(q){const f=$('#aif');if(!f)return;f.onsubmit=e=>{e.preventDefaul
 let EDIT=localStorage.getItem('ss_edit')==='1';
 const OWNER='bosctechedu@gmail.com';
 const isAdmin=()=>localStorage.getItem('ss_admin')==='1'&&(localStorage.getItem('ss_user')||'').toLowerCase()===OWNER;
+const keepLogin=()=>{try{localStorage.setItem('ss_keep','1');if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{})}catch(_){}};if(isAdmin())keepLogin();
 if(!isAdmin()){EDIT=false;localStorage.setItem('ss_edit','0')}
 function saveDraft(){try{localStorage.setItem('ss_draft',toCSV())}catch(err){try{localStorage.removeItem('ss_draft')}catch(_){}console.warn('draft too big',err)}adminBar()}
 function applyTexts(){setTimeout(()=>{const c=$('#count');if(c)c.textContent=order.length.toLocaleString('en-IN')});document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(TEXTS[k]!=null)el.innerHTML=TEXTS[k];el.contentEditable=EDIT?'true':'false';el.classList.toggle('edt',EDIT)})}
@@ -1190,9 +1194,9 @@ function adminPage(){setTimeout(openLogin);return listHTML('Admin',[]).replace('
 function openLogin(){let m=$('#lmodal');if(!m){m=document.createElement('div');m.id='lmodal';document.body.appendChild(m)}
   const set=!!localStorage.getItem('ss_pw')&&(localStorage.getItem('ss_user')||'').toLowerCase()===OWNER,on=isAdmin(),u=localStorage.getItem('ss_user')||'';
   let body;
-  if(on)body=`<div class="lbox"><h4>${IC.git} लाइव पब्लिश (GitHub)</h4>${fld('atok','key','GitHub token (github_pat_...)','password',localStorage.getItem('ss_gh_token')||'')}${fld('arepo','git','Repo','text',localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}
+  if(on)body=`<div class="lbox"><p class="lmsg ok" style="margin:0 0 10px">🔒 इस डिवाइस पर आप तब तक लॉगिन रहेंगे जब तक “Logout” न दबाएँ।</p><h4>${IC.git} लाइव पब्लिश (GitHub)</h4>${(()=>{const t=localStorage.getItem('ss_gh_token')||'';return t?`<div class="tksaved">✅ Token इस डिवाइस पर सेव है <code>••••${esc(t.slice(-4))}</code><button type="button" class="tkdel" onclick="tokDel()">हटाएँ</button></div>`:''})()}${fld('atok','key',localStorage.getItem('ss_gh_token')?'नया token डालें (बदलना हो तभी)':'GitHub token (github_pat_...)','password','')}${fld('arepo','git','Repo','text',localStorage.getItem('ss_gh_repo')||'sunitasoran98/santalsabad')}
      <button class="lbtn" onclick="adminSave()">सेव करें</button></div>
-     <div class="lbox"><h4>${IC.lock} पासवर्ड बदलें</h4>${fld('opw','lock','पुराना पासवर्ड','password')}${fld('npw','key','नया पासवर्ड (कम से कम 6 अक्षर)','password')}<button class="lbtn ghost" onclick="changePw()">पासवर्ड बदलें</button></div>
+     <details class="lbox lpw"><summary>${IC.lock} पासवर्ड बदलें</summary>${fld('opw','lock','पुराना पासवर्ड','password')}${fld('npw','key','नया पासवर्ड (कम से कम 6 अक्षर)','password')}<button class="lbtn ghost" onclick="changePw()">पासवर्ड बदलें</button></details>
      <button class="lbtn red" onclick="adminOff()">लॉगआउट</button>`;
   else if(!set)body=`<p class="lnote">पहली बार सेटअप: सिर्फ़ BOSC का admin ईमेल ही यहाँ पासवर्ड बना सकता है।</p>${fld('lu','user','Admin ईमेल','email','')}${fld('lp','lock','पासवर्ड (कम से कम 6 अक्षर)','password')}${fld('lp2','key','पासवर्ड दोबारा (Confirm)','password')}<button class="lbtn" onclick="doSetup()">सेटअप करें</button>`;
   else body=`${fld('lu','user','Admin ईमेल','email',u)}${fld('lp','lock','पासवर्ड डालिए','password')}<label class="lrem"><input type="checkbox" id="lrem" checked> मुझे याद रखें</label><button class="lbtn" onclick="doLogin()">Login</button>
@@ -1206,18 +1210,22 @@ function closeLogin(){const m=$('#lmodal');if(m)m.style.display='none';if(locati
 const lmsg=(t,ok)=>{$('#lmsg').innerHTML=`<div class="lalert ${ok?'ok':''}">${t}</div>`};
 async function doSetup(){const u=$('#lu').value.trim().toLowerCase(),p=$('#lp').value,p2=$('#lp2').value;
   if(u!==OWNER)return lmsg('यह ईमेल admin नहीं है। सिर्फ़ BOSC का admin ईमेल ही लॉगिन कर सकता है।');if(p.length<6)return lmsg('पासवर्ड कम से कम 6 अक्षर का हो');if(p!==p2)return lmsg('दोनों पासवर्ड एक जैसे नहीं हैं');
-  localStorage.setItem('ss_user',u);localStorage.setItem('ss_pw',await sha256(u+':'+p));localStorage.setItem('ss_admin','1');adminBar();route();openLogin();lmsg('सेटअप हो गया! Admin मोड चालू है।',1)}
+  localStorage.setItem('ss_user',u);localStorage.setItem('ss_pw',await sha256(u+':'+p));localStorage.setItem('ss_admin','1');keepLogin();adminBar();route();openLogin();lmsg('सेटअप हो गया! Admin मोड चालू है।',1)}
 async function doLogin(){const u=$('#lu').value.trim().toLowerCase(),p=$('#lp').value;
   if(u!==OWNER)return lmsg('यह ईमेल admin नहीं है। सिर्फ़ BOSC का admin ईमेल ही लॉगिन कर सकता है।');
   if(u!==localStorage.getItem('ss_user')||await sha256(u+':'+p)!==localStorage.getItem('ss_pw'))return lmsg('गलत ईमेल या पासवर्ड');
-  localStorage.setItem('ss_admin','1');EDIT=true;localStorage.setItem('ss_edit','1');adminBar();closeLogin();route()}
+  localStorage.setItem('ss_admin','1');keepLogin();EDIT=true;localStorage.setItem('ss_edit','1');adminBar();closeLogin();route()}
 async function changePw(){const u=localStorage.getItem('ss_user'),o=$('#opw').value,n=$('#npw').value;
   if(await sha256(u+':'+o)!==localStorage.getItem('ss_pw'))return lmsg('पुराना पासवर्ड गलत है');if(n.length<6)return lmsg('नया पासवर्ड कम से कम 6 अक्षर का हो');
   localStorage.setItem('ss_pw',await sha256(u+':'+n));lmsg('पासवर्ड बदल गया',1)}
 function forgotPw(){if(confirm('इस ब्राउज़र से admin लॉगिन हटाकर नया सेटअप करें? (आपके शब्द और पब्लिश किया डेटा सुरक्षित रहेगा)')){['ss_pw','ss_user','ss_admin'].forEach(k=>localStorage.removeItem(k));openLogin()}}
 async function sha256(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-function adminSave(){localStorage.setItem('ss_gh_token',$('#atok').value.trim());localStorage.setItem('ss_gh_repo',$('#arepo').value.trim());lmsg('सेव हो गया',1)}
-function adminOff(){localStorage.removeItem('ss_admin');EDIT=false;localStorage.setItem('ss_edit','0');adminBar();closeLogin();route()}
+async function adminSave(){const t=$('#atok').value.trim(),r=$('#arepo').value.trim()||'sunitasoran98/santalsabad';localStorage.setItem('ss_gh_repo',r);
+ if(!t){lmsg(localStorage.getItem('ss_gh_token')?'Repo सेव हो गया। पुराना token वैसे ही सेव है।':'Token खाली है। GitHub से नया token बनाकर डालिए।',!!localStorage.getItem('ss_gh_token'));return}
+ lmsg('Token जाँच रहे हैं…',1);let ok=null;try{const x=await fetch('https://api.github.com/repos/'+r,{headers:{Authorization:'Bearer '+t,Accept:'application/vnd.github+json'}});ok=x.ok?(await x.json()).permissions:false;if(x.status===401){lmsg('यह token गलत है या expire हो गया। GitHub पर नया token बनाइए।');return}if(x.status===404){lmsg('यह token इस repo तक नहीं पहुँचता। token बनाते समय repo '+r+' चुनिए।');return}}catch(_){}
+ localStorage.setItem('ss_gh_token',t);keepLogin();openLogin();lmsg(ok&&ok.push===false?'सेव हुआ, पर इस token में लिखने (Contents: Read and write) की अनुमति नहीं है।':'✅ Token सेव हो गया। यह इस डिवाइस पर तब तक रहेगा जब तक आप “हटाएँ” न दबाएँ।',!(ok&&ok.push===false))}
+function tokDel(){if(confirm('इस डिवाइस से GitHub token हटाएँ?')){localStorage.removeItem('ss_gh_token');openLogin();lmsg('Token हटा दिया गया।',1)}}
+function adminOff(){localStorage.removeItem('ss_admin');localStorage.removeItem('ss_keep');EDIT=false;localStorage.setItem('ss_edit','0');adminBar();closeLogin();route()}
 
 function remember(k){if(EDIT)return;let r=recentList();r=[k,...r.filter(x=>x!==k)].slice(0,16);localStorage.setItem('ss_recent',JSON.stringify(r))}
 
