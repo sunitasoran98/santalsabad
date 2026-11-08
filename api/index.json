@@ -1,9 +1,9 @@
 {
  "name": "SantalSabad open API",
  "by": "BOSC",
- "license": "Bodding/Campbell public domain; Wiktionary-derived CC BY-SA; credit \"SantalSabad · BOSC\"",
- "count": 29483,
+ "count": 28790,
  "shards": {
+  "_": "api/_.json",
   "a": "api/a.json",
   "b": "api/b.json",
   "c": "api/c.json",
