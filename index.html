@@ -124,6 +124,7 @@ table.et{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;min
 .et .c3h{font-family:'Noto Sans Devanagari',sans-serif;font-size:17px}
 .et .exs{display:block;font-style:italic;color:#2c2350}.et .exe{display:block;color:var(--muted);font-size:14px;margin-top:4px}
 .et .na{color:#b5b9c3}
+.et th.c7{background:#7a4b12}.et th.c8{background:#2d6a8f}.et td.c7{background:#fbf5ec}.et td.c8{background:#eef6fb;color:#2d6a8f}.et .eip{font-family:"Lucida Sans Unicode","Segoe UI","Noto Sans",sans-serif;font-size:16px;white-space:nowrap}table.et7{min-width:980px}.et .lb{color:#8a8f9c;font-size:13px;font-style:normal}.et td.c2 .dvc,.et td.c7 .dvc{font-size:17px}
 /* A-Z box */
 .azbox{background:linear-gradient(160deg,#011f43,#0d2f5c)!important;border:0!important;border-radius:12px;color:#fff;box-shadow:0 10px 26px rgba(1,31,67,.25)}
 .azbox h3{color:#fff;border-bottom-color:#f2b8c6!important}
@@ -980,18 +981,24 @@ const wlink=k=>`<a href="#/word/${encodeURIComponent(k)}">${esc(cap(entries[k].w
 
 const POS=['संज्ञा','क्रिया','विशेषण','सर्वनाम','क्रिया-विशेषण','संख्यावाचक','निपात','निर्धारक','समुच्चयबोधक','संबंधबोधक','विस्मयादिबोधक','वाक्यांश'];
 const ed=(i,f,v,cls='')=>EDIT?`<span class="ed ${cls}" contenteditable="true" data-i="${i}" data-f="${esc(f)}">${esc(v)}</span>`:(v?`<span class="${cls}">${esc(v)}</span>`:'<span class="na">—</span>');
+let ENIPA=null;fetch('en_ipa.json').then(r=>r.json()).then(j=>{ENIPA=j;if(/^#\/word\//.test(location.hash)&&typeof entries!=="undefined"&&entries&&Object.keys(entries).length)route()}).catch(()=>{});
+function enIpaHTML(en){en=(en||'').trim();if(!ENIPA||!en)return'<span class="na">—</span>';let g=en.split(/[,;\/(\[:]/)[0].trim().toLowerCase().replace(/[.!?]+$/,'').replace(/^(to|a|an|the)\s+/,'');const ws=g.match(/[a-z]+(?:'[a-z]+)?/g);if(!ws||ws.length>4||!ws.every(w=>ENIPA[w]))return'<span class="na">—</span>';const ip='/'+ws.map(w=>ENIPA[w]).join(' ')+'/';const full=en.toLowerCase().replace(/[.!?]+$/,'').replace(/^(to|a|an|the)\s+/,'');return (full===g?'':`<span class="lb">${esc(g)}</span> `)+`<span class="eip">${esc(ip)}</span>`}
 function entryHTML(k){const e=entries[k];if(!e)return`<div class="card"><p class="empty">यह शब्द अभी शब्दकोश में नहीं है।</p></div>`;
   let h=`<div class="card"><div class="crumb"><a href="#/">Home</a> › ${esc(cap(e.w))}</div>
   <h1 class="hw"${EDIT?` contenteditable="true" data-word="${esc(k)}"`:''}>${esc(EDIT?e.w:cap(e.w))}</h1>
   <div class="dvh"><span${EDIT?` contenteditable="true" data-dv="${esc(k)}"`:''}>${esc(e.dv)}</span></div>
   ${e.ipa?`<div class="meta">उच्चारण: /${esc(e.ipa)}/</div>`:''}
   <div class="tabs"><span>अर्थ और प्रयोग</span></div>
-  <div class="tw"><table class="et"><thead><tr><th class="c1">रोमन<small>Roman</small></th><th class="c2">देवनागरी<small>Devanagari</small></th><th class="c3h">हिन्दी<small>Hindi</small></th><th class="c4">अंग्रेज़ी<small>English</small></th><th class="c5">उदाहरण<small>संताली · अंग्रेज़ी</small></th>${EDIT?'<th class="c6"></th>':''}</tr></thead><tbody>`;
+  <div class="tw"><table class="et et7"><thead><tr><th class="c1">शब्द<small>Words</small></th><th class="c2">संताली में<small>Meaning in Santali</small></th><th class="c7">संताली उच्चारण<small>Uchcharan in Santali</small></th><th class="c4">अंग्रेज़ी अर्थ<small>Meaning in English</small></th><th class="c8">अंग्रेज़ी उच्चारण<small>Uchcharan in English</small></th><th class="c3h">हिन्दी अर्थ<small>Meaning in Hindi</small></th><th class="c5">उदाहरण<small>Sentence Example</small></th>${EDIT?'<th class="c6"></th>':''}</tr></thead><tbody>`;
   const all=[];for(const p in e.pos)e.pos[p].forEach(s=>all.push([p,s]));all.sort((a,b)=>a[1].n-b[1].n||a[1].i-b[1].i);
   all.forEach(([p,s])=>{const en=s.ex?((s.tr||'').split(' / ').find(x=>/[a-z]/i.test(x))||s.tr):s.tr;
     h+=`<tr><td class="c1"><span class="rw">${esc(cap(e.w))}</span><span class="pn">${EDIT?`<span class="ed" contenteditable="true" data-i="${s.i}" data-f="Arth no.">${s.n}</span>`:s.n} · ${EDIT?`<select data-i="${s.i}" class="possel"><option value="">—</option>${POS.concat(POS.includes(p)||!p?[]:[p]).map(x=>`<option${x===p?' selected':''}>${esc(x)}</option>`).join('')}</select>`:esc(p||'—')}</span></td>
-      <td class="c2 dvc">${esc(e.dv)}</td><td class="c3h">${ed(s.i,'Hindi',s.hi)}</td><td class="c4">${ed(s.i,'English',s.en)}</td>
-      <td class="c5">${EDIT?`${ed(s.i,'Udaharan (Santali)',s.ex,'exs')}${ed(s.i,'Udaharan ka anuvad',s.tr,'exe')}`:(s.ex?`<i class="exs">${esc(s.ex)}</i>${en?`<span class="exe">${esc(en)}</span>`:''}`:'<span class="na">—</span>')}</td>
+      <td class="c2"><span class="lb">Roman-</span>${esc(cap(e.w))}<br><span class="lb">Devnagri-</span><span class="dvc">${esc(e.dv)}</span></td>
+      <td class="c7">${esc(cap(e.w))}${e.dv?`/<span class="dvc">${esc(e.dv)}</span>`:''}</td>
+      <td class="c4">${ed(s.i,'English',s.en)}</td>
+      <td class="c8">${enIpaHTML(s.en)}</td>
+      <td class="c3h">${ed(s.i,'Hindi',s.hi)}</td>
+      <td class="c5">${EDIT?`${ed(s.i,'Udaharan (Santali)',s.ex,'exs')}${ed(s.i,'Udaharan ka anuvad',s.tr,'exe')}`:(s.ex?`<span class="exs"><span class="lb">Santali-</span>${esc(s.ex)}</span>${en?`<span class="exe"><span class="lb">Eng-</span>${esc(en)}</span>`:''}`:'<span class="na">—</span>')}</td>
       ${EDIT?`<td class="c6"><button class="del" data-del="${s.i}" title="यह अर्थ हटाएँ">✕</button></td>`:''}</tr>`});
   h+='</tbody></table></div>';
   if(EDIT)h+=`<div class="adm-row"><button class="abtn" data-addsense="${esc(k)}">+ नया अर्थ जोड़ें</button><button class="abtn red" data-delword="${esc(k)}">पूरा शब्द हटाएँ</button></div>`;
