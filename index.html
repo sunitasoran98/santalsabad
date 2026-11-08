@@ -2172,7 +2172,12 @@ let KG=null;
 XR.kids=()=>`<div class="card kids">${crumb('बच्चों का कोना')}<h2 class="dm xh">🧒 बच्चों का कोना</h2>
  <div class="xact"><button class="xbtn" data-kg="pic">🎯 चित्र पहचानो</button><button class="xbtn" data-kg="oc">ᱚ अक्षर मिलाओ</button><a class="xbtn sec" href="#/olchiki">Ol Chiki चार्ट</a></div><div id="kgw"></div>
  <h3 class="dm" style="margin:22px 0 10px">चित्र वाले शब्द</h3><div class="kgrid">${kidList().map(([k,i])=>`<button class="kt" data-kw="${esc(k)}"><span>${i}</span><b>${esc(cap(entries[k].w))}</b><small>${esc(hi1(entries[k]))}</small></button>`).join('')}</div></div>`;
-function kidSay(k){if(playAud(k))return;const e=entries[k];if(e&&window.speechSynthesis){const u=new SpeechSynthesisUtterance(e.dv);u.lang='hi-IN';u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)}}
+let KAUD=null;fetch('kidaud/index.json').then(r=>r.json()).then(j=>KAUD=j).catch(()=>KAUD={});
+function girlVoice(){const V=(window.speechSynthesis?speechSynthesis.getVoices():[]);const P=[/swara/i,/neerja/i,/google हिन्दी|google hindi/i,/kalpana/i,/lekha/i,/heera/i,/aditi/i,/veena/i,/raveena|priya|ananya/i];
+ for(const p of P){const v=V.find(x=>p.test(x.name)&&/^(hi|en-IN)/i.test(x.lang));if(v)return v}return V.find(x=>/^hi/i.test(x.lang)&&FEM.test(x.name))||V.find(x=>/^hi/i.test(x.lang)&&!MALE.test(x.name))||curVoice()}
+let KA_EL=null;
+function kidSay(k){if(KAUD&&KAUD[k]){try{if(KA_EL)KA_EL.pause();KA_EL=new Audio('kidaud/'+KAUD[k]);KA_EL.play().catch(()=>{});return}catch(_){}}
+ if(playAud(k))return;const e=entries[k];if(e&&window.speechSynthesis){const u=new SpeechSynthesisUtterance((e.dv||'').replace(/'/g,'')),v=girlVoice();if(v){u.voice=v;u.lang=v.lang}else u.lang='hi-IN';u.rate=.85;u.pitch=1.15;speechSynthesis.cancel();speechSynthesis.speak(u)}}
 function kgNew(type){const r=Math.random;if(type==='pic'){const L=kidList(),a=L[Math.floor(r()*L.length)],o=[a,...L.filter(x=>x!==a).sort(()=>r()-.5).slice(0,3)].sort(()=>r()-.5);KG={type,a,o,ans:null,score:KG&&KG.type===type?KG.score:0,n:KG&&KG.type===type?KG.n:0};kidSay(a[0])}
  else{const a=OCL[Math.floor(r()*OCL.length)],o=[a,...OCL.filter(x=>x!==a&&x[2]!==a[2]).sort(()=>r()-.5).slice(0,3)].sort(()=>r()-.5);KG={type,a,o,ans:null,score:KG&&KG.type===type?KG.score:0,n:KG&&KG.type===type?KG.n:0}}kgDraw()}
 function kgDraw(){const w=$('#kgw');if(!w||!KG)return;const {type,a,o,ans}=KG;
